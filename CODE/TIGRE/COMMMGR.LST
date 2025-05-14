@@ -1,0 +1,3306 @@
+.386p
+                NAME    COMMMGR
+                EXTRN   ___wcpp_2_data_module_dtor_ref_ :BYTE
+                EXTRN   `W?DiscardPacket$:TNULL$n(pn$sPacketHeader$$)$ERROR$:TComm$$` :BYTE
+                EXTRN   `W?IsPacketAvailable$:TNULL$n()i` :BYTE
+                EXTRN   `W?ReceivePacket$:TNULL$n(pn$sPacket$$)$ERROR$:TComm$$` :BYTE
+                EXTRN   `W?SendPacket$:TNULL$n(pn$sPacket$$)$ERROR$:TComm$$` :BYTE
+                EXTRN   `W?Disconnect$:TNULL$n()$ERROR$:TComm$$` :BYTE
+                EXTRN   `W?Connect$:TNULL$n()$ERROR$:TComm$$` :BYTE
+                EXTRN   `W?Init$:TNULL$n()$ERROR$:TComm$$` :BYTE
+                EXTRN   `W?Out$:Mono$n(pnae)v` :BYTE
+                EXTRN   `W?pMono$npn$Mono$$` :BYTE
+                EXTRN   memcpy_ :BYTE
+                EXTRN   memset_ :BYTE
+                EXTRN   `W?IsPacketAvailable$:TComm$n()i` :BYTE
+                EXTRN   `W?ReceivePacket$:TComm$n(pn$sPacket$$)$ERROR$:1$` :BYTE
+                EXTRN   `W?SendPacket$:TComm$n(pn$sPacket$$)$ERROR$:1$` :BYTE
+                EXTRN   `W?Disconnect$:TComm$n()$ERROR$:1$` :BYTE
+                EXTRN   `W?Connect$:TComm$n()$ERROR$:1$` :BYTE
+                EXTRN   `W?Init$:TComm$n()$ERROR$:1$` :BYTE
+                EXTRN   `W?$nan(ui)pnv` :BYTE
+                EXTRN   `W?szStrTrack$npna` :BYTE
+                EXTRN   `W?szFileTrack$npna` :BYTE
+                EXTRN   `W?lineTrack$ni` :BYTE
+                EXTRN   __wcpp_2_pure_error__ :BYTE
+                EXTRN   `W?GetUserList$:TComm$n(pnui)ui` :BYTE
+                EXTRN   `W?$Wvf0ao1e:TNULL$$nx[]pn()v` :BYTE
+                EXTRN   `W?GetUserList$:TNULL$n(pnui)ui` :BYTE
+                EXTRN   __wcpp_2_undef_vfun__ :BYTE
+                EXTRN   `W?GetUserID$:TNULL$n()ui` :BYTE
+                EXTRN   `W?$dln(pnv)v` :BYTE
+                EXTRN   `W?$dan(pnv)v` :BYTE
+                EXTRN   __wcpp_2_dtor_array_store__ :BYTE
+                EXTRN   `W?$Wts09n$TNULL$$$nx[]uc` :BYTE
+                EXTRN   `W?$dt:TNULL$n()_` :BYTE
+                EXTRN   _pfnUserAbort :BYTE
+                EXTRN   `W?$Wdf0s_SendData$n(pn$sPacket$$i)i1$:TCommMgr$n()i` :BYTE
+                EXTRN   `W?$Wdf0vDataAvailable$n(pn$sPacket$$)i0$:TCommMgr$n()pn$sPacket$$` :BYTE
+                EXTRN   `W?GetBuffer$:TCommMgr$n()pna` :BYTE
+                EXTRN   `W?GetBufferLen$:TCommMgr$n()i` :BYTE
+                EXTRN   `W?ReceiveData$:TCommMgr$n(pnipnipnipnv)i` :BYTE
+                EXTRN   `W?DataAvailable$:TCommMgr$n(pnipnipni)i` :BYTE
+                EXTRN   `W?$ct:TCommMgr$n(rnx$0$)_` :BYTE
+                EXTRN   `W?$dt:TComm$n()_` :BYTE
+                EXTRN   __wcpp_2_mod_register__ :BYTE
+                EXTRN   `W?$ct:TNULL$n(rnx$0$)_` :BYTE
+                EXTRN   `W?$ct:TComm$n()_` :BYTE
+                EXTRN   `W?GetError$:TComm$n()$ERROR$:1$` :BYTE
+                EXTRN   `W?SetError$:TComm$n($ERROR$:1$)$2:1$` :BYTE
+                EXTRN   `W?ClearError$:TComm$n()v` :BYTE
+                EXTRN   `W?GetTimeout$:TComm$n()i` :BYTE
+                EXTRN   `W?SetTimeout$:TComm$n(i)v` :BYTE
+                EXTRN   `W?GetUserID$:TComm$n()ui` :BYTE
+                EXTRN   __wcpp_2_undefined_member_function__ :BYTE
+                EXTRN   `W?GetLastPacket$:TComm$n()pn$sPacket$$` :BYTE
+                EXTRN   __wcpp_2_undefed_cdtor__ :BYTE
+                EXTRN   `W?$ct:TComm$n(rnx$0$)_` :BYTE
+DGROUP          GROUP   CONST,CONST2,_DATA,_BSS,XIB,XI,XIE
+_TEXT           SEGMENT DWORD PUBLIC USE32 'CODE'
+                ASSUME  CS:_TEXT ,DS:DGROUP,SS:DGROUP
+                PUBLIC  `W?SetUserAbortFn$:TCommMgr$n(pn(i)i)pn(i)i` 
+                PUBLIC  `W?Checksum$n(pnvui)ui` 
+                PUBLIC  `W?$ct:TNULL$n()_` 
+                PUBLIC  `W?Init$:TNULL$n()$ERROR$:TComm$$` 
+                PUBLIC  `W?Connect$:TNULL$n()$ERROR$:TComm$$` 
+                PUBLIC  `W?Disconnect$:TNULL$n()$ERROR$:TComm$$` 
+                PUBLIC  `W?SendPacket$:TNULL$n(pn$sPacket$$)$ERROR$:TComm$$` 
+                PUBLIC  `W?ReceivePacket$:TNULL$n(pn$sPacket$$)$ERROR$:TComm$$` 
+                PUBLIC  `W?DiscardPacket$:TNULL$n(pn$sPacketHeader$$)$ERROR$:TComm$$` 
+                PUBLIC  `W?IsPacketAvailable$:TNULL$n()i` 
+                PUBLIC  `W?GetError$:TCommMgr$n()i` 
+                PUBLIC  `W?GetUserID$:TCommMgr$n()i` 
+                PUBLIC  `W?GetUserList$:TCommMgr$n(pnui)i` 
+                PUBLIC  `W?$ct:TCommMgr$n()_` 
+                PUBLIC  `W?$dt:TCommMgr$n()_` 
+                PUBLIC  `W?Init$:TCommMgr$n(pn$TComm$$)i` 
+                PUBLIC  `W?Connect$:TCommMgr$n()i` 
+                PUBLIC  `W?Disconnect$:TCommMgr$n()i` 
+                PUBLIC  `W?EnQueueData$:TCommMgr$n()i` 
+                PUBLIC  `W?DeQueueData$:TCommMgr$n()pn$sPacket$$` 
+                PUBLIC  `W?_SendData$:TCommMgr$n(pn$sPacket$$i)i` 
+                PUBLIC  `W?SendData$:TCommMgr$n(iiipnv)i` 
+                PUBLIC  `W?SendData$:TCommMgr$n(pn$sPacket$$)i` 
+                PUBLIC  `W?DataAvailable$:TCommMgr$n(pn$sPacket$$)i` 
+                PUBLIC  `W?ReceiveData$:TCommMgr$n(pn$sPacket$$)i` 
+                PUBLIC  `W?DiscardData$:TCommMgr$n()i` 
+                PUBLIC  `W?_ReceiveData$:TCommMgr$n(pn$sPacket$$)i` 
+                PUBLIC  `W?ReceiveLargePacket$:TCommMgr$n()i` 
+`W?.fn_init$n()v`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     eax,offset DGROUP:L74
+                call    near ptr __wcpp_2_mod_register__
+                mov     eax,offset DGROUP:`W?tNull$n$TNULL$$`
+                call    near ptr `W?$ct:TNULL$n()_`
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr -4H[ebp],eax
+                mov     dword ptr L75,00000001H
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?SetUserAbortFn$:TCommMgr$n(pn(i)i)pn(i)i`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr _pfnUserAbort
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr _pfnUserAbort,eax
+                mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr -0cH[ebp],eax
+                mov     eax,dword ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?Checksum$n(pnvui)ui`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000018H
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     dword ptr -14H[ebp],00000000H
+                mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr -10H[ebp],eax
+                mov     dword ptr -0cH[ebp],00000000H
+                jmp     short L2
+L1:             mov     eax,dword ptr -0cH[ebp]
+                inc     dword ptr -0cH[ebp]
+L2:             mov     eax,dword ptr -0cH[ebp]
+                cmp     eax,dword ptr -4H[ebp]
+                jae     short L3
+                mov     eax,dword ptr -10H[ebp]
+                add     eax,dword ptr -0cH[ebp]
+                movzx   eax,byte ptr [eax]
+                add     dword ptr -14H[ebp],eax
+                jmp     short L1
+L3:             mov     eax,dword ptr -14H[ebp]
+                mov     dword ptr -18H[ebp],eax
+                mov     eax,dword ptr -18H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?$ct:TNULL$n()_`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?$ct:TComm$n()_`
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +2dH[eax],offset `W?$Wvf0ao1e:TNULL$$nx[]pn()v`
+                mov     edx,00000001H
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?Init$:TNULL$n()$ERROR$:TComm$$`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     edx,00000001H
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                mov     byte ptr -8H[ebp],al
+                mov     al,byte ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?Connect$:TNULL$n()$ERROR$:TComm$$`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     edx,00000001H
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                mov     byte ptr -8H[ebp],al
+                mov     al,byte ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?Disconnect$:TNULL$n()$ERROR$:TComm$$`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     edx,00000001H
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                mov     byte ptr -8H[ebp],al
+                mov     al,byte ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?SendPacket$:TNULL$n(pn$sPacket$$)$ERROR$:TComm$$`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     edx,00000001H
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                mov     byte ptr -0cH[ebp],al
+                mov     al,byte ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?ReceivePacket$:TNULL$n(pn$sPacket$$)$ERROR$:TComm$$`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     edx,00000001H
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                mov     byte ptr -0cH[ebp],al
+                mov     al,byte ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?DiscardPacket$:TNULL$n(pn$sPacketHeader$$)$ERROR$:TComm$$`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     edx,00000001H
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                mov     byte ptr -0cH[ebp],al
+                mov     al,byte ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?IsPacketAvailable$:TNULL$n()i`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     dword ptr -8H[ebp],00000000H
+                mov     eax,dword ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?GetError$:TCommMgr$n()i`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                movsx   eax,al
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?GetUserID$:TCommMgr$n()i`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?GetUserID$:TComm$n()ui`
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?GetUserList$:TCommMgr$n(pnui)i`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000010H
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -0cH[ebp],eax
+                mov     eax,dword ptr -0cH[ebp]
+                mov     ebx,dword ptr +2dH[eax]
+                mov     edx,dword ptr -4H[ebp]
+                mov     eax,dword ptr -0cH[ebp]
+                call    dword ptr +4H[ebx]
+                mov     dword ptr -10H[ebp],eax
+                mov     eax,dword ptr -10H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?$ct:TCommMgr$n()_`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr [eax],offset DGROUP:`W?tNull$n$TNULL$$`
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +8H[eax],00002800H
+                mov     dword ptr `W?lineTrack$ni`,00000094H
+                mov     dword ptr `W?szFileTrack$npna`,offset DGROUP:L68
+                mov     dword ptr `W?szStrTrack$npna`,offset DGROUP:L69
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +8H[eax]
+                call    near ptr `W?$nan(ui)pnv`
+                mov     edx,eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +4H[eax],edx
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +14H[eax],00000000H
+                mov     eax,dword ptr -4H[ebp]
+                mov     edx,dword ptr +14H[eax]
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +10H[eax],edx
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +0cH[eax],00000000H
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?$dt:TCommMgr$n()_`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000018H
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr +4H[eax]
+                call    near ptr `W?$dan(pnv)v`
+                mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -10H[ebp],eax
+                cmp     dword ptr -10H[ebp],00000000H
+                je      short L4
+                mov     eax,dword ptr -10H[ebp]
+                mov     dword ptr -14H[ebp],eax
+                mov     eax,dword ptr -14H[ebp]
+                mov     ebx,dword ptr +2dH[eax]
+                mov     edx,00000002H
+                mov     eax,dword ptr -14H[ebp]
+                call    dword ptr [ebx]
+                mov     dword ptr -0cH[ebp],eax
+                jmp     short L5
+L4:             mov     dword ptr -0cH[ebp],00000000H
+L5:             mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr -18H[ebp],eax
+                mov     eax,dword ptr -18H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?Init$:TCommMgr$n(pn$TComm$$)i`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000010H
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                cmp     dword ptr -4H[ebp],00000000H
+                je      short L6
+                mov     eax,dword ptr -4H[ebp]
+                mov     edx,dword ptr -8H[ebp]
+                mov     dword ptr [edx],eax
+                mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -10H[ebp],eax
+                mov     eax,dword ptr -10H[ebp]
+                mov     edx,dword ptr +2dH[eax]
+                mov     eax,dword ptr -10H[ebp]
+                call    dword ptr +8H[edx]
+                movsx   eax,al
+                mov     dword ptr -0cH[ebp],eax
+                jmp     short L7
+L6:             mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                movsx   eax,al
+                mov     dword ptr -0cH[ebp],eax
+L7:             mov     eax,dword ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?Connect$:TCommMgr$n()i`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -8H[ebp]
+                mov     edx,dword ptr +2dH[eax]
+                mov     eax,dword ptr -8H[ebp]
+                call    dword ptr +0cH[edx]
+                movsx   eax,al
+                mov     dword ptr -0cH[ebp],eax
+                mov     eax,dword ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?Disconnect$:TCommMgr$n()i`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -8H[ebp]
+                mov     edx,dword ptr +2dH[eax]
+                mov     eax,dword ptr -8H[ebp]
+                call    dword ptr +10H[edx]
+                movsx   eax,al
+                mov     dword ptr -0cH[ebp],eax
+                mov     eax,dword ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?EnQueueData$:TCommMgr$n()i`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000044H
+                mov     dword ptr -4H[ebp],eax
+                mov     dword ptr -0cH[ebp],0ffffffffH
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -8H[ebp]
+                mov     edx,dword ptr +2dH[eax]
+                mov     eax,dword ptr -8H[ebp]
+                call    dword ptr +1cH[edx]
+                test    eax,eax
+                je      near ptr L14
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +14H[eax]
+                shl     eax,08H
+                mov     edx,dword ptr -4H[ebp]
+                add     edx,00000018H
+                add     edx,eax
+                mov     dword ptr -1cH[ebp],edx
+                mov     eax,dword ptr -1cH[ebp]
+                add     eax,00000020H
+                mov     edx,dword ptr -1cH[ebp]
+                mov     dword ptr +1cH[edx],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +14H[eax]
+                mov     dword ptr -0cH[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     edx,dword ptr +14H[eax]
+                inc     edx
+                mov     ebx,00000010H
+                mov     eax,edx
+                sar     edx,1fH
+                idiv    ebx
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +14H[eax],edx
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -18H[ebp],eax
+                mov     eax,dword ptr -18H[ebp]
+                mov     ebx,dword ptr +2dH[eax]
+                mov     edx,dword ptr -1cH[ebp]
+                mov     eax,dword ptr -18H[ebp]
+                call    dword ptr +18H[ebx]
+                mov     eax,dword ptr -1cH[ebp]
+                mov     eax,dword ptr +4H[eax]
+                mov     dword ptr -14H[ebp],eax
+                jmp     short L12
+L8:             mov     eax,dword ptr -1cH[ebp]
+                mov     edx,dword ptr +0cH[eax]
+                mov     eax,dword ptr -1cH[ebp]
+                mov     eax,dword ptr +1cH[eax]
+                call    near ptr `W?Checksum$n(pnvui)ui`
+                mov     edx,eax
+                mov     eax,dword ptr -1cH[ebp]
+                cmp     edx,dword ptr +18H[eax]
+                jne     short L9
+                mov     byte ptr -20H[ebp],0bH
+                jmp     short L10
+L9:             mov     byte ptr -20H[ebp],0cH
+L10:            movsx   eax,byte ptr -20H[ebp]
+                mov     dword ptr -3cH[ebp],eax
+                mov     dword ptr -34H[ebp],00000000H
+                mov     dword ptr -24H[ebp],00000000H
+                mov     eax,dword ptr -1cH[ebp]
+                mov     eax,dword ptr +14H[eax]
+                mov     dword ptr -30H[ebp],eax
+                mov     eax,dword ptr -1cH[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -38H[ebp],eax
+                mov     dword ptr -28H[ebp],00000000H
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -44H[ebp],eax
+                mov     eax,dword ptr -44H[ebp]
+                mov     ebx,dword ptr +2dH[eax]
+                lea     edx,-40H[ebp]
+                mov     eax,dword ptr -44H[ebp]
+                call    dword ptr +14H[ebx]
+                jmp     short L14
+L11:            jmp     short L14
+L12:            cmp     dword ptr -14H[ebp],00000000H
+                jbe     short L8
+                cmp     dword ptr -14H[ebp],00000008H
+                jb      short L13
+                cmp     dword ptr -14H[ebp],0000000aH
+                jbe     short L8
+                jmp     short L11
+L13:            jmp     short L11
+                jmp     short L11
+L14:            mov     eax,dword ptr -0cH[ebp]
+                mov     dword ptr -10H[ebp],eax
+                mov     eax,dword ptr -10H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?DeQueueData$:TCommMgr$n()pn$sPacket$$`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -4H[ebp],eax
+                mov     dword ptr -8H[ebp],00000000H
+                mov     eax,dword ptr -4H[ebp]
+                mov     edx,dword ptr +10H[eax]
+                mov     eax,dword ptr -4H[ebp]
+                cmp     edx,dword ptr +14H[eax]
+                je      short L15
+                mov     eax,dword ptr -4H[ebp]
+                mov     edx,dword ptr +10H[eax]
+                shl     edx,08H
+                mov     eax,dword ptr -4H[ebp]
+                add     eax,00000018H
+                add     eax,edx
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     edx,dword ptr +10H[eax]
+                inc     edx
+                mov     ebx,00000010H
+                mov     eax,edx
+                sar     edx,1fH
+                idiv    ebx
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +10H[eax],edx
+L15:            mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr -0cH[ebp],eax
+                mov     eax,dword ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?_SendData$:TCommMgr$n(pn$sPacket$$i)i`:
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000028H
+                mov     dword ptr -0cH[ebp],eax
+                mov     dword ptr -8H[ebp],edx
+                mov     dword ptr -4H[ebp],ebx
+                mov     eax,dword ptr -0cH[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?GetUserID$:TComm$n()ui`
+                mov     ebx,eax
+                mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr +14H[eax],ebx
+                mov     eax,dword ptr -8H[ebp]
+                mov     edx,dword ptr +0cH[eax]
+                mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr +1cH[eax]
+                call    near ptr `W?Checksum$n(pnvui)ui`
+                mov     ebx,eax
+                mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr +18H[eax],ebx
+                mov     eax,dword ptr -0cH[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -10H[ebp],eax
+                mov     eax,dword ptr -10H[ebp]
+                mov     ebx,dword ptr +2dH[eax]
+                mov     edx,dword ptr -8H[ebp]
+                mov     eax,dword ptr -10H[ebp]
+                call    dword ptr +14H[ebx]
+                movsx   eax,al
+                mov     dword ptr -14H[ebp],eax
+L16:            cmp     dword ptr -4H[ebp],00000000H
+                jne     near ptr L23
+                mov     eax,dword ptr -0cH[ebp]
+                call    near ptr `W?EnQueueData$:TCommMgr$n()i`
+                mov     dword ptr -1cH[ebp],eax
+                cmp     dword ptr -1cH[ebp],0ffffffffH
+                je      near ptr L22
+                mov     eax,dword ptr -1cH[ebp]
+                shl     eax,08H
+                mov     edx,dword ptr -0cH[ebp]
+                add     edx,00000018H
+                add     edx,eax
+                mov     dword ptr -20H[ebp],edx
+                mov     eax,dword ptr -20H[ebp]
+                mov     eax,dword ptr +4H[eax]
+                mov     dword ptr -24H[ebp],eax
+                jmp     short L20
+L17:            mov     dword ptr -4H[ebp],00000001H
+                mov     eax,dword ptr -1cH[ebp]
+                mov     edx,dword ptr -0cH[ebp]
+                mov     dword ptr +14H[edx],eax
+                jmp     short L22
+L18:            mov     eax,dword ptr -0cH[ebp]
+                mov     eax,dword ptr [eax]
+                mov     dword ptr -28H[ebp],eax
+                mov     eax,dword ptr -28H[ebp]
+                mov     ebx,dword ptr +2dH[eax]
+                mov     edx,dword ptr -8H[ebp]
+                mov     eax,dword ptr -28H[ebp]
+                call    dword ptr +14H[ebx]
+                movsx   eax,al
+                mov     dword ptr -14H[ebp],eax
+                mov     eax,dword ptr -1cH[ebp]
+                mov     edx,dword ptr -0cH[ebp]
+                mov     dword ptr +14H[edx],eax
+                jmp     short L22
+L19:            jmp     short L22
+L20:            cmp     dword ptr -24H[ebp],0000000bH
+                jb      short L21
+                cmp     dword ptr -24H[ebp],0000000bH
+                jbe     short L17
+                cmp     dword ptr -24H[ebp],0000000cH
+                je      short L18
+                jmp     short L19
+L21:            jmp     short L19
+L22:            jmp     near ptr L16
+L23:            mov     eax,dword ptr -14H[ebp]
+                mov     dword ptr -18H[ebp],eax
+                mov     eax,dword ptr -18H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                ret     
+`W?SendData$:TCommMgr$n(iiipnv)i`:
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000034H
+                mov     dword ptr -10H[ebp],eax
+                mov     dword ptr -0cH[ebp],edx
+                mov     dword ptr -8H[ebp],ebx
+                mov     dword ptr -4H[ebp],ecx
+                mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr -2cH[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr -28H[ebp],eax
+                mov     eax,dword ptr -0cH[ebp]
+                mov     dword ptr -24H[ebp],eax
+                mov     eax,dword ptr +10H[ebp]
+                mov     dword ptr -18H[ebp],eax
+                lea     edx,-34H[ebp]
+                mov     eax,dword ptr -10H[ebp]
+                call    near ptr `W?SendData$:TCommMgr$n(pn$sPacket$$)i`
+                mov     dword ptr -14H[ebp],eax
+                mov     eax,dword ptr -14H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                ret     0004H
+`W?SendData$:TCommMgr$n(pn$sPacket$$)i`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000048H
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?ClearError$:TComm$n()v`
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +4H[eax],00000000H
+                mov     eax,dword ptr -4H[ebp]
+                cmp     dword ptr +0cH[eax],000001e4H
+                jae     short L24
+                call    near ptr `W?$Wdf0s_SendData$n(pn$sPacket$$i)i1$:TCommMgr$n()i`
+                mov     edx,dword ptr -4H[ebp]
+                mov     ecx,dword ptr -8H[ebp]
+                mov     ebx,eax
+                mov     eax,ecx
+                call    near ptr `W?_SendData$:TCommMgr$n(pn$sPacket$$i)i`
+                mov     dword ptr -14H[ebp],eax
+                jmp     near ptr L34
+L24:            mov     ebx,0000000cH
+                xor     edx,edx
+                lea     eax,-24H[ebp]
+                call    near ptr memset_
+                mov     ebx,000000d0H
+                xor     edx,edx
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +0cH[eax]
+                div     ebx
+                test    edx,edx
+                je      short L25
+                mov     dword ptr -18H[ebp],00000001H
+                jmp     short L26
+L25:            mov     dword ptr -18H[ebp],00000000H
+L26:            mov     ebx,000000d0H
+                xor     edx,edx
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +0cH[eax]
+                div     ebx
+                mov     edx,dword ptr -18H[ebp]
+                add     edx,eax
+                mov     dword ptr -24H[ebp],edx
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +0cH[eax]
+                mov     dword ptr -20H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     edx,dword ptr +0cH[eax]
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +1cH[eax]
+                call    near ptr `W?Checksum$n(pnvui)ui`
+                mov     dword ptr -1cH[ebp],eax
+                mov     eax,dword ptr -20H[ebp]
+                mov     dword ptr -10H[ebp],eax
+                mov     ebx,00000020H
+                xor     edx,edx
+                lea     eax,-44H[ebp]
+                call    near ptr memset_
+                mov     dword ptr -40H[ebp],00000008H
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +10H[eax]
+                mov     dword ptr -34H[ebp],eax
+                mov     dword ptr -38H[ebp],0000000cH
+                lea     eax,-24H[ebp]
+                mov     dword ptr -28H[ebp],eax
+                call    near ptr `W?$Wdf0s_SendData$n(pn$sPacket$$i)i1$:TCommMgr$n()i`
+                mov     ebx,eax
+                lea     edx,-44H[ebp]
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?_SendData$:TCommMgr$n(pn$sPacket$$i)i`
+                test    eax,eax
+                je      short L27
+                mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                movsx   eax,al
+                mov     dword ptr -14H[ebp],eax
+                jmp     near ptr L34
+L27:            mov     dword ptr -40H[ebp],00000009H
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +10H[eax]
+                mov     dword ptr -34H[ebp],eax
+                mov     dword ptr -0cH[ebp],00000000H
+                jmp     short L29
+L28:            mov     eax,dword ptr -0cH[ebp]
+                inc     dword ptr -0cH[ebp]
+L29:            mov     eax,dword ptr -0cH[ebp]
+                cmp     eax,dword ptr -24H[ebp]
+                jae     short L33
+                mov     eax,dword ptr -0cH[ebp]
+                mov     dword ptr -3cH[ebp],eax
+                cmp     dword ptr -10H[ebp],000000d0H
+                jle     short L30
+                mov     dword ptr -48H[ebp],000000d0H
+                jmp     short L31
+L30:            mov     eax,dword ptr -10H[ebp]
+                mov     dword ptr -48H[ebp],eax
+L31:            mov     eax,dword ptr -48H[ebp]
+                mov     dword ptr -38H[ebp],eax
+                mov     eax,dword ptr -38H[ebp]
+                sub     dword ptr -10H[ebp],eax
+                imul    edx,dword ptr -0cH[ebp],000000d0H
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +1cH[eax]
+                add     eax,edx
+                mov     dword ptr -28H[ebp],eax
+                call    near ptr `W?$Wdf0s_SendData$n(pn$sPacket$$i)i1$:TCommMgr$n()i`
+                mov     ebx,eax
+                lea     edx,-44H[ebp]
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?_SendData$:TCommMgr$n(pn$sPacket$$i)i`
+                test    eax,eax
+                je      short L32
+                mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                movsx   eax,al
+                mov     dword ptr -14H[ebp],eax
+                jmp     short L34
+L32:            jmp     short L28
+L33:            mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                movsx   eax,al
+                mov     dword ptr -14H[ebp],eax
+L34:            mov     eax,dword ptr -14H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?DataAvailable$:TCommMgr$n(pn$sPacket$$)i`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000014H
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+L35:            mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?EnQueueData$:TCommMgr$n()i`
+                cmp     eax,0ffffffffH
+                jne     short L35
+                mov     eax,dword ptr -8H[ebp]
+                cmp     dword ptr +0cH[eax],00000000H
+                jne     short L36
+                mov     eax,dword ptr -8H[ebp]
+                mov     edx,dword ptr +14H[eax]
+                mov     eax,dword ptr -8H[ebp]
+                cmp     edx,dword ptr +10H[eax]
+                jne     short L37
+L36:            jmp     near ptr L44
+L37:            mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr +10H[eax]
+                shl     eax,08H
+                mov     edx,dword ptr -8H[ebp]
+                add     edx,00000018H
+                add     edx,eax
+                mov     dword ptr -14H[ebp],edx
+                mov     eax,dword ptr -14H[ebp]
+                mov     eax,dword ptr +4H[eax]
+                mov     dword ptr -10H[ebp],eax
+                jmp     short L42
+L38:            mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr +0cH[eax],00000001H
+                mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?ClearError$:TComm$n()v`
+                jmp     short L44
+L39:            mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr +0cH[eax],00000001H
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?ReceiveLargePacket$:TCommMgr$n()i`
+                jmp     short L44
+L40:            mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?DiscardData$:TCommMgr$n()i`
+                jmp     short L44
+L41:            mov     edx,00000006H
+                mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?DiscardData$:TCommMgr$n()i`
+                jmp     short L44
+L42:            cmp     dword ptr -10H[ebp],00000002H
+                jb      short L43
+                cmp     dword ptr -10H[ebp],00000002H
+                jbe     short L40
+                cmp     dword ptr -10H[ebp],00000008H
+                je      short L39
+                jmp     short L41
+L43:            cmp     dword ptr -10H[ebp],00000000H
+                je      short L38
+                jmp     short L41
+L44:            mov     eax,dword ptr -8H[ebp]
+                cmp     dword ptr +0cH[eax],00000000H
+                je      short L45
+                cmp     dword ptr -4H[ebp],00000000H
+                jne     short L46
+L45:            jmp     short L47
+L46:            mov     ebx,00000004H
+                mov     eax,dword ptr -8H[ebp]
+                mov     edx,dword ptr +10H[eax]
+                shl     edx,08H
+                mov     eax,dword ptr -8H[ebp]
+                add     eax,00000018H
+                add     edx,eax
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr memcpy_
+L47:            mov     eax,dword ptr -8H[ebp]
+                mov     eax,dword ptr +0cH[eax]
+                mov     dword ptr -0cH[ebp],eax
+                mov     eax,dword ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?ReceiveData$:TCommMgr$n(pn$sPacket$$)i`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     eax,dword ptr -8H[ebp]
+                cmp     dword ptr +0cH[eax],00000000H
+                jne     short L48
+                call    near ptr `W?$Wdf0vDataAvailable$n(pn$sPacket$$)i0$:TCommMgr$n()pn$sPacket$$`
+                mov     ebx,dword ptr -8H[ebp]
+                mov     edx,eax
+                mov     eax,ebx
+                call    near ptr `W?DataAvailable$:TCommMgr$n(pn$sPacket$$)i`
+                test    eax,eax
+                je      short L49
+L48:            jmp     short L50
+L49:            mov     dword ptr -0cH[ebp],00000001H
+                jmp     short L51
+L50:            mov     edx,dword ptr -4H[ebp]
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?_ReceiveData$:TCommMgr$n(pn$sPacket$$)i`
+                mov     dword ptr -0cH[ebp],00000000H
+L51:            mov     eax,dword ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?DiscardData$:TCommMgr$n()i`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +0cH[eax],00000000H
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?DeQueueData$:TCommMgr$n()pn$sPacket$$`
+                mov     dword ptr -8H[ebp],00000000H
+                mov     eax,dword ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?_ReceiveData$:TCommMgr$n(pn$sPacket$$)i`:
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000014H
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     dword ptr -0cH[ebp],00000000H
+                mov     eax,dword ptr -8H[ebp]
+                cmp     dword ptr +0cH[eax],00000000H
+                je      short L52
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?DeQueueData$:TCommMgr$n()pn$sPacket$$`
+                mov     dword ptr -14H[ebp],eax
+                mov     ebx,0000001cH
+                mov     edx,dword ptr -14H[ebp]
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr memcpy_
+                mov     eax,dword ptr -4H[ebp]
+                mov     ebx,dword ptr +0cH[eax]
+                mov     eax,dword ptr -14H[ebp]
+                mov     edx,dword ptr +1cH[eax]
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +1cH[eax]
+                call    near ptr memcpy_
+                mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr +0cH[eax],00000000H
+                mov     dword ptr -0cH[ebp],00000001H
+L52:            mov     eax,dword ptr -0cH[ebp]
+                mov     dword ptr -10H[ebp],eax
+                mov     eax,dword ptr -10H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?ReceiveLargePacket$:TCommMgr$n()i`:
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,000001fcH
+                mov     dword ptr -4H[ebp],eax
+                mov     dword ptr -14H[ebp],00000000H
+                lea     eax,-24H[ebp]
+                mov     dword ptr -28H[ebp],eax
+                lea     edx,-44H[ebp]
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?_ReceiveData$:TCommMgr$n(pn$sPacket$$)i`
+                mov     eax,dword ptr -24H[ebp]
+                push    eax
+                mov     eax,offset DGROUP:L70
+                push    eax
+                push    dword ptr `W?pMono$npn$Mono$$`
+                call    near ptr `W?Out$:Mono$n(pnae)v`
+                add     esp,0000000cH
+                mov     eax,dword ptr -20H[ebp]
+                push    eax
+                mov     eax,offset DGROUP:L71
+                push    eax
+                push    dword ptr `W?pMono$npn$Mono$$`
+                call    near ptr `W?Out$:Mono$n(pnae)v`
+                add     esp,0000000cH
+                mov     eax,dword ptr -1cH[ebp]
+                push    eax
+                mov     eax,offset DGROUP:L72
+                push    eax
+                push    dword ptr `W?pMono$npn$Mono$$`
+                call    near ptr `W?Out$:Mono$n(pnae)v`
+                add     esp,0000000cH
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?ClearError$:TComm$n()v`
+                mov     ebx,00000190H
+                xor     edx,edx
+                lea     eax,-1d4H[ebp]
+                call    near ptr memset_
+                mov     dword ptr -10H[ebp],0000046cH
+                mov     edx,dword ptr -4H[ebp]
+                mov     edx,dword ptr [edx]
+                mov     ebx,00000037H
+                mov     eax,dword ptr +29H[edx]
+                mov     edx,dword ptr +29H[edx]
+                sar     edx,1fH
+                idiv    ebx
+                mov     edx,eax
+                mov     eax,dword ptr -10H[ebp]
+                mov     eax,dword ptr [eax]
+                add     eax,edx
+                mov     dword ptr -0cH[ebp],eax
+                mov     edx,0000000aH
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+L53:            mov     eax,dword ptr -14H[ebp]
+                cmp     eax,dword ptr -24H[ebp]
+                jae     short L54
+                mov     eax,dword ptr -0cH[ebp]
+                mov     edx,dword ptr -10H[ebp]
+                cmp     eax,dword ptr [edx]
+                jge     short L55
+L54:            jmp     near ptr L66
+L55:            mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?EnQueueData$:TCommMgr$n()i`
+                cmp     eax,0ffffffffH
+                jne     short L55
+L56:            mov     eax,dword ptr -4H[ebp]
+                mov     edx,dword ptr +10H[eax]
+                mov     eax,dword ptr -4H[ebp]
+                cmp     edx,dword ptr +14H[eax]
+                je      short L57
+                mov     eax,dword ptr -14H[ebp]
+                cmp     eax,dword ptr -24H[ebp]
+                jb      short L58
+L57:            jmp     near ptr L61
+L58:            mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +10H[eax]
+                shl     eax,08H
+                mov     edx,dword ptr -4H[ebp]
+                add     edx,00000018H
+                add     edx,eax
+                mov     dword ptr -1d8H[ebp],edx
+                mov     eax,dword ptr -1d8H[ebp]
+                cmp     dword ptr +4H[eax],00000009H
+                jne     short L59
+                mov     edx,dword ptr -1d8H[ebp]
+                imul    edx,dword ptr +8H[edx],000000d0H
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?GetBuffer$:TCommMgr$n()pna`
+                add     eax,edx
+                mov     dword ptr -1dcH[ebp],eax
+                mov     edx,dword ptr -4H[ebp]
+                mov     dword ptr +0cH[edx],00000001H
+                lea     edx,-1f8H[ebp]
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?_ReceiveData$:TCommMgr$n(pn$sPacket$$)i`
+                mov     edx,dword ptr -1f0H[ebp]
+                shl     edx,02H
+                mov     dword ptr -1d4H[edx+ebp],00000001H
+                mov     eax,dword ptr -14H[ebp]
+                inc     dword ptr -14H[ebp]
+                mov     edx,dword ptr -4H[ebp]
+                mov     edx,dword ptr [edx]
+                mov     ebx,00000037H
+                mov     eax,dword ptr +29H[edx]
+                mov     edx,dword ptr +29H[edx]
+                sar     edx,1fH
+                idiv    ebx
+                mov     edx,dword ptr -10H[ebp]
+                mov     edx,dword ptr [edx]
+                add     edx,eax
+                mov     dword ptr -0cH[ebp],edx
+                jmp     short L60
+L59:            mov     edx,00000007H
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?GetError$:TComm$n()$ERROR$:1$`
+                movsx   eax,al
+                mov     dword ptr -18H[ebp],eax
+                jmp     near ptr L67
+L60:            jmp     near ptr L56
+L61:            mov     dword ptr -1fcH[ebp],00000000H
+                jmp     short L63
+L62:            mov     eax,dword ptr -1fcH[ebp]
+                inc     dword ptr -1fcH[ebp]
+L63:            mov     eax,dword ptr -1fcH[ebp]
+                cmp     eax,dword ptr -24H[ebp]
+                jae     short L64
+                mov     eax,dword ptr -1fcH[ebp]
+                shl     eax,02H
+                cmp     dword ptr -1d4H[eax+ebp],00000000H
+                jne     short L62
+L64:            mov     eax,dword ptr -1fcH[ebp]
+                cmp     eax,dword ptr -24H[ebp]
+                jne     short L65
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr [eax]
+                call    near ptr `W?ClearError$:TComm$n()v`
+                jmp     short L66
+L65:            jmp     near ptr L53
+L66:            mov     eax,dword ptr -4H[ebp]
+                mov     edx,dword ptr +10H[eax]
+                add     edx,0000000fH
+                mov     ebx,00000010H
+                mov     eax,edx
+                sar     edx,1fH
+                idiv    ebx
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +10H[eax],edx
+                mov     eax,dword ptr -4H[ebp]
+                mov     edx,dword ptr +10H[eax]
+                shl     edx,08H
+                mov     eax,dword ptr -4H[ebp]
+                add     eax,00000018H
+                add     eax,edx
+                mov     dword ptr -8H[ebp],eax
+                mov     ebx,0000001cH
+                lea     edx,-44H[ebp]
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr memcpy_
+                mov     eax,dword ptr -1cH[ebp]
+                mov     edx,dword ptr -8H[ebp]
+                mov     dword ptr +18H[edx],eax
+                mov     eax,dword ptr -20H[ebp]
+                mov     edx,dword ptr -8H[ebp]
+                mov     dword ptr +0cH[edx],eax
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?GetBuffer$:TCommMgr$n()pna`
+                mov     edx,eax
+                mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr +1cH[eax],edx
+                mov     eax,dword ptr -4H[ebp]
+                mov     dword ptr +0cH[eax],00000001H
+                mov     eax,dword ptr -4H[ebp]
+                call    near ptr `W?GetError$:TCommMgr$n()i`
+                mov     dword ptr -18H[ebp],eax
+L67:            mov     eax,dword ptr -18H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+_TEXT           ENDS
+
+CONST           SEGMENT DWORD PUBLIC USE32 'DATA'
+L68             DB      43H,4fH,4dH,4dH,4dH,47H,52H,2eH
+                DB      43H,50H,50H,00H
+L69             DB      54H,43H,6fH,6dH,6dH,4dH,67H,72H
+                DB      20H,42H,75H,66H,00H
+L70             DB      6eH,42H,6cH,6fH,63H,6bH,73H,20H
+                DB      25H,64H,0aH,00H
+L71             DB      6eH,42H,79H,74H,65H,73H,20H,25H
+                DB      64H,0aH,00H
+L72             DB      63H,68H,65H,63H,6bH,73H,75H,6dH
+                DB      20H,25H,64H,0aH,00H
+CONST           ENDS
+
+CONST2          SEGMENT DWORD PUBLIC USE32 'DATA'
+`W?E_NULL$nxus` DB      01H,00H
+`W?E_MOUSE_UP$nxus` LABEL BYTE
+                DB      02H,00H
+`W?E_MOUSE_DOWN$nxus` LABEL BYTE
+                DB      04H,00H
+`W?E_KEY_UP$nxus` LABEL BYTE
+                DB      08H,00H
+`W?E_KEY_DOWN$nxus` LABEL BYTE
+                DB      10H,00H
+`W?E_DIRECTION$nxus` LABEL BYTE
+                DB      20H,00H
+`W?E_DEFINED$nxus` LABEL BYTE
+                DB      80H,00H
+`W?E_ALL$nxus`  DB      0ffH,0ffH
+`W?MOD_INSERT$nxus` LABEL BYTE
+                DB      80H,00H
+`W?MOD_CAPS$nxus` LABEL BYTE
+                DB      40H,00H
+`W?MOD_NUM_LOCK$nxus` LABEL BYTE
+                DB      20H,00H
+`W?MOD_SCROLL_LOCK$nxus` LABEL BYTE
+                DB      10H,00H
+`W?MOD_ALT$nxus` LABEL BYTE
+                DB      08H,00H
+`W?MOD_CTRL$nxus` LABEL BYTE
+                DB      04H,00H
+`W?MOD_R_SHIFT$nxus` LABEL BYTE
+                DB      02H,00H
+`W?MOD_L_SHIFT$nxus` LABEL BYTE
+                DB      01H,00H
+`W?MOD_SHIFT$nxus` LABEL BYTE
+                DB      03H,00H,00H,00H
+`W?TICKS_PER_SEC$nxul` LABEL BYTE
+                DB      14H,00H,00H,00H
+`W?tcommMaxPlayers$nxi` LABEL BYTE
+                DB      08H,00H,00H,00H
+`W?tcommDefaultTimeout$nxi` LABEL BYTE
+                DB      0e8H,03H,00H,00H
+`W?tcommDefaultMaxSendSize$nxi` LABEL BYTE
+                DB      00H,28H,00H,00H
+`W?tcommBadUserID$nxi` LABEL BYTE
+                DB      0ffH,0ffH,0ffH,0ffH
+`W?tcommMaxBlockSize$nxi` LABEL BYTE
+                DB      0e4H,01H,00H,00H
+`W?tcommmgrTOTAL_BLOCK_SIZE$nxi` LABEL BYTE
+                DB      00H,01H,00H,00H
+`W?tcommmgrMAX_PACKET_SIZE$nxi` LABEL BYTE
+                DB      0d0H,00H,00H,00H
+`W?tcommmgrNBLOCKS$nxi` LABEL BYTE
+                DB      10H,00H,00H,00H
+`W?M_NORMAL$nxuc` LABEL BYTE
+                DB      07H
+`W?M_INTENSE$nxuc` LABEL BYTE
+                DB      08H
+`W?M_UNDERLINE$nxuc` LABEL BYTE
+                DB      01H
+`W?M_REVERSE$nxuc` LABEL BYTE
+                DB      70H
+`W?M_BLINK$nxuc` LABEL BYTE
+                DB      80H,00H,00H,00H
+L73             DB      03H,00H,00H,00H
+                DD      `W?$dt:TNULL$n()_`
+                DD      DGROUP:`W?tNull$n$TNULL$$`
+CONST2          ENDS
+
+_DATA           SEGMENT DWORD PUBLIC USE32 'DATA'
+L74             DB      00H,00H,00H,00H
+                DD      DGROUP:L73
+L75             DB      00H,00H,00H,00H
+_DATA           ENDS
+
+_BSS            SEGMENT DWORD PUBLIC USE32 'BSS'
+                PUBLIC  `W?tNull$n$TNULL$$` 
+                ORG     00000000H
+`W?INVALID_GRIP$nxui` LABEL   BYTE
+                ORG     00000004H
+`W?tNull$n$TNULL$$` LABEL   BYTE
+                ORG     00000035H
+_BSS            ENDS
+
+XIB             SEGMENT WORD PUBLIC USE32 'DATA'
+XIB             ENDS
+
+XI              SEGMENT WORD PUBLIC USE32 'DATA'
+`W?.mod_init$npn()v` LABEL BYTE
+                DB      00H,40H
+                DD      `W?.fn_init$n()v`
+XI              ENDS
+
+XIE             SEGMENT WORD PUBLIC USE32 'DATA'
+XIE             ENDS
+
+$$SYMBOLS       SEGMENT BYTE USE16 'DEBSYM'
+                DB      0fH,12H
+                DP      DGROUP:`W?E_NULL$nxus`
+                DB      7cH,45H,5fH,4eH,55H,4cH,4cH,13H
+                DB      12H
+                DP      DGROUP:`W?E_MOUSE_UP$nxus`
+                DB      7cH,45H,5fH,4dH,4fH,55H,53H,45H
+                DB      5fH,55H,50H,15H,12H
+                DP      DGROUP:`W?E_MOUSE_DOWN$nxus`
+                DB      7cH,45H,5fH,4dH,4fH,55H,53H,45H
+                DB      5fH,44H,4fH,57H,4eH,11H,12H
+                DP      DGROUP:`W?E_KEY_UP$nxus`
+                DB      7cH,45H,5fH,4bH,45H,59H,5fH,55H
+                DB      50H,13H,12H
+                DP      DGROUP:`W?E_KEY_DOWN$nxus`
+                DB      7cH,45H,5fH,4bH,45H,59H,5fH,44H
+                DB      4fH,57H,4eH,14H,12H
+                DP      DGROUP:`W?E_DIRECTION$nxus`
+                DB      7cH,45H,5fH,44H,49H,52H,45H,43H
+                DB      54H,49H,4fH,4eH,12H,12H
+                DP      DGROUP:`W?E_DEFINED$nxus`
+                DB      7cH,45H,5fH,44H,45H,46H,49H,4eH
+                DB      45H,44H,0eH,12H
+                DP      DGROUP:`W?E_ALL$nxus`
+                DB      7cH,45H,5fH,41H,4cH,4cH,14H,12H
+                DP      DGROUP:`W?MOD_INSERT$nxus`
+                DB      80H,8bH,4dH,4fH,44H,5fH,49H,4eH
+                DB      53H,45H,52H,54H,12H,12H
+                DP      DGROUP:`W?MOD_CAPS$nxus`
+                DB      80H,8bH,4dH,4fH,44H,5fH,43H,41H
+                DB      50H,53H,16H,12H
+                DP      DGROUP:`W?MOD_NUM_LOCK$nxus`
+                DB      80H,8bH,4dH,4fH,44H,5fH,4eH,55H
+                DB      4dH,5fH,4cH,4fH,43H,4bH,19H,12H
+                DP      DGROUP:`W?MOD_SCROLL_LOCK$nxus`
+                DB      80H,8bH,4dH,4fH,44H,5fH,53H,43H
+                DB      52H,4fH,4cH,4cH,5fH,4cH,4fH,43H
+                DB      4bH,11H,12H
+                DP      DGROUP:`W?MOD_ALT$nxus`
+                DB      80H,8bH,4dH,4fH,44H,5fH,41H,4cH
+                DB      54H,12H,12H
+                DP      DGROUP:`W?MOD_CTRL$nxus`
+                DB      80H,8bH,4dH,4fH,44H,5fH,43H,54H
+                DB      52H,4cH,15H,12H
+                DP      DGROUP:`W?MOD_R_SHIFT$nxus`
+                DB      80H,8bH,4dH,4fH,44H,5fH,52H,5fH
+                DB      53H,48H,49H,46H,54H,15H,12H
+                DP      DGROUP:`W?MOD_L_SHIFT$nxus`
+                DB      80H,8bH,4dH,4fH,44H,5fH,4cH,5fH
+                DB      53H,48H,49H,46H,54H,13H,12H
+                DP      DGROUP:`W?MOD_SHIFT$nxus`
+                DB      80H,8bH,4dH,4fH,44H,5fH,53H,48H
+                DB      49H,46H,54H,17H,12H
+                DP      DGROUP:`W?TICKS_PER_SEC$nxul`
+                DB      80H,87H,54H,49H,43H,4bH,53H,5fH
+                DB      50H,45H,52H,5fH,53H,45H,43H,16H
+                DB      12H
+                DP      DGROUP:`W?INVALID_GRIP$nxui`
+                DB      80H,80H,49H,4eH,56H,41H,4cH,49H
+                DB      44H,5fH,47H,52H,49H,50H,18H,12H
+                DP      DGROUP:`W?tcommMaxPlayers$nxi`
+                DB      0cH,74H,63H,6fH,6dH,6dH,4dH,61H
+                DB      78H,50H,6cH,61H,79H,65H,72H,73H
+                DB      1cH,12H
+                DP      DGROUP:`W?tcommDefaultTimeout$nxi`
+                DB      0cH,74H,63H,6fH,6dH,6dH,44H,65H
+                DB      66H,61H,75H,6cH,74H,54H,69H,6dH
+                DB      65H,6fH,75H,74H,20H,12H
+                DP      DGROUP:`W?tcommDefaultMaxSendSize$nxi`
+                DB      0cH,74H,63H,6fH,6dH,6dH,44H,65H
+                DB      66H,61H,75H,6cH,74H,4dH,61H,78H
+                DB      53H,65H,6eH,64H,53H,69H,7aH,65H
+                DB      17H,12H
+                DP      DGROUP:`W?tcommBadUserID$nxi`
+                DB      0cH,74H,63H,6fH,6dH,6dH,42H,61H
+                DB      64H,55H,73H,65H,72H,49H,44H,1aH
+                DB      12H
+                DP      DGROUP:`W?tcommMaxBlockSize$nxi`
+                DB      0cH,74H,63H,6fH,6dH,6dH,4dH,61H
+                DB      78H,42H,6cH,6fH,63H,6bH,53H,69H
+                DB      7aH,65H,21H,12H
+                DP      DGROUP:`W?tcommmgrTOTAL_BLOCK_SIZE$nxi`
+                DB      0cH,74H,63H,6fH,6dH,6dH,6dH,67H
+                DB      72H,54H,4fH,54H,41H,4cH,5fH,42H
+                DB      4cH,4fH,43H,4bH,5fH,53H,49H,5aH
+                DB      45H,20H,12H
+                DP      DGROUP:`W?tcommmgrMAX_PACKET_SIZE$nxi`
+                DB      0cH,74H,63H,6fH,6dH,6dH,6dH,67H
+                DB      72H,4dH,41H,58H,5fH,50H,41H,43H
+                DB      4bH,45H,54H,5fH,53H,49H,5aH,45H
+                DB      18H,12H
+                DP      DGROUP:`W?tcommmgrNBLOCKS$nxi`
+                DB      0cH,74H,63H,6fH,6dH,6dH,6dH,67H
+                DB      72H,4eH,42H,4cH,4fH,43H,4bH,53H
+                DB      12H,12H
+                DP      DGROUP:`W?M_NORMAL$nxuc`
+                DB      80H,85H,4dH,5fH,4eH,4fH,52H,4dH
+                DB      41H,4cH,13H,12H
+                DP      DGROUP:`W?M_INTENSE$nxuc`
+                DB      80H,85H,4dH,5fH,49H,4eH,54H,45H
+                DB      4eH,53H,45H,15H,12H
+                DP      DGROUP:`W?M_UNDERLINE$nxuc`
+                DB      80H,85H,4dH,5fH,55H,4eH,44H,45H
+                DB      52H,4cH,49H,4eH,45H,13H,12H
+                DP      DGROUP:`W?M_REVERSE$nxuc`
+                DB      80H,85H,4dH,5fH,52H,45H,56H,45H
+                DB      52H,53H,45H,11H,12H
+                DP      DGROUP:`W?M_BLINK$nxuc`
+                DB      80H,85H,4dH,5fH,42H,4cH,49H,4eH
+                DB      4bH,0fH,12H
+                DP      DGROUP:`W?tNull$n$TNULL$$`
+                DB      80H,0a0H,74H,4eH,75H,6cH,6cH,08H
+                DB      32H
+                DP      `W?.fn_init$n()v`
+                DB      1eH,24H,00H,00H,00H,00H,3cH,00H
+                DB      00H,00H,00H,00H,0eH,07H,18H,00H
+                DB      00H,00H,80H,9dH,00H,00H,2eH,66H
+                DB      6eH,5fH,69H,6eH,69H,74H,08H,32H
+                DP      `W?$dt:TComm$n()_`
+                DB      15H,26H,00H,00H,80H,0b5H,06H,8eH
+                DB      10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,21H,24H,00H,00H,00H
+                DB      00H,22H,00H,00H,00H,0eaH,02H,0dH
+                DB      06H,14H,00H,00H,00H,80H,0a3H,30H
+                DB      1cH,02H,30H,1cH,30H,1fH,7eH,54H
+                DB      43H,6fH,6dH,6dH,09H,11H,10H,0f8H
+                DB      13H,74H,68H,69H,73H,0bH,11H,10H
+                DB      0fcH,0dH,2eH,63H,64H,74H,6fH,72H
+                DB      08H,32H
+                DP      `W?GetError$:TComm$n()$ERROR$:1$`
+                DB      15H,26H,00H,00H,80H,0b5H,06H,8eH
+                DB      10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,20H,24H,00H,00H,00H
+                DB      00H,24H,00H,00H,00H,3cH,03H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0b8H,40H
+                DB      01H,30H,1cH,47H,65H,74H,45H,72H
+                DB      72H,6fH,72H,09H,11H,10H,0fcH,13H
+                DB      74H,68H,69H,73H,08H,32H
+                DP      `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                DB      15H,26H,00H,00H,80H,0b5H,06H,8eH
+                DB      10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,22H,24H,00H,00H,00H
+                DB      00H,2eH,00H,00H,00H,82H,03H,0dH
+                DB      06H,14H,00H,00H,00H,80H,0b9H,40H
+                DB      02H,30H,1cH,30H,1fH,53H,65H,74H
+                DB      45H,72H,72H,6fH,72H,09H,11H,10H
+                DB      0f8H,13H,74H,68H,69H,73H,08H,11H
+                DB      10H,0fcH,21H,65H,72H,72H,08H,32H
+                DP      `W?ClearError$:TComm$n()v`
+                DB      15H,26H,00H,00H,80H,0b5H,06H,8eH
+                DB      10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,22H,24H,00H,00H,00H
+                DB      00H,1fH,00H,00H,00H,0d2H,03H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0baH,00H
+                DB      01H,30H,1cH,43H,6cH,65H,61H,72H
+                DB      45H,72H,72H,6fH,72H,09H,11H,10H
+                DB      0fcH,13H,74H,68H,69H,73H,08H,32H
+                DP      `W?GetUserID$:TComm$n()ui`
+                DB      15H,26H,00H,00H,80H,0b5H,06H,8eH
+                DB      10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,22H,24H,00H,00H,00H
+                DB      00H,24H,00H,00H,00H,1aH,04H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0bdH,30H
+                DB      1cH,01H,30H,1cH,47H,65H,74H,55H
+                DB      73H,65H,72H,49H,44H,09H,11H,10H
+                DB      0fcH,13H,74H,68H,69H,73H,08H,32H
+                DP      `W?$Wdf0vDataAvailable$n(pn$sPacket$$)i0$:TCommMgr$n()pn$sPacket$$`
+                DB      06H,26H,00H,00H,80H,0cdH,1fH,24H
+                DB      00H,00H,00H,00H,1fH,00H,00H,00H
+                DB      62H,04H,0eH,07H,18H,00H,00H,00H
+                DB      80H,0c3H,30H,1cH,00H,5fH,5fH,64H
+                DB      65H,66H,61H,72H,67H,08H,32H
+                DP      `W?$Wdf0s_SendData$n(pn$sPacket$$i)i1$:TCommMgr$n()i`
+                DB      06H,26H,00H,00H,80H,0cdH,1fH,24H
+                DB      00H,00H,00H,00H,1fH,00H,00H,00H
+                DB      8fH,04H,0eH,07H,18H,00H,00H,00H
+                DB      80H,0bbH,30H,1cH,00H,5fH,5fH,64H
+                DB      65H,66H,61H,72H,67H,08H,32H
+                DP      `W?GetBuffer$:TCommMgr$n()pna`
+                DB      15H,26H,00H,00H,80H,0cdH,06H,8eH
+                DB      10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,22H,24H,00H,00H,00H
+                DB      00H,24H,00H,00H,00H,0bcH,04H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0d0H,30H
+                DB      1cH,01H,30H,1cH,47H,65H,74H,42H
+                DB      75H,66H,66H,65H,72H,09H,11H,10H
+                DB      0fcH,13H,74H,68H,69H,73H,08H,32H
+                DP      `W?SetUserAbortFn$:TCommMgr$n(pn(i)i)pn(i)i`
+                DB      06H,26H,00H,00H,80H,0cdH,27H,24H
+                DB      00H,00H,00H,00H,31H,00H,00H,00H
+                DB      04H,05H,0eH,07H,18H,00H,00H,00H
+                DB      80H,0daH,30H,1cH,01H,30H,1cH,53H
+                DB      65H,74H,55H,73H,65H,72H,41H,62H
+                DB      6fH,72H,74H,46H,6eH,09H,11H,10H
+                DB      0fcH,19H,70H,4eH,65H,77H,09H,11H
+                DB      10H,0f8H,19H,70H,4fH,6cH,64H,23H
+                DB      24H,31H,00H,00H,00H,54H,00H,00H
+                DB      00H,00H,00H,0dH,06H,14H,00H,00H
+                DB      00H,80H,0e1H,30H,1cH,02H,30H,1cH
+                DB      30H,1fH,43H,68H,65H,63H,6bH,73H
+                DB      75H,6dH,0aH,11H,10H,0f8H,13H,70H
+                DB      44H,61H,74H,61H,08H,11H,10H,0fcH
+                DB      4bH,6cH,65H,6eH,0dH,11H,10H,0ecH
+                DB      4bH,63H,68H,65H,63H,6bH,73H,75H
+                DB      6dH,0bH,11H,10H,0f0H,80H,0e2H,70H
+                DB      54H,65H,6dH,70H,06H,11H,10H,0f4H
+                DB      0cH,69H,08H,32H
+                DP      `W?$dt:TNULL$n()_`
+                DB      15H,26H,00H,00H,80H,0a0H,06H,8eH
+                DB      10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,21H,24H,00H,00H,00H
+                DB      00H,60H,00H,00H,00H,9eH,05H,0dH
+                DB      06H,14H,00H,00H,00H,80H,0a3H,30H
+                DB      1cH,02H,30H,1cH,30H,1fH,7eH,54H
+                DB      4eH,55H,4cH,4cH,09H,11H,10H,0f8H
+                DB      13H,74H,68H,69H,73H,0bH,11H,10H
+                DB      0fcH,0dH,2eH,63H,64H,74H,6fH,72H
+                DB      08H,32H
+                DP      `W?GetUserID$:TNULL$n()ui`
+                DB      15H,26H,00H,00H,80H,0a0H,06H,8eH
+                DB      10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,22H,24H,00H,00H,00H
+                DB      00H,22H,00H,00H,00H,0f0H,05H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0a4H,30H
+                DB      1cH,01H,30H,1cH,47H,65H,74H,55H
+                DB      73H,65H,72H,49H,44H,09H,11H,10H
+                DB      0fcH,13H,74H,68H,69H,73H,08H,32H
+                DP      `W?GetUserList$:TNULL$n(pnui)ui`
+                DB      15H,26H,00H,00H,80H,0a0H,06H,8eH
+                DB      10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,26H,24H,00H,00H,00H
+                DB      00H,23H,00H,00H,00H,38H,06H,0dH
+                DB      06H,14H,00H,00H,00H,80H,0a5H,30H
+                DB      1cH,02H,30H,1cH,30H,1fH,47H,65H
+                DB      74H,55H,73H,65H,72H,4cH,69H,73H
+                DB      74H,09H,11H,10H,0f8H,13H,74H,68H
+                DB      69H,73H,08H,11H,10H,0fcH,5aH,2eH
+                DB      23H,6cH,08H,32H
+                DP      `W?$ct:TNULL$n()_`
+                DB      15H,26H,00H,00H,80H,0a0H,06H,8eH
+                DB      10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,1eH,24H,00H,00H,00H
+                DB      00H,43H,00H,00H,00H,8cH,06H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0a2H,30H
+                DB      1cH,01H,30H,1cH,54H,4eH,55H,4cH
+                DB      4cH,09H,11H,10H,0fcH,13H,74H,68H
+                DB      69H,73H,15H,26H,00H,00H,80H,0a0H
+                DB      06H,8eH,10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,1cH,24H,43H,00H,00H
+                DB      00H,33H,00H,00H,00H,0c8H,06H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0a6H,40H
+                DB      01H,30H,1cH,49H,6eH,69H,74H,09H
+                DB      11H,10H,0fcH,13H,74H,68H,69H,73H
+                DB      15H,26H,00H,00H,80H,0a0H,06H,8eH
+                DB      10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,1fH,24H,76H,00H,00H
+                DB      00H,33H,00H,00H,00H,02H,07H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0a6H,40H
+                DB      01H,30H,1cH,43H,6fH,6eH,6eH,65H
+                DB      63H,74H,09H,11H,10H,0fcH,13H,74H
+                DB      68H,69H,73H,15H,26H,00H,00H,80H
+                DB      0a0H,06H,8eH,10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,22H,24H,0a9H,00H,00H
+                DB      00H,33H,00H,00H,00H,3fH,07H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0a6H,40H
+                DB      01H,30H,1cH,44H,69H,73H,63H,6fH
+                DB      6eH,6eH,65H,63H,74H,09H,11H,10H
+                DB      0fcH,13H,74H,68H,69H,73H,15H,26H
+                DB      00H,00H,80H,0a0H,06H,8eH,10H,0f8H
+                DB      61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,24H,24H,0dcH,00H,00H
+                DB      00H,34H,00H,00H,00H,7fH,07H,0dH
+                DB      06H,14H,00H,00H,00H,80H,0aeH,40H
+                DB      02H,30H,1cH,30H,1fH,53H,65H,6eH
+                DB      64H,50H,61H,63H,6bH,65H,74H,09H
+                DB      11H,10H,0f8H,13H,74H,68H,69H,73H
+                DB      09H,11H,10H,0fcH,80H,0adH,2eH,23H
+                DB      6eH,15H,26H,00H,00H,80H,0a0H,06H
+                DB      8eH,10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,27H,24H,10H,01H,00H
+                DB      00H,34H,00H,00H,00H,0caH,07H,0dH
+                DB      06H,14H,00H,00H,00H,80H,0aeH,40H
+                DB      02H,30H,1cH,30H,1fH,52H,65H,63H
+                DB      65H,69H,76H,65H,50H,61H,63H,6bH
+                DB      65H,74H,09H,11H,10H,0f8H,13H,74H
+                DB      68H,69H,73H,09H,11H,10H,0fcH,80H
+                DB      0adH,2eH,23H,6fH,15H,26H,00H,00H
+                DB      80H,0a0H,06H,8eH,10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,27H,24H,44H,01H,00H
+                DB      00H,34H,00H,00H,00H,18H,08H,0dH
+                DB      06H,14H,00H,00H,00H,80H,0b1H,40H
+                DB      02H,30H,1cH,30H,1fH,44H,69H,73H
+                DB      63H,61H,72H,64H,50H,61H,63H,6bH
+                DB      65H,74H,09H,11H,10H,0f8H,13H,74H
+                DB      68H,69H,73H,09H,11H,10H,0fcH,80H
+                DB      0b0H,2eH,23H,70H,15H,26H,00H,00H
+                DB      80H,0a0H,06H,8eH,10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,2aH,24H,78H,01H,00H
+                DB      00H,22H,00H,00H,00H,66H,08H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0afH,30H
+                DB      1cH,01H,30H,1cH,49H,73H,50H,61H
+                DB      63H,6bH,65H,74H,41H,76H,61H,69H
+                DB      6cH,61H,62H,6cH,65H,09H,11H,10H
+                DB      0fcH,13H,74H,68H,69H,73H,15H,26H
+                DB      00H,00H,80H,0cdH,06H,8eH,10H,0fcH
+                DB      61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,21H,24H,9aH,01H,00H
+                DB      00H,2bH,00H,00H,00H,0aeH,08H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0d2H,30H
+                DB      1cH,01H,30H,1cH,47H,65H,74H,45H
+                DB      72H,72H,6fH,72H,09H,11H,10H,0fcH
+                DB      13H,74H,68H,69H,73H,15H,26H,00H
+                DB      00H,80H,0cdH,06H,8eH,10H,0fcH,61H
+                DB      21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,22H,24H,0c5H,01H,00H
+                DB      00H,28H,00H,00H,00H,0edH,08H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0d2H,30H
+                DB      1cH,01H,30H,1cH,47H,65H,74H,55H
+                DB      73H,65H,72H,49H,44H,09H,11H,10H
+                DB      0fcH,13H,74H,68H,69H,73H,15H,26H
+                DB      00H,00H,80H,0cdH,06H,8eH,10H,0f8H
+                DB      61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,26H,24H,0edH,01H,00H
+                DB      00H,36H,00H,00H,00H,2dH,09H,0dH
+                DB      06H,14H,00H,00H,00H,80H,0d9H,30H
+                DB      1cH,02H,30H,1cH,30H,1fH,47H,65H
+                DB      74H,55H,73H,65H,72H,4cH,69H,73H
+                DB      74H,09H,11H,10H,0f8H,13H,74H,68H
+                DB      69H,73H,0bH,11H,10H,0fcH,80H,0d8H
+                DB      70H,4cH,69H,73H,74H,15H,26H,00H
+                DB      00H,80H,0cdH,06H,8eH,10H,0fcH,61H
+                DB      21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,21H,24H,23H,02H,00H
+                DB      00H,85H,00H,00H,00H,7cH,09H,0eH
+                DB      07H,18H,00H,00H,00H,80H,0cfH,30H
+                DB      1cH,01H,30H,1cH,54H,43H,6fH,6dH
+                DB      6dH,4dH,67H,72H,09H,11H,10H,0fcH
+                DB      13H,74H,68H,69H,73H,0cH,23H,0bbH
+                DB      02H,00H,00H,3bH,00H,00H,00H,0dcH
+                DB      09H,15H,26H,00H,00H,80H,0cdH,06H
+                DB      8eH,10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,23H,24H,0a8H,02H,00H
+                DB      00H,5dH,00H,00H,00H,0c7H,09H,0dH
+                DB      06H,14H,00H,00H,00H,14H,30H,1cH
+                DB      02H,30H,1cH,30H,1fH,7eH,54H,43H
+                DB      6fH,6dH,6dH,4dH,67H,72H,09H,11H
+                DB      10H,0f8H,13H,74H,68H,69H,73H,0bH
+                DB      11H,10H,0fcH,0dH,2eH,63H,64H,74H
+                DB      6fH,72H,0cH,23H,1eH,03H,00H,00H
+                DB      24H,00H,00H,00H,1fH,0aH,0cH,23H
+                DB      1eH,03H,00H,00H,24H,00H,00H,00H
+                DB      40H,0aH,15H,26H,00H,00H,80H,0cdH
+                DB      06H,8eH,10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,1fH,24H,05H,03H,00H
+                DB      00H,56H,00H,00H,00H,2bH,0aH,0dH
+                DB      06H,14H,00H,00H,00H,80H,0d1H,30H
+                DB      1cH,02H,30H,1cH,30H,1fH,49H,6eH
+                DB      69H,74H,09H,11H,10H,0f8H,13H,74H
+                DB      68H,69H,73H,0aH,11H,10H,0fcH,80H
+                DB      0caH,70H,43H,6fH,6dH,15H,26H,00H
+                DB      00H,80H,0cdH,06H,8eH,10H,0fcH,61H
+                DB      21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,20H,24H,5bH,03H,00H
+                DB      00H,35H,00H,00H,00H,72H,0aH,0eH
+                DB      07H,18H,00H,00H,00H,80H,0d2H,30H
+                DB      1cH,01H,30H,1cH,43H,6fH,6eH,6eH
+                DB      65H,63H,74H,09H,11H,10H,0fcH,13H
+                DB      74H,68H,69H,73H,15H,26H,00H,00H
+                DB      80H,0cdH,06H,8eH,10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,23H,24H,90H,03H,00H
+                DB      00H,35H,00H,00H,00H,0b0H,0aH,0eH
+                DB      07H,18H,00H,00H,00H,80H,0d2H,30H
+                DB      1cH,01H,30H,1cH,44H,69H,73H,63H
+                DB      6fH,6eH,6eH,65H,63H,74H,09H,11H
+                DB      10H,0fcH,13H,74H,68H,69H,73H,0cH
+                DB      23H,5dH,04H,00H,00H,69H,00H,00H
+                DB      00H,0cH,0bH,0fH,11H,10H,0c0H,80H
+                DB      0acH,61H,63H,6bH,50H,61H,63H,6bH
+                DB      65H,74H,0cH,23H,5dH,04H,00H,00H
+                DB      6dH,00H,00H,00H,18H,0bH,0cH,23H
+                DB      5dH,04H,00H,00H,6dH,00H,00H,00H
+                DB      24H,0bH,0cH,23H,0f9H,03H,00H,00H
+                DB      0e9H,00H,00H,00H,3aH,0bH,0aH,11H
+                DB      10H,0e4H,80H,0adH,70H,41H,63H,6bH
+                DB      0cH,23H,0f9H,03H,00H,00H,0e9H,00H
+                DB      00H,00H,5bH,0bH,15H,26H,00H,00H
+                DB      80H,0cdH,06H,8eH,10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,24H,24H,0c5H,03H,00H
+                DB      00H,2dH,01H,00H,00H,46H,0bH,0eH
+                DB      07H,18H,00H,00H,00H,80H,0d2H,30H
+                DB      1cH,01H,30H,1cH,45H,6eH,51H,75H
+                DB      65H,75H,65H,44H,61H,74H,61H,09H
+                DB      11H,10H,0fcH,13H,74H,68H,69H,73H
+                DB      09H,11H,10H,0f4H,0cH,72H,65H,74H
+                DB      76H,15H,26H,00H,00H,80H,0cdH,06H
+                DB      8eH,10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,24H,24H,0f2H,04H,00H
+                DB      00H,63H,00H,00H,00H,91H,0bH,0eH
+                DB      07H,18H,00H,00H,00H,80H,0dcH,30H
+                DB      1cH,01H,30H,1cH,44H,65H,51H,75H
+                DB      65H,75H,65H,44H,61H,74H,61H,09H
+                DB      11H,10H,0fcH,13H,74H,68H,69H,73H
+                DB      0bH,11H,10H,0f8H,80H,0adH,70H,52H
+                DB      65H,74H,76H,0cH,23H,0edH,05H,00H
+                DB      00H,3cH,00H,00H,00H,0eaH,0bH,0cH
+                DB      23H,0edH,05H,00H,00H,3cH,00H,00H
+                DB      00H,0f6H,0bH,0cH,23H,0d1H,05H,00H
+                DB      00H,6eH,00H,00H,00H,0cH,0cH,0aH
+                DB      11H,10H,0e0H,80H,0adH,70H,41H,63H
+                DB      6bH,0cH,23H,0d1H,05H,00H,00H,6eH
+                DB      00H,00H,00H,18H,0cH,0cH,23H,0bcH
+                DB      05H,00H,00H,83H,00H,00H,00H,2dH
+                DB      0cH,09H,11H,10H,0e4H,0cH,6cH,61H
+                DB      73H,74H,0cH,23H,0bcH,05H,00H,00H
+                DB      83H,00H,00H,00H,4eH,0cH,15H,26H
+                DB      00H,00H,80H,0cdH,06H,8eH,10H,0f4H
+                DB      61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,26H,24H,55H,05H,00H
+                DB      00H,0fdH,00H,00H,00H,39H,0cH,0cH
+                DB      05H,10H,00H,00H,00H,80H,0dbH,30H
+                DB      1cH,03H,30H,1cH,30H,1fH,30H,1dH
+                DB      5fH,53H,65H,6eH,64H,44H,61H,74H
+                DB      61H,09H,11H,10H,0f4H,13H,74H,68H
+                DB      69H,73H,0dH,11H,10H,0f8H,80H,0adH
+                DB      70H,50H,61H,63H,6bH,65H,74H,08H
+                DB      11H,10H,0fcH,0cH,61H,63H,6bH,09H
+                DB      11H,10H,0ecH,0cH,72H,65H,74H,76H
+                DB      15H,26H,00H,00H,80H,0cdH,06H,8eH
+                DB      10H,0f0H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,27H,24H,52H,06H,00H
+                DB      00H,46H,00H,00H,00H,9bH,0cH,0bH
+                DB      06H,0cH,00H,00H,00H,80H,0d3H,30H
+                DB      1cH,04H,30H,1cH,30H,1fH,30H,1dH
+                DB      30H,1eH,53H,65H,6eH,64H,44H,61H
+                DB      74H,61H,09H,11H,10H,0f0H,13H,74H
+                DB      68H,69H,73H,07H,11H,10H,0f4H,0cH
+                DB      74H,6fH,09H,11H,10H,0f8H,0cH,74H
+                DB      79H,70H,65H,08H,11H,10H,0fcH,0cH
+                DB      6cH,65H,6eH,0aH,11H,10H,10H,13H
+                DB      70H,44H,61H,74H,61H,0cH,11H,10H
+                DB      0ccH,80H,0acH,70H,61H,63H,6bH,65H
+                DB      74H,0cH,23H,0d1H,07H,00H,00H,64H
+                DB      00H,00H,00H,1aH,0dH,0cH,23H,0d1H
+                DB      07H,00H,00H,64H,00H,00H,00H,3bH
+                DB      0dH,15H,26H,00H,00H,80H,0cdH,06H
+                DB      8eH,10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,23H,24H,98H,06H,00H
+                DB      00H,0b8H,01H,00H,00H,26H,0dH,0dH
+                DB      06H,14H,00H,00H,00H,80H,0d4H,30H
+                DB      1cH,02H,30H,1cH,30H,1fH,53H,65H
+                DB      6eH,64H,44H,61H,74H,61H,09H,11H
+                DB      10H,0f8H,13H,74H,68H,69H,73H,0dH
+                DB      11H,10H,0fcH,80H,0adH,70H,50H,61H
+                DB      63H,6bH,65H,74H,09H,11H,10H,0dcH
+                DB      80H,0e5H,6dH,62H,69H,0cH,11H,10H
+                DB      0bcH,80H,0acH,70H,61H,63H,6bH,65H
+                DB      74H,12H,11H,10H,0f0H,0cH,62H,79H
+                DB      74H,65H,73H,5fH,74H,6fH,5fH,73H
+                DB      65H,6eH,64H,06H,11H,10H,0f4H,0cH
+                DB      69H,0cH,23H,0abH,08H,00H,00H,4dH
+                DB      00H,00H,00H,0adH,0dH,0cH,23H,0abH
+                DB      08H,00H,00H,4dH,00H,00H,00H,0b9H
+                DB      0dH,0cH,23H,8cH,08H,00H,00H,88H
+                DB      00H,00H,00H,0d0H,0dH,0bH,11H,10H
+                DB      0ecH,80H,0adH,70H,4cH,61H,73H,74H
+                DB      0cH,23H,8cH,08H,00H,00H,88H,00H
+                DB      00H,00H,0f1H,0dH,15H,26H,00H,00H
+                DB      80H,0cdH,06H,8eH,10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,28H,24H,50H,08H,00H
+                DB      00H,05H,01H,00H,00H,0dcH,0dH,0dH
+                DB      06H,14H,00H,00H,00H,80H,0d4H,30H
+                DB      1cH,02H,30H,1cH,30H,1fH,44H,61H
+                DB      74H,61H,41H,76H,61H,69H,6cH,61H
+                DB      62H,6cH,65H,09H,11H,10H,0f8H,13H
+                DB      74H,68H,69H,73H,0dH,11H,10H,0fcH
+                DB      80H,0adH,70H,50H,61H,63H,6bH,65H
+                DB      74H,15H,26H,00H,00H,80H,0cdH,06H
+                DB      8eH,10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,26H,24H,55H,09H,00H
+                DB      00H,57H,00H,00H,00H,2fH,0eH,0dH
+                DB      06H,14H,00H,00H,00H,80H,0d4H,30H
+                DB      1cH,02H,30H,1cH,30H,1fH,52H,65H
+                DB      63H,65H,69H,76H,65H,44H,61H,74H
+                DB      61H,09H,11H,10H,0f8H,13H,74H,68H
+                DB      69H,73H,0dH,11H,10H,0fcH,80H,0adH
+                DB      70H,50H,61H,63H,6bH,65H,74H,15H
+                DB      26H,00H,00H,80H,0cdH,06H,8eH,10H
+                DB      0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,24H,24H,0acH,09H,00H
+                DB      00H,34H,00H,00H,00H,80H,0eH,0eH
+                DB      07H,18H,00H,00H,00H,80H,0d2H,30H
+                DB      1cH,01H,30H,1cH,44H,69H,73H,63H
+                DB      61H,72H,64H,44H,61H,74H,61H,09H
+                DB      11H,10H,0fcH,13H,74H,68H,69H,73H
+                DB      0cH,23H,03H,0aH,00H,00H,43H,00H
+                DB      00H,00H,0dfH,0eH,11H,11H,10H,0ecH
+                DB      80H,0adH,70H,43H,6fH,6dH,6dH,50H
+                DB      61H,63H,6bH,65H,74H,0cH,23H,03H
+                DB      0aH,00H,00H,43H,00H,00H,00H,00H
+                DB      0fH,15H,26H,00H,00H,80H,0cdH,06H
+                DB      8eH,10H,0f8H,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,27H,24H,0e0H,09H,00H
+                DB      00H,75H,00H,00H,00H,0ebH,0eH,0dH
+                DB      06H,14H,00H,00H,00H,80H,0d4H,30H
+                DB      1cH,02H,30H,1cH,30H,1fH,5fH,52H
+                DB      65H,63H,65H,69H,76H,65H,44H,61H
+                DB      74H,61H,09H,11H,10H,0f8H,13H,74H
+                DB      68H,69H,73H,0dH,11H,10H,0fcH,80H
+                DB      0adH,70H,50H,61H,63H,6bH,65H,74H
+                DB      09H,11H,10H,0f4H,0cH,72H,65H,74H
+                DB      76H,0cH,23H,58H,0bH,00H,00H,0b7H
+                DB      00H,00H,00H,6dH,0fH,0eH,11H,11H
+                DB      28H,0feH,80H,0adH,70H,50H,61H,63H
+                DB      6bH,65H,74H,0dH,11H,11H,08H,0feH
+                DB      80H,0acH,70H,61H,63H,6bH,65H,74H
+                DB      0cH,23H,58H,0bH,00H,00H,0b7H,00H
+                DB      00H,00H,0c1H,0fH,0cH,23H,4aH,0cH
+                DB      00H,00H,00H,00H,00H,00H,85H,0fH
+                DB      0cH,23H,4aH,0cH,00H,00H,00H,00H
+                DB      00H,00H,91H,0fH,0cH,23H,37H,0cH
+                DB      00H,00H,13H,00H,00H,00H,9dH,0fH
+                DB      0cH,23H,37H,0cH,00H,00H,13H,00H
+                DB      00H,00H,0c1H,0fH,0cH,23H,55H,0cH
+                DB      00H,00H,0cH,00H,00H,00H,0b5H,0fH
+                DB      0cH,23H,55H,0cH,00H,00H,0cH,00H
+                DB      00H,00H,0c1H,0fH,0cH,23H,30H,0bH
+                DB      00H,00H,31H,01H,00H,00H,0d4H,0fH
+                DB      07H,11H,11H,04H,0feH,0cH,69H,0cH
+                DB      23H,30H,0bH,00H,00H,31H,01H,00H
+                DB      00H,0f5H,0fH,15H,26H,00H,00H,80H
+                DB      0cdH,06H,8eH,10H,0fcH,61H,21H
+                DP      DGROUP:L74
+                DB      68H,01H,66H,2bH,24H,55H,0aH,00H
+                DB      00H,91H,02H,00H,00H,0e0H,0fH,0eH
+                DB      07H,18H,00H,00H,00H,80H,0d2H,30H
+                DB      1cH,01H,30H,1cH,52H,65H,63H,65H
+                DB      69H,76H,65H,4cH,61H,72H,67H,65H
+                DB      50H,61H,63H,6bH,65H,74H,09H,11H
+                DB      10H,0fcH,13H,74H,68H,69H,73H,0fH
+                DB      11H,11H,2cH,0feH,80H,0e6H,72H,65H
+                DB      63H,65H,69H,76H,65H,64H,0bH,11H
+                DB      10H,0bcH,80H,0acH,62H,6cH,6fH,63H
+                DB      6bH,09H,11H,10H,0dcH,80H,0e5H,6dH
+                DB      62H,69H,0eH,11H,10H,0ecH,0cH,6eH
+                DB      52H,65H,63H,65H,69H,76H,65H,64H
+                DB      0aH,11H,10H,0f0H,80H,0e7H,70H,43H
+                DB      75H,72H,0cH,11H,10H,0f4H,0eH,74H
+                DB      69H,6dH,65H,6fH,75H,74H,11H,11H
+                DB      10H,0f8H,80H,0adH,70H,43H,6fH,6dH
+                DB      6dH,50H,61H,63H,6bH,65H,74H
+$$SYMBOLS       ENDS
+
+$$TYPES         SEGMENT BYTE USE16 'DEBTYP'
+                DB      06H,13H,6cH,1bH,00H,00H,06H,11H
+                DB      65H,6eH,75H,6dH,07H,11H,75H,6eH
+                DB      69H,6fH,6eH,08H,11H,73H,74H,72H
+                DB      75H,63H,74H,07H,11H,63H,6cH,61H
+                DB      73H,73H,0cH,10H,11H,5fH,5fH,73H
+                DB      65H,67H,6dH,65H,6eH,74H,07H,10H
+                DB      00H,63H,68H,61H,72H,03H,10H,00H
+                DB      03H,10H,10H,03H,10H,11H,03H,10H
+                DB      01H,03H,10H,11H,06H,10H,03H,69H
+                DB      6eH,74H,0fH,10H,13H,75H,6eH,73H
+                DB      69H,67H,6eH,65H,64H,20H,69H,6eH
+                DB      74H,03H,10H,03H,03H,10H,13H,03H
+                DB      10H,23H,03H,10H,27H,03H,10H,30H
+                DB      03H,46H,12H,04H,72H,13H,00H,03H
+                DB      46H,14H,08H,60H,03H,00H,0cH,00H
+                DB      00H,00H,0fH,67H,01H,84H,22H,08H
+                DB      69H,0dH,5fH,5fH,69H,6eH,64H,65H
+                DB      78H,0fH,67H,01H,84H,22H,04H,69H
+                DB      0dH,5fH,5fH,64H,65H,6cH,74H,61H
+                DB      09H,67H,01H,6bH,15H,5fH,5fH,66H
+                DB      6eH,05H,72H,0cH,01H,0cH,03H,46H
+                DB      17H,0dH,12H,00H,18H,70H,49H,6eH
+                DB      74H,46H,6eH,49H,6eH,74H,0dH,12H
+                DB      00H,13H,68H,54H,45H,52H,4dH,49H
+                DB      4eH,41H,4cH,0cH,12H,00H,06H,54H
+                DB      45H,52H,4dH,49H,4eH,41H,4cH,09H
+                DB      12H,00H,13H,68H,50H,4fH,52H,54H
+                DB      0bH,12H,00H,0fH,52H,45H,41H,4cH
+                DB      50H,54H,52H,09H,12H,00H,0bH,73H
+                DB      57H,4fH,52H,44H,05H,50H,0dH,00H
+                DB      00H,10H,51H,0cH,55H,4eH,4bH,4eH
+                DB      4fH,57H,4eH,5fH,45H,52H,52H,4fH
+                DB      52H,0eH,51H,0bH,4eH,4fH,54H,5fH
+                DB      41H,5fH,4dH,4fH,44H,45H,4dH,0aH
+                DB      51H,0aH,54H,49H,4dH,45H,4fH,55H
+                DB      54H,0fH,51H,09H,42H,41H,44H,5fH
+                DB      43H,48H,45H,43H,4bH,53H,55H,4dH
+                DB      0eH,51H,08H,53H,45H,4eH,44H,5fH
+                DB      46H,41H,49H,4cH,45H,44H,14H,51H
+                DB      07H,55H,4eH,45H,58H,50H,45H,43H
+                DB      54H,45H,44H,5fH,50H,41H,43H,4bH
+                DB      45H,54H,11H,51H,06H,55H,4eH,4bH
+                DB      4eH,4fH,57H,4eH,5fH,50H,41H,43H
+                DB      4bH,45H,54H,17H,51H,05H,50H,41H
+                DB      43H,4bH,45H,54H,5fH,4eH,4fH,54H
+                DB      5fH,41H,56H,41H,49H,4cH,41H,42H
+                DB      4cH,45H,10H,51H,04H,50H,41H,43H
+                DB      4bH,45H,54H,5fH,46H,41H,49H,4cH
+                DB      45H,44H,14H,51H,03H,43H,4fH,4eH
+                DB      4eH,45H,43H,54H,49H,4fH,4eH,5fH
+                DB      46H,41H,49H,4cH,45H,44H,0eH,51H
+                DB      02H,49H,4eH,49H,54H,5fH,46H,41H
+                DB      49H,4cH,45H,44H,0dH,51H,01H,4eH
+                DB      55H,4cH,4cH,5fH,43H,4cH,41H,53H
+                DB      53H,09H,51H,00H,41H,4cH,4cH,5fH
+                DB      4fH,4bH,09H,12H,01H,1fH,45H,52H
+                DB      52H,4fH,52H,09H,12H,00H,1fH,45H
+                DB      52H,52H,4fH,52H,05H,50H,08H,00H
+                DB      00H,12H,51H,0fH,42H,41H,44H,5fH
+                DB      50H,41H,43H,4bH,45H,54H,5fH,54H
+                DB      59H,50H,45H,0dH,51H,0eH,43H,4fH
+                DB      4eH,4eH,45H,43H,54H,5fH,4fH,4bH
+                DB      0aH,51H,0dH,43H,4fH,4eH,4eH,45H
+                DB      43H,54H,0bH,51H,0cH,44H,41H,54H
+                DB      41H,5fH,4eH,41H,4bH,0bH,51H,0bH
+                DB      44H,41H,54H,41H,5fH,41H,43H,4bH
+                DB      0cH,51H,0aH,42H,4cH,4fH,43H,4bH
+                DB      5fH,45H,4eH,44H,0dH,51H,09H,42H
+                DB      4cH,4fH,43H,4bH,5fH,44H,41H,54H
+                DB      41H,0fH,51H,08H,42H,4cH,4fH,43H
+                DB      4bH,5fH,48H,45H,41H,44H,45H,52H
+                DB      14H,12H,01H,22H,5fH,58H,46H,45H
+                DB      52H,5fH,41H,44H,44H,49H,54H,49H
+                DB      4fH,4eH,41H,4cH,14H,12H,00H,22H
+                DB      5fH,58H,46H,45H,52H,5fH,41H,44H
+                DB      44H,49H,54H,49H,4fH,4eH,41H,4cH
+                DB      05H,50H,08H,00H,00H,18H,51H,07H
+                DB      5fH,58H,46H,45H,52H,5fH,42H,4cH
+                DB      4fH,43H,4bH,5fH,56H,4fH,49H,43H
+                DB      45H,5fH,45H,4eH,44H,1bH,51H,06H
+                DB      5fH,58H,46H,45H,52H,5fH,42H,4cH
+                DB      4fH,43H,4bH,5fH,56H,4fH,49H,43H
+                DB      45H,5fH,48H,45H,41H,44H,45H,52H
+                DB      14H,51H,05H,5fH,58H,46H,45H,52H
+                DB      5fH,42H,4cH,4fH,43H,4bH,5fH,56H
+                DB      4fH,49H,43H,45H,13H,51H,04H,5fH
+                DB      58H,46H,45H,52H,5fH,42H,4cH,4fH
+                DB      43H,4bH,5fH,4eH,41H,4dH,45H,1dH
+                DB      51H,03H,5fH,58H,46H,45H,52H,5fH
+                DB      42H,4cH,4fH,43H,4bH,5fH,52H,45H
+                DB      51H,55H,45H,53H,54H,5fH,52H,45H
+                DB      53H,45H,4eH,44H,11H,51H,02H,5fH
+                DB      58H,46H,45H,52H,5fH,42H,4cH,4fH
+                DB      43H,4bH,5fH,49H,44H,19H,51H,01H
+                DB      5fH,58H,46H,45H,52H,5fH,42H,4cH
+                DB      4fH,43H,4bH,5fH,52H,45H,51H,55H
+                DB      45H,53H,54H,5fH,49H,44H,13H,51H
+                DB      00H,5fH,58H,46H,45H,52H,5fH,42H
+                DB      4cH,4fH,43H,4bH,5fH,44H,41H,54H
+                DB      41H,07H,12H,00H,25H,2eH,23H,6bH
+                DB      05H,50H,04H,00H,00H,1cH,51H,03H
+                DB      5fH,4eH,45H,54H,42H,49H,4fH,53H
+                DB      5fH,49H,4eH,49H,54H,5fH,4eH,4fH
+                DB      5fH,54H,45H,4dH,50H,4eH,41H,4dH
+                DB      45H,1bH,51H,02H,5fH,4eH,45H,54H
+                DB      42H,49H,4fH,53H,5fH,49H,4eH,49H
+                DB      54H,5fH,4eH,4fH,5fH,4eH,45H,54H
+                DB      42H,49H,4fH,53H,1aH,51H,01H,5fH
+                DB      4eH,45H,54H,42H,49H,4fH,53H,5fH
+                DB      49H,4eH,49H,54H,5fH,4eH,4fH,5fH
+                DB      4dH,45H,4dH,4fH,52H,59H,19H,51H
+                DB      00H,5fH,4eH,45H,54H,42H,49H,4fH
+                DB      53H,5fH,49H,4eH,49H,54H,5fH,4eH
+                DB      4fH,5fH,45H,52H,52H,4fH,52H,07H
+                DB      12H,00H,27H,2eH,23H,6aH,05H,50H
+                DB      02H,00H,00H,1aH,51H,01H,5fH,4eH
+                DB      45H,54H,42H,49H,4fH,53H,5fH,44H
+                DB      45H,4cH,45H,54H,45H,5fH,49H,4eH
+                DB      56H,41H,4cH,49H,44H,1bH,51H,00H
+                DB      5fH,4eH,45H,54H,42H,49H,4fH,53H
+                DB      5fH,44H,45H,4cH,45H,54H,45H,5fH
+                DB      43H,4fH,4dH,50H,4cH,45H,54H,45H
+                DB      07H,12H,00H,29H,2eH,23H,69H,05H
+                DB      50H,03H,00H,00H,19H,51H,02H,5fH
+                DB      4eH,45H,54H,42H,49H,4fH,53H,5fH
+                DB      41H,44H,44H,5fH,4cH,49H,53H,54H
+                DB      5fH,46H,55H,4cH,4cH,19H,51H,01H
+                DB      5fH,4eH,45H,54H,42H,49H,4fH,53H
+                DB      5fH,41H,44H,44H,5fH,44H,55H,50H
+                DB      4cH,49H,43H,41H,54H,45H,18H,51H
+                DB      00H,5fH,4eH,45H,54H,42H,49H,4fH
+                DB      53H,5fH,41H,44H,44H,5fH,43H,4fH
+                DB      4dH,50H,4cH,45H,54H,45H,07H,12H
+                DB      00H,2bH,2eH,23H,68H,05H,50H,04H
+                DB      00H,00H,16H,51H,03H,5fH,49H,50H
+                DB      58H,5fH,49H,4eH,49H,54H,5fH,4eH
+                DB      4fH,5fH,53H,4fH,43H,4bH,45H,54H
+                DB      13H,51H,02H,5fH,49H,50H,58H,5fH
+                DB      49H,4eH,49H,54H,5fH,4eH,4fH,5fH
+                DB      49H,50H,58H,16H,51H,01H,5fH,49H
+                DB      50H,58H,5fH,49H,4eH,49H,54H,5fH
+                DB      4eH,4fH,5fH,4dH,45H,4dH,4fH,52H
+                DB      59H,15H,51H,00H,5fH,49H,50H,58H
+                DB      5fH,49H,4eH,49H,54H,5fH,4eH,4fH
+                DB      5fH,45H,52H,52H,4fH,52H,07H,12H
+                DB      00H,2dH,2eH,23H,67H,05H,50H,02H
+                DB      00H,00H,16H,51H,01H,5fH,49H,50H
+                DB      58H,5fH,44H,45H,4cH,45H,54H,45H
+                DB      5fH,49H,4eH,56H,41H,4cH,49H,44H
+                DB      17H,51H,00H,5fH,49H,50H,58H,5fH
+                DB      44H,45H,4cH,45H,54H,45H,5fH,43H
+                DB      4fH,4dH,50H,4cH,45H,54H,45H,07H
+                DB      12H,00H,2fH,2eH,23H,66H,05H,50H
+                DB      03H,00H,00H,15H,51H,02H,5fH,49H
+                DB      50H,58H,5fH,41H,44H,44H,5fH,4cH
+                DB      49H,53H,54H,5fH,46H,55H,4cH,4cH
+                DB      15H,51H,01H,5fH,49H,50H,58H,5fH
+                DB      41H,44H,44H,5fH,44H,55H,50H,4cH
+                DB      49H,43H,41H,54H,45H,14H,51H,00H
+                DB      5fH,49H,50H,58H,5fH,41H,44H,44H
+                DB      5fH,43H,4fH,4dH,50H,4cH,45H,54H
+                DB      45H,07H,12H,00H,31H,2eH,23H,65H
+                DB      05H,50H,06H,00H,00H,12H,51H,05H
+                DB      5fH,4eH,45H,54H,4eH,4fH,57H,5fH
+                DB      4eH,45H,54H,42H,49H,4fH,53H,0eH
+                DB      51H,04H,5fH,4eH,45H,54H,4eH,4fH
+                DB      57H,5fH,49H,50H,58H,15H,51H,03H
+                DB      5fH,4eH,45H,54H,4eH,4fH,57H,5fH
+                DB      4eH,4fH,5fH,52H,45H,41H,4cH,4dH
+                DB      45H,4dH,15H,51H,02H,5fH,4eH,45H
+                DB      54H,4eH,4fH,57H,5fH,49H,4eH,49H
+                DB      54H,5fH,45H,52H,52H,4fH,52H,15H
+                DB      51H,01H,5fH,4eH,45H,54H,4eH,4fH
+                DB      57H,5fH,4eH,4fH,5fH,4eH,45H,54H
+                DB      57H,4fH,52H,4bH,13H,51H,00H,5fH
+                DB      4eH,45H,54H,4eH,4fH,57H,5fH,4eH
+                DB      4fH,5fH,45H,52H,52H,4fH,52H,07H
+                DB      12H,00H,33H,2eH,23H,64H,05H,50H
+                DB      02H,00H,00H,19H,51H,01H,5fH,4eH
+                DB      45H,54H,4eH,4fH,57H,5fH,44H,45H
+                DB      4cH,45H,54H,45H,5fH,49H,4eH,56H
+                DB      41H,4cH,49H,44H,1aH,51H,00H,5fH
+                DB      4eH,45H,54H,4eH,4fH,57H,5fH,44H
+                DB      45H,4cH,45H,54H,45H,5fH,43H,4fH
+                DB      4dH,50H,4cH,45H,54H,45H,07H,12H
+                DB      00H,35H,2eH,23H,63H,05H,50H,03H
+                DB      00H,00H,18H,51H,02H,5fH,4eH,45H
+                DB      54H,4eH,4fH,57H,5fH,41H,44H,44H
+                DB      5fH,4cH,49H,53H,54H,5fH,46H,55H
+                DB      4cH,4cH,18H,51H,01H,5fH,4eH,45H
+                DB      54H,4eH,4fH,57H,5fH,41H,44H,44H
+                DB      5fH,44H,55H,50H,4cH,49H,43H,41H
+                DB      54H,45H,17H,51H,00H,5fH,4eH,45H
+                DB      54H,4eH,4fH,57H,5fH,41H,44H,44H
+                DB      5fH,43H,4fH,4dH,50H,4cH,45H,54H
+                DB      45H,07H,12H,00H,37H,2eH,23H,62H
+                DB      05H,50H,03H,00H,00H,0fH,51H,02H
+                DB      5fH,53H,41H,4dH,50H,4cH,45H,5fH
+                DB      44H,4fH,4eH,45H,12H,51H,01H,5fH
+                DB      53H,41H,4dH,50H,4cH,45H,5fH,4cH
+                DB      4fH,4fH,50H,49H,4eH,47H,14H,51H
+                DB      00H,5fH,53H,41H,4dH,50H,4cH,45H
+                DB      5fH,50H,52H,4fH,43H,45H,53H,53H
+                DB      45H,44H,07H,12H,00H,39H,2eH,23H
+                DB      61H,05H,50H,14H,00H,00H,17H,51H
+                DB      13H,5fH,45H,52H,52H,5fH,49H,4eH
+                DB      56H,41H,4cH,49H,44H,5fH,44H,4dH
+                DB      41H,5fH,49H,52H,51H,13H,51H,12H
+                DB      5fH,45H,52H,52H,5fH,49H,4eH,56H
+                DB      41H,4cH,49H,44H,5fH,44H,4dH,41H
+                DB      13H,51H,11H,5fH,45H,52H,52H,5fH
+                DB      49H,4eH,56H,41H,4cH,49H,44H,5fH
+                DB      49H,52H,51H,14H,51H,10H,5fH,45H
+                DB      52H,52H,5fH,49H,4eH,56H,41H,4cH
+                DB      49H,44H,5fH,50H,4fH,52H,54H,15H
+                DB      51H,0fH,5fH,45H,52H,52H,5fH,44H
+                DB      52H,56H,5fH,46H,49H,4cH,45H,5fH
+                DB      46H,41H,49H,4cH,14H,51H,0eH,5fH
+                DB      45H,52H,52H,5fH,49H,4eH,56H,41H
+                DB      4cH,49H,44H,5fH,44H,41H,54H,41H
+                DB      12H,51H,0dH,5fH,45H,52H,52H,5fH
+                DB      4eH,4fH,54H,5fH,50H,41H,55H,53H
+                DB      45H,44H,0eH,51H,0cH,5fH,45H,52H
+                DB      52H,5fH,50H,41H,55H,53H,45H,44H
+                DB      12H,51H,0bH,5fH,45H,52H,52H,5fH
+                DB      4eH,4fH,5fH,48H,41H,4eH,44H,4cH
+                DB      45H,53H,16H,51H,0aH,5fH,45H,52H
+                DB      52H,5fH,49H,4eH,56H,41H,4cH,49H
+                DB      44H,5fH,48H,41H,4eH,44H,4cH,45H
+                DB      15H,51H,09H,5fH,45H,52H,52H,5fH
+                DB      44H,52H,49H,56H,45H,52H,5fH,4cH
+                DB      4fH,41H,44H,45H,44H,19H,51H,08H
+                DB      5fH,45H,52H,52H,5fH,44H,45H,54H
+                DB      45H,43H,54H,49H,4fH,4eH,5fH,46H
+                DB      41H,49H,4cH,55H,52H,45H,17H,51H
+                DB      07H,5fH,45H,52H,52H,5fH,4eH,4fH
+                DB      5fH,44H,52H,49H,56H,45H,52H,5fH
+                DB      46H,4fH,55H,4eH,44H,19H,51H,06H
+                DB      5fH,45H,52H,52H,5fH,49H,4eH,56H
+                DB      41H,4cH,49H,44H,5fH,44H,52H,49H
+                DB      56H,45H,52H,5fH,49H,44H,13H,51H
+                DB      05H,5fH,45H,52H,52H,5fH,4dH,45H
+                DB      4dH,4fH,52H,59H,5fH,46H,41H,49H
+                DB      4cH,19H,51H,04H,5fH,45H,52H,52H
+                DB      5fH,46H,41H,49H,4cH,5fH,4fH,4eH
+                DB      5fH,46H,49H,4cH,45H,5fH,4fH,50H
+                DB      45H,4eH,1aH,51H,03H,5fH,45H,52H
+                DB      52H,5fH,44H,45H,54H,45H,43H,54H
+                DB      5fH,49H,4eH,49H,54H,49H,41H,4cH
+                DB      49H,5aH,45H,44H,17H,51H,02H,5fH
+                DB      45H,52H,52H,5fH,49H,4eH,56H,41H
+                DB      4cH,49H,44H,5fH,50H,4fH,49H,4eH
+                DB      54H,45H,52H,19H,51H,01H,5fH,45H
+                DB      52H,52H,5fH,44H,52H,49H,56H,45H
+                DB      52H,5fH,4eH,4fH,54H,5fH,4cH,4fH
+                DB      41H,44H,45H,44H,10H,51H,00H,5fH
+                DB      45H,52H,52H,5fH,4eH,4fH,5fH,45H
+                DB      52H,52H,4fH,52H,07H,12H,00H,3bH
+                DB      2eH,23H,39H,05H,50H,24H,00H,01H
+                DB      1dH,52H,23H,10H,5fH,54H,49H,4dH
+                DB      45H,52H,5fH,38H,5fH,47H,45H,4eH
+                DB      45H,52H,41H,4cH,5fH,50H,4fH,52H
+                DB      54H,5fH,52H,45H,43H,19H,52H,22H
+                DB      10H,5fH,54H,49H,4dH,45H,52H,5fH
+                DB      38H,5fH,47H,45H,4eH,45H,52H,41H
+                DB      4cH,5fH,50H,4fH,52H,54H,1fH,52H
+                DB      21H,10H,5fH,54H,49H,4dH,45H,52H
+                DB      5fH,38H,5fH,53H,4fH,55H,4eH,44H
+                DB      5fH,53H,4fH,55H,52H,43H,45H,5fH
+                DB      54H,41H,4eH,44H,59H,19H,52H,20H
+                DB      10H,5fH,54H,49H,4dH,45H,52H,5fH
+                DB      38H,5fH,53H,4fH,55H,4eH,44H,5fH
+                DB      53H,4fH,55H,52H,43H,45H,17H,52H
+                DB      1fH,10H,5fH,54H,49H,4dH,45H,52H
+                DB      5fH,55H,4eH,44H,45H,46H,49H,4eH
+                DB      45H,44H,5fH,31H,36H,17H,52H,1eH
+                DB      10H,5fH,54H,49H,4dH,45H,52H,5fH
+                DB      55H,4eH,44H,45H,46H,49H,4eH,45H
+                DB      44H,5fH,31H,35H,17H,52H,1dH,10H
+                DB      5fH,54H,49H,4dH,45H,52H,5fH,55H
+                DB      4eH,44H,45H,46H,49H,4eH,45H,44H
+                DB      5fH,31H,34H,17H,52H,1cH,10H,5fH
+                DB      54H,49H,4dH,45H,52H,5fH,55H,4eH
+                DB      44H,45H,46H,49H,4eH,45H,44H,5fH
+                DB      31H,33H,17H,52H,1bH,10H,5fH,54H
+                DB      49H,4dH,45H,52H,5fH,55H,4eH,44H
+                DB      45H,46H,49H,4eH,45H,44H,5fH,31H
+                DB      32H,17H,52H,1aH,10H,5fH,54H,49H
+                DB      4dH,45H,52H,5fH,55H,4eH,44H,45H
+                DB      46H,49H,4eH,45H,44H,5fH,31H,31H
+                DB      17H,52H,19H,10H,5fH,54H,49H,4dH
+                DB      45H,52H,5fH,55H,4eH,44H,45H,46H
+                DB      49H,4eH,45H,44H,5fH,31H,30H,16H
+                DB      52H,18H,10H,5fH,54H,49H,4dH,45H
+                DB      52H,5fH,55H,4eH,44H,45H,46H,49H
+                DB      4eH,45H,44H,5fH,46H,16H,52H,17H
+                DB      10H,5fH,54H,49H,4dH,45H,52H,5fH
+                DB      55H,4eH,44H,45H,46H,49H,4eH,45H
+                DB      44H,5fH,45H,16H,52H,16H,10H,5fH
+                DB      54H,49H,4dH,45H,52H,5fH,55H,4eH
+                DB      44H,45H,46H,49H,4eH,45H,44H,5fH
+                DB      44H,16H,52H,15H,10H,5fH,54H,49H
+                DB      4dH,45H,52H,5fH,55H,4eH,44H,45H
+                DB      46H,49H,4eH,45H,44H,5fH,43H,16H
+                DB      52H,14H,10H,5fH,54H,49H,4dH,45H
+                DB      52H,5fH,55H,4eH,44H,45H,46H,49H
+                DB      4eH,45H,44H,5fH,42H,16H,52H,13H
+                DB      10H,5fH,54H,49H,4dH,45H,52H,5fH
+                DB      55H,4eH,44H,45H,46H,49H,4eH,45H
+                DB      44H,5fH,41H,16H,52H,12H,10H,5fH
+                DB      54H,49H,4dH,45H,52H,5fH,55H,4eH
+                DB      44H,45H,46H,49H,4eH,45H,44H,5fH
+                DB      39H,16H,52H,11H,10H,5fH,54H,49H
+                DB      4dH,45H,52H,5fH,55H,4eH,44H,45H
+                DB      46H,49H,4eH,45H,44H,5fH,38H,16H
+                DB      52H,10H,10H,5fH,54H,49H,4dH,45H
+                DB      52H,5fH,55H,4eH,44H,45H,46H,49H
+                DB      4eH,45H,44H,5fH,37H,16H,52H,0fH
+                DB      10H,5fH,54H,49H,4dH,45H,52H,5fH
+                DB      55H,4eH,44H,45H,46H,49H,4eH,45H
+                DB      44H,5fH,36H,16H,52H,0eH,10H,5fH
+                DB      54H,49H,4dH,45H,52H,5fH,55H,4eH
+                DB      44H,45H,46H,49H,4eH,45H,44H,5fH
+                DB      35H,16H,52H,0dH,10H,5fH,54H,49H
+                DB      4dH,45H,52H,5fH,55H,4eH,44H,45H
+                DB      46H,49H,4eH,45H,44H,5fH,34H,16H
+                DB      52H,0cH,10H,5fH,54H,49H,4dH,45H
+                DB      52H,5fH,55H,4eH,44H,45H,46H,49H
+                DB      4eH,45H,44H,5fH,33H,16H,52H,0bH
+                DB      10H,5fH,54H,49H,4dH,45H,52H,5fH
+                DB      55H,4eH,44H,45H,46H,49H,4eH,45H
+                DB      44H,5fH,32H,16H,52H,0aH,10H,5fH
+                DB      54H,49H,4dH,45H,52H,5fH,55H,4eH
+                DB      44H,45H,46H,49H,4eH,45H,44H,5fH
+                DB      31H,1aH,52H,09H,10H,5fH,54H,49H
+                DB      4dH,45H,52H,5fH,38H,5fH,4dH,4fH
+                DB      4eH,4fH,5fH,55H,4cH,41H,57H,5fH
+                DB      52H,45H,43H,15H,52H,08H,10H,5fH
+                DB      54H,49H,4dH,45H,52H,5fH,38H,5fH
+                DB      4dH,4fH,4eH,4fH,5fH,52H,45H,43H
+                DB      15H,52H,07H,10H,5fH,54H,49H,4dH
+                DB      45H,52H,5fH,31H,36H,5fH,53H,54H
+                DB      5fH,55H,4cH,41H,57H,17H,52H,06H
+                DB      10H,5fH,54H,49H,4dH,45H,52H,5fH
+                DB      31H,36H,5fH,4dH,4fH,4eH,4fH,5fH
+                DB      55H,4cH,41H,57H,14H,52H,05H,10H
+                DB      5fH,54H,49H,4dH,45H,52H,5fH,38H
+                DB      5fH,53H,54H,5fH,55H,4cH,41H,57H
+                DB      16H,52H,04H,10H,5fH,54H,49H,4dH
+                DB      45H,52H,5fH,38H,5fH,4dH,4fH,4eH
+                DB      4fH,5fH,55H,4cH,41H,57H,10H,52H
+                DB      03H,10H,5fH,54H,49H,4dH,45H,52H
+                DB      5fH,31H,36H,5fH,53H,54H,12H,52H
+                DB      02H,10H,5fH,54H,49H,4dH,45H,52H
+                DB      5fH,31H,36H,5fH,4dH,4fH,4eH,4fH
+                DB      0fH,52H,01H,10H,5fH,54H,49H,4dH
+                DB      45H,52H,5fH,38H,5fH,53H,54H,11H
+                DB      52H,00H,10H,5fH,54H,49H,4dH,45H
+                DB      52H,5fH,38H,5fH,4dH,4fH,4eH,4fH
+                DB      07H,12H,00H,3dH,2eH,23H,38H,05H
+                DB      50H,02H,00H,00H,0eH,51H,01H,5fH
+                DB      42H,41H,43H,4bH,47H,52H,4fH,55H
+                DB      4eH,44H,0eH,51H,00H,5fH,46H,4fH
+                DB      52H,45H,47H,52H,4fH,55H,4eH,44H
+                DB      07H,12H,00H,3fH,2eH,23H,37H,05H
+                DB      50H,04H,00H,00H,0fH,51H,03H,5fH
+                DB      49H,4eH,54H,45H,52H,4cH,45H,41H
+                DB      56H,45H,44H,12H,51H,02H,5fH,43H
+                DB      45H,4eH,54H,45H,52H,5fH,43H,48H
+                DB      41H,4eH,4eH,45H,4cH,11H,51H,01H
+                DB      5fH,52H,49H,47H,48H,54H,5fH,43H
+                DB      48H,41H,4eH,4eH,45H,4cH,10H,51H
+                DB      00H,5fH,4cH,45H,46H,54H,5fH,43H
+                DB      48H,41H,4eH,4eH,45H,4cH,07H,12H
+                DB      00H,41H,2eH,23H,36H,05H,50H,0dH
+                DB      00H,00H,1aH,51H,0cH,5fH,44H,52H
+                DB      56H,5fH,53H,45H,54H,5fH,43H,41H
+                DB      4cH,4cH,5fH,46H,55H,4eH,43H,54H
+                DB      49H,4fH,4eH,53H,1aH,51H,0bH,5fH
+                DB      44H,52H,56H,5fH,47H,45H,54H,5fH
+                DB      43H,41H,4cH,4cH,5fH,46H,55H,4eH
+                DB      43H,54H,49H,4fH,4eH,53H,15H,51H
+                DB      0aH,5fH,44H,52H,56H,5fH,47H,45H
+                DB      54H,5fH,46H,49H,4cH,4cH,5fH,49H
+                DB      4eH,46H,4fH,17H,51H,09H,5fH,44H
+                DB      52H,56H,5fH,50H,4cH,41H,59H,5fH
+                DB      46H,4fH,52H,45H,47H,52H,4fH,55H
+                DB      4eH,44H,14H,51H,08H,5fH,44H,52H
+                DB      56H,5fH,43H,41H,50H,41H,42H,49H
+                DB      4cH,49H,54H,49H,45H,53H,0eH,51H
+                DB      07H,5fH,44H,52H,56H,5fH,52H,45H
+                DB      53H,55H,4dH,45H,0dH,51H,06H,5fH
+                DB      44H,52H,56H,5fH,50H,41H,55H,53H
+                DB      45H,0cH,51H,05H,5fH,44H,52H,56H
+                DB      5fH,53H,54H,4fH,50H,0dH,51H,04H
+                DB      5fH,44H,52H,56H,5fH,53H,54H,41H
+                DB      52H,54H,11H,51H,03H,5fH,44H,52H
+                DB      56H,5fH,53H,45H,54H,41H,43H,54H
+                DB      49H,4fH,4eH,0fH,51H,02H,5fH,44H
+                DB      52H,56H,5fH,53H,45H,54H,52H,41H
+                DB      54H,45H,0eH,51H,01H,5fH,44H,52H
+                DB      56H,5fH,55H,4eH,49H,4eH,49H,54H
+                DB      0cH,51H,00H,5fH,44H,52H,56H,5fH
+                DB      49H,4eH,49H,54H,07H,12H,00H,43H
+                DB      2eH,23H,35H,0aH,12H,00H,0dH,48H
+                DB      41H,4eH,44H,4cH,45H,03H,47H,12H
+                DB      0aH,12H,00H,46H,48H,50H,56H,4fH
+                DB      49H,44H,08H,12H,00H,0eH,4cH,4fH
+                DB      4eH,47H,03H,47H,48H,0aH,12H,00H
+                DB      49H,48H,50H,4cH,4fH,4eH,47H,08H
+                DB      12H,00H,0dH,57H,4fH,52H,44H,03H
+                DB      47H,4bH,0aH,12H,00H,4cH,48H,50H
+                DB      57H,4fH,52H,44H,08H,12H,00H,08H
+                DB      42H,59H,54H,45H,03H,47H,4eH,09H
+                DB      12H,00H,4fH,48H,50H,53H,54H,52H
+                DB      0aH,12H,00H,4fH,48H,50H,42H,59H
+                DB      54H,45H,0aH,12H,00H,46H,4cH,50H
+                DB      56H,4fH,49H,44H,0aH,12H,00H,49H
+                DB      4cH,50H,4cH,4fH,4eH,47H,0aH,12H
+                DB      00H,4cH,4cH,50H,57H,4fH,52H,44H
+                DB      09H,12H,00H,4fH,4cH,50H,53H,54H
+                DB      52H,0aH,12H,00H,4fH,4cH,50H,42H
+                DB      59H,54H,45H,09H,12H,00H,13H,50H
+                DB      56H,4fH,49H,44H,03H,46H,48H,09H
+                DB      12H,00H,58H,50H,4cH,4fH,4eH,47H
+                DB      03H,46H,4bH,09H,12H,00H,5aH,50H
+                DB      57H,4fH,52H,44H,03H,46H,06H,08H
+                DB      12H,00H,5cH,50H,53H,54H,52H,03H
+                DB      46H,4eH,09H,12H,00H,5eH,50H,42H
+                DB      59H,54H,45H,09H,12H,00H,0fH,44H
+                DB      57H,4fH,52H,44H,08H,12H,00H,0dH
+                DB      55H,49H,4eH,54H,08H,12H,00H,0cH
+                DB      42H,4fH,4fH,4cH,05H,50H,02H,00H
+                DB      00H,08H,51H,01H,5fH,54H,52H,55H
+                DB      45H,09H,51H,00H,5fH,46H,41H,4cH
+                DB      53H,45H,07H,12H,00H,63H,2eH,23H
+                DB      34H,07H,12H,00H,0cH,49H,4eH,54H
+                DB      0aH,12H,00H,0bH,55H,53H,48H,4fH
+                DB      52H,54H,09H,12H,00H,0aH,53H,48H
+                DB      4fH,52H,54H,0aH,12H,00H,0bH,67H
+                DB      72H,69H,70H,5fH,74H,05H,50H,04H
+                DB      00H,00H,0dH,51H,03H,47H,52H,49H
+                DB      50H,5fH,56H,41H,4cH,49H,44H,0dH
+                DB      51H,02H,47H,52H,49H,50H,5fH,45H
+                DB      4dH,50H,54H,59H,14H,51H,01H,47H
+                DB      52H,49H,50H,5fH,4fH,55H,54H,5fH
+                DB      4fH,46H,5fH,52H,41H,4eH,47H,45H
+                DB      0cH,51H,00H,47H,52H,49H,50H,5fH
+                DB      5aH,45H,52H,4fH,07H,12H,00H,69H
+                DB      2eH,23H,33H,0dH,12H,00H,0cH,70H
+                DB      74H,72H,64H,69H,66H,66H,5fH,74H
+                DB      0cH,12H,00H,0dH,62H,69H,74H,6dH
+                DB      61H,70H,5fH,74H,05H,50H,04H,00H
+                DB      00H,0aH,51H,03H,4dH,5fH,4dH,4fH
+                DB      44H,41H,4cH,09H,51H,02H,4dH,5fH
+                DB      53H,45H,4dH,49H,0dH,51H,01H,4dH
+                DB      5fH,4dH,4fH,44H,45H,4cH,45H,53H
+                DB      53H,0dH,51H,00H,4dH,5fH,49H,4eH
+                DB      41H,43H,54H,49H,56H,45H,0dH,12H
+                DB      01H,6dH,6dH,6fH,64H,61H,6cH,54H
+                DB      79H,70H,65H,0dH,12H,00H,6dH,6dH
+                DB      6fH,64H,61H,6cH,54H,79H,70H,65H
+                DB      05H,50H,06H,00H,00H,0fH,51H,05H
+                DB      43H,54H,52H,4cH,5fH,4cH,49H,53H
+                DB      54H,42H,4fH,58H,0eH,51H,04H,43H
+                DB      54H,52H,4cH,5fH,43H,48H,4bH,42H
+                DB      4fH,58H,0fH,51H,03H,43H,54H,52H
+                DB      4cH,5fH,52H,42H,55H,54H,54H,4fH
+                DB      4eH,0dH,51H,02H,43H,54H,52H,4cH
+                DB      5fH,4cH,41H,42H,45H,4cH,0cH,51H
+                DB      01H,43H,54H,52H,4cH,5fH,54H,45H
+                DB      58H,54H,0eH,51H,00H,43H,54H,52H
+                DB      4cH,5fH,42H,55H,54H,54H,4fH,4eH
+                DB      0aH,12H,01H,70H,63H,74H,72H,6cH
+                DB      5fH,74H,0aH,12H,00H,70H,63H,74H
+                DB      72H,6cH,5fH,74H,05H,50H,05H,00H
+                DB      00H,11H,51H,04H,44H,47H,5fH,4aH
+                DB      55H,53H,54H,5fH,42H,4fH,54H,54H
+                DB      4fH,4dH,0eH,51H,03H,44H,47H,5fH
+                DB      4aH,55H,53H,54H,5fH,54H,4fH,50H
+                DB      10H,51H,02H,44H,47H,5fH,4aH,55H
+                DB      53H,54H,5fH,52H,49H,47H,48H,54H
+                DB      11H,51H,01H,44H,47H,5fH,4aH,55H
+                DB      53H,54H,5fH,43H,45H,4eH,54H,45H
+                DB      52H,0fH,51H,00H,44H,47H,5fH,4aH
+                DB      55H,53H,54H,5fH,4cH,45H,46H,54H
+                DB      0bH,12H,01H,73H,6aH,75H,73H,74H
+                DB      69H,66H,79H,0bH,12H,00H,73H,6aH
+                DB      75H,73H,74H,69H,66H,79H,05H,50H
+                DB      04H,00H,00H,0eH,51H,03H,4dH,53H
+                DB      47H,5fH,41H,42H,4fH,52H,54H,45H
+                DB      44H,0dH,51H,02H,4dH,53H,47H,5fH
+                DB      4eH,4fH,54H,49H,43H,45H,0cH,51H
+                DB      01H,4dH,53H,47H,5fH,45H,56H,45H
+                DB      4eH,54H,0bH,51H,00H,4dH,53H,47H
+                DB      5fH,4eH,55H,4cH,4cH,09H,12H,01H
+                DB      76H,6dH,73H,67H,5fH,74H,09H,12H
+                DB      00H,76H,6dH,73H,67H,5fH,74H,05H
+                DB      50H,0bH,00H,00H,09H,51H,0aH,4eH
+                DB      5fH,4cH,41H,53H,54H,10H,51H,09H
+                DB      4eH,5fH,50H,41H,55H,53H,45H,5fH
+                DB      43H,4cH,4fH,43H,4bH,10H,51H,08H
+                DB      4eH,5fH,54H,49H,4dH,45H,52H,5fH
+                DB      46H,49H,52H,45H,44H,14H,51H,07H
+                DB      4eH,5fH,43H,48H,41H,4eH,47H,45H
+                DB      5fH,4cH,4fH,43H,41H,54H,49H,4fH
+                DB      4eH,17H,51H,06H,4eH,5fH,4eH,45H
+                DB      58H,54H,5fH,43H,4fH,4eH,56H,5fH
+                DB      45H,58H,43H,48H,41H,4eH,47H,45H
+                DB      15H,51H,05H,4eH,5fH,44H,4fH,5fH
+                DB      43H,4fH,4eH,56H,5fH,45H,58H,43H
+                DB      48H,41H,4eH,47H,45H,0aH,51H,04H
+                DB      4eH,5fH,43H,4cH,49H,43H,4bH,09H
+                DB      51H,03H,4eH,5fH,51H,55H,49H,54H
+                DB      0aH,51H,02H,4eH,5fH,53H,45H,54H
+                DB      55H,50H,08H,51H,01H,4eH,5fH,43H
+                DB      55H,45H,09H,51H,00H,4eH,5fH,4eH
+                DB      55H,4cH,4cH,0cH,12H,01H,79H,6eH
+                DB      6fH,74H,69H,63H,65H,5fH,74H,0cH
+                DB      12H,00H,79H,6eH,6fH,74H,69H,63H
+                DB      65H,5fH,74H,09H,12H,00H,0bH,65H
+                DB      76H,74H,5fH,74H,05H,50H,02H,00H
+                DB      00H,07H,51H,01H,54H,52H,55H,45H
+                DB      08H,51H,00H,46H,41H,4cH,53H,45H
+                DB      08H,12H,01H,7dH,62H,6fH,6fH,6cH
+                DB      08H,12H,00H,7dH,62H,6fH,6fH,6cH
+                DB      08H,12H,00H,0dH,67H,72H,69H,70H
+                DB      06H,72H,12H,01H,80H,80H,04H,46H
+                DB      80H,81H,0dH,12H,00H,80H,82H,44H
+                DB      72H,61H,77H,50H,72H,6fH,63H,09H
+                DB      12H,00H,0cH,63H,6fH,6fH,72H,64H
+                DB      09H,12H,00H,08H,75H,63H,68H,61H
+                DB      72H,09H,12H,00H,13H,64H,67H,72H
+                DB      69H,70H,0bH,12H,00H,0fH,74H,69H
+                DB      63H,6bH,73H,5fH,74H,0aH,12H,00H
+                DB      0dH,75H,69H,6eH,74H,33H,32H,08H
+                DB      12H,00H,0dH,75H,69H,6eH,74H,09H
+                DB      12H,00H,0cH,69H,6eH,74H,33H,32H
+                DB      0aH,12H,00H,0bH,75H,69H,6eH,74H
+                DB      31H,36H,09H,12H,00H,0aH,69H,6eH
+                DB      74H,31H,36H,09H,12H,00H,08H,75H
+                DB      69H,6eH,74H,38H,08H,12H,00H,06H
+                DB      69H,6eH,74H,38H,05H,50H,16H,00H
+                DB      00H,0bH,51H,15H,52H,45H,53H,5fH
+                DB      4cH,41H,53H,54H,0cH,51H,14H,52H
+                DB      45H,53H,5fH,53H,54H,55H,46H,46H
+                DB      0fH,51H,13H,52H,45H,53H,5fH,4dH
+                DB      41H,50H,5fH,49H,4eH,46H,4fH,0eH
+                DB      51H,12H,52H,45H,53H,5fH,54H,49H
+                DB      4cH,45H,4cH,49H,42H,0bH,51H,11H
+                DB      52H,45H,53H,5fH,46H,4cH,49H,43H
+                DB      0bH,51H,10H,52H,45H,53H,5fH,53H
+                DB      41H,56H,45H,0cH,51H,0fH,52H,45H
+                DB      53H,5fH,52H,4fH,55H,54H,45H,0cH
+                DB      51H,0eH,52H,45H,53H,5fH,43H,48H
+                DB      55H,4eH,4bH,0cH,51H,0dH,52H,45H
+                DB      53H,5fH,53H,59H,4eH,43H,48H,0aH
+                DB      51H,0cH,52H,45H,53H,5fH,42H,4eH
+                DB      4bH,0dH,51H,0bH,52H,45H,53H,5fH
+                DB      43H,48H,4fH,52H,45H,4fH,0bH,51H
+                DB      0aH,52H,45H,53H,5fH,44H,43H,45H
+                DB      4cH,0bH,51H,09H,52H,45H,53H,5fH
+                DB      43H,4fH,4eH,56H,0cH,51H,08H,52H
+                DB      45H,53H,5fH,53H,51H,55H,49H,42H
+                DB      0bH,51H,07H,52H,45H,53H,5fH,46H
+                DB      4fH,4eH,54H,0bH,51H,06H,52H,45H
+                DB      53H,5fH,44H,41H,54H,41H,0aH,51H
+                DB      05H,52H,45H,53H,5fH,50H,41H,4cH
+                DB      0aH,51H,04H,52H,45H,53H,5fH,44H
+                DB      41H,43H,0bH,51H,03H,52H,45H,53H
+                DB      5fH,4dH,49H,44H,49H,0aH,51H,02H
+                DB      52H,45H,53H,5fH,50H,49H,43H,0bH
+                DB      51H,01H,52H,45H,53H,5fH,41H,4eH
+                DB      49H,4dH,0aH,51H,00H,52H,45H,53H
+                DB      5fH,43H,45H,4cH,0aH,12H,01H,80H
+                DB      8fH,72H,65H,73H,5fH,74H,0aH,12H
+                DB      00H,80H,8fH,72H,65H,73H,5fH,74H
+                DB      04H,72H,12H,00H,04H,46H,80H,92H
+                DB      0dH,12H,00H,80H,93H,6fH,6eH,65H
+                DB      78H,69H,74H,5fH,74H,0bH,12H,00H
+                DB      09H,77H,63H,68H,61H,72H,5fH,74H
+                DB      0aH,12H,00H,0eH,66H,70H,6fH,73H
+                DB      5fH,74H,0aH,12H,00H,0dH,73H,69H
+                DB      7aH,65H,5fH,74H,05H,50H,09H,00H
+                DB      01H,0bH,52H,00H,08H,49H,4eH,54H
+                DB      52H,5fH,4fH,46H,0bH,52H,00H,04H
+                DB      49H,4eH,54H,52H,5fH,44H,46H,0bH
+                DB      52H,00H,02H,49H,4eH,54H,52H,5fH
+                DB      49H,46H,0bH,52H,00H,01H,49H,4eH
+                DB      54H,52H,5fH,54H,46H,0bH,52H,80H
+                DB      00H,49H,4eH,54H,52H,5fH,53H,46H
+                DB      0aH,51H,40H,49H,4eH,54H,52H,5fH
+                DB      5aH,46H,0aH,51H,10H,49H,4eH,54H
+                DB      52H,5fH,41H,46H,0aH,51H,04H,49H
+                DB      4eH,54H,52H,5fH,50H,46H,0aH,51H
+                DB      01H,49H,4eH,54H,52H,5fH,43H,46H
+                DB      08H,12H,00H,80H,98H,2eH,23H,30H
+                DB      03H,46H,06H,05H,20H,00H,80H,9aH
+                DB      0eH,12H,00H,80H,9bH,5fH,5fH,76H
+                DB      61H,5fH,6cH,69H,73H,74H,04H,72H
+                DB      12H,00H,04H,46H,80H,9dH,04H,46H
+                DB      80H,9eH,0aH,12H,04H,80H,0c8H,54H
+                DB      4eH,55H,4cH,4cH,04H,48H,80H,0a0H
+                DB      05H,72H,80H,0a1H,00H,04H,72H,13H
+                DB      00H,04H,72H,4bH,00H,05H,72H,4bH
+                DB      01H,5aH,04H,72H,21H,00H,08H,60H
+                DB      07H,00H,1cH,00H,00H,00H,0cH,61H
+                DB      18H,4bH,63H,68H,65H,63H,6bH,73H
+                DB      75H,6dH,0aH,61H,14H,4bH,73H,65H
+                DB      6eH,64H,49H,44H,0aH,61H,10H,4bH
+                DB      64H,65H,73H,74H,49H,44H,07H,61H
+                DB      0cH,4bH,6cH,65H,6eH,06H,61H,08H
+                DB      4bH,49H,44H,09H,61H,04H,4bH,77H
+                DB      54H,79H,70H,65H,0dH,61H,00H,4bH
+                DB      77H,53H,65H,71H,75H,65H,6eH,63H
+                DB      65H,12H,12H,03H,80H,0a7H,73H,50H
+                DB      61H,63H,6bH,65H,74H,48H,65H,61H
+                DB      64H,65H,72H,12H,12H,00H,80H,0a8H
+                DB      73H,50H,61H,63H,6bH,65H,74H,48H
+                DB      65H,61H,64H,65H,72H,08H,60H,02H
+                DB      00H,20H,00H,00H,00H,09H,61H,1cH
+                DB      13H,70H,44H,61H,74H,61H,0bH,61H
+                DB      00H,80H,0a9H,68H,65H,61H,64H,65H
+                DB      72H,0cH,12H,03H,80H,0aaH,73H,50H
+                DB      61H,63H,6bH,65H,74H,0cH,12H,00H
+                DB      80H,0abH,73H,50H,61H,63H,6bH,65H
+                DB      74H,04H,46H,80H,0acH,06H,72H,21H
+                DB      01H,80H,0adH,04H,72H,62H,00H,04H
+                DB      46H,80H,0a9H,06H,72H,21H,01H,80H
+                DB      0b0H,04H,48H,80H,0a0H,04H,48H,80H
+                DB      0a0H,07H,72H,80H,0b2H,01H,80H,0b3H
+                DB      0aH,12H,04H,80H,0c7H,54H,43H,6fH
+                DB      6dH,6dH,04H,48H,80H,0b5H,05H,72H
+                DB      80H,0b6H,00H,04H,72H,21H,00H,05H
+                DB      72H,21H,01H,21H,04H,72H,12H,00H
+                DB      04H,72H,0cH,00H,05H,72H,12H,01H
+                DB      0cH,04H,72H,4bH,00H,05H,72H,4bH
+                DB      01H,5aH,04H,72H,21H,00H,06H,72H
+                DB      21H,01H,80H,0adH,04H,72H,62H,00H
+                DB      06H,72H,21H,01H,80H,0b0H,05H,72H
+                DB      80H,0adH,00H,04H,48H,80H,0b5H,04H
+                DB      48H,80H,0b5H,07H,72H,80H,0c4H,01H
+                DB      80H,0c5H,08H,60H,18H,00H,31H,00H
+                DB      00H,00H,11H,67H,02H,21H
+                DP      `W?$ct:TComm$n(rnx$0$)_`
+                DB      80H,0c6H,54H,43H,6fH,6dH,6dH,19H
+                DB      67H,04H,21H
+                DP      `W?GetLastPacket$:TComm$n()pn$sPacket$$`
+                DB      80H,0c3H,47H,65H,74H,4cH,61H,73H
+                DB      74H,50H,61H,63H,6bH,65H,74H,25H
+                DB      67H,04H,93H,22H,2dH,69H,61H,22H
+                DB      20H,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0c2H,44H,69H,73H
+                DB      63H,61H,72H,64H,50H,61H,63H,6bH
+                DB      65H,74H,29H,67H,04H,93H,22H,2dH
+                DB      69H,61H,22H,1cH,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0c1H,49H,73H,50H
+                DB      61H,63H,6bH,65H,74H,41H,76H,61H
+                DB      69H,6cH,61H,62H,6cH,65H,25H,67H
+                DB      04H,93H,22H,2dH,69H,61H,22H,18H
+                DB      69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0c0H,52H,65H,63H
+                DB      65H,69H,76H,65H,50H,61H,63H,6bH
+                DB      65H,74H,22H,67H,04H,93H,22H,2dH
+                DB      69H,61H,22H,14H,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0c0H,53H,65H,6eH
+                DB      64H,50H,61H,63H,6bH,65H,74H,22H
+                DB      67H,04H,93H,22H,2dH,69H,61H,22H
+                DB      10H,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0bfH,44H,69H,73H
+                DB      63H,6fH,6eH,6eH,65H,63H,74H,1fH
+                DB      67H,04H,93H,22H,2dH,69H,61H,22H
+                DB      0cH,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0bfH,43H,6fH,6eH
+                DB      6eH,65H,63H,74H,1cH,67H,04H,93H
+                DB      22H,2dH,69H,61H,22H,08H,69H,61H
+                DB      21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0bfH,49H,6eH,69H
+                DB      74H,23H,67H,02H,93H,22H,2dH,69H
+                DB      61H,22H,04H,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0beH,47H,65H,74H
+                DB      55H,73H,65H,72H,4cH,69H,73H,74H
+                DB      15H,67H,02H,21H
+                DP      `W?GetUserID$:TComm$n()ui`
+                DB      80H,0bdH,47H,65H,74H,55H,73H,65H
+                DB      72H,49H,44H,16H,67H,02H,21H
+                DP      `W?SetTimeout$:TComm$n(i)v`
+                DB      80H,0bcH,53H,65H,74H,54H,69H,6dH
+                DB      65H,6fH,75H,74H,16H,67H,02H,21H
+                DP      `W?GetTimeout$:TComm$n()i`
+                DB      80H,0bbH,47H,65H,74H,54H,69H,6dH
+                DB      65H,6fH,75H,74H,16H,67H,02H,21H
+                DP      `W?ClearError$:TComm$n()v`
+                DB      80H,0baH,43H,6cH,65H,61H,72H,45H
+                DB      72H,72H,6fH,72H,14H,67H,02H,21H
+                DP      `W?SetError$:TComm$n($ERROR$:1$)$2:1$`
+                DB      80H,0b9H,53H,65H,74H,45H,72H,72H
+                DB      6fH,72H,14H,67H,02H,21H
+                DP      `W?GetError$:TComm$n()$ERROR$:1$`
+                DB      80H,0b8H,47H,65H,74H,45H,72H,72H
+                DB      6fH,72H,1eH,67H,02H,93H,22H,2dH
+                DB      69H,61H,22H,00H,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0a3H,7eH,54H,43H
+                DB      6fH,6dH,6dH,11H,67H,02H,21H
+                DP      `W?$ct:TComm$n()_`
+                DB      80H,0b7H,54H,43H,6fH,6dH,6dH,10H
+                DB      67H,01H,84H,22H,2dH,69H,80H,9fH
+                DB      5fH,5fH,76H,66H,70H,74H,72H,0fH
+                DB      67H,08H,84H,22H,29H,69H,0cH,74H
+                DB      69H,6dH,65H,6fH,75H,74H,0dH,67H
+                DB      08H,84H,22H,28H,69H,21H,65H,72H
+                DB      72H,6fH,72H,14H,67H,04H,84H,22H
+                DB      24H,69H,4bH,77H,43H,6fH,6eH,73H
+                DB      6fH,6cH,65H,4eH,6fH,64H,65H,13H
+                DB      67H,04H,84H,22H,04H,69H,80H,0acH
+                DB      6cH,61H,73H,74H,50H,61H,63H,6bH
+                DB      65H,74H,10H,67H,04H,6bH,62H,70H
+                DB      61H,63H,6bH,65H,74H,41H,76H,61H
+                DB      69H,6cH,08H,60H,0eH,00H,31H,00H
+                DB      00H,00H,06H,69H,22H,00H,80H,0b5H
+                DB      11H,67H,02H,21H
+                DP      `W?$ct:TNULL$n(rnx$0$)_`
+                DB      80H,0b4H,54H,4eH,55H,4cH,4cH,25H
+                DB      67H,08H,93H,22H,2dH,69H,61H,22H
+                DB      20H,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0b1H,44H,69H,73H
+                DB      63H,61H,72H,64H,50H,61H,63H,6bH
+                DB      65H,74H,29H,67H,08H,93H,22H,2dH
+                DB      69H,61H,22H,1cH,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0afH,49H,73H,50H
+                DB      61H,63H,6bH,65H,74H,41H,76H,61H
+                DB      69H,6cH,61H,62H,6cH,65H,25H,67H
+                DB      08H,93H,22H,2dH,69H,61H,22H,18H
+                DB      69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0aeH,52H,65H,63H
+                DB      65H,69H,76H,65H,50H,61H,63H,6bH
+                DB      65H,74H,22H,67H,08H,93H,22H,2dH
+                DB      69H,61H,22H,14H,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0aeH,53H,65H,6eH
+                DB      64H,50H,61H,63H,6bH,65H,74H,22H
+                DB      67H,08H,93H,22H,2dH,69H,61H,22H
+                DB      10H,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0a6H,44H,69H,73H
+                DB      63H,6fH,6eH,6eH,65H,63H,74H,1fH
+                DB      67H,08H,93H,22H,2dH,69H,61H,22H
+                DB      0cH,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0a6H,43H,6fH,6eH
+                DB      6eH,65H,63H,74H,1cH,67H,08H,93H
+                DB      22H,2dH,69H,61H,22H,08H,69H,61H
+                DB      21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0a6H,49H,6eH,69H
+                DB      74H,23H,67H,02H,93H,22H,2dH,69H
+                DB      61H,22H,04H,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0a5H,47H,65H,74H
+                DB      55H,73H,65H,72H,4cH,69H,73H,74H
+                DB      21H,67H,02H,93H,22H,2dH,69H,61H
+                DB      22H,24H,69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0a4H,47H,65H,74H
+                DB      55H,73H,65H,72H,49H,44H,1eH,67H
+                DB      02H,93H,22H,2dH,69H,61H,22H,00H
+                DB      69H,61H,21H
+                DP      `W?.fn_init$n()v`
+                DB      68H,01H,66H,80H,0a3H,7eH,54H,4eH
+                DB      55H,4cH,4cH,11H,67H,02H,21H
+                DP      `W?$ct:TNULL$n()_`
+                DB      80H,0a2H,54H,4eH,55H,4cH,4cH,10H
+                DB      67H,01H,84H,22H,2dH,69H,80H,9fH
+                DB      5fH,5fH,76H,66H,70H,74H,72H,0aH
+                DB      12H,00H,80H,0b5H,54H,43H,6fH,6dH
+                DB      6dH,04H,46H,80H,0c9H,05H,21H,0ffH
+                DB      00H,06H,05H,20H,0fH,80H,0cbH,0dH
+                DB      12H,04H,80H,0e0H,54H,43H,6fH,6dH
+                DB      6dH,4dH,67H,72H,04H,48H,80H,0cdH
+                DB      05H,72H,80H,0ceH,00H,05H,72H,80H
+                DB      9aH,00H,06H,72H,0cH,01H,80H,0caH
+                DB      04H,72H,0cH,00H,08H,72H,0cH,04H
+                DB      0cH,0cH,0cH,13H,06H,72H,0cH,01H
+                DB      80H,0adH,03H,46H,0cH,0bH,72H,0cH
+                DB      04H,80H,0d5H,80H,0d5H,80H,0d5H,13H
+                DB      0aH,72H,0cH,03H,80H,0d5H,80H,0d5H
+                DB      80H,0d5H,03H,46H,0dH,06H,72H,0cH
+                DB      01H,80H,0d8H,05H,72H,19H,01H,19H
+                DB      07H,72H,0cH,02H,80H,0adH,0cH,05H
+                DB      72H,80H,0adH,00H,04H,48H,80H,0cdH
+                DB      04H,48H,80H,0cdH,07H,72H,80H,0ddH
+                DB      01H,80H,0deH,08H,60H,1fH,00H,18H
+                DB      10H,00H,00H,14H,67H,02H,21H
+                DP      `W?$ct:TCommMgr$n(rnx$0$)_`
+                DB      80H,0dfH,54H,43H,6fH,6dH,6dH,4dH
+                DB      67H,72H,17H,67H,08H,21H
+                DP      `W?DeQueueData$:TCommMgr$n()pn$sPacket$$`
+                DB      80H,0dcH,44H,65H,51H,75H,65H,75H
+                DB      65H,44H,61H,74H,61H,17H,67H,08H
+                DB      21H
+                DP      `W?EnQueueData$:TCommMgr$n()i`
+                DB      80H,0d2H,45H,6eH,51H,75H,65H,75H
+                DB      65H,44H,61H,74H,61H,1eH,67H,08H
+                DB      21H
+                DP      `W?ReceiveLargePacket$:TCommMgr$n()i`
+                DB      80H,0d2H,52H,65H,63H,65H,69H,76H
+                DB      65H,4cH,61H,72H,67H,65H,50H,61H
+                DB      63H,6bH,65H,74H,18H,67H,08H,21H
+                DP      `W?_ReceiveData$:TCommMgr$n(pn$sPacket$$)i`
+                DB      80H,0d4H,5fH,52H,65H,63H,65H,69H
+                DB      76H,65H,44H,61H,74H,61H,15H,67H
+                DB      08H,21H
+                DP      `W?_SendData$:TCommMgr$n(pn$sPacket$$i)i`
+                DB      80H,0dbH,5fH,53H,65H,6eH,64H,44H
+                DB      61H,74H,61H,1aH,67H,02H,21H
+                DP      `W?SetUserAbortFn$:TCommMgr$n(pn(i)i)pn(i)i`
+                DB      80H,0daH,53H,65H,74H,55H,73H,65H
+                DB      72H,41H,62H,6fH,72H,74H,46H,6eH
+                DB      17H,67H,02H,21H
+                DP      `W?GetUserList$:TCommMgr$n(pnui)i`
+                DB      80H,0d9H,47H,65H,74H,55H,73H,65H
+                DB      72H,4cH,69H,73H,74H,15H,67H,02H
+                DB      21H
+                DP      `W?GetUserID$:TCommMgr$n()i`
+                DB      80H,0d2H,47H,65H,74H,55H,73H,65H
+                DB      72H,49H,44H,14H,67H,02H,21H
+                DP      `W?GetError$:TCommMgr$n()i`
+                DB      80H,0d2H,47H,65H,74H,45H,72H,72H
+                DB      6fH,72H,17H,67H,02H,21H
+                DP      `W?DiscardData$:TCommMgr$n()i`
+                DB      80H,0d2H,44H,69H,73H,63H,61H,72H
+                DB      64H,44H,61H,74H,61H,19H,67H,02H
+                DB      21H
+                DP      `W?DataAvailable$:TCommMgr$n(pn$sPacket$$)i`
+                DB      80H,0d4H,44H,61H,74H,61H,41H,76H
+                DB      61H,69H,6cH,61H,62H,6cH,65H,19H
+                DB      67H,02H,21H
+                DP      `W?DataAvailable$:TCommMgr$n(pnipnipni)i`
+                DB      80H,0d7H,44H,61H,74H,61H,41H,76H
+                DB      61H,69H,6cH,61H,62H,6cH,65H,17H
+                DB      67H,02H,21H
+                DP      `W?ReceiveData$:TCommMgr$n(pn$sPacket$$)i`
+                DB      80H,0d4H,52H,65H,63H,65H,69H,76H
+                DB      65H,44H,61H,74H,61H,17H,67H,02H
+                DB      21H
+                DP      `W?ReceiveData$:TCommMgr$n(pnipnipnipnv)i`
+                DB      80H,0d6H,52H,65H,63H,65H,69H,76H
+                DB      65H,44H,61H,74H,61H,14H,67H,02H
+                DB      21H
+                DP      `W?SendData$:TCommMgr$n(pn$sPacket$$)i`
+                DB      80H,0d4H,53H,65H,6eH,64H,44H,61H
+                DB      74H,61H,14H,67H,02H,21H
+                DP      `W?SendData$:TCommMgr$n(iiipnv)i`
+                DB      80H,0d3H,53H,65H,6eH,64H,44H,61H
+                DB      74H,61H,16H,67H,02H,21H
+                DP      `W?Disconnect$:TCommMgr$n()i`
+                DB      80H,0d2H,44H,69H,73H,63H,6fH,6eH
+                DB      6eH,65H,63H,74H,13H,67H,02H,21H
+                DP      `W?Connect$:TCommMgr$n()i`
+                DB      80H,0d2H,43H,6fH,6eH,6eH,65H,63H
+                DB      74H,10H,67H,02H,21H
+                DP      `W?Init$:TCommMgr$n(pn$TComm$$)i`
+                DB      80H,0d1H,49H,6eH,69H,74H,18H,67H
+                DB      02H,21H
+                DP      `W?GetBufferLen$:TCommMgr$n()i`
+                DB      80H,0bbH,47H,65H,74H,42H,75H,66H
+                DB      66H,65H,72H,4cH,65H,6eH,15H,67H
+                DB      02H,21H
+                DP      `W?GetBuffer$:TCommMgr$n()pna`
+                DB      80H,0d0H,47H,65H,74H,42H,75H,66H
+                DB      66H,65H,72H,14H,67H,02H,21H
+                DP      `W?$dt:TCommMgr$n()_`
+                DB      14H,7eH,54H,43H,6fH,6dH,6dH,4dH
+                DB      67H,72H,14H,67H,02H,21H
+                DP      `W?$ct:TCommMgr$n()_`
+                DB      80H,0cfH,54H,43H,6fH,6dH,6dH,4dH
+                DB      67H,72H,0eH,67H,08H,84H,22H,18H
+                DB      69H,80H,0ccH,71H,75H,65H,75H,65H
+                DB      0cH,67H,08H,84H,22H,14H,69H,0cH
+                DB      74H,61H,69H,6cH,0cH,67H,08H,84H
+                DB      22H,10H,69H,0cH,68H,65H,61H,64H
+                DB      11H,67H,08H,84H,22H,0cH,69H,0cH
+                DB      64H,61H,74H,61H,41H,76H,61H,69H
+                DB      6cH,11H,67H,08H,84H,22H,08H,69H
+                DB      0cH,62H,75H,66H,66H,65H,72H,4cH
+                DB      65H,6eH,10H,67H,08H,84H,22H,04H
+                DB      69H,80H,9aH,70H,42H,75H,66H,66H
+                DB      65H,72H,0bH,67H,08H,6bH,80H,0caH
+                DB      70H,43H,6fH,6dH,6dH,06H,72H,4bH
+                DB      02H,13H,4bH,03H,46H,08H,08H,60H
+                DB      03H,00H,0cH,00H,00H,00H,0cH,61H
+                DB      08H,4bH,63H,68H,65H,63H,6bH,73H
+                DB      75H,6dH,0aH,61H,04H,4bH,6eH,42H
+                DB      79H,74H,65H,73H,0bH,61H,00H,4bH
+                DB      6eH,42H,6cH,6fH,63H,6bH,73H,14H
+                DB      12H,03H,80H,0e3H,73H,4dH,75H,6cH
+                DB      74H,69H,42H,6cH,6fH,63H,6bH,49H
+                DB      6eH,66H,6fH,14H,12H,00H,80H,0e4H
+                DB      73H,4dH,75H,6cH,74H,69H,42H,6cH
+                DB      6fH,63H,6bH,49H,6eH,66H,6fH,04H
+                DB      20H,63H,0cH,03H,46H,0eH,02H,14H
+$$TYPES         ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?$dt:TComm$n()_` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?$dt:TComm$n()_` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr -0cH[ebp],eax
+                mov     eax,dword ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?$dt:TComm$n()_` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?GetError$:TComm$n()$ERROR$:1$` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?GetError$:TComm$n()$ERROR$:1$` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     al,byte ptr +28H[eax]
+                mov     byte ptr -8H[ebp],al
+                mov     al,byte ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?GetError$:TComm$n()$ERROR$:1$` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?SetError$:TComm$n($ERROR$:1$)$2:1$` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?SetError$:TComm$n($ERROR$:1$)$2:1$` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -8H[ebp],eax
+                mov     byte ptr -4H[ebp],dl
+                mov     al,byte ptr -4H[ebp]
+                mov     edx,dword ptr -8H[ebp]
+                mov     byte ptr +28H[edx],al
+                mov     eax,dword ptr -8H[ebp]
+                mov     al,byte ptr +28H[eax]
+                mov     byte ptr -0cH[ebp],al
+                mov     al,byte ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?SetError$:TComm$n($ERROR$:1$)$2:1$` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?ClearError$:TComm$n()v` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?ClearError$:TComm$n()v` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000004H
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     byte ptr +28H[eax],00H
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?ClearError$:TComm$n()v` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?GetUserID$:TComm$n()ui` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?GetUserID$:TComm$n()ui` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +24H[eax]
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?GetUserID$:TComm$n()ui` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?$Wdf0vDataAvailable$n(pn$sPacket$$)i0$:TCommMgr$n()pn$sPacket$$` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?$Wdf0vDataAvailable$n(pn$sPacket$$)i0$:TCommMgr$n()pn$sPacket$$` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000004H
+                mov     dword ptr -4H[ebp],00000000H
+                mov     eax,dword ptr -4H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?$Wdf0vDataAvailable$n(pn$sPacket$$)i0$:TCommMgr$n()pn$sPacket$$` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?$Wdf0s_SendData$n(pn$sPacket$$i)i1$:TCommMgr$n()i` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?$Wdf0s_SendData$n(pn$sPacket$$i)i1$:TCommMgr$n()i` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000004H
+                mov     dword ptr -4H[ebp],00000000H
+                mov     eax,dword ptr -4H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?$Wdf0s_SendData$n(pn$sPacket$$i)i1$:TCommMgr$n()i` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?GetBuffer$:TCommMgr$n()pna` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?GetBuffer$:TCommMgr$n()pna` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     eax,dword ptr -4H[ebp]
+                mov     eax,dword ptr +4H[eax]
+                mov     dword ptr -8H[ebp],eax
+                mov     eax,dword ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?GetBuffer$:TCommMgr$n()pna` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?$dt:TNULL$n()_` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?$dt:TNULL$n()_` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                test    dword ptr -4H[ebp],00000004H
+                je      short L76
+                mov     edx,offset `W?$Wts09n$TNULL$$$nx[]uc`
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr __wcpp_2_dtor_array_store__
+                call    near ptr `W?$dan(pnv)v`
+                jmp     short L77
+L76:            mov     edx,00000001H
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?$dt:TComm$n()_`
+                mov     dword ptr -8H[ebp],eax
+                test    dword ptr -4H[ebp],00000002H
+                je      short L77
+                mov     eax,dword ptr -8H[ebp]
+                call    near ptr `W?$dln(pnv)v`
+L77:            mov     eax,dword ptr -8H[ebp]
+                mov     dword ptr -0cH[ebp],eax
+                mov     eax,dword ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?$dt:TNULL$n()_` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?GetUserID$:TNULL$n()ui` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?GetUserID$:TNULL$n()ui` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    edx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,00000008H
+                mov     dword ptr -4H[ebp],eax
+                mov     dword ptr -8H[ebp],0ffffffffH
+                mov     eax,dword ptr -8H[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     edx
+                pop     ecx
+                pop     ebx
+                ret     
+`W?GetUserID$:TNULL$n()ui` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?GetUserList$:TNULL$n(pnui)ui` COMDAT  SEGMENT ANY '_TEXT' 
+                ASSUME  CS:`W?GetUserList$:TNULL$n(pnui)ui` ,DS:DGROUP,SS:DGROUP
+                push    ebx
+                push    ecx
+                push    esi
+                push    edi
+                push    ebp
+                mov     ebp,esp
+                sub     esp,0000000cH
+                mov     dword ptr -8H[ebp],eax
+                mov     dword ptr -4H[ebp],edx
+                mov     dword ptr -0cH[ebp],00000000H
+                mov     eax,dword ptr -0cH[ebp]
+                leave   
+                pop     edi
+                pop     esi
+                pop     ecx
+                pop     ebx
+                ret     
+`W?GetUserList$:TNULL$n(pnui)ui` ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?$Wvf0ao1e:TNULL$$nx[]pn()v` COMDAT  SEGMENT ANY 'DGROUP:CONST2' 
+                DD      `W?$dt:TNULL$n()_`
+                DD      `W?GetUserList$:TNULL$n(pnui)ui`
+                DD      `W?Init$:TNULL$n()$ERROR$:TComm$$`
+                DD      `W?Connect$:TNULL$n()$ERROR$:TComm$$`
+                DD      `W?Disconnect$:TNULL$n()$ERROR$:TComm$$`
+                DD      `W?SendPacket$:TNULL$n(pn$sPacket$$)$ERROR$:TComm$$`
+                DD      `W?ReceivePacket$:TNULL$n(pn$sPacket$$)$ERROR$:TComm$$`
+                DD      `W?IsPacketAvailable$:TNULL$n()i`
+                DD      `W?DiscardPacket$:TNULL$n(pn$sPacketHeader$$)$ERROR$:TComm$$`
+                DD      `W?GetUserID$:TNULL$n()ui`
+`W?$Wvf0ao1e:TNULL$$nx[]pn()v` ENDS
+
+$$TYPES         SEGMENT BYTE USE16 'DEBTYP'
+                DB      03H,00H,01H,00H,01H,00H,51H,00H
+                DB      01H,00H,0eH,00H,02H,00H,23H,00H
+                DB      01H,00H,19H,00H,02H,00H,18H,00H
+                DB      01H,00H,03H,00H,00H,00H,19H,00H
+                DB      2fH,00H,43H,3aH,5cH,42H,41H,4dH
+                DB      5cH,54H,49H,47H,52H,45H,5cH,43H
+                DB      4fH,4dH,4dH,4dH,47H,52H,2eH,43H
+                DB      50H,50H,00H,43H,3aH,5cH,42H,41H
+                DB      4dH,5cH,54H,49H,47H,52H,45H,5cH
+                DB      63H,6fH,6dH,6dH,2eH,68H,70H,70H
+                DB      00H,43H,3aH,5cH,42H,41H,4dH,5cH
+                DB      54H,49H,47H,52H,45H,5cH,63H,6fH
+                DB      6dH,6dH,6dH,67H,72H,2eH,68H,70H
+                DB      70H,00H
+$$TYPES         ENDS
+
+; ERROR: COMDAT symbols can not be assembled.
+`W?$Wts09n$TNULL$$$nx[]uc` COMDAT  SEGMENT ANY 'DGROUP:CONST2' 
+                DB      00H
+                DD      `W?$ct:TNULL$n()_`
+                DD      `W?$ct:TNULL$n(rnx$0$)_`
+                DD      `W?$dt:TNULL$n()_`
+                DB      31H,00H,00H,00H
+`W?$Wts09n$TNULL$$$nx[]uc` ENDS
+
+                END

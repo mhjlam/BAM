@@ -1,0 +1,42 @@
+@echo off
+
+:START
+smartdrv c+
+
+echo ON
+del files.txt
+echo stuff:main > stuff.dat
+echo { >> STUFF.DAT
+
+rem **** Gather *.ANI
+call gather *.ani
+
+rem **** Gather *.HMP
+call gather *.hmp
+
+rem **** Gather sound FX *.WAV
+call gather *.wav
+
+rem **** Gather *.PAL
+call gather *.pal
+
+rem **** Gather *.FON
+call gather *.fon
+
+rem **** Gather *.SQB
+call gather *.sqb
+
+rem **** Gather *.BNK
+call gather *.bnk
+
+rem **** Gather *.TLB
+call gather *.tlb
+
+rem **** Gather *.MIF
+call gather *.mif
+
+echo } >> STUFF.DAT
+
+
+:EXIT
+smartdrv c

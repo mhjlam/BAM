@@ -1,0 +1,108 @@
+WATCOM Make Version 3.2
+Copyright by WATCOM International Corp. 1988, 1994. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+	wcl386 /c /j /s /zq /w3 /d2 /3r debug
+DEBUG.CPP(64): Warning! W014: (col 1) no reference to symbol 'pString' 
+DEBUG.CPP(64): Note! N392: (col 1) 'char * pString' in 'void Debugger::Put( char * )' defined in: DEBUG.CPP(40) (col 21) 
+DEBUG.CPP(83): Warning! W014: (col 1) no reference to symbol 'msg' 
+DEBUG.CPP(83): Note! N392: (col 1) 'char msg[128]' in 'void Debugger::Out( char *, ... )' defined in: DEBUG.CPP(70) (col 14) 
+DEBUG.CPP(99): Warning! W014: (col 1) no reference to symbol 'pDebugFileName' 
+DEBUG.CPP(99): Note! N392: (col 1) 'char * pDebugFileName' in 'bool Debugger::OpenFile( char * )' defined in: DEBUG.CPP(86) (col 26) 
+	wcl386 /c /j /s /zq /w3 /d2 /3r mono
+MONO.CPP(158): Warning! W014: (col 1) no reference to symbol 'pString' 
+MONO.CPP(158): Note! N392: (col 1) 'char * pString' in 'void Mono::Put( char * )' defined in: MONO.CPP(98) (col 17) 
+MONO.CPP(176): Warning! W014: (col 1) no reference to symbol 'msg' 
+MONO.CPP(176): Note! N392: (col 1) 'char msg[160]' in 'void Mono::Out( char *, ... )' defined in: MONO.CPP(165) (col 14) 
+MONO.CPP(206): Warning! W014: (col 1) no reference to symbol 'x1' 
+MONO.CPP(206): Note! N392: (col 1) 'int x1' in 'void Mono::Clear( int, int, int, int )' defined in: MONO.CPP(193) (col 17) 
+MONO.CPP(206): Warning! W014: (col 1) no reference to symbol 'y1' 
+MONO.CPP(206): Note! N392: (col 1) 'int y1' in 'void Mono::Clear( int, int, int, int )' defined in: MONO.CPP(193) (col 25) 
+MONO.CPP(206): Warning! W014: (col 1) no reference to symbol 'x2' 
+MONO.CPP(206): Note! N392: (col 1) 'int x2' in 'void Mono::Clear( int, int, int, int )' defined in: MONO.CPP(193) (col 33) 
+MONO.CPP(206): Warning! W014: (col 1) no reference to symbol 'y2' 
+MONO.CPP(206): Note! N392: (col 1) 'int y2' in 'void Mono::Clear( int, int, int, int )' defined in: MONO.CPP(193) (col 41) 
+MONO.CPP(262): Warning! W014: (col 1) no reference to symbol 'l' 
+MONO.CPP(262): Note! N392: (col 1) 'unsigned short l' in 'void Mono::Goto( unsigned short, unsigned short )' defined in: MONO.CPP(253) (col 19) 
+MONO.CPP(262): Warning! W014: (col 1) no reference to symbol 'c' 
+MONO.CPP(262): Note! N392: (col 1) 'unsigned short c' in 'void Mono::Goto( unsigned short, unsigned short )' defined in: MONO.CPP(253) (col 29) 
+MONO.CPP(300): Warning! W014: (col 1) no reference to symbol 'num' 
+MONO.CPP(300): Note! N392: (col 1) 'unsigned short num' in 'void Mono::Scroll( unsigned short, int, int, int, int )' defined in: MONO.CPP(267) (col 21) 
+MONO.CPP(300): Warning! W014: (col 1) no reference to symbol 'x1' 
+MONO.CPP(300): Note! N392: (col 1) 'int x1' in 'void Mono::Scroll( unsigned short, int, int, int, int )' defined in: MONO.CPP(267) (col 30) 
+MONO.CPP(300): Warning! W014: (col 1) no reference to symbol 'y1' 
+MONO.CPP(300): Note! N392: (col 1) 'int y1' in 'void Mono::Scroll( unsigned short, int, int, int, int )' defined in: MONO.CPP(267) (col 38) 
+MONO.CPP(300): Warning! W014: (col 1) no reference to symbol 'x2' 
+MONO.CPP(300): Note! N392: (col 1) 'int x2' in 'void Mono::Scroll( unsigned short, int, int, int, int )' defined in: MONO.CPP(267) (col 46) 
+MONO.CPP(300): Warning! W014: (col 1) no reference to symbol 'y2' 
+MONO.CPP(300): Note! N392: (col 1) 'int y2' in 'void Mono::Scroll( unsigned short, int, int, int, int )' defined in: MONO.CPP(267) (col 54) 
+MONO.CPP(310): Warning! W014: (col 1) no reference to symbol 'vAttr' 
+MONO.CPP(310): Note! N392: (col 1) 'unsigned char vAttr' in 'void Mono::SetAttr( unsigned char )' defined in: MONO.CPP(305) (col 21) 
+MONO.CPP(324): Warning! W014: (col 1) no reference to symbol 'filename' 
+MONO.CPP(324): Note! N392: (col 1) 'char * filename' in 'void Mono::SetReport( char * )' defined in: MONO.CPP(315) (col 23) 
+MONO.CPP(377): Warning! W014: (col 1) no reference to symbol 'line' 
+MONO.CPP(377): Note! N392: (col 1) 'int line' in 'void Mono::MemSet( int, int, unsigned char, char, int )' defined in: MONO.CPP(356) (col 18) 
+MONO.CPP(377): Warning! W014: (col 1) no reference to symbol 'col' 
+MONO.CPP(377): Note! N392: (col 1) 'int col' in 'void Mono::MemSet( int, int, unsigned char, char, int )' defined in: MONO.CPP(356) (col 28) 
+MONO.CPP(377): Warning! W014: (col 1) no reference to symbol 'charValue' 
+MONO.CPP(377): Note! N392: (col 1) 'unsigned char charValue' in 'void Mono::MemSet( int, int, unsigned char, char, int )' defined in: MONO.CPP(356) (col 39) 
+MONO.CPP(377): Warning! W014: (col 1) no reference to symbol 'attrib' 
+MONO.CPP(377): Note! N392: (col 1) 'char attrib' in 'void Mono::MemSet( int, int, unsigned char, char, int )' defined in: MONO.CPP(356) (col 55) 
+MONO.CPP(377): Warning! W014: (col 1) no reference to symbol 'numChars' 
+MONO.CPP(377): Note! N392: (col 1) 'int numChars' in 'void Mono::MemSet( int, int, unsigned char, char, int )' defined in: MONO.CPP(356) (col 67) 
+	echo. > tigre.rsp
+	for %i in (api.obj apidlg.obj apievt.obj apifont.obj apigraph.obj apimem.obj apires.obj cliprect.obj clock.obj comp.obj comm.obj commmgr.obj config.obj context.obj debug.obj dialog.obj dpmi.obj eventmgr.obj fontmgr.obj file.obj graphmgr.obj keylist.obj list.obj manager.obj mem.obj memmgr.obj mono.obj mouse.obj mouseint.obj mousescr.obj object.obj objmgr.obj os.obj osgrph.obj palette.obj periodic.obj rect.obj resmgr.obj resource.obj savebase.obj savemgr.obj sconfig.obj scrimage.obj serial.obj soundmgr.obj stream.obj srle.obj t12.obj text.obj trle.obj vesa.obj vgabuf.obj xmoddisp.obj modex.obj) do echo -+%i >> tigre.rsp
+	echo -+api.obj >> tigre.rsp
+	echo -+apidlg.obj >> tigre.rsp
+	echo -+apievt.obj >> tigre.rsp
+	echo -+apifont.obj >> tigre.rsp
+	echo -+apigraph.obj >> tigre.rsp
+	echo -+apimem.obj >> tigre.rsp
+	echo -+apires.obj >> tigre.rsp
+	echo -+cliprect.obj >> tigre.rsp
+	echo -+clock.obj >> tigre.rsp
+	echo -+comp.obj >> tigre.rsp
+	echo -+comm.obj >> tigre.rsp
+	echo -+commmgr.obj >> tigre.rsp
+	echo -+config.obj >> tigre.rsp
+	echo -+context.obj >> tigre.rsp
+	echo -+debug.obj >> tigre.rsp
+	echo -+dialog.obj >> tigre.rsp
+	echo -+dpmi.obj >> tigre.rsp
+	echo -+eventmgr.obj >> tigre.rsp
+	echo -+fontmgr.obj >> tigre.rsp
+	echo -+file.obj >> tigre.rsp
+	echo -+graphmgr.obj >> tigre.rsp
+	echo -+keylist.obj >> tigre.rsp
+	echo -+list.obj >> tigre.rsp
+	echo -+manager.obj >> tigre.rsp
+	echo -+mem.obj >> tigre.rsp
+	echo -+memmgr.obj >> tigre.rsp
+	echo -+mono.obj >> tigre.rsp
+	echo -+mouse.obj >> tigre.rsp
+	echo -+mouseint.obj >> tigre.rsp
+	echo -+mousescr.obj >> tigre.rsp
+	echo -+object.obj >> tigre.rsp
+	echo -+objmgr.obj >> tigre.rsp
+	echo -+os.obj >> tigre.rsp
+	echo -+osgrph.obj >> tigre.rsp
+	echo -+palette.obj >> tigre.rsp
+	echo -+periodic.obj >> tigre.rsp
+	echo -+rect.obj >> tigre.rsp
+	echo -+resmgr.obj >> tigre.rsp
+	echo -+resource.obj >> tigre.rsp
+	echo -+savebase.obj >> tigre.rsp
+	echo -+savemgr.obj >> tigre.rsp
+	echo -+sconfig.obj >> tigre.rsp
+	echo -+scrimage.obj >> tigre.rsp
+	echo -+serial.obj >> tigre.rsp
+	echo -+soundmgr.obj >> tigre.rsp
+	echo -+stream.obj >> tigre.rsp
+	echo -+srle.obj >> tigre.rsp
+	echo -+t12.obj >> tigre.rsp
+	echo -+text.obj >> tigre.rsp
+	echo -+trle.obj >> tigre.rsp
+	echo -+vesa.obj >> tigre.rsp
+	echo -+vgabuf.obj >> tigre.rsp
+	echo -+xmoddisp.obj >> tigre.rsp
+	echo -+modex.obj >> tigre.rsp
+	wlib /b /c /l /n /p=32 /q tigre.lib @tigre.rsp

@@ -1,0 +1,2 @@
+commmgr.cpp(304): Error! E191: (col 23) expression must be a pointer or a zero constant 
+commmgr.cpp(335): Error! E029: (col 41) symbol 'SEND_FAILED' has not been declared 

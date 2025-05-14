@@ -1,0 +1,10 @@
+;BAM demo run time script (9 fps)
+;
+;  Music fade frames
+1 5 +
+101 106 -
+;
+;  Palette manipulation frames
+1 5 u
+101 106 d
+

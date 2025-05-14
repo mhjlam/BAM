@@ -1,0 +1,36 @@
+mouse.hpp(59): Error! E498: (col 22) syntax error before 'Scrimage'; probable cause: incorrectly spelled type name 
+mouse.hpp(59): Note! N393: (col 22) included from MOUSE.CPP(41) 
+MOUSE.CPP(77): Error! E386: (col 15) attempt to use pointer to undefined class 
+MOUSE.CPP(77): Note! N638: (col 15) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(89): Error! E386: (col 21) attempt to use pointer to undefined class 
+MOUSE.CPP(89): Note! N638: (col 21) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(94): Error! E386: (col 21) attempt to use pointer to undefined class 
+MOUSE.CPP(94): Note! N638: (col 21) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(99): Error! E386: (col 33) attempt to use pointer to undefined class 
+MOUSE.CPP(99): Note! N638: (col 33) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(100): Error! E386: (col 33) attempt to use pointer to undefined class 
+MOUSE.CPP(100): Note! N638: (col 33) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(103): Error! E386: (col 30) attempt to use pointer to undefined class 
+MOUSE.CPP(103): Note! N638: (col 30) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(104): Error! E386: (col 30) attempt to use pointer to undefined class 
+MOUSE.CPP(104): Note! N638: (col 30) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(107): Error! E386: (col 21) attempt to use pointer to undefined class 
+MOUSE.CPP(107): Note! N638: (col 21) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(110): Error! E386: (col 31) attempt to use pointer to undefined class 
+MOUSE.CPP(110): Note! N638: (col 31) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(173): Error! E304: (col 8) 'class Mouse' has not been defined 
+MOUSE.CPP(174): Warning! W480: (col 1) variable/function has the same name as the class/enum 'Mouse' 
+MOUSE.CPP(174): Note! N392: (col 1) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(178): Error! E204: (col 26) 'this' pointer is not defined 
+MOUSE.CPP(179): Error! E029: (col 17) symbol 'gRectBits' has not been declared 
+MOUSE.CPP(216): Error! E029: (col 9) symbol 'hideCount' has not been declared 
+MOUSE.CPP(219): Error! E029: (col 9) symbol 'status' has not been declared 
+MOUSE.CPP(227): Error! E204: (col 26) 'this' pointer is not defined 
+MOUSE.CPP(233): Error! E386: (col 24) attempt to use pointer to undefined class 
+MOUSE.CPP(233): Note! N638: (col 24) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(234): Error! E386: (col 25) attempt to use pointer to undefined class 
+MOUSE.CPP(234): Note! N638: (col 25) 'Mouse' defined in: mouse.hpp(59) (col 7) 
+MOUSE.CPP(238): Error! E304: (col 8) 'class Mouse' has not been defined 
+MOUSE.CPP(240): Error! E229: (col 9) function 'Mouse' has already been defined 
+MOUSE.CPP(240): Note! N392: (col 9) 'int Mouse( void )' defined in: MOUSE.CPP(173) (col 8) 
+MOUSE.CPP(249): Error! E133: (col 8) too many errors: compilation aborted 

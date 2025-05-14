@@ -1,0 +1,2347 @@
+ABlit_.................modex            AFBlit_................modex
+ARBlit_................modex            ExtensionsOff_..........vesa
+ExtensionsOn_...........vesa            FillScreen_............modex
+OS_CopyPixelLine_ASM_.osgrph            OS_GetPalette_........osgrph
+OS_GetScreenMode_.....osgrph            OS_GetStackPtr_.......osgrph
+OS_SetPalette_........osgrph            OS_ShutDownVideo_.....osgrph
+SetBankData_............vesa            SetScreenMode_........osgrph
+SetXMode_..............modex            SyncWithVBL_...........modex
+VESABlit_...............vesa            VESASetBank_............vesa
+Video7Blit_.............vesa            Video7SetBank_..........vesa
+near Animator::Animator( animator_t, int unsigned, long unsigned )..SCRIMAGE
+near Animator::Animator()...................................SCRIMAGE
+near AutoRes::AutoRes().......................................RESMGR
+near Configuration::Configuration( char near *, short unsigned, short unsigned, short unsigned )..CONFIG
+near Configuration::Configuration( short unsigned, short unsigned, short unsigned )..CONFIG
+near Context::Context()......................................CONTEXT
+near ContextMgr::ContextMgr()................................CONTEXT
+near Debugger::Debugger()......................................DEBUG
+near DebugTimer::DebugTimer()..................................DEBUG
+near Dialog::Dialog().DIALOG            
+near Dialog::Dialog( int, int, int unsigned, char unsigned, char unsigned )..DIALOG
+near DPMI::DPMI().......DPMI            
+near EventMgr::EventMgr( int unsigned, int unsigned ).......EVENTMGR
+near FontMgr::FontMgr()......................................FONTMGR
+near GList::GList( short unsigned, bool )...................GRAPHMGR
+near GraphicsMgr::GraphicsMgr( int unsigned )...............GRAPHMGR
+near Guy::Guy().....SCRIMAGE            
+near KeyList::KeyList( short unsigned, bool )................KEYLIST
+near Label::Label( TControlInfo near * )......................DIALOG
+near List::List( short unsigned, bool ).........................LIST
+near MemoryMgr::MemoryMgr()...................................MEMMGR
+near Mono::Mono().......MONO            near Mouse::Mouse()....MOUSE
+near MouseInt::MouseInt()...................................MOUSEINT
+near MouseScr::MouseScr()...................................MOUSESCR
+near Object::Object().OBJECT            
+near ObjectMgr::ObjectMgr()...................................OBJMGR
+near PalCycler::PalCycler( char unsigned, char unsigned, char unsigned, int unsigned, int unsigned, short unsigned, int unsigne..PALETTE
+near PalFader::PalFader( char unsigned, char unsigned, int unsigned, int unsigned, short unsigned, char unsigned, char unsigned..PALETTE
+near PalFader::PalFader( char unsigned, char unsigned, int unsigned, int unsigned, short unsigned, int unsigned )..PALETTE
+near PalUtility::PalUtility()................................PALETTE
+near int near ADetectVGA()::.0::PassRegs::PassRegs()........XMODDISP
+near Periodic::Periodic()...................................PERIODIC
+near Rectangle::Rectangle().....................................RECT
+near Rectangle::Rectangle( int, int, int, int, int unsigned )...RECT
+near Rectangle::Rectangle( Rectangle near * )...................RECT
+near Resource::Resource()...................................RESOURCE
+near ResourceMgr::ResourceMgr( bool ).........................RESMGR
+near SaveMgr::SaveMgr()......................................SAVEMGR
+near ScaleTable::ScaleTable()...............................GRAPHMGR
+near SConfig::SConfig()......................................SCONFIG
+near Scrimage::Scrimage()...................................SCRIMAGE
+near ScrimList::ScrimList().................................GRAPHMGR
+near Script::Script().......................................PERIODIC
+near SOS_Base::SOS_Base()...................................SOUNDMGR
+near SoundMgr::SoundMgr()...................................SOUNDMGR
+near SysList::SysList( short unsigned, bool )...................LIST
+near TButton::TButton( TControlInfo near * )..................DIALOG
+near TClipRect::TClipRect().................................CLIPRECT
+near TClipRect::TClipRect( int, int, int, int, int unsigned )..CLIPRECT
+near TClipRect::TClipRect( TClipRect near * )...............CLIPRECT
+near TClipRect::TClipRect( Rectangle near * )...............CLIPRECT
+near TClock::TClock()..CLOCK            near TComm::TComm().....COMM
+near TCommMgr::TCommMgr()....................................COMMMGR
+near TControl::TControl( TControlInfo near * )................DIALOG
+near TControlInfo::TControlInfo().............................APIDLG
+near TFile::TFile().....FILE            
+near TLineTo::TLineTo().....................................SCRIMAGE
+near TLineTo::TLineTo( int, int, int unsigned, long unsigned )..SCRIMAGE
+near TModem::TModem().SERIAL            
+near TMovable::TMovable().....................................OBJECT
+near TMusic::TMusic().......................................SOUNDMGR
+near TNetwork::TNetwork().......................................COMM
+near TNULL::TNULL()..COMMMGR            
+near TPalette::TPalette()....................................PALETTE
+near TRandomGenerator::TRandomGenerator()........................API
+near TRectPool::TRectPool().................................GRAPHMGR
+near TSerial::TSerial().......................................SERIAL
+near TSound::TSound().......................................SOUNDMGR
+near TStream::TStream().......................................STREAM
+near TStreamBase::TStreamBase()...............................STREAM
+near TTextBox::TTextBox( TControlInfo near * )................DIALOG
+near Utility::Utility().....................................SCRIMAGE
+near Utilizer::Utilizer()....................................PALETTE
+near VGABuffer::VGABuffer()...................................VGABUF
+near VGABuffer::VGABuffer( int unsigned, int unsigned, int, int )..VGABUF
+near WalkTo::WalkTo().......................................SCRIMAGE
+near WalkTo::WalkTo( int, int, int unsigned, long unsigned )..SCRIMAGE
+near Window::Window( Rectangle near *, int, void (near *)( )).DIALOG
+near Window::Window( Rectangle near *, int unsigned, int, char unsigned )..DIALOG
+near Window::Window( int unsigned, int unsigned, int )........DIALOG
+void near operator delete( void near * ).........................MEM
+near Animator::~Animator()..................................SCRIMAGE
+near AutoRes::~AutoRes()......................................RESMGR
+near Context::~Context().....................................CONTEXT
+near ContextMgr::~ContextMgr()...............................CONTEXT
+near Debugger::~Debugger().....................................DEBUG
+near DebugTimer::~DebugTimer().................................DEBUG
+near Dialog::~Dialog()........................................DIALOG
+near DPMI::~DPMI()......DPMI            
+near EventMgr::~EventMgr()..................................EVENTMGR
+near FontMgr::~FontMgr().....................................FONTMGR
+near GList::~GList()........................................GRAPHMGR
+near GraphicsMgr::~GraphicsMgr()............................GRAPHMGR
+near Guy::~Guy()....SCRIMAGE            near Label::~Label()..DIALOG
+near List::~List()......LIST            
+near MemoryMgr::~MemoryMgr()..................................MEMMGR
+near Mono::~Mono()......MONO            near Mouse::~Mouse()...MOUSE
+near MouseInt::~MouseInt()..................................MOUSEINT
+near MouseScr::~MouseScr()..................................MOUSESCR
+near Object::~Object()........................................OBJECT
+near ObjectMgr::~ObjectMgr()..................................OBJMGR
+near PalCycler::~PalCycler().................................PALETTE
+near PalFader::~PalFader()...................................PALETTE
+near PalUtility::~PalUtility()...............................PALETTE
+near Periodic::~Periodic()..................................PERIODIC
+near Resource::~Resource()..................................RESOURCE
+near ResourceMgr::~ResourceMgr()..............................RESMGR
+near SaveMgr::~SaveMgr().....................................SAVEMGR
+near SConfig::~SConfig().....................................SCONFIG
+near Scrimage::~Scrimage()..................................SCRIMAGE
+near ScrimList::~ScrimList()................................GRAPHMGR
+near Script::~Script()......................................PERIODIC
+near SOS_Base::~SOS_Base()..................................SOUNDMGR
+near SoundMgr::~SoundMgr()..................................SOUNDMGR
+near TButton::~TButton()......................................DIALOG
+near TComm::~TComm()....COMM            
+near TCommMgr::~TCommMgr()...................................COMMMGR
+near TControl::~TControl()....................................DIALOG
+near TFile::~TFile()....FILE            
+near TLineTo::~TLineTo()....................................SCRIMAGE
+near TModem::~TModem()........................................SERIAL
+near TMovable::~TMovable()....................................OBJECT
+near TMusic::~TMusic()......................................SOUNDMGR
+near TNetwork::~TNetwork()......................................COMM
+near TNULL::~TNULL().COMMMGR            
+near TPalette::~TPalette()...................................PALETTE
+near TSerial::~TSerial()......................................SERIAL
+near TSound::~TSound()......................................SOUNDMGR
+near TStream::~TStream()......................................STREAM
+near TStreamBase::~TStreamBase()..............................STREAM
+near TTextBox::~TTextBox()....................................DIALOG
+near Utility::~Utility()....................................SCRIMAGE
+near Utilizer::~Utilizer()..................................SCRIMAGE
+near VGABuffer::~VGABuffer()..................................VGABUF
+near WalkTo::~WalkTo()......................................SCRIMAGE
+near Window::~Window()........................................DIALOG
+void near * near Manager::operator new( int unsigned ).......MANAGER
+void near * near SysList::operator new( int unsigned )..........LIST
+void near * near operator new( int unsigned )....................MEM
+void near * near DebugTimer::__arrdtorblk( int unsigned )....COMMMGR
+int unsigned near GraphicsMgr::__defarg()...................GRAPHMGR
+int unsigned near EventMgr::__defarg()......................EVENTMGR
+int unsigned near EventMgr::__defarg()......................EVENTMGR
+int unsigned near VGABuffer::__defarg().....................GRAPHMGR
+int near TPalette::__defarg()...............................GRAPHMGR
+int unsigned near Rectangle::__defarg().....................GRAPHMGR
+short unsigned near Configuration::__defarg().................RESMGR
+short unsigned near Configuration::__defarg().................RESMGR
+short unsigned near Configuration::__defarg().................RESMGR
+int unsigned near TStream::__defarg().........................STREAM
+int unsigned near TStreamBase::__defarg()...................SOUNDMGR
+bool near ResourceMgr::__defarg().............................RESMGR
+int near GFModem::__defarg()..................................SERIAL
+short unsigned near GFI8250::__defarg().......................SERIAL
+int near GFI8250::__defarg()..................................SERIAL
+int unsigned near GFI8250::__defarg().........................SERIAL
+int unsigned near GFI8250::__defarg().........................SERIAL
+short unsigned near GList::__defarg().......................GRAPHMGR
+bool near GList::__defarg().................................GRAPHMGR
+int near TPalette::__defarg()...............................GRAPHMGR
+int near GList::__defarg()..................................GRAPHMGR
+short unsigned near GList::__defarg().......................GRAPHMGR
+void near * near GList::__defarg()..........................GRAPHMGR
+void (near * near Dialog::__defarg())().......................APIDLG
+bool near ResourceMgr::__defarg().............................RESMGR
+short unsigned near EventMgr::__defarg()....................EVENTMGR
+char near * near SoundMgr::__defarg().......................SOUNDMGR
+bool near __defarg()........................................SOUNDMGR
+short unsigned near Configuration::__defarg().................CONFIG
+bool near TCommMgr::__defarg()...............................COMMMGR
+void near * near * near TStream::__defarg()...................STREAM
+void near * near * near TStreamBase::__defarg().............SOUNDMGR
+char unsigned near Dialog::__defarg().........................APIDLG
+char unsigned near Dialog::__defarg().........................APIDLG
+int unsigned near Guy::__defarg().............................DIALOG
+Rectangle near * near GraphicsMgr::__defarg()...............GRAPHMGR
+TClipRect near * near GraphicsMgr::__defarg()...............GRAPHMGR
+int near __defarg()...DIALOG            
+short unsigned near ResourceMgr::__defarg()...................RESMGR
+short unsigned near EventMgr::__defarg()....................EVENTMGR
+int near EventMgr::__defarg()...............................EVENTMGR
+int unsigned near TStreamBase::__defarg()...................SOUNDMGR
+int unsigned near TStream::__defarg().........................STREAM
+int unsigned near TStreamBase::__defarg()...................SOUNDMGR
+int unsigned near TStream::__defarg().........................STREAM
+int unsigned near TStreamBase::__defarg()...................SOUNDMGR
+bool near __defarg()........................................EVENTMGR
+sPacket near * near TCommMgr::__defarg().....................COMMMGR
+bool near MemoryMgr::__defarg()...............................MEMMGR
+bool near ResourceMgr::__defarg().............................RESMGR
+int unsigned near * near ResourceMgr::__defarg()..............RESMGR
+bool near ResourceMgr::__defarg().............................RESMGR
+int unsigned near Label::__defarg()...........................DIALOG
+int unsigned near Label::__defarg()...........................DIALOG
+char near * near __defarg()...................................RESMGR
+bool near __defarg()..OBJECT            
+bool near TCommMgr::__defarg()...............................COMMMGR
+bool near SoundMgr::__defarg()..............................SOUNDMGR
+bool near SoundMgr::__defarg()..............................SOUNDMGR
+SREGS near * near DPMI::__defarg()..............................DPMI
+bool near TCommMgr::__defarg()...............................COMMMGR
+int unsigned near Dialog::__defarg()..........................APIDLG
+int unsigned near Dialog::__defarg()..........................APIDLG
+Rectangle near * near Mouse::__defarg().....................GRAPHMGR
+int unsigned near FontMgr::__defarg().........................DIALOG
+int near FontMgr::__defarg()..................................DIALOG
+int unsigned near FontMgr::__defarg().........................DIALOG
+notice_t near EventMgr::__defarg()..........................EVENTMGR
+int unsigned near __defarg()..................................DIALOG
+int unsigned near __defarg()..................................DIALOG
+justify near __defarg().......................................DIALOG
+int unsigned near __defarg()..................................DIALOG
+int unsigned near __defarg()..................................DIALOG
+bool near TComm::__defarg()..................................COMMMGR
+bool near TSerial::__defarg().................................SERIAL
+sPacketHeader near * near TNetwork::__defarg()..................COMM
+bool near VGABuffer::__defarg()...............................VGABUF
+ASMCopyPixels near * near __defarg()........................APIGRAPH
+ASMCopyPixels near * near __defarg()........................APIGRAPH
+char unsigned const near __typesig[]........................SCRIMAGE
+char unsigned const near __typesig[]............................LIST
+char unsigned const near __typesig[]............................MONO
+char unsigned const near __typesig[]........................GRAPHMGR
+char unsigned const near __typesig[]..........................DIALOG
+char unsigned const near __typesig[]..........................RESMGR
+char unsigned const near __typesig[].........................COMMMGR
+char unsigned const near __typesig[]..........................OBJECT
+char unsigned const near __typesig[]........................PERIODIC
+char unsigned const near __typesig[]..........................SERIAL
+char unsigned const near __typesig[]........................SOUNDMGR
+char unsigned const near __typesig[]........................SOUNDMGR
+char unsigned const near __typesig[]........................SCRIMAGE
+char unsigned const near __typesig[]..........................DIALOG
+char unsigned const near __typesig[]..........................RESMGR
+char unsigned const near __typesig[].........................CONTEXT
+char unsigned const near __typesig[].........................FONTMGR
+char unsigned const near __typesig[].........................SAVEMGR
+char unsigned const near __typesig[]........................SOUNDMGR
+char unsigned const near __typesig[]..........................DIALOG
+char unsigned const near __typesig[]........................SCRIMAGE
+char unsigned const near __typesig[]..........................SERIAL
+char unsigned const near __typesig[]..........................STREAM
+char unsigned const near __typesig[]........................SCRIMAGE
+char unsigned const near __typesig[]........................SCRIMAGE
+char unsigned const near __typesig[]........................EVENTMGR
+char unsigned const near __typesig[]........................MOUSEINT
+char unsigned const near __typesig[].........................PALETTE
+char unsigned const near __typesig[]........................PERIODIC
+char unsigned const near __typesig[]........................RESOURCE
+char unsigned const near __typesig[]........................SCRIMAGE
+char unsigned const near __typesig[]........................SOUNDMGR
+char unsigned const near __typesig[].........................COMMMGR
+char unsigned const near __typesig[]..........................OBJECT
+char unsigned const near __typesig[]............................COMM
+char unsigned const near __typesig[]..........................DIALOG
+char unsigned const near __typesig[]........................SCRIMAGE
+char unsigned const near __typesig[]..........................MEMMGR
+char unsigned const near __typesig[]..........................OBJMGR
+char unsigned const near __typesig[].........................PALETTE
+char unsigned const near __typesig[]........................GRAPHMGR
+char unsigned const near __typesig[]........................GRAPHMGR
+char unsigned const near __typesig[].........................CONTEXT
+char unsigned const near __typesig[].........................COMMMGR
+char unsigned const near __typesig[].........................PALETTE
+char unsigned const near __typesig[]........................GRAPHMGR
+char unsigned const near __typesig[]..........................RESMGR
+char unsigned const near __typesig[].........................COMMMGR
+void (near * const near __vftbl[])()........................SCRIMAGE
+void (near * const near __vftbl[])()............................DPMI
+void (near * const near __vftbl[])()............................LIST
+void (near * const near __vftbl[])()........................GRAPHMGR
+void (near * const near __vftbl[])()..........................DIALOG
+void (near * const near __vftbl[])()...........................MOUSE
+void (near * const near __vftbl[])()............................MONO
+void (near * const near __vftbl[])()............................COMM
+void (near * const near __vftbl[])().........................COMMMGR
+void (near * const near __vftbl[])()..........................DIALOG
+void (near * const near __vftbl[])()..........................OBJECT
+void (near * const near __vftbl[])()........................PERIODIC
+void (near * const near __vftbl[])()...........................CLOCK
+void (near * const near __vftbl[])()........................SOUNDMGR
+void (near * const near __vftbl[])()........................SOUNDMGR
+void (near * const near __vftbl[])()........................SCRIMAGE
+void (near * const near __vftbl[])()..........................DIALOG
+void (near * const near __vftbl[])()..........................STREAM
+void (near * const near __vftbl[])()..........................SERIAL
+void (near * const near __vftbl[])()..........................RESMGR
+void (near * const near __vftbl[])().........................CONTEXT
+void (near * const near __vftbl[])().........................FONTMGR
+void (near * const near __vftbl[])().........................KEYLIST
+void (near * const near __vftbl[])()............................LIST
+void (near * const near __vftbl[])()..........................DIALOG
+void (near * const near __vftbl[])()........................SCRIMAGE
+void (near * const near __vftbl[])()........................SCRIMAGE
+void (near * const near __vftbl[])()..........................SERIAL
+void (near * const near __vftbl[])()........................SCRIMAGE
+void (near * const near __vftbl[])()........................EVENTMGR
+void (near * const near __vftbl[])()........................MOUSEINT
+void (near * const near __vftbl[])()........................MOUSESCR
+void (near * const near __vftbl[])().........................PALETTE
+void (near * const near __vftbl[])()........................PERIODIC
+void (near * const near __vftbl[])()........................RESOURCE
+void (near * const near __vftbl[])()........................SCRIMAGE
+void (near * const near __vftbl[])()........................SOUNDMGR
+void (near * const near __vftbl[])()........................SOUNDMGR
+void (near * const near __vftbl[])().........................COMMMGR
+void (near * const near __vftbl[])()..........................DIALOG
+void (near * const near __vftbl[])()..........................OBJECT
+void (near * const near __vftbl[])().........................PALETTE
+void (near * const near __vftbl[])()..........................DIALOG
+void (near * const near __vftbl[])()............................COMM
+void (near * const near __vftbl[])()..........................OBJMGR
+void (near * const near __vftbl[])().........................PALETTE
+void (near * const near __vftbl[])()........................GRAPHMGR
+void (near * const near __vftbl[])()..........................VGABUF
+void (near * const near __vftbl[])()............................RECT
+void (near * const near __vftbl[])()........................CLIPRECT
+void (near * const near __vftbl[])().........................CONTEXT
+void (near * const near __vftbl[])().........................PALETTE
+void (near * const near __vftbl[])()..........................STREAM
+void (near * const near __vftbl[])()........................GRAPHMGR
+void (near * const near __vftbl[])()..........................RESMGR
+void (near * const near __vftbl[])()..........................MEMMGR
+void near AAddScrim( Scrimage near * )......................APIGRAPH
+bool near AAlert( char near * )...............................APIDLG
+void near AAnimate()........................................APIGRAPH
+int unsigned near AAssignGrip( void near *, bool, short unsigned )..APIMEM
+void near AAutoUpdateTicks( bool )............................APIEVT
+int unsigned near AAvailMem().....................................OS
+void near Script::Abort()...................................PERIODIC
+void near Utilizer::AbortAllUtils().........................SCRIMAGE
+void near Utilizer::AbortUtil( int unsigned )...............SCRIMAGE
+void near Utilizer::AbortUtils( util_t )....................SCRIMAGE
+bool near AChangeGrip( int unsigned, int unsigned )...........APIMEM
+void near AChangeScrim( Scrimage near * )...................APIGRAPH
+int unsigned near ACloneRes( res_t, int unsigned, int unsigned near *, res_t, int unsigned )..APIRES
+bool near AConfirm( char near * ).............................APIDLG
+void near ACopyPixels( RCopyPixels near * ).................APIGRAPH
+int unsigned near ACreateAnim( int unsigned, CelArrayElement near * near *, int unsigned near * )..APIRES
+int unsigned near ACreateBitMap( int, int ).......................OS
+int unsigned near ACreateCel( int unsigned near *, int, int, int unsigned, int unsigned, char unsigned, int )..APIRES
+int unsigned near ACreateEasyCel( CelArrayElement near *, int unsigned near * )..APIRES
+void near ACreateGripText( int unsigned, char near *, char unsigned, char unsigned, int unsigned, justify )..APIFONT
+int unsigned near ACreatePartialText( int unsigned near *, char near *, char unsigned, void (near *)( ), int unsigned, int unsi..APIFONT
+int unsigned near ACreateProcText( int unsigned near *, char near *, char unsigned, void (near *)( ), int unsigned, int unsigne..APIFONT
+int unsigned near ACreateText( int unsigned near *, char near *, char unsigned, char unsigned, int unsigned, justify )..APIFONT
+void near Context::Activate( bool )..........................CONTEXT
+void near Dialog::Activate( modalType, int )..................DIALOG
+void near Dialog::ActivateFrom( char near * ).................DIALOG
+void near ContextMgr::Add( int unsigned )....................CONTEXT
+short unsigned near GList::Add( void near *, int, short unsigned, void near * )..GRAPHMGR
+short unsigned near List::Add( void near *, int, short unsigned, void near * )..LIST
+int near TRectPool::Add( Rectangle near * ).................GRAPHMGR
+int near TRectPool::Add( TClipRect near * ).................GRAPHMGR
+int unsigned near Dialog::AddButton( TControlInfo near * )....DIALOG
+void near SoundMgr::AddDigi( TSound near *, int, int unsigned )..SOUNDMGR
+int unsigned near Dialog::AddLabel( TControlInfo near *, int unsigned, int unsigned )..DIALOG
+void near SoundMgr::AddMidi( TMusic near *, short unsigned, int unsigned )..SOUNDMGR
+void near Context::AddObject( int unsigned, short unsigned, int )..CONTEXT
+void near Context::AddReceiver( int unsigned, int )..........CONTEXT
+void near Context::AddRoster()...............................CONTEXT
+void near Context::AddScrimage( int unsigned )...............CONTEXT
+void near GraphicsMgr::AddScrimage( Scrimage near * ).......GRAPHMGR
+void near Context::AddServiceable( int unsigned )............CONTEXT
+void near Dialog::AddTControl( int unsigned ).................DIALOG
+int unsigned near Dialog::AddTextBox( TControlInfo near * )...DIALOG
+void near TSound::AddToChain( int ).........................SOUNDMGR
+bool near TCommMgr::AddToWaitingRoom( sPacket near * ).......COMMMGR
+void near ADeleteScrim( Scrimage near * )...................APIGRAPH
+char unsigned near * near ADerefBitMap( int unsigned )............OS
+void near ADestroyBitMap( int unsigned )..........................OS
+int near ADetectVGA().......................................XMODDISP
+void near TLineTo::AdvanceCel( Guy near * ).................SCRIMAGE
+void near WalkTo::AdvanceCel( Guy near * )..................SCRIMAGE
+void near EventMgr::AdvanceEQueue().........................EVENTMGR
+void near EventMgr::AdvanceNQueue().........................EVENTMGR
+char unsigned near * near AdvanceRLE( char unsigned near *, short )..TRLE
+bool near AEvtMgr()...APIEVT            
+bool near AExists( res_t, int unsigned )......................APIRES
+int unsigned near AFileLastAccessTime( char near * )..............OS
+int unsigned near AFileLastModTime( char near * ).................OS
+int unsigned near AFileLength( __iobuf near * )..................API
+int unsigned near AFlatten( __iobuf near *, int unsigned, char near *, short unsigned )..COMP
+int unsigned near AFluff( TFile near *, int unsigned, char near *, short unsigned, char near * )..COMP
+void near AFlush( int unsigned, bool )........................APIRES
+int unsigned near AFlushEvents( short unsigned )..............APIEVT
+int unsigned near AFlushNotices( int unsigned )...............APIEVT
+char unsigned near AFontColor( int unsigned )................APIFONT
+int unsigned near AFontPoint()...............................APIFONT
+void near AFree( int unsigned )...............................APIMEM
+char unsigned near * near AGetBiosKey()...........................OS
+int unsigned near AGetCharWidth( char )......................APIFONT
+void near AGetCursorPosn( char near *, int unsigned, int unsigned, int unsigned near &, int unsigned near &, int unsigned )..APIFONT
+short unsigned near AGetEventMods()...............................OS
+int unsigned near AGetGrip( void near * ).....................APIMEM
+int near AGetNumber( char near *, int ).......................APIDLG
+void near AGetPalette( Gun near *, int unsigned, int unsigned )..APIGRAPH
+char unsigned near * near AGetResData( int unsigned ).........APIRES
+char near * near AGetString( char near *, char near *, char near *, int )..APIDLG
+int near AInitGraphics( GraphicsMgr near *, int unsigned )..XMODDISP
+void near AInitializePlatform()...................................OS
+bool near AInitVideo( int unsigned, int unsigned, int unsigned near &, int near &, int near &, int unsigned near &, int unsigne..XMODDISP
+int unsigned near AIsLoaded( res_t, int unsigned, bool )......APIRES
+bool near AIsOnStack( void near * )...............................OS
+int unsigned near ALargestAlloc().................................OS
+void far * near DPMI::AllocateDosMemoryBlock( int unsigned, short unsigned near * )..DPMI
+int unsigned near ALoad( res_t, int unsigned, bool )..........APIRES
+int unsigned near ALoadDebug( char near *, int, res_t, int unsigned, bool )..APIRES
+char unsigned near FontMgr::AltColor( int )..................FONTMGR
+int unsigned near AMalloc( int unsigned ).....................APIMEM
+int unsigned near AMax( int, int )...............................API
+int near AMaxX()....APIGRAPH            int near AMaxY()....APIGRAPH
+void near AMemCycle().APIMEM            bool near AMemMgr()...APIMEM
+int unsigned near AMin( int, int )...............................API
+void near GraphicsMgr::Animate()............................GRAPHMGR
+bool near APostEvent( short unsigned, int, bool ).............APIEVT
+bool near APostNotice( notice_t, int unsigned, void near *, int unsigned )..APIEVT
+void near APrintUnfreedPtrs( bool )...........................APIMEM
+void near APublishNext()......................................APIEVT
+bool near APurge( int unsigned )..............................APIRES
+void near AQueueUpdate()..OS            
+int unsigned near Rectangle::AreaBounds( Rectangle near * ).....RECT
+int unsigned near TClipRect::AreaBounds( TClipRect near * ).CLIPRECT
+int unsigned near TClipRect::AreaBounds( Rectangle near * ).CLIPRECT
+int unsigned near ARealloc( int unsigned, int unsigned )......APIMEM
+void near AReleaseGrip( int unsigned )........................APIMEM
+bool near AResMgr()...APIRES            
+bool near ARestoreGripNum( int unsigned near *, __iobuf near * )..APIMEM
+bool near ASaveGripNum( int unsigned, __iobuf near * )........APIMEM
+char near AScanToASCII( Event )...................................OS
+char near * near asciiShiftTable............................EVENTMGR
+char near * near asciiTable.................................EVENTMGR
+bool near ASendNotice( notice_t, int unsigned, int unsigned, void near * )..APIEVT
+void near ASetColors( char unsigned near *, char unsigned near *, bool )..APIFONT
+void near ASetFontColor( int unsigned, char unsigned ).......APIFONT
+void near ASetKeyboardVector( bool )..............................OS
+void near ASetPalette( Gun near *, int unsigned, int unsigned )..APIGRAPH
+void near ASetPurgeStatus( int unsigned, bool )...............APIMEM
+void near ASetSaveStatus( int unsigned, bool )................APIMEM
+void near ASetString( int unsigned, int unsigned, char near *, char unsigned near *, int unsigned, int unsigned, justify, int u..APIFONT
+void near AShutDownVideo()..................................APIGRAPH
+int unsigned near ASizeOfGrip( int unsigned ).................APIMEM
+int unsigned near MemoryMgr::AssignGrip( void near *, bool, short unsigned )..MEMMGR
+int unsigned near ASysMalloc( int unsigned )..................APIMEM
+void near * near List::At( int unsigned ).......................LIST
+void near TNetwork::AtExitFn()..................................COMM
+void near TSerial::AtExitFn().................................SERIAL
+int near atoi( void near *, int )............................SCONFIG
+short unsigned near AtSave( bool (near *)())................SAVEBASE
+bool (near * near atSaveArray[])( short unsigned, __iobuf near * )..SAVEBASE
+short unsigned near atSaveCnt...............................SAVEBASE
+void near AUpdateRect( Rectangle near * )...................APIGRAPH
+void near AUpdateRect( TClipRect near * )...................APIGRAPH
+void near SOS_Base::AutoFade( short unsigned, int unsigned, int unsigned, int unsigned )..SOUNDMGR
+void near SoundMgr::AutoFade( short unsigned, int unsigned, int unsigned, int unsigned )..SOUNDMGR
+void near EventMgr::AutoUpdateTicks( bool ).................EVENTMGR
+int unsigned near MemoryMgr::AvailMem().......................MEMMGR
+char unsigned near FontMgr::BackColor( int ).................FONTMGR
+void near VGABuffer::Blit( int unsigned ).....................VGABUF
+int unsigned near Rectangle::CalcArea().........................RECT
+bool near MemoryMgr::ChangeGrip( int unsigned, int unsigned ).MEMMGR
+void near GraphicsMgr::ChangeScrimage( Scrimage near * )....GRAPHMGR
+bool near Resource::CheckAttr( short unsigned ).............RESOURCE
+bool near TControl::CheckAttr( int unsigned ).................DIALOG
+bool near Mouse::CheckBounds().................................MOUSE
+int near MemoryMgr::CheckGrip( int unsigned ).................MEMMGR
+void near PalUtility::CheckRange( char unsigned, char unsigned )..PALETTE
+bool near Guy::CheckState( short unsigned ).................SCRIMAGE
+bool near Scrimage::CheckState( short unsigned )............SCRIMAGE
+int unsigned near TComm::Checksum( void near *, int unsigned )..COMM
+short unsigned near TComm::Checksum16( void near *, int unsigned )..COMM
+void near TLineTo::ChooseAnim( Guy near *, int, int ).......SCRIMAGE
+void near WalkTo::ChooseAnim( Guy near *, int, int )........SCRIMAGE
+void near Guy::ChooseStander()..............................SCRIMAGE
+void near Guy::ChooseWalker( int, int ).....................SCRIMAGE
+void near Guy::Cleanup()....................................SCRIMAGE
+void near Script::Cleanup().................................PERIODIC
+void near SquibRes::Cleanup()...................................TEXT
+void near TStream::CleanUp()..................................STREAM
+void near Utility::Cleanup()................................SCRIMAGE
+void near Utilizer::CleanupAllUtils().......................SCRIMAGE
+void near Utilizer::CleanupUtil( int unsigned ).............SCRIMAGE
+void near Utilizer::CleanupUtils( util_t )..................SCRIMAGE
+void near Mono::Clear().MONO            
+void near Mono::Clear( int, int, int, int ).....................MONO
+void near MemoryMgr::ClearAllocations().......................MEMMGR
+void near TComm::ClearError()...................................COMM
+void near TStream::ClearFilePtr().............................STREAM
+void near Context::ClearLists()..............................CONTEXT
+void near Mouse::ClearMickeys()................................MOUSE
+void near GraphicsMgr::Clip( Rectangle near *, Rectangle near * )..GRAPHMGR
+void near GraphicsMgr::Clip( TClipRect near *, TClipRect near * )..GRAPHMGR
+void near Rectangle::Clip( Rectangle near * )...................RECT
+void near TClipRect::Clip( TClipRect near * )...............CLIPRECT
+void near TClipRect::Clip( Rectangle near * )...............CLIPRECT
+void near MouseInt::ClipLastRect()..........................MOUSEINT
+int unsigned near ResourceMgr::CloneRes( res_t, int unsigned, int unsigned near *, res_t, int unsigned )..RESMGR
+void near TFile::Close()........................................FILE
+void near TStream::Close()....................................STREAM
+void near Debugger::CloseFile()................................DEBUG
+void near TStream::CloseSoundFile()...........................STREAM
+void near Debugger::CloseWindow()..............................DEBUG
+Debugger near ComDebug.......................................COMMMGR
+bool near CommMgrSave( short unsigned, __iobuf near * )......COMMMGR
+int near TCommMgr::Connect().................................COMMMGR
+TComm::ERROR near TNetwork::Connect()...........................COMM
+TComm::ERROR near TNULL::Connect()...........................COMMMGR
+TComm::ERROR near TSerial::Connect()..........................SERIAL
+void near Rectangle::Construct()................................RECT
+void near Rectangle::Construct( Rectangle near * )..............RECT
+void near TClipRect::Construct()............................CLIPRECT
+void near TClipRect::Construct( TClipRect near * )..........CLIPRECT
+void near TClipRect::Construct( Rectangle near * )..........CLIPRECT
+void near VGABuffer::Construct( int unsigned, int unsigned, int, int )..VGABUF
+bool near Rectangle::Contains( int, int ).......................RECT
+bool near TClipRect::Contains( int, int )...................CLIPRECT
+bool near ContextMgrSave( short unsigned, __iobuf near * )...CONTEXT
+void near DebugTimer::Continue()...............................DEBUG
+void near Rectangle::Copy( void near * )........................RECT
+void near Rectangle::Copy( void near *, int unsigned )..........RECT
+void near TClipRect::Copy( void near * )....................CLIPRECT
+void near TClipRect::Copy( void near *, int unsigned )......CLIPRECT
+void near TMovable::Copy( void near * ).......................OBJECT
+void near TMovable::Copy( void near *, int unsigned ).........OBJECT
+Resource near * near Resource::CopyAndInit( int unsigned, res_t, int unsigned )..RESOURCE
+bool near ResourceMgr::CopyResName( char near *, res_t, char near *, int unsigned )..RESMGR
+bool near ResourceMgr::CopyResName( char near *, res_t, int unsigned, int unsigned )..RESMGR
+char near * near Configuration::CopyStr( char near *, char near *, short unsigned )..CONFIG
+char near * near Configuration::CopyStr( char near *, short unsigned, short unsigned )..CONFIG
+int unsigned near CopyTRLE( char unsigned near *, CelArrayElement near * )..TRLE
+int near TRectPool::Count().................................GRAPHMGR
+void near Script::CountDown( long unsigned )................PERIODIC
+short unsigned near KeyList::CountKey( int ).................KEYLIST
+int unsigned near ResourceMgr::CreateAnim( int unsigned, CelArrayElement near * near *, int unsigned near * )..RESMGR
+int unsigned near ResourceMgr::CreateCel( CelArrayElement near *, int unsigned near * )..RESMGR
+int unsigned near FontMgr::CreatePartialText( int unsigned near *, char near *, char unsigned, void (near *)( ), int unsigned, ..FONTMGR
+int unsigned near FontMgr::CreateText( int unsigned near *, char near *, char unsigned, void (near *)( ), int unsigned, int uns..FONTMGR
+int unsigned near FontMgr::CreateText( int unsigned near *, char near *, char unsigned, char unsigned, int unsigned, justify )..FONTMGR
+void near FontMgr::CreateText( int unsigned, char near *, char unsigned, char unsigned, int unsigned, justify )..FONTMGR
+void near Script::Cue().....................................PERIODIC
+short near current_code_bits.....................................T12
+void near ContextMgr::Cut( int unsigned )....................CONTEXT
+void near Context::CutObject( int unsigned, short unsigned ).CONTEXT
+void near Context::CutReceiver( int unsigned )...............CONTEXT
+void near Context::CutRoster()...............................CONTEXT
+void near Context::CutScrimage( int unsigned )...............CONTEXT
+void near Context::CutServiceable( int unsigned )............CONTEXT
+void near Context::Cycle()...................................CONTEXT
+void near ContextMgr::Cycle()................................CONTEXT
+void near MemoryMgr::Cycle()..................................MEMMGR
+void near Periodic::Cycle().................................PERIODIC
+void near SoundMgr::Cycle().................................SOUNDMGR
+long unsigned near TClock::Cycle().............................CLOCK
+char unsigned near * near Resource::Data()..................RESOURCE
+int near TCommMgr::DataAvailable( sPacket near * )...........COMMMGR
+int near Dialog::Deactivate().................................DIALOG
+char near decode_stack[].T12            
+void near TCommMgr::DecrTail()...............................COMMMGR
+short unsigned near List::Delete( node near * ).................LIST
+short unsigned near List::Delete( void near * ).................LIST
+void near SoundMgr::DeleteDigi( TSound near *, bool ).......SOUNDMGR
+void near SConfig::DeleteEntry( char near * )................SCONFIG
+short unsigned near KeyList::DeleteKey( int )................KEYLIST
+void near SoundMgr::DeleteMidi( TMusic near *, bool ).......SOUNDMGR
+void near GraphicsMgr::DeleteScrimage( Scrimage near * )....GRAPHMGR
+sPacket near * near TCommMgr::DeQueueData()..................COMMMGR
+void near * near MemoryMgr::Deref( int unsigned ).............MEMMGR
+TComm::ERROR near TModem::Dial( char near * ).................SERIAL
+dictionary near dict[][256]......................................T12
+bool near SoundMgr::DigiIsPlaying( TSound near * )..........SOUNDMGR
+int near TCommMgr::DiscardData().............................COMMMGR
+TComm::ERROR near TNetwork::DiscardPacket( sPacketHeader near * )..COMM
+TComm::ERROR near TNULL::DiscardPacket( sPacketHeader near * )..COMMMGR
+TComm::ERROR near TSerial::DiscardPacket( sPacketHeader near * )..SERIAL
+int near TCommMgr::Disconnect()..............................COMMMGR
+TComm::ERROR near TModem::Disconnect()........................SERIAL
+TComm::ERROR near TNetwork::Disconnect()........................COMM
+TComm::ERROR near TNULL::Disconnect()........................COMMMGR
+TComm::ERROR near TSerial::Disconnect().......................SERIAL
+void near Rectangle::Display( char near * ).....................RECT
+void near Label::Draw().......................................DIALOG
+void near TControl::Draw()....................................DIALOG
+void near TTextBox::Draw()....................................DIALOG
+void near GraphicsMgr::DrawCel( short unsigned, short unsigned, int, int, Rectangle near * )..GRAPHMGR
+void near Mouse::DrawFence()...................................MOUSE
+void near MouseInt::DrawPointer()...........................MOUSEINT
+char near dummySpace[].......................................COMMMGR
+void near MemoryMgr::Dump( short unsigned, char near *, bool )..MEMMGR
+void near ResourceMgr::Dump( short unsigned, char near *, bool )..RESMGR
+void near MemoryMgr::DumpGrip( int unsigned ).................MEMMGR
+void near ResourceMgr::DumpLocked()...........................RESMGR
+int near TCommMgr::DumpQueue()...............................COMMMGR
+void near MouseInt::EnableDragging( bool )..................MOUSEINT
+void near EventMgr::EnableInterrupts()......................EVENTMGR
+int near TCommMgr::EnQueueData( bool ).......................COMMMGR
+void near Mouse::EraseFence()..................................MOUSE
+Message near * near EventMgr::ETail().......................EVENTMGR
+int near Dialog::EventLoop( void (near *)())..................DIALOG
+bool near EventMgrSave( short unsigned, __iobuf near * )....EVENTMGR
+bool near SaveMgr::ExecuteAtSaveFunctions( short unsigned, __iobuf near * )..SAVEMGR
+bool near ResourceMgr::Exists( res_t, int unsigned )..........RESMGR
+char unsigned near * near ExpandRLE( char unsigned near *, char unsigned near *, int )..TRLE
+void near ExpandSRLECel( char unsigned near *, char unsigned near *, CelHeader near * )..SRLE
+void near ExpandTRLECel( char unsigned near *, char unsigned near *, CelHeader near * )..TRLE
+void near Guy::FaceTo( int, int )...........................SCRIMAGE
+bool near SoundMgr::Fade( short unsigned, int unsigned, int unsigned )..SOUNDMGR
+bool near TMusic::Fade( short unsigned, int unsigned, int unsigned )..SOUNDMGR
+bool near TSound::Fade( short unsigned, int unsigned, int unsigned )..SOUNDMGR
+void near TPalette::FadeToBlack( int ).......................PALETTE
+void near TPalette::FadeUp( int )............................PALETTE
+void near ScaleTable::Fill( short unsigned )................GRAPHMGR
+node near * near GList::Find( void near * ).................GRAPHMGR
+node near * near List::Find( void near * )......................LIST
+int unsigned near MemoryMgr::FindEmptyGrip( int unsigned )....MEMMGR
+int unsigned near MemoryMgr::FindEmptySysGrip()...............MEMMGR
+short near SConfig::FindEntry( char near *, char near * )....SCONFIG
+MapRec near * near ResourceMgr::FindMapEntry( short unsigned, res_t, int unsigned )..RESMGR
+Resource near * near ResourceMgr::FindNewest()................RESMGR
+Resource near * near ResourceMgr::FindOldest( short unsigned )..RESMGR
+Resource near * near ResourceMgr::FindOldestUnlocked()........RESMGR
+int unsigned near MemoryMgr::FindOwnerOf( void near *, int near * )..MEMMGR
+short near Configuration::FindSubject( char near *, short unsigned )..CONFIG
+char near * near SConfig::FindToken( char near *, char near * )..SCONFIG
+int unsigned near GraphicsMgr::FindTopGuy( int, int ).......GRAPHMGR
+node near * near List::First()..................................LIST
+node near * near KeyList::FirstKey( int )....................KEYLIST
+void near * near List::FirstValue().............................LIST
+TClipRect near * near TRectPool::FirstValue()...............GRAPHMGR
+void near Guy::Flip( short unsigned, bool ).................SCRIMAGE
+void near ResourceMgr::Flush( int unsigned, bool )............RESMGR
+void near Scrimage::FlushDynamicCel().......................SCRIMAGE
+int unsigned near EventMgr::FlushEvents( short unsigned )...EVENTMGR
+int unsigned near EventMgr::FlushNotices( int unsigned )....EVENTMGR
+bool near FontMgrSave( short unsigned, __iobuf near * )......FONTMGR
+void near TClock::ForceResume()................................CLOCK
+int near Mouse::ForceShow( short ).............................MOUSE
+char unsigned near FontMgr::ForeColor( int ).................FONTMGR
+bool near fPrintUnfreedPtrs......................................MEM
+void near MemoryMgr::Free( int unsigned ).....................MEMMGR
+void near DPMI::FreeDosMemoryBlock( void far * )................DPMI
+void near DPMI::FreeDosMemoryBlock( short unsigned )............DPMI
+int near TStream::FSeek( int, int )...........................STREAM
+int near TStream::FTell().....................................STREAM
+int near TRectPool::GetAvailIndex().........................GRAPHMGR
+long unsigned near TClock::GetBootTicks()......................CLOCK
+char near * near TCommMgr::GetBuffer().......................COMMMGR
+char unsigned near * near VGABuffer::GetBuffer()..............VGABUF
+int near TStream::GetBytes( char near *, int unsigned, void near * near * )..STREAM
+int near MouseInt::GetCel().................................MOUSEINT
+int near MouseScr::GetCel().................................MOUSESCR
+CelHeader near Scrimage::GetCelHeader().....................SCRIMAGE
+void near VGABuffer::GetCelRect( int unsigned, int unsigned, Rectangle near * )..VGABUF
+int near TFile::Getch().FILE            
+int unsigned near FontMgr::GetCharOffset( char unsigned )....FONTMGR
+int unsigned near FontMgr::GetCharWidth( char unsigned ).....FONTMGR
+void near TPalette::GetColors( Gun near *, int unsigned, int unsigned )..PALETTE
+__iobuf near * near ResourceMgr::GetCuedResFile( res_t, int ).RESMGR
+void near FontMgr::GetCursorPosn( char near *, int unsigned, int unsigned, int unsigned near &, int unsigned near &, int unsign..FONTMGR
+char near * near SConfig::GetEntry( char near *, char near * )..SCONFIG
+int near SConfig::GetEntryDecimal( char near *, char near * )..SCONFIG
+TComm::ERROR near TComm::GetError().............................COMM
+int near TCommMgr::GetError()................................COMMMGR
+int near Mouse::GetFenceStartX()...............................MOUSE
+int near Mouse::GetFenceStartY()...............................MOUSE
+short unsigned near SaveMgr::GetFirstSave( char near * ).....SAVEMGR
+int unsigned near MemoryMgr::GetGrip( void near * )...........MEMMGR
+CelHeader near * near Resource::GetHeader( int unsigned )...RESOURCE
+MapRec near * near ResourceMgr::GetMapEntry( short unsigned, short unsigned, int unsigned near & )..RESMGR
+short near SoundMgr::GetMasterDigiVolume()..................SOUNDMGR
+short near SoundMgr::GetMasterMidiVolume()..................SOUNDMGR
+short unsigned near EventMgr::GetModifiers()................EVENTMGR
+short unsigned near SaveMgr::GetNextSave( char near * )......SAVEMGR
+node near * near List::GetNode( int unsigned )..................LIST
+int near Configuration::GetNum( char near * ).................CONFIG
+int near TRandomGenerator::GetNumber( int )......................API
+short near SoundMgr::GetPanPosition( int )..................SOUNDMGR
+char unsigned near VGABuffer::GetPixel( Rectangle near *, int, int, int unsigned, int unsigned, Scrimage near * )..VGABUF
+node near * near List::GetPNode( int unsigned ).................LIST
+void near Mouse::GetPos( Message near * )......................MOUSE
+Rectangle near * near GraphicsMgr::GetRect( res_t, int unsigned, int unsigned )..GRAPHMGR
+char unsigned near * near ResourceMgr::GetResData( int unsigned )..RESMGR
+int unsigned near MouseInt::GetResNum().....................MOUSEINT
+int unsigned near MouseScr::GetResNum().....................MOUSESCR
+res_t near MouseInt::GetResType()...........................MOUSEINT
+res_t near MouseScr::GetResType()...........................MOUSESCR
+char unsigned near * near VGABuffer::GetResUnitData( int unsigned, int unsigned )..VGABUF
+short unsigned near SaveMgr::GetSaveInfo( char near *, char near *, short unsigned, short unsigned near *, short unsigned near ..SAVEMGR
+int unsigned near Guy::GetScrimage()........................SCRIMAGE
+int unsigned near Object::GetScrimage().......................OBJECT
+int near TRandomGenerator::GetSeed().............................API
+TStreamBase near * near TSound::GetStreamer()...............SOUNDMGR
+long unsigned near TClock::GetTicks()..........................CLOCK
+int unsigned near Resource::GetUseCount()...................RESOURCE
+int near TCommMgr::GetUserID()...............................COMMMGR
+int unsigned near TNULL::GetUserID().........................COMMMGR
+int near TCommMgr::GetUserList( int unsigned near * )........COMMMGR
+int unsigned near TNetwork::GetUserList( int unsigned near * )..COMM
+int unsigned near TNULL::GetUserList( int unsigned near * )..COMMMGR
+int unsigned near TSerial::GetUserList( int unsigned near * ).SERIAL
+void near Dialog::GetWindowRect( Rectangle near * )...........DIALOG
+int near MouseInt::GetX()...................................MOUSEINT
+int near MouseScr::GetX()...................................MOUSESCR
+int near MouseInt::GetY()...................................MOUSEINT
+int near MouseScr::GetY()...................................MOUSESCR
+void near Mono::Goto( short unsigned, short unsigned )..........MONO
+bool near GraphMgrSave( short unsigned, __iobuf near * )....GRAPHMGR
+bool near Context::HandleMsg( Message near * )...............CONTEXT
+bool near ContextMgr::HandleMsg( Message near * )............CONTEXT
+bool near Dialog::HandleMsg( Message near * ).................DIALOG
+bool near Object::HandleMsg( Message near * ).................OBJECT
+bool near Script::HandleMsg( Message near * )...............PERIODIC
+bool near TButton::HandleMsg( Message near * )................DIALOG
+bool near TControl::HandleMsg( Message near * )...............DIALOG
+bool near TTextBox::HandleMsg( Message near * )...............DIALOG
+void near TModem::HangUp()....................................SERIAL
+short near Configuration::HasEntry( char near * ).............CONFIG
+bool near Configuration::HasParam( short unsigned, char near * )..CONFIG
+bool near TStream::HasReachedEOF()............................STREAM
+int near MemoryMgr::HeapCheck()...............................MEMMGR
+void near Guy::Hide().......................................SCRIMAGE
+void near Mouse::Hide()........................................MOUSE
+void near MouseInt::HideFence().............................MOUSEINT
+void near MouseInt::HidePointer()...........................MOUSEINT
+void near MouseScr::HidePointer()...........................MOUSESCR
+int unsigned near Rectangle::High().............................RECT
+int unsigned near TClipRect::High().........................CLIPRECT
+void near TButton::Hilite( bool ).............................DIALOG
+void near TControl::Hilite( bool )............................DIALOG
+void near TCommMgr::IncrHead()...............................COMMMGR
+void near TCommMgr::IncrTail()...............................COMMMGR
+void near Mouse::Init( int, int, int, int )....................MOUSE
+void near Resource::Init( res_t, int unsigned ).............RESOURCE
+void near SoundMgr::Init( char near * ).....................SOUNDMGR
+int near TCommMgr::Init( TComm near *, long )................COMMMGR
+TComm::ERROR near TModem::Init( long )........................SERIAL
+TComm::ERROR near TNetwork::Init( long )........................COMM
+int near TNetwork::init.COMM            
+TComm::ERROR near TNULL::Init( long )........................COMMMGR
+TComm::ERROR near TSerial::Init( long ).......................SERIAL
+void near SoundMgr::InitError( int unsigned, char near * )..SOUNDMGR
+void near EventMgr::InitEvent( Message near *, short unsigned, int )..EVENTMGR
+void near Dialog::Initialize( int, int, int unsigned, char unsigned, char unsigned )..DIALOG
+void near Dialog::Initialize( void (near *)( ))...............DIALOG
+void near InitializeDictionary().................................T12
+void near EventMgr::InitNotice( Message near *, notice_t )..EVENTMGR
+bool near Object::InMask( Message near * )....................OBJECT
+void near DPMI::Interrupt( REGS near *, SREGS near * )..........DPMI
+bool near Rectangle::Intersect( Rectangle near *, Rectangle near * )..RECT
+bool near TClipRect::Intersect( TClipRect near *, TClipRect near * )..CLIPRECT
+bool near TClipRect::Intersect( Rectangle near *, Rectangle near * )..CLIPRECT
+bool near GraphicsMgr::IntersectRect( TClipRect near *, TClipRect near *, Rectangle near * )..GRAPHMGR
+bool near ResourceMgr::IsCompressed( int unsigned )...........RESMGR
+bool near Resource::IsDynamic().............................RESOURCE
+bool near Rectangle::IsEmpty()..................................RECT
+bool near TClipRect::IsEmpty()..............................CLIPRECT
+int near TNetwork::isKilled.....................................COMM
+int unsigned near ResourceMgr::IsLoaded( res_t, int unsigned, bool )..RESMGR
+int unsigned near ResourceMgr::IsLoaded( int unsigned, bool ).RESMGR
+int near TNetwork::IsPacketAvailable()..........................COMM
+int near TNULL::IsPacketAvailable()..........................COMMMGR
+int near TSerial::IsPacketAvailable().........................SERIAL
+int near TMusic::IsPlaying()................................SOUNDMGR
+int near TSound::IsPlaying()................................SOUNDMGR
+bool near TControl::IsType( ctrl_t )..........................DIALOG
+void near Dialog::JustifyWindow( justify, justify )...........DIALOG
+void far EventMgr::KeyInterrupt()...........................EVENTMGR
+bool near EventMgr::KeyIsDown( char unsigned )..............EVENTMGR
+int near ki_debugging.......................................EVENTMGR
+char unsigned near ki_lastChar[]............................EVENTMGR
+int unsigned near MemoryMgr::LargestAlloc()...................MEMMGR
+node near * near List::Last()...................................LIST
+node near * near KeyList::LastKey( int ).....................KEYLIST
+void near * near List::LastValue()..............................LIST
+int unsigned near FontMgr::LineSize( char near *, int unsigned, int unsigned near & )..FONTMGR
+int near lineTrack....APIMEM            
+bool near Configuration::Load( char near * )..................CONFIG
+int unsigned near FontMgr::Load( int unsigned )..............FONTMGR
+int unsigned near ResourceMgr::Load( res_t, int unsigned, int unsigned near *, bool )..RESMGR
+char near * near SquibRes::Load( int unsigned, int, bool )......TEXT
+void near TPalette::Load( int unsigned ).....................PALETTE
+void near VGABuffer::Load( Rectangle near *, int, int, int unsigned, int unsigned, Scrimage near *, int unsigned, bool, int uns..VGABUF
+bool near ResourceMgr::LoadChunk( short unsigned )............RESMGR
+bool near SConfig::LoadConfig( bool )........................SCONFIG
+bool near SConfig::LoadConfig( char near *, bool )...........SCONFIG
+int unsigned near ResourceMgr::LoadFromSingle( TFile near *, res_t, int unsigned )..RESMGR
+void near TPalette::LoadPartial( int unsigned, int unsigned, int unsigned, int unsigned )..PALETTE
+void near * near AutoRes::Lock( res_t, int unsigned ).........RESMGR
+void near * near AutoRes::Lock()..............................RESMGR
+void near Resource::Lock()..................................RESOURCE
+void near ResourceMgr::Lock( int unsigned )...................RESMGR
+void near MemoryMgr::MakeEmptyGrip( int unsigned )............MEMMGR
+int unsigned near MemoryMgr::Malloc( int unsigned, bool ).....MEMMGR
+void near * near MemoryMgr::MallocAtGrip( int unsigned, int unsigned, bool )..MEMMGR
+MemoryMgr near MemMgr.MEMMGR            
+bool near MemMgrSave( short unsigned, __iobuf near * )........MEMMGR
+void near Mono::MemSet( int, int, char unsigned, char, int )....MONO
+void near * near mem_calloc( int unsigned )......................MEM
+void near * near mem_calloc_debug( int unsigned, char const near *, int, char const near * )..MEM
+void near mem_check()....MEM            
+void near mem_checkfree()........................................MEM
+void near mem_checkptr( void near * )............................MEM
+int near mem_exception().MEM            
+void near mem_free( void near * )................................MEM
+void near mem_freefp( void near * )..............................MEM
+void near mem_free_debug( void near *, char const near *, int )..MEM
+void near mem_init().....MEM            int near mem_inited......MEM
+void near * near mem_malloc( int unsigned )......................MEM
+void near * near mem_malloc_debug( int unsigned, char const near *, int, char const near * )..MEM
+void near * near mem_realloc( void near *, int unsigned )........MEM
+void near * near mem_realloc_debug( void near *, int unsigned, char const near *, int, char const near * )..MEM
+void near mem_setexception( MEM_E, ... ).........................MEM
+void near mem_setnewfileline( void near *, char const near *, int )..MEM
+char near * near mem_strdup( char const near * ).................MEM
+char near * near mem_strdup_debug( char const near *, char const near *, int )..MEM
+void near mem_term().....MEM            
+bool near SoundMgr::MidiIsPlaying( TMusic near * )..........SOUNDMGR
+int near MIntMask......MOUSE            
+short near MIntMoveX........................................MOUSEINT
+short near MIntMoveY........................................MOUSEINT
+int near MIntValue.....MOUSE            
+void near Guy::Mirror( short unsigned, bool )...............SCRIMAGE
+int near MkPan( int unsigned, int unsigned )................SOUNDMGR
+bool near MouseSave( short unsigned, __iobuf near * )..........MOUSE
+char unsigned near mouseStack[]................................MOUSE
+bool near GList::Move( void near *, short unsigned, void near * )..GRAPHMGR
+bool near List::Move( void near *, short unsigned, void near * )..LIST
+void near MouseInt::MovePointer()...........................MOUSEINT
+void near MouseScr::MovePointer()...........................MOUSESCR
+StackPtr near newStackPtr......................................MOUSE
+void near * near newSys( int unsigned )..........................MEM
+node near * near List::Next()...................................LIST
+node near * near List::Next( node near * )......................LIST
+node near * near List::Next( void near * )......................LIST
+int near TStream::NextChunkSize().............................STREAM
+node near * near KeyList::NextKey( node near *, int )........KEYLIST
+node near * near KeyList::NextKey( void near *, int )........KEYLIST
+int unsigned near SoundMgr::NextOldestDigiPlaying().........SOUNDMGR
+int unsigned near Dialog::NextTab()...........................DIALOG
+void near * near List::NextValue()..............................LIST
+TClipRect near * near TRectPool::NextValue()................GRAPHMGR
+short unsigned near next_bump_code...............................T12
+short unsigned near next_code....................................T12
+void near * near List::NodeValue( node near * ).................LIST
+Message near * near EventMgr::NTail().......................EVENTMGR
+short unsigned near SoundMgr::NumberDigiPlaying()...........SOUNDMGR
+short unsigned near SoundMgr::NumberMidiPlaying()...........SOUNDMGR
+void near Guy::OffsetPos( int, int )........................SCRIMAGE
+int unsigned near SoundMgr::OldestDigiPlaying().............SOUNDMGR
+int unsigned near SoundMgr::OldestMidiPlaying().............SOUNDMGR
+StackPtr near oldStackPtr......................................MOUSE
+int near TFile::Open( char near *, char near *, int )...........FILE
+void near TStream::Open( res_t, int unsigned, int unsigned, int unsigned, int unsigned, int unsigned, int unsigned )..STREAM
+bool near Debugger::OpenFile( char near * )....................DEBUG
+bool near Debugger::OpenWindow( int, int, int, int )...........DEBUG
+void near OS_CopyPixelsLine( ASMCopyPixels near * ).........APIGRAPH
+void near OS_InitMem()....OS            
+void near Debugger::Out( char near *, ... )....................DEBUG
+void near Mono::Out( char near *, ... ).........................MONO
+bool near MemoryMgr::PackMem()................................MEMMGR
+char unsigned near * near PackRLE( char unsigned near *, char unsigned near *, short )..TRLE
+int unsigned near PackSRLECel( char unsigned near *, char unsigned near *, CelHeader near * )..SRLE
+int unsigned near PackTRLECel( char unsigned near *, char unsigned near *, CelHeader near * )..TRLE
+void near MouseInt::Pause( bool )...........................MOUSEINT
+void near MouseScr::Pause( bool )...........................MOUSESCR
+void near SoundMgr::Pause().................................SOUNDMGR
+void near TClock::Pause()......................................CLOCK
+void near TMusic::Pause()...................................SOUNDMGR
+void near TSound::Pause()...................................SOUNDMGR
+char near pBlockIDStrings[][30]..............................COMMMGR
+TCommMgr near * near pCommMgr................................COMMMGR
+ContextMgr near * near pContextMgr...........................CONTEXT
+char near pErrorStrings[][30]................................COMMMGR
+EventMgr near * near pEventMgr..............................EVENTMGR
+FontMgr near * near pFontMgr.................................FONTMGR
+GraphicsMgr near * near pGraphMgr...........................GRAPHMGR
+void near TMusic::Play( short unsigned, short, int unsigned )..SOUNDMGR
+void near TSound::Play( int, short, int, int unsigned, short, bool )..SOUNDMGR
+void near TSound::PlayNextLink()............................SOUNDMGR
+MemoryMgr near * near pMemMgr.................................MEMMGR
+Mono near * near pMono..MONO            
+Mouse near * near pMouse.......................................MOUSE
+MouseInt near * near pMouseInt..............................MOUSEINT
+ObjectMgr near * near pObjMgr.................................OBJMGR
+bool near EventMgr::PostEvent( short unsigned, int )........EVENTMGR
+Message near * near EventMgr::PostEventXY( short unsigned, int, int, int )..EVENTMGR
+bool near EventMgr::PostNotice( notice_t, int unsigned, void near *, int unsigned )..EVENTMGR
+bool (near * near ppGlobalMsg)( Message near * ).............CONTEXT
+ResourceMgr near * near pResMgr...............................RESMGR
+node near * near List::Prev( node near * )......................LIST
+node near * near List::Prev( void near * )......................LIST
+node near * near KeyList::PrevKey( node near *, int )........KEYLIST
+node near * near KeyList::PrevKey( void near *, int )........KEYLIST
+int unsigned near Dialog::PrevTab()...........................DIALOG
+void (far * near EventMgr::prev_int_09)()...................EVENTMGR
+short unsigned near SaveMgr::ProcessFind( char near *, int unsigned )..SAVEMGR
+bool near MouseInt::Protect( bool, Rectangle near * ).......MOUSEINT
+bool near MouseScr::Protect( bool, Rectangle near * ).......MOUSESCR
+SoundMgr near * near pSoundMgr..............................SOUNDMGR
+Scrimage near * near ScrimList::PtrAt( int unsigned ).......GRAPHMGR
+void near EventMgr::PublishNext()...........................EVENTMGR
+bool near Resource::Purge().................................RESOURCE
+int unsigned near ResourceMgr::Purge( short unsigned )........RESMGR
+void near ResourceMgr::PurgeAllUnlocked().....................RESMGR
+void near Debugger::Put( char near * ).........................DEBUG
+void near Mono::Put( char near * )..............................MONO
+int near TCommMgr::QueueDecr( int )..........................COMMMGR
+int near TCommMgr::QueueIncr( int )..........................COMMMGR
+void near ContextMgr::Quit().................................CONTEXT
+long near TFile::Read( void near *, long, long )................FILE
+bool near MemoryMgr::ReadAllocations( __iobuf near * )........MEMMGR
+int unsigned near TStream::ReadBuf( char unsigned near *, int unsigned, int unsigned )..STREAM
+int unsigned near MemoryMgr::Realloc( int unsigned, int unsigned )..MEMMGR
+bool near DPMI::RealModeInterrupt( int unsigned, RealModeCall near * )..DPMI
+void near * near DPMI::RealToProtected( int unsigned )..........DPMI
+void near * near DPMI::RealToProtected( int unsigned, int unsigned )..DPMI
+int near TCommMgr::ReceiveData( sPacket near * ).............COMMMGR
+int near TCommMgr::ReceiveLargePacket()......................COMMMGR
+TComm::ERROR near TNetwork::ReceivePacket( sPacket near * ).....COMM
+TComm::ERROR near TNULL::ReceivePacket( sPacket near * ).....COMMMGR
+TComm::ERROR near TSerial::ReceivePacket( sPacket near * )....SERIAL
+int near TRectPool::ReduceRects()...........................GRAPHMGR
+void near FontMgr::Register( int unsigned )..................FONTMGR
+void near TStream::ReInit( int unsigned ).....................STREAM
+void near GList::Release()..................................GRAPHMGR
+void near List::Release().......................................LIST
+void near TRectPool::Release()..............................GRAPHMGR
+void near VGABuffer::ReleaseBuffer()..........................VGABUF
+void near MemoryMgr::ReleaseGrip( int unsigned )..............MEMMGR
+void near RemoveAtSave( bool (near *)())....................SAVEBASE
+void near TCommMgr::RemoveEmpties()..........................COMMMGR
+bool near TCommMgr::RemoveFromWaitingRoom( sPacket near * )..COMMMGR
+void near TCommMgr::RemoveOldReplies().......................COMMMGR
+int near ResourceMgr::ReportUseage( res_t )...................RESMGR
+ResCfgEntry near resCfgTable[]................................RESMGR
+void near TRandomGenerator::ReSeed( int )........................API
+TComm::ERROR near TCommMgr::ResendWaiters()..................COMMMGR
+void near SConfig::ResetConfigFile().........................SCONFIG
+void near Context::ResetMsgPri( int unsigned, int )..........CONTEXT
+void near Object::ResetMsgPri( int )..........................OBJECT
+bool near List::Resize( int unsigned )..........................LIST
+void near SConfig::ReSizeArray( int )........................SCONFIG
+Debugger near ResMgrDebug.....................................RESMGR
+bool near ResourceMgrSave( short unsigned, __iobuf near * )...RESMGR
+short unsigned near SaveMgr::Restore( short unsigned, short unsigned, short unsigned, short unsigned )..SAVEMGR
+bool near MemoryMgr::RestoreGrip( int unsigned, __iobuf near * )..MEMMGR
+bool near MemoryMgr::RestoreGripNum( int unsigned near *, __iobuf near * )..MEMMGR
+bool near MemoryMgr::RestoreGripOffsets().....................MEMMGR
+void near MouseInt::RestoreUnderBits()......................MOUSEINT
+void near Mono::RestoreWindow().................................MONO
+void near ObjectMgr::RestoreWorld()...........................OBJMGR
+void near Mono::Resume()........................................MONO
+void near SoundMgr::Resume()................................SOUNDMGR
+void near TClock::Resume().....................................CLOCK
+void near TMusic::Resume()..................................SOUNDMGR
+void near TSound::Resume()..................................SOUNDMGR
+void near PalCycler::RotatePalette( char )...................PALETTE
+int unsigned near DebugTimer::SampleTimer()....................DEBUG
+bool near EventMgr::Save( short unsigned, __iobuf near * )..EVENTMGR
+bool near GraphicsMgr::Save( short unsigned, __iobuf near * )..GRAPHMGR
+bool near MouseInt::Save( short unsigned, __iobuf near * )..MOUSEINT
+bool near MouseScr::Save( short unsigned, __iobuf near * )..MOUSESCR
+bool near Object::Save( short unsigned )......................OBJECT
+short unsigned near SaveMgr::Save( short unsigned, short unsigned, short unsigned, short unsigned, char near * )..SAVEMGR
+bool near Scrimage::Save( short unsigned )..................SCRIMAGE
+bool near SoundMgr::Save( short unsigned, __iobuf near * )..SOUNDMGR
+bool near TCommMgr::Save( short unsigned, __iobuf near * )...COMMMGR
+void near SConfig::SaveConfig()..............................SCONFIG
+void near SConfig::SaveConfig( char near * ).................SCONFIG
+bool near MemoryMgr::SaveGrip( int unsigned, __iobuf near * ).MEMMGR
+bool near MemoryMgr::SaveGripNum( int unsigned, __iobuf near * )..MEMMGR
+SaveMgr near saveMgr.SAVEMGR            
+void near MouseInt::SaveUnderBits().........................MOUSEINT
+void near Mono::SaveWindow()....................................MONO
+void near ObjectMgr::SaveWorld()..............................OBJMGR
+char unsigned near * near ScanAddress( ScanOffsetTable near *, int )..TRLE
+char near EventMgr::ScanToASCII( Event )....................EVENTMGR
+void near Periodic::ScriptAborting()........................PERIODIC
+void near Utilizer::ScriptAborting()........................SCRIMAGE
+void near Mono::Scroll( short unsigned, int, int, int, int )....MONO
+FileInfo near * near ResourceMgr::SearchMaps( res_t, int unsigned, int unsigned near & )..RESMGR
+int near TFile::Seek( long, int )...............................FILE
+void near TButton::Select( bool ).............................DIALOG
+void near TControl::Select( bool )............................DIALOG
+void near TTextBox::Select()..................................DIALOG
+TComm::ERROR near TCommMgr::SendAckNak( sPacket near *, bool )..COMMMGR
+int near TCommMgr::SendData( int, int, int, void near * )....COMMMGR
+int near TCommMgr::SendData( sPacket near *, bool )..........COMMMGR
+bool near EventMgr::SendNotice( notice_t, int unsigned, int unsigned, void near * )..EVENTMGR
+TComm::ERROR near TNetwork::SendPacket( sPacket near *, bool )..COMM
+TComm::ERROR near TNULL::SendPacket( sPacket near *, bool )..COMMMGR
+TComm::ERROR near TSerial::SendPacket( sPacket near *, bool ).SERIAL
+void near Animator::Service()...............................SCRIMAGE
+void near PalCycler::Service()...............................PALETTE
+void near PalFader::Service()................................PALETTE
+void near Periodic::Service()...............................PERIODIC
+void near Script::Service().................................PERIODIC
+void near TLineTo::Service()................................SCRIMAGE
+void near Utility::Service()................................SCRIMAGE
+void near Utilizer::Service()...............................SCRIMAGE
+void near AutoRes::Set( res_t, int unsigned ).................RESMGR
+void near Rectangle::Set( int, int, int, int )..................RECT
+void near ScaleTable::Set( int, short unsigned, int, short unsigned )..GRAPHMGR
+void near TClipRect::Set( int, int, int, int )..............CLIPRECT
+void near Mono::SetAttr( char unsigned )........................MONO
+void near Resource::SetAttr( short unsigned, bool ).........RESOURCE
+void near TControl::SetAttr( int unsigned, bool ).............DIALOG
+void near TSerial::SetBaud( int ).............................SERIAL
+void near Guy::SetCel( int unsigned ).......................SCRIMAGE
+int unsigned near FontMgr::SetChar( int unsigned, int unsigned, char unsigned, char unsigned near *, char unsigned near *, bool..FONTMGR
+void near Guy::SetClipRect( int, int, int, int )............SCRIMAGE
+void near Scrimage::SetClipRect( int, int, int, int ).......SCRIMAGE
+void near Periodic::SetClock( int unsigned )................PERIODIC
+void near Guy::SetClut( int unsigned, int unsigned, int unsigned )..SCRIMAGE
+void near Scrimage::SetClut( int unsigned, int unsigned, int unsigned )..SCRIMAGE
+void near TPalette::SetColor( int, char unsigned, char unsigned, char unsigned )..PALETTE
+void near SConfig::SetConfigFile( char near * )..............SCONFIG
+void near Object::SetContext( int unsigned )..................OBJECT
+void near Mouse::SetDraggableRect( int, int, int, int )........MOUSE
+void near SConfig::SetEntry( char near *, char near * )......SCONFIG
+TComm::ERROR near TComm::SetError( TComm::ERROR )...............COMM
+void near Mouse::SetFence( int, int, int, int )................MOUSE
+void near MouseInt::SetFenceRes( res_t, int unsigned, int unsigned, res_t, int unsigned, int unsigned )..MOUSEINT
+void near MemoryMgr::SetHashTable( void near *, int unsigned )..MEMMGR
+void near FontMgr::SetHPen( int unsigned near &, char near *, int unsigned, int unsigned, justify, int unsigned )..FONTMGR
+void near Periodic::SetInterval( long unsigned )............PERIODIC
+void near SetLanguage( int )....................................TEXT
+void near Scrimage::SetLastRect( int, int, int, int ).......SCRIMAGE
+void near Mouse::SetLimits( Rectangle near * ).................MOUSE
+void near SoundMgr::SetMasterDigiVolume( short )............SOUNDMGR
+void near SoundMgr::SetMasterMidiVolume( short )............SOUNDMGR
+void near Object::SetName( char near * )......................OBJECT
+void near Rectangle::SetName( char near * ).....................RECT
+void near VGABuffer::SetOrigin( int, int )....................VGABUF
+void near TSound::SetPanPosition( int ).....................SOUNDMGR
+TComm::ERROR near TSerial::SetPort( int ).....................SERIAL
+void near Dialog::SetPos( int, int )..........................DIALOG
+void near Guy::SetPos( int, int )...........................SCRIMAGE
+void near Mouse::SetPos( int, int )............................MOUSE
+void near TControl::SetPos( int, int )........................DIALOG
+void near Dialog::SetPri( int )...............................DIALOG
+void near Guy::SetPri( int )................................SCRIMAGE
+void near MouseInt::SetPri( int )...........................MOUSEINT
+void near MouseScr::SetPri( int )...........................MOUSESCR
+void near MemoryMgr::SetPurgeStatus( int unsigned, bool ).....MEMMGR
+void near Guy::SetRect()....................................SCRIMAGE
+void near Scrimage::SetRect()...............................SCRIMAGE
+void near Scrimage::SetRect( int, int, int, int )...........SCRIMAGE
+void near Mono::SetReport( char near * )........................MONO
+void near FontMgr::SetRes( int unsigned )....................FONTMGR
+void near Guy::SetRes( res_t, int unsigned, int unsigned )..SCRIMAGE
+void near MouseInt::SetRes( res_t, int unsigned, int unsigned, int unsigned )..MOUSEINT
+void near MouseScr::SetRes( res_t, int unsigned, int unsigned, int unsigned )..MOUSESCR
+void near Object::SetResCount( res_t, int unsigned, res_t, int unsigned )..OBJECT
+void near MemoryMgr::SetSaveStatus( int unsigned, bool )......MEMMGR
+void near Guy::SetScale( int unsigned ).....................SCRIMAGE
+void near MouseInt::SetScale( int unsigned )................MOUSEINT
+void near MouseScr::SetScale( int unsigned )................MOUSESCR
+void near Debugger::SetScrollCount( int )......................DEBUG
+void near Mono::SetScrollCount( int )...........................MONO
+bool near Guy::SetState( short unsigned, bool ).............SCRIMAGE
+bool near Scrimage::SetState( short unsigned, bool )........SCRIMAGE
+void near Configuration::SetStr( char near *, char near *, short unsigned )..CONFIG
+void near FontMgr::SetString( int unsigned, int unsigned, char near *, char unsigned near *, int unsigned, int unsigned, justif..FONTMGR
+void near Dialog::SetTControlDrawProc( void (near *)( ))......DIALOG
+void near TClock::SetTicks( long unsigned )....................CLOCK
+void near Animator::Setup( void near * )....................SCRIMAGE
+void near Guy::Setup()......................................SCRIMAGE
+void near Label::Setup( TControlInfo near *, int unsigned, int unsigned )..DIALOG
+void near PalCycler::Setup( void near * )....................PALETTE
+void near PalFader::Setup( void near * ).....................PALETTE
+void near PalFader::Setup( char unsigned, char unsigned, int unsigned, int unsigned, short unsigned, char unsigned, char unsign..PALETTE
+void near PalFader::Setup( char unsigned, char unsigned, int unsigned, int unsigned, short unsigned, int unsigned )..PALETTE
+void near Script::Setup( int unsigned, Periodic near *, int unsigned )..PERIODIC
+void near TButton::Setup( TControlInfo near * )...............DIALOG
+void near TLineTo::Setup( void near * ).....................SCRIMAGE
+void near TPalette::Setup( int unsigned )....................PALETTE
+void near TTextBox::Setup( TControlInfo near * )..............DIALOG
+void near Utility::Setup( void near * ).....................SCRIMAGE
+void near Utilizer::SetupUtil( Utility near * ).............SCRIMAGE
+void near Resource::SetUseCount( int unsigned ).............RESOURCE
+int (near * near TCommMgr::SetUserAbortFn( int (near *)( )))( int )..COMMMGR
+void near TMusic::SetVolume( short, int, bool ).............SOUNDMGR
+void near TSound::SetVolume( short, int, bool ).............SOUNDMGR
+void near Mono::SetWindow( int, int, int, int ).................MONO
+void near MouseInt::SetX( int ).............................MOUSEINT
+void near MouseScr::SetX( int ).............................MOUSESCR
+void near MouseInt::SetY( int ).............................MOUSEINT
+void near MouseScr::SetY( int ).............................MOUSESCR
+void near Periodic::Set_Script( void near *, int unsigned ).PERIODIC
+void near Guy::Show().......................................SCRIMAGE
+void near Mouse::Show()........................................MOUSE
+void near MemoryMgr::ShowGripNames( short unsigned )..........MEMMGR
+void near MouseInt::ShowPointer()...........................MOUSEINT
+void near MouseScr::ShowPointer()...........................MOUSESCR
+void near SoundMgr::ShutDown()..............................SOUNDMGR
+void near ShutDownMouse()......................................MOUSE
+void near Mouse::ShutDownMouseDriver().........................MOUSE
+void near ShutDownSoundMgr()................................SOUNDMGR
+void near ShutDownSoundMgrNow( SoundMgr near * )............SOUNDMGR
+void near Debugger::Silence( bool )............................DEBUG
+void near TCommMgr::Silence( bool )..........................COMMMGR
+long near TFile::Size().FILE            
+int unsigned near MemoryMgr::SizeOfGrip( int unsigned ).......MEMMGR
+void near Mono::Snapshot()......................................MONO
+int near SortAscendingKey( void const near *, void const near * )..KEYLIST
+int near SortAscendingPri( void const near *, void const near * )..GRAPHMGR
+void near KeyList::SortByKey( int )..........................KEYLIST
+int near SortDescendingKey( void const near *, void const near * )..KEYLIST
+void near SortScrimsByPri().................................GRAPHMGR
+bool near SoundMgrSave( short unsigned, __iobuf near * )....SOUNDMGR
+int near squibLanguageNum.......................................TEXT
+_tagCAPABILITIES near sSOSDeviceCaps........................SOUNDMGR
+__1iocl_SOS_HARDWARE near sSOSHardwareSettings..............SOUNDMGR
+__6gob84_SOS_INIT_DRIVER near sSOSInitDMDriver..............SOUNDMGR
+__6gob84_SOS_INIT_DRIVER near sSOSInitDriver................SOUNDMGR
+__2p89em_SOS_MIDI_INIT_SONG near sSOSInitSong...............SOUNDMGR
+__6el72l_SOS_MIDI_HARDWARE near sSOSMIDIHardware............SOUNDMGR
+__6bqh6e_SOS_MIDI_INIT_DRIVER near sSOSMIDIInitDriver.......SOUNDMGR
+__ns58n_SOS_MIDI_TRACK_DEVICE near sSOSTrackMap.............SOUNDMGR
+void near DebugTimer::Start()..................................DEBUG
+int unsigned near DebugTimer::Stop()...........................DEBUG
+void near TMusic::Stop()....................................SOUNDMGR
+void near TSound::Stop()....................................SOUNDMGR
+void near TStream::Stream( int unsigned ).....................STREAM
+bool near TStream::StreamDone()...............................STREAM
+void near Mono::Suspend().......................................MONO
+void near SoundMgr::SwapDigiLeftAndRight( bool )............SOUNDMGR
+int unsigned near MemoryMgr::SysMalloc( int unsigned )........MEMMGR
+bool near SoundMgr::SystemIsActive( short unsigned )........SOUNDMGR
+char near * near szFileTrack..................................APIMEM
+char near * near szLastMessage....................................OS
+char near * near szStrTrack...................................APIMEM
+int unsigned near t12_buffer_count...............................T12
+int unsigned near t12_buffer_max.................................T12
+short unsigned near T12_Decode_String( short unsigned, short unsigned )..T12
+short unsigned near T12_Find_Child_Node( short unsigned, short ).T12
+int unsigned near T12_Flatten( __iobuf near *, int unsigned, char near * )..T12
+int unsigned near T12_Fluff( __iobuf near *, int unsigned, char near *, char near * )..T12
+int unsigned near T12_InputBits( __iobuf near *, short, char near * )..T12
+char unsigned near t12_mask......................................T12
+void near T12_OutputBits( __iobuf near *, int unsigned, short )..T12
+short near t12_rack......T12            
+int unsigned near t12_return_count...............................T12
+DebugTimer near tempTimers[].................................COMMMGR
+void near FontMgr::TextSize( Rectangle near &, char near *, int unsigned, int, int unsigned )..FONTMGR
+TNULL near tNull.....COMMMGR            
+void far TSoundStreamCallback( int unsigned, int unsigned, int unsigned )..SOUNDMGR
+void near Rectangle::Unite( Rectangle near * )..................RECT
+void near TClipRect::Unite( TClipRect near * )..............CLIPRECT
+void near TClipRect::Unite( Rectangle near * )..............CLIPRECT
+int near TRectPool::UniteRects()............................GRAPHMGR
+void near AutoRes::Unlock()...................................RESMGR
+void near Resource::Unlock( bool )..........................RESOURCE
+void near ResourceMgr::Unlock( int unsigned, bool )...........RESMGR
+void near FontMgr::Unregister()..............................FONTMGR
+void near TPalette::UpdateAll()..............................PALETTE
+void near TPalette::UpdateColor( int ).......................PALETTE
+void near TPalette::UpdateColors( Gun near *, int unsigned, int unsigned )..PALETTE
+void near TPalette::UpdateColors( int unsigned, int unsigned )..PALETTE
+void near MouseInt::UpdatePointer().........................MOUSEINT
+void near MouseScr::UpdatePointer().........................MOUSESCR
+void near GraphicsMgr::UpdateRect( Rectangle near * ).......GRAPHMGR
+void near GraphicsMgr::UpdateRect( TClipRect near * ).......GRAPHMGR
+int unsigned near MemoryMgr::UsedMem()........................MEMMGR
+void near List::Verify( char near * )...........................LIST
+TComm::ERROR near TModem::WaitForCall().......................SERIAL
+void near EventMgr::WaitForEvent( Message near * )..........EVENTMGR
+int unsigned near wError....................................SOUNDMGR
+void near EventMgr::Where( int near *, int near * ).........EVENTMGR
+int unsigned near Rectangle::Wide().............................RECT
+int unsigned near TClipRect::Wide().........................CLIPRECT
+int unsigned near TNetwork::wNETNodes...........................COMM
+int unsigned near TNetwork::wNETSocket..........................COMM
+int unsigned near FontMgr::WordSize( char near *, int unsigned near & )..FONTMGR
+int unsigned near FontMgr::WordSize( char near *, int unsigned near &, int unsigned )..FONTMGR
+int unsigned near wPort.....................................SOUNDMGR
+long near TFile::Write( void near *, long, long )...............FILE
+TComm::ERROR near TModem::Write( char near * )................SERIAL
+bool near MemoryMgr::WriteAllocations( __iobuf near * ).......MEMMGR
+void near Configuration::WriteConfig( char near * )...........CONFIG
+void near TStream::ZeroOffsetBufs()...........................STREAM
+long near TModem::_Answer()...................................SERIAL
+bool near TSerial::_CheckLineErrors().........................SERIAL
+int near TSerial::_CheckValid( sPacketHeaderTiny near * ).....SERIAL
+void near TSerial::_ClearVars()...............................SERIAL
+void near TSerial::_Destruct()................................SERIAL
+void (near * near _new_handler)()................................MEM
+void near _Panic( char near *, char near *, int ).................OS
+int near TCommMgr::_ReceiveData( sPacket near * )............COMMMGR
+int near TCommMgr::_SendData( sPacket near *, bool ).........COMMMGR
+bool near TSerial::_WaitForTXBufferSpace()....................SERIAL
+char near * near __mem_file......................................MEM
+int near __mem_line......MEM            XModeFlipPage_.........modex
+_curDrawPage...........modex            _pVGAMem...............modex
+
+modex         Offset=00000020H
+  ABlit_            AFBlit_           ARBlit_           FillScreen_     
+  SetXMode_         SyncWithVBL_      XModeFlipPage_    _curDrawPage    
+  _pVGAMem        
+
+XMODDISP      Offset=00000820H
+  near int near ADetectVGA()::.0::PassRegs::PassRegs() 
+  int near ADetectVGA()             
+  int near AInitGraphics( GraphicsMgr near *, int unsigned )            
+  bool near AInitVideo( int unsigned, int unsigned, int unsigned near &, int near &, int near &, int unsigned near &, int unsigne 
+
+VGABUF        Offset=000062c0H
+  near VGABuffer::VGABuffer()       
+  near VGABuffer::VGABuffer( int unsigned, int unsigned, int, int )     
+  near VGABuffer::~VGABuffer()        bool near VGABuffer::__defarg()   
+  void (near * const near __vftbl[])()                
+  void near VGABuffer::Blit( int unsigned )           
+  void near VGABuffer::Construct( int unsigned, int unsigned, int, int ) 
+  char unsigned near * near VGABuffer::GetBuffer()      void near VGABuffer::GetCelRect( int unsigned, int unsigned, Rectangle near * )         
+  char unsigned near VGABuffer::GetPixel( Rectangle near *, int, int, int unsigned, int unsigned, Scrimage near * ) 
+  char unsigned near * near VGABuffer::GetResUnitData( int unsigned, int unsigned )       
+  void near VGABuffer::Load( Rectangle near *, int, int, int unsigned, int unsigned, Scrimage near *, int unsigned, bool, int uns 
+  void near VGABuffer::ReleaseBuffer()                
+  void near VGABuffer::SetOrigin( int, int )          
+
+vesa          Offset=0000b1e0H
+  ExtensionsOff_    ExtensionsOn_     SetBankData_      VESABlit_       
+  VESASetBank_      Video7Blit_       Video7SetBank_  
+
+TRLE          Offset=0000c5c0H
+  char unsigned near * near AdvanceRLE( char unsigned near *, short )   
+  int unsigned near CopyTRLE( char unsigned near *, CelArrayElement near * ) 
+  char unsigned near * near ExpandRLE( char unsigned near *, char unsigned near *, int )  
+  void near ExpandTRLECel( char unsigned near *, char unsigned near *, CelHeader near * ) 
+  char unsigned near * near PackRLE( char unsigned near *, char unsigned near *, short )  
+  int unsigned near PackTRLECel( char unsigned near *, char unsigned near *, CelHeader near * ) 
+  char unsigned near * near ScanAddress( ScanOffsetTable near *, int )  
+
+TEXT          Offset=0000e880H
+  void near SquibRes::Cleanup()     
+  char near * near SquibRes::Load( int unsigned, int, bool )            
+  void near SetLanguage( int )        int near squibLanguageNum         
+
+T12           Offset=00010c40H
+  short near current_code_bits        char near decode_stack[]          
+  dictionary near dict[][256]         void near InitializeDictionary()  
+  short unsigned near next_bump_code   short unsigned near next_code     
+  int unsigned near t12_buffer_count   int unsigned near t12_buffer_max  
+  short unsigned near T12_Decode_String( short unsigned, short unsigned ) 
+  short unsigned near T12_Find_Child_Node( short unsigned, short )      
+  int unsigned near T12_Flatten( __iobuf near *, int unsigned, char near * ) 
+  int unsigned near T12_Fluff( __iobuf near *, int unsigned, char near *, char near * )   
+  int unsigned near T12_InputBits( __iobuf near *, short, char near * ) 
+  char unsigned near t12_mask       
+  void near T12_OutputBits( __iobuf near *, int unsigned, short )       
+  short near t12_rack                 int unsigned near t12_return_count 
+
+SRLE          Offset=000133e0H
+  void near ExpandSRLECel( char unsigned near *, char unsigned near *, CelHeader near * ) 
+  int unsigned near PackSRLECel( char unsigned near *, char unsigned near *, CelHeader near * ) 
+
+STREAM        Offset=00014da0H
+  near TStream::TStream()             near TStreamBase::TStreamBase()   
+  near TStream::~TStream()            near TStreamBase::~TStreamBase()  
+  int unsigned near TStream::__defarg()               
+  void near * near * near TStream::__defarg()         
+  int unsigned near TStream::__defarg()               
+  int unsigned near TStream::__defarg()               
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void near TStream::CleanUp()        void near TStream::ClearFilePtr() 
+  void near TStream::Close()        
+  void near TStream::CloseSoundFile()                 
+  int near TStream::FSeek( int, int )                 
+  int near TStream::FTell()           int near TStream::GetBytes( char near *, int unsigned, void near * near * )             
+  bool near TStream::HasReachedEOF()   int near TStream::NextChunkSize() 
+  void near TStream::Open( res_t, int unsigned, int unsigned, int unsigned, int unsigned, int unsigned, int unsigned )        
+  int unsigned near TStream::ReadBuf( char unsigned near *, int unsigned, int unsigned )  
+  void near TStream::ReInit( int unsigned )           
+  void near TStream::Stream( int unsigned )           
+  bool near TStream::StreamDone()   
+  void near TStream::ZeroOffsetBufs()                 
+
+SOUNDMGR      Offset=00019840H
+  near SOS_Base::SOS_Base()           near SoundMgr::SoundMgr()         
+  near TMusic::TMusic()               near TSound::TSound()             
+  near SOS_Base::~SOS_Base()          near SoundMgr::~SoundMgr()        
+  near TMusic::~TMusic()              near TSound::~TSound()            
+  int unsigned near TStreamBase::__defarg()           
+  char near * near SoundMgr::__defarg()               
+  bool near __defarg()              
+  void near * near * near TStreamBase::__defarg()     
+  int unsigned near TStreamBase::__defarg()           
+  int unsigned near TStreamBase::__defarg()           
+  int unsigned near TStreamBase::__defarg()           
+  bool near SoundMgr::__defarg()      bool near SoundMgr::__defarg()    
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void near SoundMgr::AddDigi( TSound near *, int, int unsigned )       
+  void near SoundMgr::AddMidi( TMusic near *, short unsigned, int unsigned ) 
+  void near TSound::AddToChain( int )                   void near SOS_Base::AutoFade( short unsigned, int unsigned, int unsigned, int unsigned ) 
+  void near SoundMgr::AutoFade( short unsigned, int unsigned, int unsigned, int unsigned ) 
+  void near SoundMgr::Cycle()       
+  void near SoundMgr::DeleteDigi( TSound near *, bool ) 
+  void near SoundMgr::DeleteMidi( TMusic near *, bool ) 
+  bool near SoundMgr::DigiIsPlaying( TSound near * )  
+  bool near SoundMgr::Fade( short unsigned, int unsigned, int unsigned ) 
+  bool near TMusic::Fade( short unsigned, int unsigned, int unsigned )  
+  bool near TSound::Fade( short unsigned, int unsigned, int unsigned )  
+  short near SoundMgr::GetMasterDigiVolume()          
+  short near SoundMgr::GetMasterMidiVolume()          
+  short near SoundMgr::GetPanPosition( int )          
+  TStreamBase near * near TSound::GetStreamer()       
+  void near SoundMgr::Init( char near * )             
+  void near SoundMgr::InitError( int unsigned, char near * )            
+  int near TMusic::IsPlaying()        int near TSound::IsPlaying()      
+  bool near SoundMgr::MidiIsPlaying( TMusic near * )  
+  int near MkPan( int unsigned, int unsigned )        
+  int unsigned near SoundMgr::NextOldestDigiPlaying() 
+  short unsigned near SoundMgr::NumberDigiPlaying()   
+  short unsigned near SoundMgr::NumberMidiPlaying()   
+  int unsigned near SoundMgr::OldestDigiPlaying()     
+  int unsigned near SoundMgr::OldestMidiPlaying()     
+  void near SoundMgr::Pause()         void near TMusic::Pause()         
+  void near TSound::Pause()         
+  void near TMusic::Play( short unsigned, short, int unsigned )         
+  void near TSound::Play( int, short, int, int unsigned, short, bool )  
+  void near TSound::PlayNextLink()    SoundMgr near * near pSoundMgr    
+  void near SoundMgr::Resume()        void near TMusic::Resume()        
+  void near TSound::Resume()        
+  bool near SoundMgr::Save( short unsigned, __iobuf near * )            
+  void near SoundMgr::SetMasterDigiVolume( short )    
+  void near SoundMgr::SetMasterMidiVolume( short )    
+  void near TSound::SetPanPosition( int )             
+  void near TMusic::SetVolume( short, int, bool )     
+  void near TSound::SetVolume( short, int, bool )     
+  void near SoundMgr::ShutDown()      void near ShutDownSoundMgr()      
+  void near ShutDownSoundMgrNow( SoundMgr near * )    
+  bool near SoundMgrSave( short unsigned, __iobuf near * )              
+  _tagCAPABILITIES near sSOSDeviceCaps                
+  __1iocl_SOS_HARDWARE near sSOSHardwareSettings      
+  __6gob84_SOS_INIT_DRIVER near sSOSInitDMDriver      
+  __6gob84_SOS_INIT_DRIVER near sSOSInitDriver        
+  __2p89em_SOS_MIDI_INIT_SONG near sSOSInitSong       
+  __6el72l_SOS_MIDI_HARDWARE near sSOSMIDIHardware    
+  __6bqh6e_SOS_MIDI_INIT_DRIVER near sSOSMIDIInitDriver 
+  __ns58n_SOS_MIDI_TRACK_DEVICE near sSOSTrackMap     
+  void near TMusic::Stop()            void near TSound::Stop()          
+  void near SoundMgr::SwapDigiLeftAndRight( bool )    
+  bool near SoundMgr::SystemIsActive( short unsigned ) 
+  void far TSoundStreamCallback( int unsigned, int unsigned, int unsigned ) 
+  int unsigned near wError            int unsigned near wPort           
+
+SERIAL        Offset=0002d1e0H
+  near TModem::TModem()               near TSerial::TSerial()           
+  near TModem::~TModem()              near TSerial::~TSerial()          
+  int near GFModem::__defarg()      
+  short unsigned near GFI8250::__defarg()             
+  int near GFI8250::__defarg()      
+  int unsigned near GFI8250::__defarg()               
+  int unsigned near GFI8250::__defarg()               
+  bool near TSerial::__defarg()     
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void near TSerial::AtExitFn()     
+  TComm::ERROR near TSerial::Connect()                
+  TComm::ERROR near TModem::Dial( char near * )       
+  TComm::ERROR near TSerial::DiscardPacket( sPacketHeader near * )      
+  TComm::ERROR near TModem::Disconnect()              
+  TComm::ERROR near TSerial::Disconnect()             
+  int unsigned near TSerial::GetUserList( int unsigned near * )         
+  void near TModem::HangUp()        
+  TComm::ERROR near TModem::Init( long )              
+  TComm::ERROR near TSerial::Init( long )             
+  int near TSerial::IsPacketAvailable()               
+  TComm::ERROR near TSerial::ReceivePacket( sPacket near * )            
+  TComm::ERROR near TSerial::SendPacket( sPacket near *, bool )         
+  void near TSerial::SetBaud( int ) 
+  TComm::ERROR near TSerial::SetPort( int )           
+  TComm::ERROR near TModem::WaitForCall()             
+  TComm::ERROR near TModem::Write( char near * )      
+  long near TModem::_Answer()       
+  bool near TSerial::_CheckLineErrors()               
+  int near TSerial::_CheckValid( sPacketHeaderTiny near * )             
+  void near TSerial::_ClearVars()     void near TSerial::_Destruct()    
+  bool near TSerial::_WaitForTXBufferSpace()          
+
+SCRIMAGE      Offset=0003afe0H
+  near Animator::Animator( animator_t, int unsigned, long unsigned )    
+  near Animator::Animator()           near Guy::Guy() 
+  near Scrimage::Scrimage()           near TLineTo::TLineTo()           
+  near TLineTo::TLineTo( int, int, int unsigned, long unsigned )        
+  near Utility::Utility()             near WalkTo::WalkTo()             
+  near WalkTo::WalkTo( int, int, int unsigned, long unsigned )          
+  near Animator::~Animator()          near Guy::~Guy() 
+  near Scrimage::~Scrimage()          near TLineTo::~TLineTo()          
+  near Utility::~Utility()            near Utilizer::~Utilizer()        
+  near WalkTo::~WalkTo()            
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void near Utilizer::AbortAllUtils()                 
+  void near Utilizer::AbortUtil( int unsigned )       
+  void near Utilizer::AbortUtils( util_t )            
+  void near TLineTo::AdvanceCel( Guy near * )         
+  void near WalkTo::AdvanceCel( Guy near * )          
+  bool near Guy::CheckState( short unsigned )         
+  bool near Scrimage::CheckState( short unsigned )    
+  void near TLineTo::ChooseAnim( Guy near *, int, int ) 
+  void near WalkTo::ChooseAnim( Guy near *, int, int ) 
+  void near Guy::ChooseStander()    
+  void near Guy::ChooseWalker( int, int )             
+  void near Guy::Cleanup()            void near Utility::Cleanup()      
+  void near Utilizer::CleanupAllUtils()               
+  void near Utilizer::CleanupUtil( int unsigned )     
+  void near Utilizer::CleanupUtils( util_t )          
+  void near Guy::FaceTo( int, int ) 
+  void near Guy::Flip( short unsigned, bool )         
+  void near Scrimage::FlushDynamicCel()               
+  CelHeader near Scrimage::GetCelHeader()             
+  int unsigned near Guy::GetScrimage()                
+  void near Guy::Hide()             
+  void near Guy::Mirror( short unsigned, bool )       
+  void near Guy::OffsetPos( int, int )                
+  bool near Scrimage::Save( short unsigned )          
+  void near Utilizer::ScriptAborting()                
+  void near Animator::Service()       void near TLineTo::Service()      
+  void near Utility::Service()        void near Utilizer::Service()     
+  void near Guy::SetCel( int unsigned )               
+  void near Guy::SetClipRect( int, int, int, int )    
+  void near Scrimage::SetClipRect( int, int, int, int ) 
+  void near Guy::SetClut( int unsigned, int unsigned, int unsigned )    
+  void near Scrimage::SetClut( int unsigned, int unsigned, int unsigned ) 
+  void near Scrimage::SetLastRect( int, int, int, int ) 
+  void near Guy::SetPos( int, int )   void near Guy::SetPri( int )      
+  void near Guy::SetRect()            void near Scrimage::SetRect()     
+  void near Scrimage::SetRect( int, int, int, int )   
+  void near Guy::SetRes( res_t, int unsigned, int unsigned )            
+  void near Guy::SetScale( int unsigned )             
+  bool near Guy::SetState( short unsigned, bool )     
+  bool near Scrimage::SetState( short unsigned, bool ) 
+  void near Animator::Setup( void near * )            
+  void near Guy::Setup()            
+  void near TLineTo::Setup( void near * )             
+  void near Utility::Setup( void near * )             
+  void near Utilizer::SetupUtil( Utility near * )     
+  void near Guy::Show()             
+
+SCONFIG       Offset=0003fc40H
+  near SConfig::SConfig()             near SConfig::~SConfig()          
+  int near atoi( void near *, int ) 
+  void near SConfig::DeleteEntry( char near * )       
+  short near SConfig::FindEntry( char near *, char near * )             
+  char near * near SConfig::FindToken( char near *, char near * )       
+  char near * near SConfig::GetEntry( char near *, char near * )        
+  int near SConfig::GetEntryDecimal( char near *, char near * )         
+  bool near SConfig::LoadConfig( bool )               
+  bool near SConfig::LoadConfig( char near *, bool )  
+  void near SConfig::ResetConfigFile()                
+  void near SConfig::ReSizeArray( int )               
+  void near SConfig::SaveConfig()   
+  void near SConfig::SaveConfig( char near * )        
+  void near SConfig::SetConfigFile( char near * )     
+  void near SConfig::SetEntry( char near *, char near * )               
+
+SAVEMGR       Offset=00043aa0H
+  near SaveMgr::SaveMgr()             near SaveMgr::~SaveMgr()          
+  char unsigned const near __typesig[]                  bool near SaveMgr::ExecuteAtSaveFunctions( short unsigned, __iobuf near * )             
+  short unsigned near SaveMgr::GetFirstSave( char near * )              
+  short unsigned near SaveMgr::GetNextSave( char near * )               
+  short unsigned near SaveMgr::GetSaveInfo( char near *, char near *, short unsigned, short unsigned near *, short unsigned near  
+  short unsigned near SaveMgr::ProcessFind( char near *, int unsigned ) 
+  short unsigned near SaveMgr::Restore( short unsigned, short unsigned, short unsigned, short unsigned )    
+  short unsigned near SaveMgr::Save( short unsigned, short unsigned, short unsigned, short unsigned, char near * ) 
+  SaveMgr near saveMgr              
+
+SAVEBASE      Offset=000471c0H
+  short unsigned near AtSave( bool (near *)())        
+  bool (near * near atSaveArray[])( short unsigned, __iobuf near * )    
+  short unsigned near atSaveCnt     
+  void near RemoveAtSave( bool (near *)())            
+
+RESOURCE      Offset=00047ec0H
+  near Resource::Resource()           near Resource::~Resource()        
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  bool near Resource::CheckAttr( short unsigned )       Resource near * near Resource::CopyAndInit( int unsigned, res_t, int unsigned )         
+  char unsigned near * near Resource::Data()          
+  CelHeader near * near Resource::GetHeader( int unsigned )             
+  int unsigned near Resource::GetUseCount()           
+  void near Resource::Init( res_t, int unsigned )     
+  bool near Resource::IsDynamic()     void near Resource::Lock()        
+  bool near Resource::Purge()       
+  void near Resource::SetAttr( short unsigned, bool ) 
+  void near Resource::SetUseCount( int unsigned )     
+  void near Resource::Unlock( bool ) 
+
+RESMGR        Offset=0004afa0H
+  near AutoRes::AutoRes()           
+  near ResourceMgr::ResourceMgr( bool )               
+  near AutoRes::~AutoRes()            near ResourceMgr::~ResourceMgr()  
+  short unsigned near Configuration::__defarg()       
+  short unsigned near Configuration::__defarg()       
+  short unsigned near Configuration::__defarg()       
+  bool near ResourceMgr::__defarg()   bool near ResourceMgr::__defarg() 
+  short unsigned near ResourceMgr::__defarg()         
+  bool near ResourceMgr::__defarg() 
+  int unsigned near * near ResourceMgr::__defarg()    
+  bool near ResourceMgr::__defarg()   char near * near __defarg()       
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                  int unsigned near ResourceMgr::CloneRes( res_t, int unsigned, int unsigned near *, res_t, int unsigned )  
+  bool near ResourceMgr::CopyResName( char near *, res_t, char near *, int unsigned )     
+  bool near ResourceMgr::CopyResName( char near *, res_t, int unsigned, int unsigned )    
+  int unsigned near ResourceMgr::CreateAnim( int unsigned, CelArrayElement near * near *, int unsigned near * ) 
+  int unsigned near ResourceMgr::CreateCel( CelArrayElement near *, int unsigned near * ) 
+  void near ResourceMgr::Dump( short unsigned, char near *, bool )      
+  void near ResourceMgr::DumpLocked()                 
+  bool near ResourceMgr::Exists( res_t, int unsigned )   MapRec near * near ResourceMgr::FindMapEntry( short unsigned, res_t, int unsigned )     
+  Resource near * near ResourceMgr::FindNewest()      
+  Resource near * near ResourceMgr::FindOldest( short unsigned )        
+  Resource near * near ResourceMgr::FindOldestUnlocked() 
+  void near ResourceMgr::Flush( int unsigned, bool )  
+  __iobuf near * near ResourceMgr::GetCuedResFile( res_t, int )         
+  MapRec near * near ResourceMgr::GetMapEntry( short unsigned, short unsigned, int unsigned near & )        
+  char unsigned near * near ResourceMgr::GetResData( int unsigned )     
+  bool near ResourceMgr::IsCompressed( int unsigned ) 
+  int unsigned near ResourceMgr::IsLoaded( res_t, int unsigned, bool )  
+  int unsigned near ResourceMgr::IsLoaded( int unsigned, bool )         
+  int unsigned near ResourceMgr::Load( res_t, int unsigned, int unsigned near *, bool )   
+  bool near ResourceMgr::LoadChunk( short unsigned )    int unsigned near ResourceMgr::LoadFromSingle( TFile near *, res_t, int unsigned )      
+  void near * near AutoRes::Lock( res_t, int unsigned ) 
+  void near * near AutoRes::Lock()  
+  void near ResourceMgr::Lock( int unsigned )         
+  ResourceMgr near * near pResMgr   
+  int unsigned near ResourceMgr::Purge( short unsigned ) 
+  void near ResourceMgr::PurgeAllUnlocked()           
+  int near ResourceMgr::ReportUseage( res_t )         
+  ResCfgEntry near resCfgTable[]      Debugger near ResMgrDebug         
+  bool near ResourceMgrSave( short unsigned, __iobuf near * )           
+  FileInfo near * near ResourceMgr::SearchMaps( res_t, int unsigned, int unsigned near & ) 
+  void near AutoRes::Set( res_t, int unsigned )       
+  void near AutoRes::Unlock()       
+  void near ResourceMgr::Unlock( int unsigned, bool ) 
+
+RECT          Offset=0005b4a0H
+  near Rectangle::Rectangle()       
+  near Rectangle::Rectangle( int, int, int, int, int unsigned )         
+  near Rectangle::Rectangle( Rectangle near * )       
+  void (near * const near __vftbl[])()                
+  int unsigned near Rectangle::AreaBounds( Rectangle near * )           
+  int unsigned near Rectangle::CalcArea()             
+  void near Rectangle::Clip( Rectangle near * )       
+  void near Rectangle::Construct()  
+  void near Rectangle::Construct( Rectangle near * )  
+  bool near Rectangle::Contains( int, int )           
+  void near Rectangle::Copy( void near * )            
+  void near Rectangle::Copy( void near *, int unsigned ) 
+  void near Rectangle::Display( char near * )         
+  int unsigned near Rectangle::High()                 
+  bool near Rectangle::Intersect( Rectangle near *, Rectangle near * )  
+  bool near Rectangle::IsEmpty()    
+  void near Rectangle::Set( int, int, int, int )      
+  void near Rectangle::SetName( char near * )         
+  void near Rectangle::Unite( Rectangle near * )      
+  int unsigned near Rectangle::Wide()                 
+
+PERIODIC      Offset=0005c200H
+  near Periodic::Periodic()           near Script::Script()             
+  near Periodic::~Periodic()          near Script::~Script()            
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void near Script::Abort()           void near Script::Cleanup()       
+  void near Script::CountDown( long unsigned )        
+  void near Script::Cue()             void near Periodic::Cycle()       
+  bool near Script::HandleMsg( Message near * )       
+  void near Periodic::ScriptAborting()                
+  void near Periodic::Service()       void near Script::Service()       
+  void near Periodic::SetClock( int unsigned )        
+  void near Periodic::SetInterval( long unsigned )    
+  void near Script::Setup( int unsigned, Periodic near *, int unsigned ) 
+  void near Periodic::Set_Script( void near *, int unsigned )           
+
+PALETTE       Offset=000622a0H
+  near PalCycler::PalCycler( char unsigned, char unsigned, char unsigned, int unsigned, int unsigned, short unsigned, int unsigne 
+  near PalFader::PalFader( char unsigned, char unsigned, int unsigned, int unsigned, short unsigned, char unsigned, char unsigned 
+  near PalFader::PalFader( char unsigned, char unsigned, int unsigned, int unsigned, short unsigned, int unsigned ) 
+  near PalUtility::PalUtility()       near TPalette::TPalette()         
+  near Utilizer::Utilizer()           near PalCycler::~PalCycler()      
+  near PalFader::~PalFader()          near PalUtility::~PalUtility()    
+  near TPalette::~TPalette()        
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void near PalUtility::CheckRange( char unsigned, char unsigned )      
+  void near TPalette::FadeToBlack( int )              
+  void near TPalette::FadeUp( int ) 
+  void near TPalette::GetColors( Gun near *, int unsigned, int unsigned ) 
+  void near TPalette::Load( int unsigned )              void near TPalette::LoadPartial( int unsigned, int unsigned, int unsigned, int unsigned ) 
+  void near PalCycler::RotatePalette( char )          
+  void near PalCycler::Service()      void near PalFader::Service()     
+  void near TPalette::SetColor( int, char unsigned, char unsigned, char unsigned )        
+  void near PalCycler::Setup( void near * )           
+  void near PalFader::Setup( void near * )              void near PalFader::Setup( char unsigned, char unsigned, int unsigned, int unsigned, short unsigned, char unsigned, char unsign 
+  void near PalFader::Setup( char unsigned, char unsigned, int unsigned, int unsigned, short unsigned, int unsigned )         
+  void near TPalette::Setup( int unsigned )           
+  void near TPalette::UpdateAll()   
+  void near TPalette::UpdateColor( int )              
+  void near TPalette::UpdateColors( Gun near *, int unsigned, int unsigned ) 
+  void near TPalette::UpdateColors( int unsigned, int unsigned )        
+
+osgrph        Offset=0006b5c0H
+  OS_CopyPixelLine_ASM_               OS_GetPalette_  
+  OS_GetScreenMode_                   OS_GetStackPtr_   OS_SetPalette_  
+  OS_ShutDownVideo_                   SetScreenMode_  
+
+OS            Offset=0006b8c0H
+  int unsigned near AAvailMem()     
+  int unsigned near ACreateBitMap( int, int )         
+  char unsigned near * near ADerefBitMap( int unsigned ) 
+  void near ADestroyBitMap( int unsigned )            
+  int unsigned near AFileLastAccessTime( char near * ) 
+  int unsigned near AFileLastModTime( char near * )   
+  char unsigned near * near AGetBiosKey()             
+  short unsigned near AGetEventMods()                 
+  void near AInitializePlatform()   
+  bool near AIsOnStack( void near * )                 
+  int unsigned near ALargestAlloc()   void near AQueueUpdate()          
+  char near AScanToASCII( Event )   
+  void near ASetKeyboardVector( bool )                
+  void near OS_InitMem()              char near * near szLastMessage    
+  void near _Panic( char near *, char near *, int )   
+
+OBJMGR        Offset=00070640H
+  near ObjectMgr::ObjectMgr()         near ObjectMgr::~ObjectMgr()      
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  ObjectMgr near * near pObjMgr     
+  void near ObjectMgr::RestoreWorld()                 
+  void near ObjectMgr::SaveWorld()  
+
+OBJECT        Offset=00071460H
+  near Object::Object()               near TMovable::TMovable()         
+  near Object::~Object()              near TMovable::~TMovable()        
+  bool near __defarg()              
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void near TMovable::Copy( void near * )             
+  void near TMovable::Copy( void near *, int unsigned ) 
+  int unsigned near Object::GetScrimage()             
+  bool near Object::HandleMsg( Message near * )       
+  bool near Object::InMask( Message near * )          
+  void near Object::ResetMsgPri( int )                
+  bool near Object::Save( short unsigned )            
+  void near Object::SetContext( int unsigned )        
+  void near Object::SetName( char near * )            
+  void near Object::SetResCount( res_t, int unsigned, res_t, int unsigned ) 
+
+MOUSESCR      Offset=00075400H
+  near MouseScr::MouseScr()           near MouseScr::~MouseScr()        
+  void (near * const near __vftbl[])()                
+  int near MouseScr::GetCel()       
+  int unsigned near MouseScr::GetResNum()             
+  res_t near MouseScr::GetResType()   int near MouseScr::GetX()         
+  int near MouseScr::GetY()           void near MouseScr::HidePointer() 
+  void near MouseScr::MovePointer()   void near MouseScr::Pause( bool ) 
+  bool near MouseScr::Protect( bool, Rectangle near * ) 
+  bool near MouseScr::Save( short unsigned, __iobuf near * )            
+  void near MouseScr::SetPri( int )   void near MouseScr::SetRes( res_t, int unsigned, int unsigned, int unsigned )           
+  void near MouseScr::SetScale( int unsigned )        
+  void near MouseScr::SetX( int )     void near MouseScr::SetY( int )   
+  void near MouseScr::ShowPointer() 
+  void near MouseScr::UpdatePointer()                 
+
+MOUSEINT      Offset=0007dca0H
+  near MouseInt::MouseInt()           near MouseInt::~MouseInt()        
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void near MouseInt::ClipLastRect()   void near MouseInt::DrawPointer() 
+  void near MouseInt::EnableDragging( bool )          
+  int near MouseInt::GetCel()       
+  int unsigned near MouseInt::GetResNum()             
+  res_t near MouseInt::GetResType()   int near MouseInt::GetX()         
+  int near MouseInt::GetY()           void near MouseInt::HideFence()   
+  void near MouseInt::HidePointer()   short near MIntMoveX              
+  short near MIntMoveY                void near MouseInt::MovePointer() 
+  void near MouseInt::Pause( bool )   MouseInt near * near pMouseInt    
+  bool near MouseInt::Protect( bool, Rectangle near * ) 
+  void near MouseInt::RestoreUnderBits()              
+  bool near MouseInt::Save( short unsigned, __iobuf near * )            
+  void near MouseInt::SaveUnderBits()                   void near MouseInt::SetFenceRes( res_t, int unsigned, int unsigned, res_t, int unsigned, int unsigned )   
+  void near MouseInt::SetPri( int )   void near MouseInt::SetRes( res_t, int unsigned, int unsigned, int unsigned )           
+  void near MouseInt::SetScale( int unsigned )        
+  void near MouseInt::SetX( int )     void near MouseInt::SetY( int )   
+  void near MouseInt::ShowPointer() 
+  void near MouseInt::UpdatePointer()                 
+
+MOUSE         Offset=0008a3e0H
+  near Mouse::Mouse()                 near Mouse::~Mouse()              
+  void (near * const near __vftbl[])()                
+  bool near Mouse::CheckBounds()      void near Mouse::ClearMickeys()   
+  void near Mouse::DrawFence()        void near Mouse::EraseFence()     
+  int near Mouse::ForceShow( short )   int near Mouse::GetFenceStartX()  
+  int near Mouse::GetFenceStartY()  
+  void near Mouse::GetPos( Message near * )           
+  void near Mouse::Hide()           
+  void near Mouse::Init( int, int, int, int )         
+  int near MIntMask                   int near MIntValue                
+  bool near MouseSave( short unsigned, __iobuf near * ) 
+  char unsigned near mouseStack[]     StackPtr near newStackPtr         
+  StackPtr near oldStackPtr           Mouse near * near pMouse          
+  void near Mouse::SetDraggableRect( int, int, int, int )               
+  void near Mouse::SetFence( int, int, int, int )     
+  void near Mouse::SetLimits( Rectangle near * )      
+  void near Mouse::SetPos( int, int )                 
+  void near Mouse::Show()             void near ShutDownMouse()         
+  void near Mouse::ShutDownMouseDriver()              
+
+MONO          Offset=00090e00H
+  near Mono::Mono()                   near Mono::~Mono()                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void near Mono::Clear()           
+  void near Mono::Clear( int, int, int, int )         
+  void near Mono::Goto( short unsigned, short unsigned ) 
+  void near Mono::MemSet( int, int, char unsigned, char, int )          
+  void near Mono::Out( char near *, ... )             
+  Mono near * near pMono              void near Mono::Put( char near * ) 
+  void near Mono::RestoreWindow()     void near Mono::Resume()          
+  void near Mono::SaveWindow()      
+  void near Mono::Scroll( short unsigned, int, int, int, int )          
+  void near Mono::SetAttr( char unsigned )            
+  void near Mono::SetReport( char near * )            
+  void near Mono::SetScrollCount( int )               
+  void near Mono::SetWindow( int, int, int, int )     
+  void near Mono::Snapshot()          void near Mono::Suspend()         
+
+MEMMGR        Offset=000930e0H
+  near MemoryMgr::MemoryMgr()         near MemoryMgr::~MemoryMgr()      
+  bool near MemoryMgr::__defarg()   
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                  int unsigned near MemoryMgr::AssignGrip( void near *, bool, short unsigned )            
+  int unsigned near MemoryMgr::AvailMem()             
+  bool near MemoryMgr::ChangeGrip( int unsigned, int unsigned )         
+  int near MemoryMgr::CheckGrip( int unsigned )       
+  void near MemoryMgr::ClearAllocations()             
+  void near MemoryMgr::Cycle()      
+  void near * near MemoryMgr::Deref( int unsigned )   
+  void near MemoryMgr::Dump( short unsigned, char near *, bool )        
+  void near MemoryMgr::DumpGrip( int unsigned )       
+  int unsigned near MemoryMgr::FindEmptyGrip( int unsigned )            
+  int unsigned near MemoryMgr::FindEmptySysGrip()     
+  int unsigned near MemoryMgr::FindOwnerOf( void near *, int near * )   
+  void near MemoryMgr::Free( int unsigned )           
+  int unsigned near MemoryMgr::GetGrip( void near * ) 
+  int near MemoryMgr::HeapCheck()   
+  int unsigned near MemoryMgr::LargestAlloc()         
+  void near MemoryMgr::MakeEmptyGrip( int unsigned )  
+  int unsigned near MemoryMgr::Malloc( int unsigned, bool )             
+  void near * near MemoryMgr::MallocAtGrip( int unsigned, int unsigned, bool )            
+  MemoryMgr near MemMgr             
+  bool near MemMgrSave( short unsigned, __iobuf near * ) 
+  bool near MemoryMgr::PackMem()      MemoryMgr near * near pMemMgr     
+  bool near MemoryMgr::ReadAllocations( __iobuf near * ) 
+  int unsigned near MemoryMgr::Realloc( int unsigned, int unsigned )    
+  void near MemoryMgr::ReleaseGrip( int unsigned )    
+  bool near MemoryMgr::RestoreGrip( int unsigned, __iobuf near * )      
+  bool near MemoryMgr::RestoreGripNum( int unsigned near *, __iobuf near * ) 
+  bool near MemoryMgr::RestoreGripOffsets()           
+  bool near MemoryMgr::SaveGrip( int unsigned, __iobuf near * )         
+  bool near MemoryMgr::SaveGripNum( int unsigned, __iobuf near * )      
+  void near MemoryMgr::SetHashTable( void near *, int unsigned )        
+  void near MemoryMgr::SetPurgeStatus( int unsigned, bool )             
+  void near MemoryMgr::SetSaveStatus( int unsigned, bool )              
+  void near MemoryMgr::ShowGripNames( short unsigned ) 
+  int unsigned near MemoryMgr::SizeOfGrip( int unsigned )               
+  int unsigned near MemoryMgr::SysMalloc( int unsigned ) 
+  int unsigned near MemoryMgr::UsedMem()              
+  bool near MemoryMgr::WriteAllocations( __iobuf near * )               
+
+MEM           Offset=0009c9e0H
+  void near operator delete( void near * )            
+  void near * near operator new( int unsigned )       
+  bool near fPrintUnfreedPtrs       
+  void near * near mem_calloc( int unsigned )           void near * near mem_calloc_debug( int unsigned, char const near *, int, char const near * ) 
+  void near mem_check()               void near mem_checkfree()         
+  void near mem_checkptr( void near * )               
+  int near mem_exception()            void near mem_free( void near * ) 
+  void near mem_freefp( void near * )                 
+  void near mem_free_debug( void near *, char const near *, int )       
+  void near mem_init()                int near mem_inited               
+  void near * near mem_malloc( int unsigned )           void near * near mem_malloc_debug( int unsigned, char const near *, int, char const near * ) 
+  void near * near mem_realloc( void near *, int unsigned )             
+  void near * near mem_realloc_debug( void near *, int unsigned, char const near *, int, char const near * ) 
+  void near mem_setexception( MEM_E, ... )            
+  void near mem_setnewfileline( void near *, char const near *, int )   
+  char near * near mem_strdup( char const near * )      char near * near mem_strdup_debug( char const near *, char const near *, int )          
+  void near mem_term()              
+  void near * near newSys( int unsigned )             
+  void (near * near _new_handler)()   char near * near __mem_file       
+  int near __mem_line               
+
+MANAGER       Offset=000a1b80H
+  void near * near Manager::operator new( int unsigned ) 
+
+LIST          Offset=000a24e0H
+  near List::List( short unsigned, bool )             
+  near SysList::SysList( short unsigned, bool )       
+  near List::~List()                
+  void near * near SysList::operator new( int unsigned ) 
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                  short unsigned near List::Add( void near *, int, short unsigned, void near * )          
+  void near * near List::At( int unsigned )           
+  short unsigned near List::Delete( node near * )     
+  short unsigned near List::Delete( void near * )     
+  node near * near List::Find( void near * )          
+  node near * near List::First()    
+  void near * near List::FirstValue()                 
+  node near * near List::GetNode( int unsigned )      
+  node near * near List::GetPNode( int unsigned )     
+  node near * near List::Last()       void near * near List::LastValue() 
+  bool near List::Move( void near *, short unsigned, void near * )      
+  node near * near List::Next()     
+  node near * near List::Next( node near * )          
+  node near * near List::Next( void near * )          
+  void near * near List::NextValue() 
+  void near * near List::NodeValue( node near * )     
+  node near * near List::Prev( node near * )          
+  node near * near List::Prev( void near * )          
+  void near List::Release()         
+  bool near List::Resize( int unsigned )              
+  void near List::Verify( char near * )               
+
+KEYLIST       Offset=000a7e40H
+  near KeyList::KeyList( short unsigned, bool )       
+  void (near * const near __vftbl[])()                
+  short unsigned near KeyList::CountKey( int )        
+  short unsigned near KeyList::DeleteKey( int )       
+  node near * near KeyList::FirstKey( int )           
+  node near * near KeyList::LastKey( int )            
+  node near * near KeyList::NextKey( node near *, int ) 
+  node near * near KeyList::NextKey( void near *, int ) 
+  node near * near KeyList::PrevKey( node near *, int ) 
+  node near * near KeyList::PrevKey( void near *, int ) 
+  int near SortAscendingKey( void const near *, void const near * )     
+  void near KeyList::SortByKey( int )                 
+  int near SortDescendingKey( void const near *, void const near * )    
+
+GRAPHMGR      Offset=000ab9a0H
+  near GList::GList( short unsigned, bool )           
+  near GraphicsMgr::GraphicsMgr( int unsigned )       
+  near ScaleTable::ScaleTable()       near ScrimList::ScrimList()       
+  near TRectPool::TRectPool()         near GList::~GList()              
+  near GraphicsMgr::~GraphicsMgr()    near ScrimList::~ScrimList()      
+  int unsigned near GraphicsMgr::__defarg()           
+  int unsigned near VGABuffer::__defarg()             
+  int near TPalette::__defarg()     
+  int unsigned near Rectangle::__defarg()             
+  short unsigned near GList::__defarg()               
+  bool near GList::__defarg()         int near TPalette::__defarg()     
+  int near GList::__defarg()        
+  short unsigned near GList::__defarg()               
+  void near * near GList::__defarg() 
+  Rectangle near * near GraphicsMgr::__defarg()       
+  TClipRect near * near GraphicsMgr::__defarg()       
+  Rectangle near * near Mouse::__defarg()             
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                  short unsigned near GList::Add( void near *, int, short unsigned, void near * )         
+  int near TRectPool::Add( Rectangle near * )         
+  int near TRectPool::Add( TClipRect near * )         
+  void near GraphicsMgr::AddScrimage( Scrimage near * ) 
+  void near GraphicsMgr::Animate()  
+  void near GraphicsMgr::ChangeScrimage( Scrimage near * )              
+  void near GraphicsMgr::Clip( Rectangle near *, Rectangle near * )     
+  void near GraphicsMgr::Clip( TClipRect near *, TClipRect near * )     
+  int near TRectPool::Count()       
+  void near GraphicsMgr::DeleteScrimage( Scrimage near * )              
+  void near GraphicsMgr::DrawCel( short unsigned, short unsigned, int, int, Rectangle near * ) 
+  void near ScaleTable::Fill( short unsigned )        
+  node near * near GList::Find( void near * )         
+  int unsigned near GraphicsMgr::FindTopGuy( int, int ) 
+  TClipRect near * near TRectPool::FirstValue()       
+  int near TRectPool::GetAvailIndex()                   Rectangle near * near GraphicsMgr::GetRect( res_t, int unsigned, int unsigned )         
+  bool near GraphMgrSave( short unsigned, __iobuf near * )              
+  bool near GraphicsMgr::IntersectRect( TClipRect near *, TClipRect near *, Rectangle near * ) 
+  bool near GList::Move( void near *, short unsigned, void near * )     
+  TClipRect near * near TRectPool::NextValue()        
+  GraphicsMgr near * near pGraphMgr 
+  Scrimage near * near ScrimList::PtrAt( int unsigned ) 
+  int near TRectPool::ReduceRects()   void near GList::Release()        
+  void near TRectPool::Release()    
+  bool near GraphicsMgr::Save( short unsigned, __iobuf near * )         
+  void near ScaleTable::Set( int, short unsigned, int, short unsigned ) 
+  int near SortAscendingPri( void const near *, void const near * )     
+  void near SortScrimsByPri()         int near TRectPool::UniteRects()  
+  void near GraphicsMgr::UpdateRect( Rectangle near * ) 
+  void near GraphicsMgr::UpdateRect( TClipRect near * ) 
+
+FILE          Offset=000b9620H
+  near TFile::TFile()                 near TFile::~TFile()              
+  void near TFile::Close()            int near TFile::Getch()           
+  int near TFile::Open( char near *, char near *, int ) 
+  long near TFile::Read( void near *, long, long )    
+  int near TFile::Seek( long, int )   long near TFile::Size()           
+  long near TFile::Write( void near *, long, long )   
+
+FONTMGR       Offset=000baec0H
+  near FontMgr::FontMgr()             near FontMgr::~FontMgr()          
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  char unsigned near FontMgr::AltColor( int )         
+  char unsigned near FontMgr::BackColor( int )          int unsigned near FontMgr::CreatePartialText( int unsigned near *, char near *, char unsigned, void (near *)( ), int unsigned,  
+  int unsigned near FontMgr::CreateText( int unsigned near *, char near *, char unsigned, void (near *)( ), int unsigned, int uns 
+  int unsigned near FontMgr::CreateText( int unsigned near *, char near *, char unsigned, char unsigned, int unsigned, justify ) 
+  void near FontMgr::CreateText( int unsigned, char near *, char unsigned, char unsigned, int unsigned, justify ) 
+  bool near FontMgrSave( short unsigned, __iobuf near * )               
+  char unsigned near FontMgr::ForeColor( int )        
+  int unsigned near FontMgr::GetCharOffset( char unsigned )             
+  int unsigned near FontMgr::GetCharWidth( char unsigned )              
+  void near FontMgr::GetCursorPosn( char near *, int unsigned, int unsigned, int unsigned near &, int unsigned near &, int unsign 
+  int unsigned near FontMgr::LineSize( char near *, int unsigned, int unsigned near & )   
+  int unsigned near FontMgr::Load( int unsigned )     
+  FontMgr near * near pFontMgr      
+  void near FontMgr::Register( int unsigned )           int unsigned near FontMgr::SetChar( int unsigned, int unsigned, char unsigned, char unsigned near *, char unsigned near *, bool 
+  void near FontMgr::SetHPen( int unsigned near &, char near *, int unsigned, int unsigned, justify, int unsigned ) 
+  void near FontMgr::SetRes( int unsigned )             void near FontMgr::SetString( int unsigned, int unsigned, char near *, char unsigned near *, int unsigned, int unsigned, justif 
+  void near FontMgr::TextSize( Rectangle near &, char near *, int unsigned, int, int unsigned ) 
+  void near FontMgr::Unregister()   
+  int unsigned near FontMgr::WordSize( char near *, int unsigned near & ) 
+  int unsigned near FontMgr::WordSize( char near *, int unsigned near &, int unsigned )   
+
+EVENTMGR      Offset=000bd7e0H
+  near EventMgr::EventMgr( int unsigned, int unsigned ) 
+  near EventMgr::~EventMgr()        
+  int unsigned near EventMgr::__defarg()              
+  int unsigned near EventMgr::__defarg()              
+  short unsigned near EventMgr::__defarg()            
+  short unsigned near EventMgr::__defarg()            
+  int near EventMgr::__defarg()       bool near __defarg()              
+  notice_t near EventMgr::__defarg() 
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void near EventMgr::AdvanceEQueue()                 
+  void near EventMgr::AdvanceNQueue()                 
+  char near * near asciiShiftTable    char near * near asciiTable       
+  void near EventMgr::AutoUpdateTicks( bool )         
+  void near EventMgr::EnableInterrupts()              
+  Message near * near EventMgr::ETail()               
+  bool near EventMgrSave( short unsigned, __iobuf near * )              
+  int unsigned near EventMgr::FlushEvents( short unsigned )             
+  int unsigned near EventMgr::FlushNotices( int unsigned )              
+  short unsigned near EventMgr::GetModifiers()        
+  void near EventMgr::InitEvent( Message near *, short unsigned, int )  
+  void near EventMgr::InitNotice( Message near *, notice_t )            
+  void far EventMgr::KeyInterrupt() 
+  bool near EventMgr::KeyIsDown( char unsigned )      
+  int near ki_debugging               char unsigned near ki_lastChar[]  
+  Message near * near EventMgr::NTail()               
+  EventMgr near * near pEventMgr    
+  bool near EventMgr::PostEvent( short unsigned, int ) 
+  Message near * near EventMgr::PostEventXY( short unsigned, int, int, int ) 
+  bool near EventMgr::PostNotice( notice_t, int unsigned, void near *, int unsigned )     
+  void (far * near EventMgr::prev_int_09)()           
+  void near EventMgr::PublishNext() 
+  bool near EventMgr::Save( short unsigned, __iobuf near * )            
+  char near EventMgr::ScanToASCII( Event )              bool near EventMgr::SendNotice( notice_t, int unsigned, int unsigned, void near * )     
+  void near EventMgr::WaitForEvent( Message near * )  
+  void near EventMgr::Where( int near *, int near * ) 
+
+DPMI          Offset=000c5f80H
+  near DPMI::DPMI()                   near DPMI::~DPMI()                
+  SREGS near * near DPMI::__defarg() 
+  void (near * const near __vftbl[])()                  void far * near DPMI::AllocateDosMemoryBlock( int unsigned, short unsigned near * )     
+  void near DPMI::FreeDosMemoryBlock( void far * )    
+  void near DPMI::FreeDosMemoryBlock( short unsigned ) 
+  void near DPMI::Interrupt( REGS near *, SREGS near * ) 
+  bool near DPMI::RealModeInterrupt( int unsigned, RealModeCall near * ) 
+  void near * near DPMI::RealToProtected( int unsigned ) 
+  void near * near DPMI::RealToProtected( int unsigned, int unsigned )  
+
+DIALOG        Offset=000c7a60H
+  near Dialog::Dialog()               near Dialog::Dialog( int, int, int unsigned, char unsigned, char unsigned )             
+  near Label::Label( TControlInfo near * )            
+  near TButton::TButton( TControlInfo near * )        
+  near TControl::TControl( TControlInfo near * )      
+  near TTextBox::TTextBox( TControlInfo near * )      
+  near Window::Window( Rectangle near *, int, void (near *)( ))         
+  near Window::Window( Rectangle near *, int unsigned, int, char unsigned ) 
+  near Window::Window( int unsigned, int unsigned, int ) 
+  near Dialog::~Dialog()              near Label::~Label()              
+  near TButton::~TButton()            near TControl::~TControl()        
+  near TTextBox::~TTextBox()          near Window::~Window()            
+  int unsigned near Guy::__defarg()   int near __defarg()               
+  int unsigned near Label::__defarg()                 
+  int unsigned near Label::__defarg()                 
+  int unsigned near FontMgr::__defarg()               
+  int near FontMgr::__defarg()      
+  int unsigned near FontMgr::__defarg()               
+  int unsigned near __defarg()        int unsigned near __defarg()      
+  justify near __defarg()             int unsigned near __defarg()      
+  int unsigned near __defarg()      
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void near Dialog::Activate( modalType, int )        
+  void near Dialog::ActivateFrom( char near * )       
+  int unsigned near Dialog::AddButton( TControlInfo near * )            
+  int unsigned near Dialog::AddLabel( TControlInfo near *, int unsigned, int unsigned )   
+  void near Dialog::AddTControl( int unsigned )       
+  int unsigned near Dialog::AddTextBox( TControlInfo near * )           
+  bool near TControl::CheckAttr( int unsigned )       
+  int near Dialog::Deactivate()       void near Label::Draw()           
+  void near TControl::Draw()          void near TTextBox::Draw()        
+  int near Dialog::EventLoop( void (near *)())        
+  void near Dialog::GetWindowRect( Rectangle near * ) 
+  bool near Dialog::HandleMsg( Message near * )       
+  bool near TButton::HandleMsg( Message near * )      
+  bool near TControl::HandleMsg( Message near * )     
+  bool near TTextBox::HandleMsg( Message near * )     
+  void near TButton::Hilite( bool )   void near TControl::Hilite( bool ) 
+  void near Dialog::Initialize( int, int, int unsigned, char unsigned, char unsigned )    
+  void near Dialog::Initialize( void (near *)( ))     
+  bool near TControl::IsType( ctrl_t )                
+  void near Dialog::JustifyWindow( justify, justify ) 
+  int unsigned near Dialog::NextTab()                 
+  int unsigned near Dialog::PrevTab()                 
+  void near TButton::Select( bool )   void near TControl::Select( bool ) 
+  void near TTextBox::Select()      
+  void near TControl::SetAttr( int unsigned, bool )   
+  void near Dialog::SetPos( int, int )                
+  void near TControl::SetPos( int, int )              
+  void near Dialog::SetPri( int )   
+  void near Dialog::SetTControlDrawProc( void (near *)( ))              
+  void near Label::Setup( TControlInfo near *, int unsigned, int unsigned ) 
+  void near TButton::Setup( TControlInfo near * )     
+  void near TTextBox::Setup( TControlInfo near * )    
+
+DEBUG         Offset=000db860H
+  near Debugger::Debugger()           near DebugTimer::DebugTimer()     
+  near Debugger::~Debugger()          near DebugTimer::~DebugTimer()    
+  void near Debugger::CloseFile()     void near Debugger::CloseWindow() 
+  void near DebugTimer::Continue()  
+  bool near Debugger::OpenFile( char near * )         
+  bool near Debugger::OpenWindow( int, int, int, int ) 
+  void near Debugger::Out( char near *, ... )         
+  void near Debugger::Put( char near * )              
+  int unsigned near DebugTimer::SampleTimer()         
+  void near Debugger::SetScrollCount( int )           
+  void near Debugger::Silence( bool )                 
+  void near DebugTimer::Start()     
+  int unsigned near DebugTimer::Stop()                
+
+CONTEXT       Offset=000dd760H
+  near Context::Context()             near ContextMgr::ContextMgr()     
+  near Context::~Context()            near ContextMgr::~ContextMgr()    
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void near Context::Activate( bool )                 
+  void near ContextMgr::Add( int unsigned )           
+  void near Context::AddObject( int unsigned, short unsigned, int )     
+  void near Context::AddReceiver( int unsigned, int ) 
+  void near Context::AddRoster()    
+  void near Context::AddScrimage( int unsigned )      
+  void near Context::AddServiceable( int unsigned )   
+  void near Context::ClearLists()   
+  bool near ContextMgrSave( short unsigned, __iobuf near * )            
+  void near ContextMgr::Cut( int unsigned )           
+  void near Context::CutObject( int unsigned, short unsigned )          
+  void near Context::CutReceiver( int unsigned )      
+  void near Context::CutRoster()    
+  void near Context::CutScrimage( int unsigned )      
+  void near Context::CutServiceable( int unsigned )   
+  void near Context::Cycle()          void near ContextMgr::Cycle()     
+  bool near Context::HandleMsg( Message near * )      
+  bool near ContextMgr::HandleMsg( Message near * )   
+  ContextMgr near * near pContextMgr 
+  bool (near * near ppGlobalMsg)( Message near * )    
+  void near ContextMgr::Quit()      
+  void near Context::ResetMsgPri( int unsigned, int ) 
+
+CONFIG        Offset=000e5380H
+  near Configuration::Configuration( char near *, short unsigned, short unsigned, short unsigned )          
+  near Configuration::Configuration( short unsigned, short unsigned, short unsigned )     
+  short unsigned near Configuration::__defarg()         char near * near Configuration::CopyStr( char near *, char near *, short unsigned )     
+  char near * near Configuration::CopyStr( char near *, short unsigned, short unsigned )  
+  short near Configuration::FindSubject( char near *, short unsigned )  
+  int near Configuration::GetNum( char near * )       
+  short near Configuration::HasEntry( char near * )   
+  bool near Configuration::HasParam( short unsigned, char near * )      
+  bool near Configuration::Load( char near * )          void near Configuration::SetStr( char near *, char near *, short unsigned )             
+  void near Configuration::WriteConfig( char near * ) 
+
+COMMMGR       Offset=000e7960H
+  near TCommMgr::TCommMgr()           near TNULL::TNULL()               
+  near TCommMgr::~TCommMgr()          near TNULL::~TNULL()              
+  void near * near DebugTimer::__arrdtorblk( int unsigned )             
+  bool near TCommMgr::__defarg()    
+  sPacket near * near TCommMgr::__defarg()            
+  bool near TCommMgr::__defarg()      bool near TCommMgr::__defarg()    
+  bool near TComm::__defarg()       
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  bool near TCommMgr::AddToWaitingRoom( sPacket near * ) 
+  Debugger near ComDebug            
+  bool near CommMgrSave( short unsigned, __iobuf near * )               
+  int near TCommMgr::Connect()        TComm::ERROR near TNULL::Connect() 
+  int near TCommMgr::DataAvailable( sPacket near * )  
+  void near TCommMgr::DecrTail()    
+  sPacket near * near TCommMgr::DeQueueData()         
+  int near TCommMgr::DiscardData()  
+  TComm::ERROR near TNULL::DiscardPacket( sPacketHeader near * )        
+  int near TCommMgr::Disconnect()   
+  TComm::ERROR near TNULL::Disconnect()               
+  char near dummySpace[]              int near TCommMgr::DumpQueue()    
+  int near TCommMgr::EnQueueData( bool )              
+  char near * near TCommMgr::GetBuffer()              
+  int near TCommMgr::GetError()       int near TCommMgr::GetUserID()    
+  int unsigned near TNULL::GetUserID()                
+  int near TCommMgr::GetUserList( int unsigned near * ) 
+  int unsigned near TNULL::GetUserList( int unsigned near * )           
+  void near TCommMgr::IncrHead()      void near TCommMgr::IncrTail()    
+  int near TCommMgr::Init( TComm near *, long )       
+  TComm::ERROR near TNULL::Init( long )               
+  int near TNULL::IsPacketAvailable()                 
+  char near pBlockIDStrings[][30]     TCommMgr near * near pCommMgr     
+  char near pErrorStrings[][30]     
+  int near TCommMgr::QueueDecr( int )                 
+  int near TCommMgr::QueueIncr( int )                 
+  int near TCommMgr::ReceiveData( sPacket near * )    
+  int near TCommMgr::ReceiveLargePacket()             
+  TComm::ERROR near TNULL::ReceivePacket( sPacket near * )              
+  void near TCommMgr::RemoveEmpties()                 
+  bool near TCommMgr::RemoveFromWaitingRoom( sPacket near * )           
+  void near TCommMgr::RemoveOldReplies()              
+  TComm::ERROR near TCommMgr::ResendWaiters()         
+  bool near TCommMgr::Save( short unsigned, __iobuf near * )            
+  TComm::ERROR near TCommMgr::SendAckNak( sPacket near *, bool )        
+  int near TCommMgr::SendData( int, int, int, void near * )             
+  int near TCommMgr::SendData( sPacket near *, bool ) 
+  TComm::ERROR near TNULL::SendPacket( sPacket near *, bool )           
+  int (near * near TCommMgr::SetUserAbortFn( int (near *)( )))( int )   
+  void near TCommMgr::Silence( bool )                 
+  DebugTimer near tempTimers[]        TNULL near tNull 
+  int near TCommMgr::_ReceiveData( sPacket near * )   
+  int near TCommMgr::_SendData( sPacket near *, bool ) 
+
+COMM          Offset=000f6700H
+  near TComm::TComm()                 near TNetwork::TNetwork()         
+  near TComm::~TComm()                near TNetwork::~TNetwork()        
+  sPacketHeader near * near TNetwork::__defarg()      
+  char unsigned const near __typesig[]                
+  void (near * const near __vftbl[])()                
+  void (near * const near __vftbl[])()                
+  void near TNetwork::AtExitFn()    
+  int unsigned near TComm::Checksum( void near *, int unsigned )        
+  short unsigned near TComm::Checksum16( void near *, int unsigned )    
+  void near TComm::ClearError()     
+  TComm::ERROR near TNetwork::Connect()               
+  TComm::ERROR near TNetwork::DiscardPacket( sPacketHeader near * )     
+  TComm::ERROR near TNetwork::Disconnect()            
+  TComm::ERROR near TComm::GetError()                 
+  int unsigned near TNetwork::GetUserList( int unsigned near * )        
+  TComm::ERROR near TNetwork::Init( long )            
+  int near TNetwork::init             int near TNetwork::isKilled       
+  int near TNetwork::IsPacketAvailable()              
+  TComm::ERROR near TNetwork::ReceivePacket( sPacket near * )           
+  TComm::ERROR near TNetwork::SendPacket( sPacket near *, bool )        
+  TComm::ERROR near TComm::SetError( TComm::ERROR )   
+  int unsigned near TNetwork::wNETNodes               
+  int unsigned near TNetwork::wNETSocket              
+
+COMP          Offset=000fbfe0H
+  int unsigned near AFlatten( __iobuf near *, int unsigned, char near *, short unsigned ) 
+  int unsigned near AFluff( TFile near *, int unsigned, char near *, short unsigned, char near * )          
+
+CLOCK         Offset=000fd5e0H
+  near TClock::TClock()             
+  void (near * const near __vftbl[])()                
+  long unsigned near TClock::Cycle()   void near TClock::ForceResume()   
+  long unsigned near TClock::GetBootTicks()           
+  long unsigned near TClock::GetTicks()               
+  void near TClock::Pause()           void near TClock::Resume()        
+  void near TClock::SetTicks( long unsigned )         
+
+CLIPRECT      Offset=000ff180H
+  near TClipRect::TClipRect()       
+  near TClipRect::TClipRect( int, int, int, int, int unsigned )         
+  near TClipRect::TClipRect( TClipRect near * )       
+  near TClipRect::TClipRect( Rectangle near * )       
+  void (near * const near __vftbl[])()                
+  int unsigned near TClipRect::AreaBounds( TClipRect near * )           
+  int unsigned near TClipRect::AreaBounds( Rectangle near * )           
+  void near TClipRect::Clip( TClipRect near * )       
+  void near TClipRect::Clip( Rectangle near * )       
+  void near TClipRect::Construct()  
+  void near TClipRect::Construct( TClipRect near * )  
+  void near TClipRect::Construct( Rectangle near * )  
+  bool near TClipRect::Contains( int, int )           
+  void near TClipRect::Copy( void near * )            
+  void near TClipRect::Copy( void near *, int unsigned ) 
+  int unsigned near TClipRect::High()                 
+  bool near TClipRect::Intersect( TClipRect near *, TClipRect near * )  
+  bool near TClipRect::Intersect( Rectangle near *, Rectangle near * )  
+  bool near TClipRect::IsEmpty()    
+  void near TClipRect::Set( int, int, int, int )      
+  void near TClipRect::Unite( TClipRect near * )      
+  void near TClipRect::Unite( Rectangle near * )      
+  int unsigned near TClipRect::Wide()                 
+
+APIRES        Offset=00102c20H
+  int unsigned near ACloneRes( res_t, int unsigned, int unsigned near *, res_t, int unsigned ) 
+  int unsigned near ACreateAnim( int unsigned, CelArrayElement near * near *, int unsigned near * )         
+  int unsigned near ACreateCel( int unsigned near *, int, int, int unsigned, int unsigned, char unsigned, int ) 
+  int unsigned near ACreateEasyCel( CelArrayElement near *, int unsigned near * )         
+  bool near AExists( res_t, int unsigned )            
+  void near AFlush( int unsigned, bool )              
+  char unsigned near * near AGetResData( int unsigned ) 
+  int unsigned near AIsLoaded( res_t, int unsigned, bool )              
+  int unsigned near ALoad( res_t, int unsigned, bool )   int unsigned near ALoadDebug( char near *, int, res_t, int unsigned, bool )             
+  bool near APurge( int unsigned )    bool near AResMgr()               
+
+APIMEM        Offset=00104cc0H
+  int unsigned near AAssignGrip( void near *, bool, short unsigned )    
+  bool near AChangeGrip( int unsigned, int unsigned ) 
+  void near AFree( int unsigned )   
+  int unsigned near AGetGrip( void near * )           
+  int unsigned near AMalloc( int unsigned )           
+  void near AMemCycle()               bool near AMemMgr()               
+  void near APrintUnfreedPtrs( bool )                 
+  int unsigned near ARealloc( int unsigned, int unsigned )              
+  void near AReleaseGrip( int unsigned )              
+  bool near ARestoreGripNum( int unsigned near *, __iobuf near * )      
+  bool near ASaveGripNum( int unsigned, __iobuf near * ) 
+  void near ASetPurgeStatus( int unsigned, bool )     
+  void near ASetSaveStatus( int unsigned, bool )      
+  int unsigned near ASizeOfGrip( int unsigned )       
+  int unsigned near ASysMalloc( int unsigned )        
+  int near lineTrack                  char near * near szFileTrack      
+  char near * near szStrTrack       
+
+APIGRAPH      Offset=00107f40H
+  ASMCopyPixels near * near __defarg()                
+  ASMCopyPixels near * near __defarg()                
+  void near AAddScrim( Scrimage near * )              
+  void near AAnimate()              
+  void near AChangeScrim( Scrimage near * )           
+  void near ACopyPixels( RCopyPixels near * )         
+  void near ADeleteScrim( Scrimage near * )           
+  void near AGetPalette( Gun near *, int unsigned, int unsigned )       
+  int near AMaxX()   int near AMaxY() 
+  void near ASetPalette( Gun near *, int unsigned, int unsigned )       
+  void near AShutDownVideo()        
+  void near AUpdateRect( Rectangle near * )           
+  void near AUpdateRect( TClipRect near * )           
+  void near OS_CopyPixelsLine( ASMCopyPixels near * ) 
+
+APIFONT       Offset=0010d500H
+  void near ACreateGripText( int unsigned, char near *, char unsigned, char unsigned, int unsigned, justify ) 
+  int unsigned near ACreatePartialText( int unsigned near *, char near *, char unsigned, void (near *)( ), int unsigned, int unsi 
+  int unsigned near ACreateProcText( int unsigned near *, char near *, char unsigned, void (near *)( ), int unsigned, int unsigne 
+  int unsigned near ACreateText( int unsigned near *, char near *, char unsigned, char unsigned, int unsigned, justify )      
+  char unsigned near AFontColor( int unsigned )       
+  int unsigned near AFontPoint()    
+  int unsigned near AGetCharWidth( char )               void near AGetCursorPosn( char near *, int unsigned, int unsigned, int unsigned near &, int unsigned near &, int unsigned ) 
+  void near ASetColors( char unsigned near *, char unsigned near *, bool ) 
+  void near ASetFontColor( int unsigned, char unsigned )   void near ASetString( int unsigned, int unsigned, char near *, char unsigned near *, int unsigned, int unsigned, justify, int u 
+
+APIEVT        Offset=0010f160H
+  void near AAutoUpdateTicks( bool )   bool near AEvtMgr()               
+  int unsigned near AFlushEvents( short unsigned )    
+  int unsigned near AFlushNotices( int unsigned )     
+  bool near APostEvent( short unsigned, int, bool )   
+  bool near APostNotice( notice_t, int unsigned, void near *, int unsigned ) 
+  void near APublishNext()          
+  bool near ASendNotice( notice_t, int unsigned, int unsigned, void near * ) 
+
+APIDLG        Offset=00111ac0H
+  near TControlInfo::TControlInfo() 
+  void (near * near Dialog::__defarg())()             
+  char unsigned near Dialog::__defarg()               
+  char unsigned near Dialog::__defarg()               
+  int unsigned near Dialog::__defarg()                
+  int unsigned near Dialog::__defarg()                
+  bool near AAlert( char near * )     bool near AConfirm( char near * ) 
+  int near AGetNumber( char near *, int )             
+  char near * near AGetString( char near *, char near *, char near *, int ) 
+
+API           Offset=00118fe0H
+  near TRandomGenerator::TRandomGenerator()           
+  int unsigned near AFileLength( __iobuf near * )     
+  int unsigned near AMax( int, int )   int unsigned near AMin( int, int ) 
+  int near TRandomGenerator::GetNumber( int )         
+  int near TRandomGenerator::GetSeed()                
+  void near TRandomGenerator::ReSeed( int )           

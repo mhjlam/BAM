@@ -1,0 +1,2 @@
+dir /b %1 >> i:\bam\intdemo\data\stuff.dat
+dir /b /f %1 >> i:\bam\intdemo\data\files.txt
