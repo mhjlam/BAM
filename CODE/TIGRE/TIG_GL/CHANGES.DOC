@@ -1,0 +1,72 @@
+
+
+A: Changes made to 12-01-95 bam tigre code to incorporate GL 
+	Serial/Modem code
+
+	
+	1) Replace Modem.?pp with Serial.?pp
+
+		- Remove Modem.obj from tigre.mak
+
+		- Add Serial.obj to tigre.mak
+
+		- replace include of "modem.hpp" with include of "serial.hpp"
+		  in file "comm.hpp"
+
+	1.5) Use new MEM.CPP (which removes "no track mem" error check)
+
+	2) Remove all Magna Carta headers
+
+		del ascii.h
+		del cctdef.h
+		del cctlimit.h
+		del ccttype.h
+		del comm.h
+		del compat.h
+		del ins8250.h
+		del keys.h
+		del mc.h
+		del modem.h
+		del rawtypes.h
+		del wc386.h
+
+
+	3) Add Green Leaf headers
+
+		asciidef.h 
+		compat20.h
+		cppcomp.h
+		ibmkeys.h
+		tw.h
+		video.h
+		_defs386.h
+		_dwdisp.h 
+
+		compplib.hpp
+		comdef.hpp
+		nasi.hpp
+		_8250.hpp
+		_comlink.hpp
+		_dosisr.hpp
+		_star.hpp
+	
+	4) replace Magna Carta lib with Greenleaf lib in Bam.mak
+		
+		LIB = tigre.lib, sosdw1pr, sosmw1pr, netnowr.lib, cctew95r.lib
+	   is now
+		LIB = tigre.lib, sosdw1pr, sosmw1pr, netnowr.lib, cpfr32.lib
+		
+		del cctew95r.lib
+
+
+	5) replace your old "mainmenu.cpp" with jc's version of "mainmenu.cpp"
+
+
+
+B: Other changes to Tigre
+	
+	1) Replace ClipRect with TClipRect
+	2) Replace File::Length() with File::Size()
+	3) Delete obsolete files....
+		OSGRPH.CPP
+
