@@ -1,0 +1,90 @@
+:Base ide.hlp>main
+:Title Open Watcom 1.9 IDE
+:Index Open Watcom 1.9 IDE Help=ide.hlp
+
+1 Open Watcom 1.9 IDE
+1 Open Watcom Integrated Development Environment
+1 Introduction=Open_Watcom_Integrated_Development_Environment
+1 How the Environment Operates=How_the_Environment_Operates
+1 How the Integrated Development Environment Looks=How_the_Integrated_Development_Environment_Looks
+1 The Files the Integrated Development Environment Uses=The_Files_the_Integrated_Development_Environment_Uses
+2 Using the Open Watcom Integrated Development Environment
+2 Introduction=Using_the_Open_Watcom_Integrated_Development_Environment
+2 Starting the Open Watcom Integrated Development Environment=Starting_the_Open_Watcom_Integrated_Development_Environment
+2 Quitting the Open Watcom Integrated Development Environment=Quitting_the_Open_Watcom_Integrated_Development_Environment
+2 The IDE Menu Bar=The_IDE_Menu_Bar
+2 The IDE Status Bar=The_IDE_Status_Bar
+2 The IDE Toolbar=The_IDE_Toolbar
+2 Getting Started with a Short Tutorial
+2 Introduction=Getting_Started_with_a_Short_Tutorial
+2 A Simple Executable=A_Simple_Executable
+2 Review of What Happened=Review_of_What_Happened
+2 The Open Watcom IDE Project Window
+2 Introduction=The_Open_Watcom_IDE_Project_Window
+2 Opening a Project=Opening_a_Project
+2 Closing a Project=Closing_a_Project
+3 Saving a Project
+3 Introduction=Saving_a_Project
+3 Updating the Project=Updating_the_Project
+3 Saving the Project Under a New Name=Saving_the_Project_Under_a_New_Name
+2 Working with Targets
+2 Introduction=Working_with_Targets
+2 Adding a Target=Adding_a_Target
+2 Minimizing a Target=Minimizing_a_Target
+2 Removing a Target=Removing_a_Target
+2 Renaming a Target=Renaming_a_Target
+2 Marking a Target for Remake=Marking_a_Target_for_Remake
+3 Making Targets
+3 Introduction=Making_Targets
+3 Viewing the Make Command for a Target=Viewing_the_Make_Command_for_a_Target
+3 Running a Target
+3 Introduction=Running_a_Target
+3 Other Run Functions=Other_Run_Functions
+2 Setting Application Parameters=Setting_Application_Parameters
+2 Working with Source Files
+2 Introduction=Working_with_Source_Files
+2 Adding Source Files=Adding_Source_Files
+2 Removing a Source File=Removing_a_Source_File
+2 Renaming a Source File=Renaming_a_Source_File
+2 Marking a Source File for Remake=Marking_a_Source_File_for_Remake
+3 Making Source Files
+3 Introduction=Making_Source_Files
+3 Viewing the Make Command for a Source File=Viewing_the_Make_Command_for_a_Source_File
+2 Viewing Included Files=Viewing_Included_Files
+2 Using the IDE Log Window
+2 Introduction=Using_the_IDE_Log_Window
+2 Stopping the Make Function=Stopping_the_Make_Function
+2 Getting Help=Getting_Help
+2 Editing the Source File=Editing_the_Source_File
+2 Saving the Log=Saving_the_Log
+2 The IDE Switches
+2 Introduction=The_IDE_Switches
+2 Using Release and Development Switches=Using_Release_and_Development_Switches
+3 Setting Target and Source File Switches
+3 Introduction=Setting_Target_and_Source_File_Switches
+3 Setting Target Switches=Setting_Target_Switches
+3 Setting Source File Switches=Setting_Source_File_Switches
+2 Using the Autodepend Switch=Using_the_Autodepend_Switch
+2 Configuring the Integrated Development Environment
+2 Introduction=Configuring_the_Integrated_Development_Environment
+2 Show Toolbar=Show_Toolbar
+2 Show Status Bar=Show_Status_Bar
+2 Auto Refresh=Auto_Refresh
+2 Selecting Your Own Text Editor=Selecting_Your_Own_Text_Editor
+2 Selecting a Source Revision Control System=Selecting_a_Source_Revision_Control_System
+1 Executing Special Commands=Executing_Special_Commands
+1 Adding Resources to a Target=Adding_Resources_to_a_Target
+1 Including Libraries in a Target=Including_Libraries_in_a_Target
+2 Targets and Image Types Supported by the IDE
+2 Introduction=Targets_and_Image_Types_Supported_by_the_IDE
+2 Win32 Targets=Win32_Targets
+2 Win16 Targets=Win16_Targets
+2 Win386 (Watcom Extender) Targets=Win386_LWatcom_ExtenderR_Targets
+2 DOS - 16-bit Targets=DOS_M_16Mbit_Targets
+2 DOS - 32-bit Targets=DOS_M_32Mbit_Targets
+2 OS/2 - 16-bit Targets=OSD2_M_16Mbit_Targets
+2 OS/2 - 32-bit Targets=OSD2_M_32Mbit_Targets
+2 Linux Targets=Linux_Targets
+1 Invoking Other Applications from the IDE=Invoking_Other_Applications_from_the_IDE
+1 Invoking DOS Applications from the IDE under OS/2=Invoking_DOS_Applications_from_the_IDE_under_OSD2
+1 Using the Information of the IDE from outside=Using_the_Information_of_the_IDE_from_outside

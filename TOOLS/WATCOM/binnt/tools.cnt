@@ -1,0 +1,168 @@
+:Base tools.hlp>main
+:Title Open Watcom 1.9 C/C++ Tools User's Guide
+:Index Open Watcom 1.9 C/C++ Tools User's Guide Help=tools.hlp
+
+1 Open Watcom 1.9 C/C++ Tools User's Guide
+2 The Open Watcom C/C++ Compile and Link Utility
+2 Introduction=The_Open_Watcom_CDCPP_Compile_and_Link_Utility
+2 WCL/WCL386 Command Line Format=WCLDWCL386_Command_Line_Format
+2 Open Watcom Compile and Link Options Summary=Open_Watcom_Compile_and_Link_Options_Summary
+2 WCL/WCL386 Environment Variables=WCLDWCL386_Environment_Variables
+2 WCL/WCL386 Command Line Examples=WCLDWCL386_Command_Line_Examples
+2 The Open Watcom C/C++ POSIX-like Compiler Driver
+2 Introduction=The_Open_Watcom_CDCPP_POSIXMlike_Compiler_Driver
+2 owcc Command Line Format=owcc_Command_Line_Format
+2 owcc Options Summary=owcc_Options_Summary
+2 owcc Command Line Examples=owcc_Command_Line_Examples
+2 The Open Watcom Assembler
+2 Introduction=The_Open_Watcom_Assembler
+2 Assembler Directives, Operators and Assembly Opcodes=Assembler_Directives__Operators_and_Assembly_Opcodes
+2 Unsupported Directives=Unsupported_Directives
+3 Open Watcom Assembler Specific
+3 Introduction=Open_Watcom_Assembler_Specific
+3 Naming convention=Naming_convention
+3 Open Watcom "C" name mangler=Open_Watcom__C__name_mangler
+3 Calling convention=Calling_convention
+2 Open Watcom Assembler Diagnostic Messages=Open_Watcom_Assembler_Diagnostic_Messages
+2 The Open Watcom Library Manager
+2 Introduction=The_Open_Watcom_Library_Manager
+2 The Open Watcom Library Manager Command Line=The_Open_Watcom_Library_Manager_Command_Line
+2 Open Watcom Library Manager Module Commands=Open_Watcom_Library_Manager_Module_Commands
+2 Adding Modules to a Library File=Adding_Modules_to_a_Library_File
+2 Deleting Modules from a Library File=Deleting_Modules_from_a_Library_File
+2 Replacing Modules in a Library File=Replacing_Modules_in_a_Library_File
+2 Extracting a Module from a Library File=Extracting_a_Module_from_a_Library_File
+2 Creating Import Libraries=Creating_Import_Libraries
+2 Creating Import Library Entries=Creating_Import_Library_Entries
+2 Commands from a File or Environment Variable=Commands_from_a_File_or_Environment_Variable
+3 Open Watcom Library Manager Options
+3 Introduction=Open_Watcom_Library_Manager_Options
+3 Suppress Creation of Backup File - "b" Option=Suppress_Creation_of_Backup_File_M__b__Option
+3 Case Sensitive Symbol Names - "c" Option=Case_Sensitive_Symbol_Names_M__c__Option
+3 Specify Output Directory - "d" Option=Specify_Output_Directory_M__d__Option
+3 Specify Output Format - "f" Option=Specify_Output_Format_M__f__Option
+3 Generating Imports - "i" Option=Generating_Imports_M__i__Option
+3 Creating a Listing File - "l" Option=Creating_a_Listing_File_M__l__Option
+3 Display C++ Mangled Names - "m" Option=Display_CPP_Mangled_Names_M__m__Option
+3 Always Create a New Library - "n" Option=Always_Create_a_New_Library_M__n__Option
+3 Specifying an Output File Name - "o" Option=Specifying_an_Output_File_Name_M__o__Option
+3 Specifying a Library Record Size - "p" and "pa" Options=Specifying_a_Library_Record_Size_M__p__and__pa__Options
+3 Operate Quietly - "q" Option=Operate_Quietly_M__q__Option
+3 Strip Line Number Records - "s" Option=Strip_Line_Number_Records_M__s__Option
+3 Trim Module Name - "t" Option=Trim_Module_Name_M__t__Option
+3 Operate Verbosely - "v" Option=Operate_Verbosely_M__v__Option
+3 Explode Library File - "x" Option=Explode_Library_File_M__x__Option
+2 Librarian Error Messages=Librarian_Error_Messages
+2 The Object File Disassembler
+2 Introduction=The_Object_File_Disassembler
+2 Changing the Internal Label Character - "i\=<char>"=Changing_the_Internal_Label_Character_M__iEXcharY_
+2 The Assembly Format Option - "a"=The_Assembly_Format_Option_M__a_
+2 The External Symbols Option - "e"=The_External_Symbols_Option_M__e_
+2 The No Instruction Name Pseudonyms Option - "fp"=The_No_Instruction_Name_Pseudonyms_Option_M__fp_
+2 The No Register Name Pseudonyms Option - "fr"=The_No_Register_Name_Pseudonyms_Option_M__fr_
+2 The Alternate Addressing Form Option - "fi"=The_Alternate_Addressing_Form_Option_M__fi_
+2 The Uppercase Instructions/Registers Option - "fu"=The_Uppercase_InstructionsDRegisters_Option_M__fu_
+2 The Listing Option - "l[\=<list_file>]"=The_Listing_Option_M__lUEXlist_fileYV_
+2 The Public Symbols Option - "p"=The_Public_Symbols_Option_M__p_
+2 Retain C++ Mangled Names  - "m"=Retain_CPP_Mangled_Names__M__m_
+2 The Source Option - "s[\=<source_file>]"=The_Source_Option_M__sUEXsource_fileYV_
+2 An Example=An_Example
+2 Optimization of Far Calls
+2 Introduction=Optimization_of_Far_Calls
+3 Far Call Optimizations for Non-Open Watcom Object Modules
+3 Introduction=Far_Call_Optimizations_for_NonMOpen_Watcom_Object_Modules
+3 The Open Watcom Far Call Optimization Enabling Utility=The_Open_Watcom_Far_Call_Optimization_Enabling_Utility
+2 The Open Watcom Exe2bin Utility
+2 Introduction=The_Open_Watcom_Exe2bin_Utility
+2 The Open Watcom Exe2bin Utility Command Line=The_Open_Watcom_Exe2bin_Utility_Command_Line
+2 Exe2bin Messages=Exe2bin_Messages
+2 The Open Watcom Patch Utility
+2 Introduction=The_Open_Watcom_Patch_Utility
+2 Applying a Patch=Applying_a_Patch
+2 Diagnostic Messages=Diagnostic_Messages
+2 The Open Watcom Strip Utility
+2 Introduction=The_Open_Watcom_Strip_Utility
+2 The Open Watcom Strip Utility Command Line=The_Open_Watcom_Strip_Utility_Command_Line
+2 Strip Utility Messages=Strip_Utility_Messages
+2 The Open Watcom Make Utility
+2 Introduction=The_Open_Watcom_Make_Utility
+3 Open Watcom Make Reference
+3 Introduction=Open_Watcom_Make_Reference
+3 Open Watcom Make Command Line Format=Open_Watcom_Make_Command_Line_Format
+3 Open Watcom Make Options Summary=Open_Watcom_Make_Options_Summary
+4 Command Line Options
+4 Introduction=Command_Line_Options
+4 a=a
+4 b=b
+4 c=c
+4 d=d
+4 e=e
+4 f=f
+4 h=h
+4 i=i
+4 k=k
+4 l=l
+4 m=m
+4 ms=ms
+4 n=n
+4 o=o
+4 p=p
+4 q=q
+4 r=r
+4 s=s
+4 sn=sn
+4 t=t
+4 u=u
+4 v=v
+4 y=y
+4 z=z
+3 Special Macros=Special_Macros
+2 Dependency Declarations=Dependency_Declarations
+2 Multiple Dependents=Multiple_Dependents
+2 Multiple Targets=Multiple_Targets
+2 Multiple Rules=Multiple_Rules
+2 Command Lists=Command_Lists
+2 Final Commands (.AFTER)=Final_Commands_L_AFTERR
+2 Ignoring Dependent Timestamps (.ALWAYS)=Ignoring_Dependent_Timestamps_L_ALWAYSR
+2 Automatic Dependency Detection (.AUTODEPEND)=Automatic_Dependency_Detection_L_AUTODEPENDR
+2 Initial Commands (.BEFORE)=Initial_Commands_L_BEFORER
+2 Disable Implicit Rules (.BLOCK)=Disable_Implicit_Rules_L_BLOCKR
+2 Ignoring Errors (.CONTINUE)=Ignoring_Errors_L_CONTINUER
+2 Default Command List (.DEFAULT)=Default_Command_List_L_DEFAULTR
+2 Erasing Targets After Error (.ERASE)=Erasing_Targets_After_Error_L_ERASER
+2 Error Action (.ERROR)=Error_Action_L_ERRORR
+2 Ignoring Target Timestamp (.EXISTSONLY)=Ignoring_Target_Timestamp_L_EXISTSONLYR
+2 Specifying Explicitly Updated Targets (.EXPLICIT)=Specifying_Explicitly_Updated_Targets_L_EXPLICITR
+2 Defining Recognized File Extensions (.EXTENSIONS)=Defining_Recognized_File_Extensions_L_EXTENSIONSR
+2 Approximate Timestamp Matching (.FUZZY)=Approximate_Timestamp_Matching_L_FUZZYR
+2 Preserving Targets After Error (.HOLD)=Preserving_Targets_After_Error_L_HOLDR
+2 Ignoring Return Codes (.IGNORE)=Ignoring_Return_Codes_L_IGNORER
+2 Minimising Target Timestamp (.JUST_ENOUGH)=Minimising_Target_Timestamp_L_JUST_ENOUGHR
+2 Updating Targets Multiple Times (.MULTIPLE)=Updating_Targets_Multiple_Times_L_MULTIPLER
+2 Ignoring Target Timestamp (.NOCHECK)=Ignoring_Target_Timestamp_L_NOCHECKR
+2 Cache Search Path (.OPTIMIZE)=Cache_Search_Path_L_OPTIMIZER
+2 Preserving Targets (.PRECIOUS)=Preserving_Targets_L_PRECIOUSR
+2 Name Command Sequence (.PROCEDURE)=Name_Command_Sequence_L_PROCEDURER
+2 Re-Checking Target Timestamp (.RECHECK)=ReMChecking_Target_Timestamp_L_RECHECKR
+2 Suppressing Terminal Output (.SILENT)=Suppressing_Terminal_Output_L_SILENTR
+2 Defining Recognized File Extensions (.SUFFIXES)=Defining_Recognized_File_Extensions_L_SUFFIXESR
+2 Targets Without Any Dependents (.SYMBOLIC)=Targets_Without_Any_Dependents_L_SYMBOLICR
+2 Macros=Macros
+2 Implicit Rules=Implicit_Rules
+2 Double Colon Explicit Rules=Double_Colon_Explicit_Rules
+3 Preprocessing Directives
+3 Introduction=Preprocessing_Directives
+3 File Inclusion=File_Inclusion
+3 Conditional Processing=Conditional_Processing
+3 Loading Dynamic Link Libraries=Loading_Dynamic_Link_Libraries
+2 Command List Directives=Command_List_Directives
+2 MAKEINIT File=MAKEINIT_File
+2 Command List Execution=Command_List_Execution
+2 Compatibility Between Open Watcom Make and UNIX Make=Compatibility_Between_Open_Watcom_Make_and_UNIX_Make
+2 Open Watcom Make Diagnostic Messages=Open_Watcom_Make_Diagnostic_Messages
+2 The Touch Utility
+2 Introduction=The_Touch_Utility
+2 WTOUCH Operation=WTOUCH_Operation
+2 The IDE2MAKE Utility
+2 Introduction=The_IDE2MAKE_Utility
+2 IDE2MAKE Operation=IDE2MAKE_Operation

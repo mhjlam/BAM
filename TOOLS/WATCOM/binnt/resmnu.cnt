@@ -1,0 +1,39 @@
+:Base resmnu.hlp>main
+:Title Open Watcom 1.9 Menu Editor
+:Index Open Watcom 1.9 Menu Editor Help=resmnu.hlp
+
+1 Open Watcom 1.9 Menu Editor
+1 The Open Watcom Menu Editor
+1 Introduction=The_Open_Watcom_Menu_Editor
+2 Using the Menu Editor
+2 Introduction=Using_the_Menu_Editor
+3 Starting the Menu Editor
+3 Introduction=Starting_the_Menu_Editor
+3 Creating a New Menu=Creating_a_New_Menu
+3 Opening an Existing Menu=Opening_an_Existing_Menu
+2 Quitting the Menu Editor=Quitting_the_Menu_Editor
+2 The Menu Editor Menu Bar=The_Menu_Editor_Menu_Bar
+2 The Menu Editor Toolbar=The_Menu_Editor_Toolbar
+2 Using the Menu Editor Window
+2 Introduction=Using_the_Menu_Editor_Window
+2 Menu Editor: Resource Name Field=Menu_Editor__Resource_Name_Field
+2 Menu Editor: The Preview Window=Menu_Editor__The_Preview_Window
+2 Menu Editor: Attributes Area=Menu_Editor__Attributes_Area
+2 Menu Editor: Menu Item List=Menu_Editor__Menu_Item_List
+2 Menu Editor: Action Buttons=Menu_Editor__Action_Buttons
+2 Menu Functions
+2 Introduction=Menu_Functions
+2 Adding a New Menu Item=Adding_a_New_Menu_Item
+2 Changing an Existing Menu Item=Changing_an_Existing_Menu_Item
+3 Deleting Menu Items
+3 Introduction=Deleting_Menu_Items
+3 Deleting a Menu Item=Deleting_a_Menu_Item
+3 Deleting All Menu Items=Deleting_All_Menu_Items
+2 Renaming a Menu=Renaming_a_Menu
+3 Saving Menu Items
+3 Introduction=Saving_Menu_Items
+3 Menu Editor: Update=Menu_Editor__Update
+3 Menu Editor: Save As=Menu_Editor__Save_As
+3 Menu Editor: Copy To=Menu_Editor__Copy_To
+2 Using Shortcuts to Create menus=Using_Shortcuts_to_Create_menus
+2 Menu Editor: Changing Memory Options=Menu_Editor__Changing_Memory_Options

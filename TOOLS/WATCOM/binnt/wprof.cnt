@@ -1,0 +1,44 @@
+:Base wprof.hlp>main
+:Title Open Watcom 1.9 Profiler
+:Index Open Watcom 1.9 Profiler Help=wprof.hlp
+
+1 Open Watcom 1.9 Profiler
+2 Profile Analysis Tools
+2 Introduction=Profile_Analysis_Tools
+2 The Open Watcom Execution Sampler
+2 Introduction=The_Open_Watcom_Execution_Sampler
+2 Sampler Options Summary=Sampler_Options_Summary
+2 Sampler Command Line Options=Sampler_Command_Line_Options
+3 Sampler Operating System Considerations
+3 Introduction=Sampler_Operating_System_Considerations
+3 Using the Sampler with DOS=Using_the_Sampler_with_DOS
+3 Using the Sampler with OS/2=Using_the_Sampler_with_OSD2
+3 Using the Sampler with DOS/4GW or DOS/4G=Using_the_Sampler_with_DOSD4GW_or_DOSD4G
+3 Using the Sampler with the Phar Lap 386|DOS-Extender=Using_the_Sampler_with_the_Phar_Lap_386_DOSMExtender
+3 Using the Sampler with Windows 3.x=Using_the_Sampler_with_Windows_3_x
+3 Using the Sampler with Win32=Using_the_Sampler_with_Win32
+3 Using the Sampler with NetWare 386=Using_the_Sampler_with_NetWare_386
+2 The Open Watcom Execution Profiler
+2 Introduction=The_Open_Watcom_Execution_Profiler
+3 Zoom-In and Backout=ZoomMIn_and_Backout
+3 Samples=Samples
+3 Absolute and Relative Percentages=Absolute_and_Relative_Percentages
+3 The Open Watcom Execution Profiler User Interface
+3 Introduction=The_Open_Watcom_Execution_Profiler_User_Interface
+3 The Title Area=The_Title_Area
+3 The Information Area=The_Information_Area
+3 The Detail View=The_Detail_View
+4 The Profiler Menu Bar
+4 Introduction=The_Profiler_Menu_Bar
+4 The File Menu=The_File_Menu
+4 The Convert Menu=The_Convert_Menu
+4 The Windows Menu=The_Windows_Menu
+4 The Actions Menu=The_Actions_Menu
+4 The Help Menu=The_Help_Menu
+3 The Popup Menu=The_Popup_Menu
+3 The Options Dialog=The_Options_Dialog
+3 The Convert Dialog=The_Convert_Dialog
+3 The Status Line=The_Status_Line
+2 How to Use the Profiler Effectively=How_to_Use_the_Profiler_Effectively
+2 Open Watcom Execution Profiler Command Line Format=Open_Watcom_Execution_Profiler_Command_Line_Format
+2 Profiling a NetWare NLM=Profiling_a_NetWare_NLM

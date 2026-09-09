@@ -1,0 +1,48 @@
+:Base drwatcom.hlp>main
+:Title Dr. Watcom 1.9
+:Index Dr. Watcom 1.9 Help=drwatcom.hlp
+
+1 Dr. Watcom 1.9
+1 Dr. Watcom for Windows 3.1
+1 Introduction=Win16__Dr__Watcom_for_Windows_3_1
+2 Using Dr. Watcom
+2 Introduction=Win16__Using_Dr__Watcom
+2 Starting Dr. Watcom=Win16__Starting_Dr__Watcom
+2 Quitting Dr. Watcom=Win16__Quitting_Dr__Watcom
+2 The Dr. Watcom Menu Bar=Win16__The_Dr__Watcom_Menu_Bar
+2 Using the Dr. Watcom Window
+2 Introduction=Win16__Using_the_Dr__Watcom_Window
+2 Dr. Watcom: Saving Event List Information to a File=Win16__Dr__Watcom__Saving_Event_List_Information_to_a_File
+2 Dr. Watcom: Clearing the Event List=Win16__Dr__Watcom__Clearing_the_Event_List
+2 Dr. Watcom: Marking the Event List=Win16__Dr__Watcom__Marking_the_Event_List
+2 Dr. Watcom: Setting the Fonts=Win16__Dr__Watcom__Setting_the_Fonts
+2 Setting the Alert Feature=Win16__Setting_the_Alert_Feature
+2 Showing the DIP status=Win16__Showing_the_DIP_status
+2 Using the Clear Alert Function=Win16__Using_the_Clear_Alert_Function
+2 Dr. Watcom: Exception Handling
+2 Introduction=Win16__Dr__Watcom__Exception_Handling
+3 Examining the Task Status
+3 Introduction=Win16__Examining_the_Task_Status
+3 Dr. Watcom: Changing the Registers=Win16__Dr__Watcom__Changing_the_Registers
+3 Dr. Watcom: Applying Registers=Win16__Dr__Watcom__Applying_Registers
+4 Dr. Watcom: Segment Mapping
+4 Introduction=Win16__Dr__Watcom__Segment_Mapping
+4 Dr. Watcom: Saving Window Information=Win16__Dr__Watcom__Saving_Window_Information
+4 Dr. Watcom: Changing the Display=Win16__Dr__Watcom__Changing_the_Display
+4 Dr. Watcom: Setting the Offset=Win16__Dr__Watcom__Setting_the_Offset
+4 Dr. Watcom: The Handle Information Dialog Box=Win16__Dr__Watcom__The_Handle_Information_Dialog_Box
+3 Performing a Stack Trace=Win16__Performing_a_Stack_Trace
+2 Resetting the Fault Handled Flag=Win16__Resetting_the_Fault_Handled_Flag
+2 Dr. Watcom: Working with Log Files
+2 Introduction=Win16__Dr__Watcom__Working_with_Log_Files
+2 Log the Current State=Win16__Log_the_Current_State
+2 Erase the Log File=Win16__Erase_the_Log_File
+3 Customize the Log File
+3 Introduction=Win16__Customize_the_Log_File
+3 Dr. Watcom: Naming the Log File=Win16__Dr__Watcom__Naming_the_Log_File
+3 Dr. Watcom: Specifying the Log File Data=Win16__Dr__Watcom__Specifying_the_Log_File_Data
+3 Dr. Watcom: Other Options=Win16__Dr__Watcom__Other_Options
+2 Performing Task Control
+2 Introduction=Win16__Performing_Task_Control
+2 Terminating a Task=Win16__Terminating_a_Task
+2 Debugging a Task=Win16__Debugging_a_Task

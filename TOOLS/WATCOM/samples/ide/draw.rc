@@ -1,0 +1,41 @@
+#include <windows.h>
+#include "drawmenu.h"
+
+DrawIcon ICON draw.ico
+
+IDM_ROTATE_LEFT BITMAP left.bmp
+IDM_ROTATE_RIGHT BITMAP right.bmp
+IDM_ROTATE_UP BITMAP up.bmp
+IDM_ROTATE_DOWN BITMAP down.bmp
+IDM_MOVE_IN BITMAP forward.bmp
+IDM_MOVE_OUT BITMAP back.bmp
+IDM_MORE_BRIGHTNESS BITMAP brighter.bmp
+IDM_LESS_BRIGHTNESS BITMAP darker.bmp
+
+
+DrawMenu MENU
+BEGIN
+    POPUP       "&File"
+    BEGIN
+        MENUITEM "E&xit", IDM_EXIT
+    END
+    POPUP       "&Lighting"
+    BEGIN
+        MENUITEM "&Brighter", IDM_MORE_BRIGHTNESS
+        MENUITEM "&Dimmer", IDM_LESS_BRIGHTNESS
+        MENUITEM "&More Contrast", IDM_MORE_CONTRAST
+        MENUITEM "&Less Contrast", IDM_LESS_CONTRAST
+    END
+    POPUP       "&Move"
+    BEGIN
+        MENUITEM "&Left", IDM_ROTATE_LEFT
+        MENUITEM "&Right", IDM_ROTATE_RIGHT
+        MENUITEM "&Up", IDM_ROTATE_UP
+        MENUITEM "&Down", IDM_ROTATE_DOWN
+        MENUITEM "&In", IDM_MOVE_IN
+        MENUITEM "&Out", IDM_MOVE_OUT
+        MENUITEM SEPARATOR
+        MENUITEM "&Wide Angle", IDM_MORE_PERSPECTIVE
+        MENUITEM "&Narrow Angle", IDM_LESS_PERSPECTIVE
+    END
+END

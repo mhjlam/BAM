@@ -1,0 +1,78 @@
+:Base spy.hlp>main
+:Title Open Watcom 1.9 Spy
+:Index Open Watcom 1.9 Spy Help=spy.hlp
+
+1 Open Watcom 1.9 Spy
+1 Spy
+1 Introduction=Spy
+2 Using Spy
+2 Introduction=Using_Spy
+2 Starting Spy=Starting_Spy
+2 Quitting Spy=Quitting_Spy
+2 The Spy Menu Bar=The_Spy_Menu_Bar
+2 The Spy Toolbar=The_Spy_Toolbar
+2 The Spy Window
+2 Introduction=The_Spy_Window
+2 Spy: Setting the Fonts=Spy__Setting_the_Fonts
+2 Spy: Saving the Contents of the Message List=Spy__Saving_the_Contents_of_the_Message_List
+2 Spy: Clearing the Message List=Spy__Clearing_the_Message_List
+2 Spy: Marking the Message List=Spy__Marking_the_Message_List
+2 Spy: Automatic Scrolling=Spy__Automatic_Scrolling
+2 Spy: Always On Top=Spy__Always_On_Top
+2 Selecting Messages to Monitor
+2 Introduction=Selecting_Messages_to_Monitor
+2 Selecting Individual Messages=Selecting_Individual_Messages
+2 Selecting Message Classes=Selecting_Message_Classes
+3 Predefined Spy Message Classes
+3 Introduction=Predefined_Spy_Message_Classes
+3 Clipboard Messages=Clipboard_Messages
+3 DDE Messages=DDE_Messages
+3 Init Messages=Init_Messages
+3 Input Messages=Input_Messages
+3 MDI Messages=MDI_Messages
+3 Mouse Messages=Mouse_Messages
+3 NC Misc Messages=NC_Misc_Messages
+3 NC Mouse Messages=NC_Mouse_Messages
+3 Other Messages=Other_Messages
+3 System Messages=System_Messages
+3 User Messages=User_Messages
+3 Unknown Messages=Unknown_Messages
+3 Window Messages=Window_Messages
+3 Saving and Loading Message Configurations
+3 Introduction=Saving_and_Loading_Message_Configurations
+3 Using the Auto Save Feature=Using_the_Auto_Save_Feature
+3 Saving a Message Configuration=Saving_a_Message_Configuration
+3 Loading a Message Configuration=Loading_a_Message_Configuration
+2 Spying
+2 Introduction=Spying
+2 Start Spying=Start_Spying
+2 Spying on More Windows=Spying_on_More_Windows
+2 Stop Spying=Stop_Spying
+2 Pause Spying=Pause_Spying
+2 Viewing Message Information
+2 Introduction=Viewing_Message_Information
+2 Resetting the Usage Count=Resetting_the_Usage_Count
+2 Displaying Help for the Message=Displaying_Help_for_the_Message
+2 Changing the Monitoring State of the Message=Changing_the_Monitoring_State_of_the_Message
+2 Highlighting the Receiving Window=Highlighting_the_Receiving_Window
+2 Displaying Information about the Receiving Window=Displaying_Information_about_the_Receiving_Window
+2 Spy: Working with Log Files
+2 Introduction=Spy__Working_with_Log_Files
+3 Spy: Configuring the Log File
+3 Introduction=Spy__Configuring_the_Log_File
+3 Spy: Default Log Name=Spy__Default_Log_Name
+3 Spy: Log Name=Spy__Log_Name
+3 Spy: Action When Log File Exists=Spy__Action_When_Log_File_Exists
+2 Spy: Start Logging=Spy__Start_Logging
+2 Spy: Logging Type=Spy__Logging_Type
+2 Spy: Stop Logging=Spy__Stop_Logging
+2 Spy: Pause Logging=Spy__Pause_Logging
+2 Viewing Window Information
+2 Introduction=Viewing_Window_Information
+2 Viewing Information About a Window=Viewing_Information_About_a_Window
+3 Listing All Windows
+3 Introduction=Listing_All_Windows
+3 Adding a Window=Adding_a_Window
+3 Deleting a Window=Deleting_a_Window
+3 Monitoring All Windows=Monitoring_All_Windows
+3 Viewing Information=Viewing_Information

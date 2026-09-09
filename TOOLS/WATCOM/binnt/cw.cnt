@@ -1,0 +1,67 @@
+:Base cw.hlp>main
+:Title CauseWay User's Guide
+:Index CauseWay User's Guide Help=cw.hlp
+
+1 CauseWay User's Guide
+1 Overview
+1 Introduction=Overview
+1 Introduction=Introduction
+1 Minimum System Requirements=Minimum_System_Requirements
+1 CauseWay Memory Requirements=CauseWay_Memory_Requirements
+1 Operating CauseWay=Operating_CauseWay
+1 Debugging Using WD=Debugging_Using_WD
+1 Operational Considerations When Using CauseWay=Operational_Considerations_When_Using_CauseWay
+2 Environment Variables
+2 Introduction=Environment_Variables
+2 TEMP and TMP Environment Variables=TEMP_and_TMP_Environment_Variables
+2 CAUSEWAY Environment Variable=CAUSEWAY_Environment_Variable
+1 Using the flat memory model
+1 Introduction=Using_the_flat_memory_model
+1 Using DLLs with Open Watcom C/C++
+1 Introduction=Using_DLLs_with_Open_Watcom_CDCPP
+1 Performance Considerations
+1 Introduction=Performance_Considerations
+1 Memory Size=Memory_Size
+1 Open Watcom C/C++ kbhit() replacement=Open_Watcom_CDCPP_kbhitLR_replacement
+1 DOS API Buffer Size=DOS_API_Buffer_Size
+1 API Memory Allocation=API_Memory_Allocation
+1 Rules For Protected Mode Operation
+1 Introduction=Rules_For_Protected_Mode_Operation
+1 CW.ERR File Information Format
+1 Introduction=CW_ERR_File_Information_Format
+1 Quick Reference Guide=Quick_Reference_Guide
+1 Sequence=Sequence
+1 CauseWay Services
+1 Introduction=CauseWay_Services
+1 Internal Operation=Internal_Operation
+1 Functions=Functions
+1 CauseWay API=CauseWay_API
+1 Stack Frames=Stack_Frames
+2 Default API
+2 Introduction=Default_API
+2 API functions (numerical index)=API_functions_Lnumerical_indexR
+2 API functions (alphabetical order)=API_functions_Lalphabetical_orderR
+1 API Notes=API_Notes
+1 Interrupt Services
+1 Introduction=Interrupt_Services
+1 Extended or Altered Interrupt Services=Extended_or_Altered_Interrupt_Services
+1 Troubleshooting
+1 Introduction=Troubleshooting
+1 First Steps=First_Steps
+1 DOS Extender Error Messages and Return Values=DOS_Extender_Error_Messages_and_Return_Values
+1 01 Unable to resize program memory block.=01_Unable_to_resize_program_memory_block_
+1 02 386 or better required.=02_386_or_better_required_
+1 03 Non-standard protected mode program already active.=03_NonMstandard_protected_mode_program_already_active_
+1 04 DOS 3.1 or better required.=04_DOS_3_1_or_better_required_
+1 05 Not enough memory for CauseWay.=05_Not_enough_memory_for_CauseWay_
+1 06 VCPI failed to switch into protected mode.=06_VCPI_failed_to_switch_into_protected_mode_
+1 07 Unable to control A20.=07_Unable_to_control_A20_
+1 08 Selector allocation error.=08_Selector_allocation_error_
+1 09 Unrecoverable exception. Program terminated.=09_Unrecoverable_exception__Program_terminated_
+1 10 Unable to find application to load.=10_Unable_to_find_application_to_load_
+1 11 DOS reported error while accessing application.=11_DOS_reported_error_while_accessing_application_
+1 12 Not enough memory to load application.=12_Not_enough_memory_to_load_application_
+1 13 DPMI failed to switch to protected mode.=13_DPMI_failed_to_switch_to_protected_mode_
+1 14 Memory structures destroyed. Program terminated.=14_Memory_structures_destroyed__Program_terminated_
+1 15 DOS reported an error while accessing swap file. Program terminated.=15_DOS_reported_an_error_while_accessing_swap_file__Program_terminated_
+1 16 Unsupported DOS function call. Program terminated.=16_Unsupported_DOS_function_call__Program_terminated_

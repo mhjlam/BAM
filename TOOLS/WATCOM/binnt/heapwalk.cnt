@@ -1,0 +1,70 @@
+:Base heapwalk.hlp>main
+:Title Open Watcom 1.9 Heap Walker
+:Index Open Watcom 1.9 Heap Walker Help=heapwalk.hlp
+
+1 Open Watcom 1.9 Heap Walker
+1 Heap Walker
+1 Introduction=Heap_Walker
+2 Using Heap Walker
+2 Introduction=Using_Heap_Walker
+2 Starting Heap Walker=Starting_Heap_Walker
+2 Quitting Heap Walker=Quitting_Heap_Walker
+2 The Heap Walker Menu Bar=The_Heap_Walker_Menu_Bar
+2 Configuring the Heap Walker Session
+2 Introduction=Configuring_the_Heap_Walker_Session
+2 Heap Walker: Configuring the File Name Paths=Heap_Walker__Configuring_the_File_Name_Paths
+3 Heap Walker: Configuring Window Behaviour
+3 Introduction=Heap_Walker__Configuring_Window_Behaviour
+3 Save Main Window Size/Position=Save_Main_Window_SizeDPosition
+3 Save Memory Window Size/Position=Save_Memory_Window_SizeDPosition
+3 Allow Multiple Memory Display Windows=Allow_Multiple_Memory_Display_Windows
+3 Display Memory Info Window=Display_Memory_Info_Window
+3 Auto Position Memory Info Window=Auto_Position_Memory_Info_Window
+3 Display Resources=Display_Resources
+2 Heap Walker: Saving the Current Configuration=Heap_Walker__Saving_the_Current_Configuration
+2 Heap Walker: Setting the Font=Heap_Walker__Setting_the_Font
+2 Walking the Global Heap
+2 Introduction=Walking_the_Global_Heap
+2 The Entire Heap=The_Entire_Heap
+2 Free Items List=Free_Items_List
+2 LRU Items List=LRU_Items_List
+2 The Selector List=The_Selector_List
+1 Sorting the Lists=Sorting_the_Lists
+2 Viewing the Contents of Memory
+2 Introduction=Viewing_the_Contents_of_Memory
+3 The Memory Display Window
+3 Introduction=The_Memory_Display_Window
+3 Saving Heap Walker Information to a File=Saving_Heap_Walker_Information_to_a_File
+3 Changing the Heap Walker Display=Changing_the_Heap_Walker_Display
+3 Setting the Offset in the Memory Display Window=Setting_the_Offset_in_the_Memory_Display_Window
+3 Information Dialog Boxes=Information_Dialog_Boxes
+2 Working with Individual Objects
+2 Introduction=Working_with_Individual_Objects
+2 Viewing an Object's Memory=Viewing_an_Object_s_Memory
+2 Finding a Selector=Finding_a_Selector
+2 Discarding an Object=Discarding_an_Object
+2 Repositioning an Object=Repositioning_an_Object
+2 Calculating Memory Size=Calculating_Memory_Size
+2 Walking the Local Heap
+2 Introduction=Walking_the_Local_Heap
+2 Monitoring Data Segment Usage=Monitoring_Data_Segment_Usage
+3 Local Walk
+3 Introduction=Local_Walk
+3 Refresh the Heap=Refresh_the_Heap
+3 Display Heap Information=Display_Heap_Information
+3 Sorting the Local Heap=Sorting_the_Local_Heap
+2 Compact and Local Walk=Compact_and_Local_Walk
+2 GDI Local Walk=GDI_Local_Walk
+2 USER Local Walk=USER_Local_Walk
+2 Working with the Global Heap
+2 Introduction=Working_with_the_Global_Heap
+2 Refreshing the Global Heap=Refreshing_the_Global_Heap
+2 Compacting the Global Heap=Compacting_the_Global_Heap
+2 Removing Discardable Objects=Removing_Discardable_Objects
+2 Viewing the Global Heap Summary=Viewing_the_Global_Heap_Summary
+2 Viewing Memory Management Information=Viewing_Memory_Management_Information
+2 Testing with Heap Walker
+2 Introduction=Testing_with_Heap_Walker
+2 Allocate All Memory=Allocate_All_Memory
+2 Free All Memory=Free_All_Memory
+2 Other Allocation Functions=Other_Allocation_Functions

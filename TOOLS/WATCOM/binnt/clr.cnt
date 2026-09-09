@@ -1,0 +1,291 @@
+:Base clr.hlp>main
+:Title Open Watcom 1.9 C Language Reference
+:Index Open Watcom 1.9 C Language Reference Help=clr.hlp
+
+1 Open Watcom 1.9 C Language Reference
+2 Introduction to C
+2 Introduction=Introduction_to_C
+2 History=History
+2 Uses=Uses
+2 Advantages=Advantages
+2 How to Use This Book=How_to_Use_This_Book
+2 Notation
+2 Introduction=Notation
+2 Basic Language Elements
+2 Introduction=Basic_Language_Elements
+3 Character Sets
+3 Introduction=Character_Sets
+3 Multibyte Characters=Multibyte_Characters
+2 Keywords=Keywords
+2 Identifiers=Identifiers
+2 Comments=Comments
+2 Basic Types
+2 Introduction=Basic_Types
+2 Declarations of Objects=Declarations_of_Objects
+2 Name Scope=Name_Scope
+2 Type Specifiers=Type_Specifiers
+2 Integer Types=Integer_Types
+2 Floating-Point Types=FloatingMPoint_Types
+2 Enumerated Types=Enumerated_Types
+2 Arrays=Arrays
+2 Strings=Strings
+2 Constants
+2 Introduction=Constants
+2 Integer Constants=Integer_Constants
+2 Floating-Point Constants=FloatingMPoint_Constants
+3 Character Constants
+3 Introduction=Character_Constants
+3 Wide Character Constants=Wide_Character_Constants
+3 String Literals
+3 Introduction=String_Literals
+3 Wide String Literals=Wide_String_Literals
+2 Type Conversion
+2 Introduction=Type_Conversion
+2 Integral Promotion=Integral_Promotion
+2 Signed and Unsigned Integer Conversion=Signed_and_Unsigned_Integer_Conversion
+2 Floating-Point to Integer Conversion=FloatingMPoint_to_Integer_Conversion
+2 Integer to Floating-Point Conversion=Integer_to_FloatingMPoint_Conversion
+2 Arithmetic Conversion=Arithmetic_Conversion
+2 Default Argument Promotion=Default_Argument_Promotion
+2 Advanced Types
+2 Introduction=Advanced_Types
+3 Structures
+3 Introduction=Structures
+3 Bit-fields=BitMfields
+2 Unions=Unions
+3 Pointers
+3 Introduction=Pointers
+4 Special Pointer Types for Open Watcom C/16
+4 Introduction=Special_Pointer_Types_for_Open_Watcom_CD16
+4 The Small and Big Code Models=The_Small_and_Big_Code_Models
+4 The Small and Big Data Models=The_Small_and_Big_Data_Models
+4 Mixing Memory Models=Mixing_Memory_Models
+4 The _ _far Keyword for Open Watcom C/16=The____far_Keyword_for_Open_Watcom_CD16
+4 The _ _near Keyword for Open Watcom C/16=The____near_Keyword_for_Open_Watcom_CD16
+4 The _ _huge Keyword for Open Watcom C/16=The____huge_Keyword_for_Open_Watcom_CD16
+4 Special Pointer Types for Open Watcom C/32
+4 Introduction=Special_Pointer_Types_for_Open_Watcom_CD32
+4 The _ _far Keyword for Open Watcom C/32=The____far_Keyword_for_Open_Watcom_CD32
+4 The _ _near Keyword for Open Watcom C/32=The____near_Keyword_for_Open_Watcom_CD32
+4 The _ _far16 and _Seg16 Keywords=The____far16_and__Seg16_Keywords
+4 Based Pointers for Open Watcom C/16 and C/32
+4 Introduction=Based_Pointers_for_Open_Watcom_CD16_and_CD32
+4 Segment Constant Based Pointers and Objects=Segment_Constant_Based_Pointers_and_Objects
+4 Segment Object Based Pointers=Segment_Object_Based_Pointers
+4 Void Based Pointers=Void_Based_Pointers
+4 Self Based Pointers=Self_Based_Pointers
+2 Void=Void
+2 The const and volatile Declarations=The_const_and_volatile_Declarations
+2 Storage Classes
+2 Introduction=Storage_Classes
+3 Type Definitions
+3 Introduction=Type_Definitions
+3 Compatible Types=Compatible_Types
+3 Static Storage Duration
+3 Introduction=Static_Storage_Duration
+3 The static Storage Class=The_static_Storage_Class
+3 The extern Storage Class=The_extern_Storage_Class
+3 Automatic Storage Duration
+3 Introduction=Automatic_Storage_Duration
+3 The auto Storage Class=The_auto_Storage_Class
+3 The register Storage Class=The_register_Storage_Class
+2 Initialization of Objects
+2 Introduction=Initialization_of_Objects
+2 Initialization of Scalar Types=Initialization_of_Scalar_Types
+2 Initialization of Arrays=Initialization_of_Arrays
+2 Initialization of Structures=Initialization_of_Structures
+2 Initialization of Unions=Initialization_of_Unions
+2 Uninitialized Objects=Uninitialized_Objects
+2 Expressions
+2 Introduction=Expressions
+2 Lvalues=Lvalues
+2 Primary Expressions=Primary_Expressions
+3 Postfix Operators
+3 Introduction=Postfix_Operators
+3 Array Subscripting=Array_Subscripting
+3 Function Calls=Function_Calls
+3 Structure and Union Members=Structure_and_Union_Members
+3 Post-Increment and Post-Decrement=PostMIncrement_and_PostMDecrement
+3 Unary Operators
+3 Introduction=Unary_Operators
+3 Pre-Increment and Pre-Decrement Operators=PreMIncrement_and_PreMDecrement_Operators
+3 Address-of and Indirection Operators=AddressMof_and_Indirection_Operators
+3 Unary Arithmetic Operators=Unary_Arithmetic_Operators
+3 The sizeof Operator=The_sizeof_Operator
+2 Cast Operator=Cast_Operator
+2 Multiplicative Operators=Multiplicative_Operators
+2 Additive Operators=Additive_Operators
+2 Bitwise Shift Operators=Bitwise_Shift_Operators
+2 Relational Operators=Relational_Operators
+2 Equality Operators=Equality_Operators
+2 Bitwise AND Operator=Bitwise_AND_Operator
+2 Bitwise Exclusive OR Operator=Bitwise_Exclusive_OR_Operator
+2 Bitwise Inclusive OR Operator=Bitwise_Inclusive_OR_Operator
+2 Logical AND Operator=Logical_AND_Operator
+2 Logical OR Operator=Logical_OR_Operator
+2 Conditional Operator=Conditional_Operator
+3 Assignment Operators
+3 Introduction=Assignment_Operators
+3 Simple Assignment=Simple_Assignment
+3 Compound Assignment=Compound_Assignment
+2 Comma Operator=Comma_Operator
+2 Constant Expressions=Constant_Expressions
+2 Statements
+2 Introduction=Statements
+2 Labelled Statements=Labelled_Statements
+2 Compound Statements=Compound_Statements
+2 Expression Statements=Expression_Statements
+2 Null Statements=Null_Statements
+3 Selection Statements
+3 Introduction=Selection_Statements
+3 The if Statement=The_if_Statement
+3 The switch Statement=The_switch_Statement
+3 Iteration Statements
+3 Introduction=Iteration_Statements
+3 The while Statement=The_while_Statement
+3 The do Statement=The_do_Statement
+3 The for Statement=The_for_Statement
+3 Jump Statements
+3 Introduction=Jump_Statements
+3 The goto Statement=The_goto_Statement
+3 The continue Statement=The_continue_Statement
+3 The break Statement=The_break_Statement
+3 The return Statement=The_return_Statement
+2 Functions
+2 Introduction=Functions
+2 The Body of the Function=The_Body_of_the_Function
+3 Function Prototypes
+3 Introduction=Function_Prototypes
+3 Variable Argument Lists=Variable_Argument_Lists
+2 The Parameters to the Function main=The_Parameters_to_the_Function_main
+2 The Preprocessor
+2 Introduction=The_Preprocessor
+2 The Null Directive=The_Null_Directive
+2 Including Headers and Source Files=Including_Headers_and_Source_Files
+3 Conditionally Including Source Lines
+3 Introduction=Conditionally_Including_Source_Lines
+3 The #ifdef and #ifndef Directives=The__ifdef_and__ifndef_Directives
+2 Macro Replacement=Macro_Replacement
+3 Argument Substitution
+3 Introduction=Argument_Substitution
+3 Converting An Argument to a String=Converting_An_Argument_to_a_String
+3 Concatenating Tokens=Concatenating_Tokens
+3 Simple Argument Substitution=Simple_Argument_Substitution
+3 Variable Argument Macros=Variable_Argument_Macros
+3 Rescanning for Further Replacement=Rescanning_for_Further_Replacement
+2 More Examples of Macro Replacement=More_Examples_of_Macro_Replacement
+2 Redefining a Macro=Redefining_a_Macro
+2 Changing the Line Numbering and File Name=Changing_the_Line_Numbering_and_File_Name
+2 Displaying a Diagnostic Message=Displaying_a_Diagnostic_Message
+2 Providing Other Information to the Compiler=Providing_Other_Information_to_the_Compiler
+2 Standard Predefined Macros=Standard_Predefined_Macros
+2 Open Watcom C/16 and C/32 Predefined Macros=Open_Watcom_CD16_and_CD32_Predefined_Macros
+2 The offsetof Macro=The_offsetof_Macro
+2 The NULL Macro=The_NULL_Macro
+2 The Order of Translation
+2 Introduction=The_Order_of_Translation
+2 Modularity
+2 Introduction=Modularity
+2 Reducing Recompilation Time=Reducing_Recompilation_Time
+2 Grouping Code With Related Functionality=Grouping_Code_With_Related_Functionality
+3 Data Hiding
+3 Introduction=Data_Hiding
+3 Complete Data Hiding=Complete_Data_Hiding
+3 Partial Data Hiding=Partial_Data_Hiding
+2 Rewriting and Redesigning Modules=Rewriting_and_Redesigning_Modules
+2 Isolating System Dependent Code in Modules=Isolating_System_Dependent_Code_in_Modules
+2 Writing Portable Programs
+2 Introduction=Writing_Portable_Programs
+2 Isolating System Dependent Code=Isolating_System_Dependent_Code
+2 Beware of Long External Names=Beware_of_Long_External_Names
+2 Avoiding Implementation-Defined Behavior=Avoiding_ImplementationMDefined_Behavior
+2 Ranges of Types=Ranges_of_Types
+2 Special Features=Special_Features
+2 Using the Preprocessor to Aid Portability=Using_the_Preprocessor_to_Aid_Portability
+2 Avoiding Common Pitfalls
+2 Introduction=Avoiding_Common_Pitfalls
+2 Assignment Instead of Comparison=Assignment_Instead_of_Comparison
+2 Unexpected Operator Precedence=Unexpected_Operator_Precedence
+2 Delayed Error From Included File=Delayed_Error_From_Included_File
+2 Extra Semi-colon in Macros=Extra_SemiMcolon_in_Macros
+2 The Dangling else=The_Dangling_else
+2 Missing break in switch Statement=Missing_break_in_switch_Statement
+2 Side-effects in Macros=SideMeffects_in_Macros
+2 Programming Style
+2 Introduction=Programming_Style
+2 Consistency=Consistency
+2 Case Rules for Object and Function Names=Case_Rules_for_Object_and_Function_Names
+2 Choose Appropriate Names=Choose_Appropriate_Names
+2 Indent to Emphasize Structure=Indent_to_Emphasize_Structure
+2 Visually Align Object Declarations=Visually_Align_Object_Declarations
+2 Keep Functions Small=Keep_Functions_Small
+2 Use static for Most Functions=Use_static_for_Most_Functions
+2 Group Static Objects Together=Group_Static_Objects_Together
+2 Do Not Reuse the Names of Static Objects=Do_Not_Reuse_the_Names_of_Static_Objects
+2 Use Included Files to Organize Structures=Use_Included_Files_to_Organize_Structures
+2 Use Function Prototypes=Use_Function_Prototypes
+2 Do Not Do Too Much In One Statement=Do_Not_Do_Too_Much_In_One_Statement
+2 Do Not Use goto Too Much=Do_Not_Use_goto_Too_Much
+2 Use Comments=Use_Comments
+2 Compiler Keywords
+2 Introduction=Compiler_Keywords
+2 Standard Keywords=Standard_Keywords
+2 Open Watcom Extended Keywords=Open_Watcom_Extended_Keywords
+2 Trigraphs
+2 Introduction=Trigraphs
+2 Escape Sequences
+2 Introduction=Escape_Sequences
+2 Operator Precedence
+2 Introduction=Operator_Precedence
+2 Formal C Grammar
+2 Introduction=Formal_C_Grammar
+3 Lexical Grammar
+3 Introduction=Lexical_Grammar
+3 Definition of a Token=Definition_of_a_Token
+3 Definition of a Keyword=Definition_of_a_Keyword
+3 Definition of an Identifier=Definition_of_an_Identifier
+3 Definition of a Constant=Definition_of_a_Constant
+3 Definition of a String Literal=Definition_of_a_String_Literal
+3 Definition of an Operator=Definition_of_an_Operator
+3 Definition of a Punctuator=Definition_of_a_Punctuator
+3 Phrase Structure Grammar
+3 Introduction=Phrase_Structure_Grammar
+3 Definition of Expressions=Definition_of_Expressions
+3 Definition of a Declaration=Definition_of_a_Declaration
+3 Definition of a Statement=Definition_of_a_Statement
+3 External Definitions=External_Definitions
+2 Preprocessing Directives Grammar=Preprocessing_Directives_Grammar
+2 Translation Limits
+2 Introduction=Translation_Limits
+2 Macros for Numerical Limits
+2 Introduction=Macros_for_Numerical_Limits
+2 Numerical Limits for Integer Types=Numerical_Limits_for_Integer_Types
+2 Numerical Limits for Floating-Point Types=Numerical_Limits_for_FloatingMPoint_Types
+2 Implementation-Defined Behavior
+2 Introduction=ImplementationMDefined_Behavior
+2 Translation=Translation
+2 Environment=Environment
+2 Behaviour Concerning Identifiers=Behaviour_Concerning_Identifiers
+2 Characters=Characters
+2 Integers=Integers
+2 Floating Point=Floating_Point
+2 Arrays and Pointers=Arrays_and_Pointers
+2 Registers=Registers
+2 Structures, Unions, Enumerations and Bit-Fields=Structures__Unions__Enumerations_and_BitMFields
+2 Qualifiers=Qualifiers
+2 Declarators=Declarators
+2 Behaviour Concerning Statements=Behaviour_Concerning_Statements
+2 Preprocessing Directives=Preprocessing_Directives
+2 Library Functions=Library_Functions
+2 Examples of Declarations
+2 Introduction=Examples_of_Declarations
+2 Object Declarations=Object_Declarations
+2 Function Declarations=Function_Declarations
+2 _ _far, _ _near and _ _huge Declarations=___far_____near_and____huge_Declarations
+2 _ _interrupt Declarations=___interrupt_Declarations
+2 A Sample Program
+2 Introduction=A_Sample_Program
+2 The memos.h File=The_memos_h_File
+2 The memos.c File=The_memos_c_File
+2 Glossary
+2 Introduction=Glossary

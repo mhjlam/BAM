@@ -1,0 +1,34 @@
+:Base resedt.hlp>main
+:Title Open Watcom 1.9 Resource Editor
+:Index Open Watcom 1.9 Resource Editor Help=resedt.hlp
+
+1 Open Watcom 1.9 Resource Editor
+1 The Open Watcom Resource Editor
+1 Introduction=The_Open_Watcom_Resource_Editor
+2 Using the Open Watcom Resource Editor
+2 Introduction=Using_the_Open_Watcom_Resource_Editor
+2 Starting the Resource Editor=Starting_the_Resource_Editor
+2 Quitting the Resource Editor=Quitting_the_Resource_Editor
+2 The Resource Editor Menu Bar=The_Resource_Editor_Menu_Bar
+2 The Resource Editor Toolbar=The_Resource_Editor_Toolbar
+2 Working with Resource Files
+2 Introduction=Working_with_Resource_Files
+2 Creating a New Resource File with the Resource Editor=Creating_a_New_Resource_File_with_the_Resource_Editor
+2 Opening an Existing Resource File with the Resource Editor=Opening_an_Existing_Resource_File_with_the_Resource_Editor
+3 Saving a Resource File with the Resource Editor
+3 Introduction=Saving_a_Resource_File_with_the_Resource_Editor
+3 Resource Editor: Save=Resource_Editor__Save
+3 Resource Editor: Save As=Resource_Editor__Save_As
+2 Working with Resources
+2 Introduction=Working_with_Resources
+2 Creating a New Resource=Creating_a_New_Resource
+2 Editing an Existing Resource=Editing_an_Existing_Resource
+3 Saving a Resource
+3 Introduction=Saving_a_Resource
+3 Saving to a New Resource File=Saving_to_a_New_Resource_File
+3 Saving to an Existing Resource File=Saving_to_an_Existing_Resource_File
+3 Copying Into an Existing Resource File=Copying_Into_an_Existing_Resource_File
+2 Using Shortcuts to Create a Resource=Using_Shortcuts_to_Create_a_Resource
+2 Deleting a Resource=Deleting_a_Resource
+2 Renaming a Resource=Renaming_a_Resource
+2 Resource Editor: Changing Memory Options=Resource_Editor__Changing_Memory_Options

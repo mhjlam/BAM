@@ -1,0 +1,65 @@
+:Base editor.hlp>main
+:Title Open Watcom 1.9 Editor
+:Index Open Watcom 1.9 Editor Help=editor.hlp
+
+1 Open Watcom 1.9 Editor
+2 The Open Watcom Editor
+2 Introduction=The_Open_Watcom_Editor
+2 Startup Options=Startup_Options
+2 Using Menus=Using_Menus
+2 Using Drag and Drop Palettes=Using_Drag_and_Drop_Palettes
+3 Using the Right Mouse Button
+3 Introduction=Using_the_Right_Mouse_Button
+3 When Less Than One Line is Selected=When_Less_Than_One_Line_is_Selected
+3 When More Than One Line is Selected=When_More_Than_One_Line_is_Selected
+2 Starting and Quitting the Editor=Starting_and_Quitting_the_Editor
+3 Opening and Closing Files
+3 Introduction=Opening_and_Closing_Files
+3 Opening a New File=Opening_a_New_File
+3 Opening an Existing File=Opening_an_Existing_File
+3 Closing a File=Closing_a_File
+2 Saving Files=Saving_Files
+2 The Editor Toolbar=The_Editor_Toolbar
+3 Searching Text
+3 Introduction=Searching_Text
+3 Setting Search Options=Setting_Search_Options
+3 Replacing Text
+3 Introduction=Replacing_Text
+3 Setting Search and Replace Options=Setting_Search_and_Replace_Options
+2 Changing the Font=Changing_the_Font
+2 Changing Colors=Changing_Colors
+2 Accessing Help=Accessing_Help
+2 Using Fgrep Capabilities=Using_Fgrep_Capabilities
+3 Configuring the Editor
+3 Introduction=Configuring_the_Editor
+4 Status Bar Contents
+4 Introduction=Status_Bar_Contents
+4 Status Bar Contents : Items=Status_Bar_Contents___Items
+4 Status Bar Contents : Alignment=Status_Bar_Contents___Alignment
+4 Status Bar Contents : Commands=Status_Bar_Contents___Commands
+4 General Options
+4 Introduction=General_Options
+4 General Options : Features=General_Options___Features
+4 General Options : VI Emulation=General_Options___VI_Emulation
+4 General Options : Searching=General_Options___Searching
+4 General Options : Word Definitions=General_Options___Word_Definitions
+4 General Options : Filenames/Paths=General_Options___FilenamesDPaths
+4 General Options : Miscellaneous=General_Options___Miscellaneous
+4 File Specific Options
+4 Introduction=File_Specific_Options
+4 File Specific Options : Source=File_Specific_Options___Source
+4 File Specific Options : Language=File_Specific_Options___Language
+4 File Specific Options : Tabs=File_Specific_Options___Tabs
+4 File Specific Options : Tags=File_Specific_Options___Tags
+4 File Specific Options : Miscellaneous=File_Specific_Options___Miscellaneous
+4 Screen/Window Options
+4 Introduction=ScreenDWindow_Options
+4 Screen/Window Options : Editing=ScreenDWindow_Options___Editing
+4 Screen/Window Options : Miscellaneous=ScreenDWindow_Options___Miscellaneous
+3 Saving the Configuration=Saving_the_Configuration
+2 Regular Expressions
+2 Introduction=Regular_Expressions
+2 Regular Expression BNF=Regular_Expression_BNF
+2 File Matching Regular Expressions=File_Matching_Regular_Expressions
+2 Replacement Strings=Replacement_Strings
+2 Controlling Magic Characters=Controlling_Magic_Characters

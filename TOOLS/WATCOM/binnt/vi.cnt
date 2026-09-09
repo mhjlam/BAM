@@ -1,0 +1,378 @@
+:Base vi.hlp>main
+:Title Open Watcom 1.9 VI Editor
+:Index Open Watcom 1.9 VI Editor Help=vi.hlp
+
+1 Open Watcom 1.9 VI Editor
+2 Introduction to the Open Watcom Vi Editor
+2 Introduction=Introduction_to_the_Open_Watcom_Vi_Editor
+3 Terms and Notation
+3 Introduction=Terms_and_Notation
+3 The Mouse=The_Mouse
+3 The Screen=The_Screen
+2 Basic Usage
+2 Introduction=Basic_Usage
+2 Starting the Open Watcom Vi Editor=Starting_the_Open_Watcom_Vi_Editor
+2 What is a Modal Editor?=What_is_a_Modal_Editor_
+3 Some Basic Commands
+3 Introduction=Some_Basic_Commands
+3 Moving Around=Moving_Around
+3 Saving and Exiting a File=Saving_and_Exiting_a_File
+3 Inputting Text=Inputting_Text
+3 Cutting and Pasting Text
+3 Introduction=Cutting_and_Pasting_Text
+3 Lines=Lines
+3 Characters=Characters
+3 Using the Menus
+3 Introduction=Using_the_Menus
+3 Edit Window Menu=Edit_Window_Menu
+3 Window Menu=Window_Menu
+3 Options Menu=Options_Menu
+3 File Menu=File_Menu
+3 Edit Menu=Edit_Menu
+3 Position Menu=Position_Menu
+3 Help Menu=Help_Menu
+2 Intermediate Usage
+2 Introduction=Intermediate_Usage
+3 The Command Line
+3 Introduction=The_Command_Line
+3 Line Numbers=Line_Numbers
+2 Getting a File for Editing=Getting_a_File_for_Editing
+2 Moving Between Files=Moving_Between_Files
+2 Moving Around in a File=Moving_Around_in_a_File
+2 Saving and Exiting a File Revisited=Saving_and_Exiting_a_File_Revisited
+2 Using the Mouse=Using_the_Mouse
+2 Selecting Text=Selecting_Text
+2 Joining Text=Joining_Text
+2 Using Marks=Using_Marks
+2 Searching for Text=Searching_for_Text
+2 Deleting, Copying, and Pasting Text=Deleting__Copying__and_Pasting_Text
+2 Altering Text=Altering_Text
+2 Undo and Redo=Undo_and_Redo
+2 Repeating Edit Operations=Repeating_Edit_Operations
+2 Advanced Usage
+2 Introduction=Advanced_Usage
+2 The Substitute Command=The_Substitute_Command
+2 The Global Command=The_Global_Command
+2 Searching Files For Text=Searching_Files_For_Text
+2 Mapping Keys=Mapping_Keys
+2 The Open Watcom Vi Editor Environment
+2 Introduction=The_Open_Watcom_Vi_Editor_Environment
+2 Using Edbind=Using_Edbind
+2 Invoking the Open Watcom Vi Editor=Invoking_the_Open_Watcom_Vi_Editor
+2 Lost File Recovery=Lost_File_Recovery
+2 Modes
+2 Introduction=Modes
+3 Text Insertion Mode
+3 Introduction=Text_Insertion_Mode
+3 Special Keys=Special_Keys
+3 Command Mode
+3 Introduction=Command_Mode
+3 Movement=Movement
+3 Undoing Changes=Undoing_Changes
+3 Marks=Marks
+3 Copy Buffers=Copy_Buffers
+4 Searching
+4 Introduction=Searching
+4 Special Keys In The Search String Window=Special_Keys_In_The_Search_String_Window
+3 Inserting Text=Inserting_Text
+3 Replacing Text=Replacing_Text
+3 Deleting Text=Deleting_Text
+3 Copying Text=Copying_Text
+3 Changing Text=Changing_Text
+3 Shifting Text=Shifting_Text
+3 Case Toggling=Case_Toggling
+3 Filters=Filters
+3 Text Selection=Text_Selection
+3 Miscellaneous Keys=Miscellaneous_Keys
+2 Editor Commands
+2 Introduction=Editor_Commands
+2 Special Keys In The Command Window=Special_Keys_In_The_Command_Window
+3 Line Addresses
+3 Introduction=Line_Addresses
+3 Line Address Examples=Line_Address_Examples
+3 Commands
+3 Introduction=Commands
+3 >=Y
+3 <=X
+3 !=_
+3 ABBREV=ABBREV
+3 ALIAS=ALIAS
+3 APPEND=APPEND
+3 CASCADE=CASCADE
+3 CD=CD
+3 CHANGE=CHANGE
+3 COMPILE=COMPILE
+3 COMPRESS=COMPRESS
+3 COPY=COPY
+3 DATE=DATE
+3 DELETE=DELETE
+3 ECHO=ECHO
+3 EDIT=EDIT
+3 EGREP=EGREP
+3 EVAL=EVAL
+3 EXECUTE=EXECUTE
+3 EXITALL=EXITALL
+3 EXPAND=EXPAND
+3 FGREP=FGREP
+3 FILES=FILES
+3 FLOATMENU=FLOATMENU
+3 GENCONFIG=GENCONFIG
+3 GLOBAL=GLOBAL
+3 HELP=HELP
+3 INSERT=INSERT
+3 JOIN=JOIN
+3 KEYADD=KEYADD
+3 LIST=LIST
+3 LOAD=LOAD
+3 MAP=MAP
+3 MAPBASE=MAPBASE
+3 MARK=MARK
+3 MATCH=MATCH
+3 MAXIMIZE=MAXIMIZE
+3 MINIMIZE=MINIMIZE
+3 MOVE=MOVE
+3 MOVEWIN=MOVEWIN
+3 NEXT=NEXT
+3 OPEN=OPEN
+3 POP=POP
+3 PREV=PREV
+3 PUSH=PUSH
+3 PUT=PUT
+3 QUIT=QUIT
+3 QUITALL=QUITALL
+3 READ=READ
+3 RESIZE=RESIZE
+3 SET=SET
+3 SETCOLOR=SETCOLOR
+3 SHELL=SHELL
+3 SIZE=SIZE
+3 SOURCE=SOURCE
+3 SUBSTITUTE=SUBSTITUTE
+3 TAG=TAG
+3 TILE=TILE
+3 UNABBREV=UNABBREV
+3 UNALIAS=UNALIAS
+3 UNDO (command)=UNDO_LcommandR
+3 UNMAP=UNMAP
+3 VERSION=VERSION
+3 VIEW=VIEW
+3 VISUAL=VISUAL
+3 WRITE=WRITE
+3 WQ=WQ
+3 YANK=YANK
+3 XIT=XIT
+2 Windows and Menus
+2 Introduction=Windows_and_Menus
+3 Window Properties
+3 Introduction=Window_Properties
+3 BORDER=BORDER
+3 DIMENSION=DIMENSION
+3 ENDWINDOW=ENDWINDOW
+3 HILIGHT=HILIGHT
+3 TEXT=TEXT
+3 Window Types
+3 Introduction=Window_Types
+3 COMMANDWINDOW=COMMANDWINDOW
+3 COUNTWINDOW=COUNTWINDOW
+3 DEFAULTWINDOW=DEFAULTWINDOW
+3 DIRWINDOW=DIRWINDOW
+3 EDITWINDOW=EDITWINDOW
+3 EXTRAINFOWINDOW=EXTRAINFOWINDOW
+3 FILEWINDOW=FILEWINDOW
+3 FILECWINDOW=FILECWINDOW
+3 LINENUMBERWINDOW=LINENUMBERWINDOW
+3 MENUWINDOW=MENUWINDOW
+3 MENUBARWINDOW=MENUBARWINDOW
+3 MESSAGEWINDOW=MESSAGEWINDOW
+3 SETWINDOW=SETWINDOW
+3 SETVALWINDOW=SETVALWINDOW
+3 STATUSWINDOW=STATUSWINDOW
+2 Sample Window Settings=Sample_Window_Settings
+3 Menu Commands
+3 Introduction=Menu_Commands
+3 ADDMENUITEM=ADDMENUITEM
+3 DELETEMENU=DELETEMENU
+3 DELETEMENUITEM=DELETEMENUITEM
+3 ENDMENU=ENDMENU
+3 MENU=MENU
+3 MENUITEM=MENUITEM
+2 Sample Menus=Sample_Menus
+2 Editor Settings
+2 Introduction=Editor_Settings
+3 Boolean Settings
+3 Introduction=Boolean_Settings
+3 autoindent=autoindent
+3 automessageclear=automessageclear
+3 beepflag=beepflag
+3 caseignore=caseignore
+3 changelikevi=changelikevi
+3 cmode=cmode
+3 columninfilestatus=columninfilestatus
+3 currentstatus=currentstatus
+3 drawtildes=drawtildes
+3 eightbits=eightbits
+3 escapemessage=escapemessage
+3 extendedmemory=extendedmemory
+3 ignorectrlz=ignorectrlz
+3 ignoretagcase=ignoretagcase
+3 magic=magic
+3 pauseonspawnerr=pauseonspawnerr
+3 quiet=quiet
+3 quitmovesforward=quitmovesforward
+3 readentirefile=readentirefile
+3 readonlycheck=readonlycheck
+3 realtabs=realtabs
+3 regsubmagic=regsubmagic
+3 samefilecheck=samefilecheck
+3 saveconfig=saveconfig
+3 saveposition=saveposition
+3 searchwrap=searchwrap
+3 showmatch=showmatch
+3 tagprompt=tagprompt
+3 undo=undo
+3 verbose=verbose
+3 wordwrap=wordwrap
+3 wrapbackspace=wrapbackspace
+3 writecrlf=writecrlf
+4 Mouse Control Booleans
+4 Introduction=Mouse_Control_Booleans
+4 lefthandmouse=lefthandmouse
+4 usemouse=usemouse
+4 Window Control Booleans
+4 Introduction=Window_Control_Booleans
+4 clock=clock
+4 linenumbers=linenumbers
+4 linenumsonright=linenumsonright
+4 marklonglines=marklonglines
+4 menus=menus
+4 repeatinfo=repeatinfo
+4 spinning=spinning
+4 statusinfo=statusinfo
+4 toolbar=toolbar
+4 windowgadgets=windowgadgets
+3 Non-Boolean Settings
+3 Introduction=NonMBoolean_Settings
+3 autosaveinterval=autosaveinterval
+3 commandcursortype=commandcursortype
+3 endoflinechar=endoflinechar
+3 exitattr=exitattr
+3 fileendstring=fileendstring
+3 grepdefault=grepdefault
+3 hardtab=hardtab
+3 historyfile=historyfile
+3 insertcursortype=insertcursortype
+3 magicstring=magicstring
+3 maxclhistory=maxclhistory
+3 maxemsk=maxemsk
+3 maxfilterhistory=maxfilterhistory
+3 maxfindhistory=maxfindhistory
+3 maxlinelen=maxlinelen
+3 maxpush=maxpush
+3 maxswapk=maxswapk
+3 maxxmsk=maxxmsk
+3 pagelinesexposed=pagelinesexposed
+3 overstrikecursortype=overstrikecursortype
+3 radix=radix
+3 shiftwidth=shiftwidth
+3 stackk=stackk
+3 statussections=statussections
+3 statusstring=statusstring
+3 shellprompt=shellprompt
+3 tabamount=tabamount
+3 tagfilename=tagfilename
+3 tmpdir=tmpdir
+3 word=word
+3 wrapmargin=wrapmargin
+4 Mouse Control Values
+4 Introduction=Mouse_Control_Values
+4 mousedclickspeed=mousedclickspeed
+4 mouserepeatdelay=mouserepeatdelay
+4 mousespeed=mousespeed
+4 wordalt=wordalt
+4 Window Control Values
+4 Introduction=Window_Control_Values
+4 buttonheight=buttonheight
+4 buttonwidth=buttonwidth
+4 clockx=clockx
+4 clocky=clocky
+4 currentstatuscolumn=currentstatuscolumn
+4 cursorblinkrate=cursorblinkrate
+4 gadgetstring=gadgetstring
+4 inactivewindowcolor=inactivewindowcolor
+4 maxtilecolors=maxtilecolors
+4 maxwindowtilex=maxwindowtilex
+4 maxwindowtiley=maxwindowtiley
+4 movecolor=movecolor
+4 resizecolor=resizecolor
+4 spinx=spinx
+4 spiny=spiny
+4 tilecolor=tilecolor
+2 Regular Expressions
+2 Introduction=Regular_Expressions
+3 Regular Expression BNF=Regular_Expression_BNF
+2 File Matching Regular Expressions=File_Matching_Regular_Expressions
+2 Replacement Strings=Replacement_Strings
+2 Controlling Magic Characters=Controlling_Magic_Characters
+3 Regular Expression Examples
+3 Introduction=Regular_Expression_Examples
+3 Matching Examples=Matching_Examples
+3 Replacement Examples=Replacement_Examples
+2 Editor Script Language
+2 Introduction=Editor_Script_Language
+3 Script Variables
+3 Introduction=Script_Variables
+3 Pre-defined Global Variables=PreMdefined_Global_Variables
+2 Hook Scripts=Hook_Scripts
+3 Script Expressions
+3 Introduction=Script_Expressions
+3 Script Expression BNF=Script_Expression_BNF
+3 Control Flow Commands
+3 Introduction=Control_Flow_Commands
+3 The LOOP Block=The_LOOP_Block
+3 The WHILE Block=The_WHILE_Block
+3 The IF Block=The_IF_Block
+3 Script Commands
+3 Introduction=Script_Commands
+3 ATOMIC=ATOMIC
+3 ASSIGN=ASSIGN
+3 BREAK=BREAK
+3 CONTINUE=CONTINUE
+3 ENDIF=ENDIF
+3 ENDLOOP=ENDLOOP
+3 ENDWHILE=ENDWHILE
+3 ELSEIF=ELSEIF
+3 ELSE=ELSE
+3 EXPR=EXPR
+3 FCLOSE=FCLOSE
+3 FOPEN=FOPEN
+3 FREAD=FREAD
+3 FWRITE=FWRITE
+3 GET=GET
+3 GOTO=GOTO
+3 IF=IF
+3 INPUT=INPUT
+3 LABEL=LABEL
+3 LOOP=LOOP
+3 NEXTWORD=NEXTWORD
+3 QUIF=QUIF
+3 RETURN=RETURN
+3 UNTIL=UNTIL
+3 WHILE=WHILE
+3 Script Examples
+3 Introduction=Script_Examples
+3 Example - err.vi=Example_M_err_vi
+3 Example - lnum.vi=Example_M_lnum_vi
+3 Example - qall.vi=Example_M_qall_vi
+3 Example - wrme.vi=Example_M_wrme_vi
+3 Example - proc.vi=Example_M_proc_vi
+2 Command Mode Key Summary
+2 Introduction=Command_Mode_Key_Summary
+2 The Open Watcom Vi Editor Error Messages
+2 Introduction=The_Open_Watcom_Vi_Editor_Error_Messages
+2 CTAGS
+2 Introduction=CTAGS
+2 Symbolic Keystrokes
+2 Introduction=Symbolic_Keystrokes
+2 Symbols and Meaning=Symbols_and_Meaning
+2 Error Code Tokens
+2 Introduction=Error_Code_Tokens

@@ -1,0 +1,23 @@
+# Preserve third-party distributions byte-for-byte.
+TOOLS/WATCOM/** -text
+TOOLS/DOSBOX/** -text
+
+# Original DOS resources and executables are binary data.
+*.386 -text
+*.ANI -text
+*.BNK -text
+*.EXE -text
+*.FON -text
+*.HMP -text
+*.IDX -text
+*.LIB -text
+*.MAP -text
+*.MID -text
+*.MIF -text
+*.PAL -text
+*.RAW -text
+*.SMK -text
+*.SQB -text
+*.STF -text
+*.TLB -text
+*.WAV -text

@@ -1,0 +1,24 @@
+:Base zoom.hlp>main
+:Title Open Watcom 1.9 Zoom
+:Index Open Watcom 1.9 Zoom Help=zoom.hlp
+
+1 Open Watcom 1.9 Zoom
+1 Zoom
+1 Introduction=Zoom
+2 Using Zoom
+2 Introduction=Using_Zoom
+2 Starting Zoom=Starting_Zoom
+2 Quitting Zoom=Quitting_Zoom
+2 The Zoom Menu Bar=The_Zoom_Menu_Bar
+2 The Zoom Window=The_Zoom_Window
+2 Zoom Operations
+2 Introduction=Zoom_Operations
+2 Zooming=Zooming
+2 Resizing the Zoom Window=Resizing_the_Zoom_Window
+2 The Begin Zoom Item=The_Begin_Zoom_Item
+2 Pasting with Zoom=Pasting_with_Zoom
+2 Configuring Zoom
+2 Introduction=Configuring_Zoom
+2 Configuring Zoom: Always On Top=Configuring_Zoom__Always_On_Top
+2 Configuring Zoom: Sticky Magnifier=Configuring_Zoom__Sticky_Magnifier
+2 Configuring Zoom: Auto Refresh=Configuring_Zoom__Auto_Refresh

@@ -1,0 +1,37 @@
+:Base resstr.hlp>main
+:Title Open Watcom 1.9 String Table Editor
+:Index Open Watcom 1.9 String Table Editor Help=resstr.hlp
+
+1 Open Watcom 1.9 String Table Editor
+1 The Open Watcom String Editor
+1 Introduction=The_Open_Watcom_String_Editor
+2 Using the String Editor
+2 Introduction=Using_the_String_Editor
+3 Starting the String Editor
+3 Introduction=Starting_the_String_Editor
+3 Creating a New String Table=Creating_a_New_String_Table
+3 Opening an Existing String Table=Opening_an_Existing_String_Table
+2 Quitting the String Editor=Quitting_the_String_Editor
+2 The String Editor Menu Bar=The_String_Editor_Menu_Bar
+2 The String Editor Toolbar=The_String_Editor_Toolbar
+2 Using the String Editor Window
+2 Introduction=Using_the_String_Editor_Window
+2 String Text Field=String_Text_Field
+2 String ID Field=String_ID_Field
+2 String Editor: Action Buttons=String_Editor__Action_Buttons
+2 Strings List=Strings_List
+2 String Functions
+2 Introduction=String_Functions
+2 Adding a New String Item=Adding_a_New_String_Item
+2 Changing an Existing String Item=Changing_an_Existing_String_Item
+3 Deleting String Items
+3 Introduction=Deleting_String_Items
+3 Deleting a String Item=Deleting_a_String_Item
+3 Deleting All String Items=Deleting_All_String_Items
+3 Saving String Items
+3 Introduction=Saving_String_Items
+3 String Editor: Update=String_Editor__Update
+3 String Editor: Save As=String_Editor__Save_As
+3 String Editor: Copy To=String_Editor__Copy_To
+2 Using Shortcuts to Create String Tables=Using_Shortcuts_to_Create_String_Tables
+2 String Editor: Changing Memory Options=String_Editor__Changing_Memory_Options

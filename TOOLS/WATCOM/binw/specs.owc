@@ -1,0 +1,183 @@
+# default specs.owc file
+#
+# FIXME: should -bd and others also be passed?
+system begin dos
+    wcc -bt=dos
+end
+system begin dos4g
+    wcc386 -bt=dos
+end
+system begin dos4gnz
+    wcc386 -bt=dos
+end
+system begin pharlap
+    wcc386 -bt=dos
+end
+system begin x32r
+    wcc386 -bt=dos
+end
+system begin x32rv
+    wcc386 -bt=dos
+end
+system begin x32s
+    wcc386 -bt=dos
+end
+system begin x32sv
+    wcc386 -bt=dos
+end
+system begin win386
+    wcc386 -bt=windows
+end
+system begin os2
+    wcc -bt=os2
+end
+system begin os2_pm
+    wcc -bt=os2
+end
+system begin os2_dll
+    wcc -bt=os2 -bd
+end
+system begin windows
+    wcc -bt=windows
+end
+system begin windows_dll
+    wcc -bt=windows -bd
+end
+system begin win_vxd
+    wcc386
+end
+system begin os2v2
+    wcc386 -bt=os2
+end
+system begin os2v2_pm
+    wcc386 -bt=os2
+end
+system begin os2v2_dll
+    wcc386 -bt=os2 -bd
+end
+system begin novell
+    wcc386 -bt=netware
+end
+system begin netware
+    wcc386 -bt=netware
+end
+system begin netware_libc
+    wcc386 -bt=netware
+end
+system begin netware_libc_lite
+    wcc386 -bt=netware
+end
+system begin netware_clib
+    wcc386 -bt=netware
+end
+system begin netware_clib_lite
+    wcc386 -bt=netware
+end
+system begin ads
+    wcc386 -bt=dos
+end
+system begin eadi
+    wcc386 -bt=dos
+end
+system begin fadi
+    wcc386 -bt=dos
+end
+system begin com
+    wcc -bt=dos
+end
+system begin qnx
+    wcc -bt=qnx
+end
+system begin qnx386
+    wcc386 -bt=qnx
+end
+system begin linux
+    wcc386 -bt=linux
+end
+system begin linuxmips
+    wccmps -bt=linux
+end
+system begin nt
+    wcc386 -bt=nt
+end
+system begin nt_win
+    wcc386 -bt=nt
+end
+system begin nt_dll
+    wcc386 -bt=nt_dll -bd
+end
+system begin win95
+    wcc386 -bt=nt
+end
+system begin win32
+    wcc386 -bt=nt
+end
+system begin win32s
+    wcc386 -bt=nt
+end
+system begin tnt
+    wcc386 -bt=dos
+end
+system begin ntaxp
+    wccaxp -bt=nt
+end
+system begin ntaxp_win
+    wccaxp -bt=nt
+end
+system begin ntaxp_dll
+    wccaxp -bt=nt -bd
+end
+system begin causeway
+    wcc386 -bt=dos
+end
+system begin cwdlls
+    wcc386 -bt=dos
+end
+system begin cwdllr
+    wcc386 -bt=dos
+end
+system begin dos32a
+    wcc386 -bt=dos
+end
+system begin dos32x
+    wcc386 -bt=dos
+end
+system begin stub32a
+    wcc386 -bt=dos
+end
+system begin stub32x
+    wcc386 -bt=dos
+end
+system begin stub32ac
+    wcc386 -bt=dos
+end
+system begin stub32xc
+    wcc386 -bt=dos
+end
+system begin pmodew
+    wcc386 -bt=dos
+end
+system begin zrdx
+    wcc386 -bt=dos
+end
+system begin dos16m
+    wcc -bt=dos
+end
+system begin zdos
+    wcc386 -bt=zdos
+end
+system begin zdosfsd
+    wcc386 -bt=zdos
+end
+system begin zdoshwd
+    wcc386 -bt=zdos
+end
+system begin zdosdev
+    wcc386 -bt=zdos
+end
+system begin rdos
+    wcc386 -bt=rdos
+end
+system begin rdos_dll
+    wcc386 -bt=rdos -bd
+end

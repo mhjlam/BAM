@@ -1,0 +1,798 @@
+:Base cpplib.hlp>main
+:Title Open Watcom 1.9 C++ Class Library Reference
+:Index Open Watcom 1.9 C++ Class Library Reference Help=cpplib.hlp
+
+1 Open Watcom 1.9 C++ Class Library Reference
+2 Header Files
+2 Introduction=Header_Files
+2 Common Types
+2 Introduction=Common_Types
+2 Predefined Objects
+2 Introduction=Predefined_Objects
+2 cin=cin
+2 cout=cout
+2 cerr=cerr
+2 clog=clog
+2 istream Input
+2 Introduction=istream_Input
+2 Formatted Input: Extractors=Formatted_Input__Extractors
+2 Unformatted Input=Unformatted_Input
+2 ostream Output
+2 Introduction=ostream_Output
+2 Formatted Output: Inserters=Formatted_Output__Inserters
+2 Unformatted Output=Unformatted_Output
+2 Library Functions and Types
+2 Introduction=Library_Functions_and_Types
+2 Complex Class
+2 Introduction=Complex_Class
+3 Complex Class Description
+3 Introduction=Complex_Class_Description
+3 Complex abs()=Complex_absLR
+3 Complex acos()=Complex_acosLR
+3 Complex acosh()=Complex_acoshLR
+3 Complex arg()=Complex_argLR
+3 Complex asin()=Complex_asinLR
+3 Complex asinh()=Complex_asinhLR
+3 Complex atan()=Complex_atanLR
+3 Complex atanh()=Complex_atanhLR
+3 Complex::Complex()=Complex__ComplexLR
+3 Complex::~Complex()=Complex____ComplexLR
+3 Complex conj()=Complex_conjLR
+3 Complex cos()=Complex_cosLR
+3 Complex cosh()=Complex_coshLR
+3 Complex exp()=Complex_expLR
+3 Complex::imag()=Complex__imagLR
+3 Complex imag()=Complex_imagLR
+3 Complex log()=Complex_logLR
+3 Complex log10()=Complex_log10LR
+3 Complex norm()=Complex_normLR
+3 Complex operator !\=()=Complex_operator__ELR
+3 Complex operator *()=Complex_operator_TLR
+3 Complex::operator *\=()=Complex__operator_TELR
+3 Complex::operator +()=Complex__operator_PLR
+3 Complex operator +()=Complex_operator_PLR
+3 Complex::operator +\=()=Complex__operator_PELR
+3 Complex::operator -()=Complex__operator_MLR
+3 Complex operator -()=Complex_operator_MLR
+3 Complex::operator -\=()=Complex__operator_MELR
+3 Complex operator /()=Complex_operator_DLR
+3 Complex::operator /\=()=Complex__operator_DELR
+3 Complex operator <<()=Complex_operator_XXLR
+3 Complex::operator \=()=Complex__operator_ELR
+3 Complex operator \=\=()=Complex_operator_EELR
+3 Complex operator >>()=Complex_operator_YYLR
+3 Complex polar()=Complex_polarLR
+3 Complex pow()=Complex_powLR
+3 Complex::real()=Complex__realLR
+3 Complex real()=Complex_realLR
+3 Complex sin()=Complex_sinLR
+3 Complex sinh()=Complex_sinhLR
+3 Complex sqrt()=Complex_sqrtLR
+3 Complex tan()=Complex_tanLR
+3 Complex tanh()=Complex_tanhLR
+2 Container Exception Classes
+2 Introduction=Container_Exception_Classes
+3 WCExcept Class Description
+3 Introduction=WCExcept_Class_Description
+3 WCExcept::WCExcept()=WCExcept__WCExceptLR
+3 WCExcept::~WCExcept()=WCExcept____WCExceptLR
+3 WCExcept::exceptions()=WCExcept__exceptionsLR
+3 WCExcept::wc_state=WCExcept__wc_state
+3 WCIterExcept Class Description
+3 Introduction=WCIterExcept_Class_Description
+3 WCIterExcept::WCIterExcept()=WCIterExcept__WCIterExceptLR
+3 WCIterExcept::~WCIterExcept()=WCIterExcept____WCIterExceptLR
+3 WCIterExcept::exceptions()=WCIterExcept__exceptionsLR
+3 WCIterExcept::wciter_state=WCIterExcept__wciter_state
+2 Container Allocators and Deallocators
+2 Introduction=Container_Allocators_and_Deallocators
+2 Hash Containers
+2 Introduction=Hash_Containers
+3 WCPtrHashDict<Key,Value> Class Description
+3 Introduction=WCPtrHashDictXKey_ValueY_Class_Description
+3 WCPtrHashDict<Key,Value>::WCPtrHashDict()=WCPtrHashDictXKey_ValueY__WCPtrHashDictLR
+3 WCPtrHashDict<Key,Value>::~WCPtrHashDict()=WCPtrHashDictXKey_ValueY____WCPtrHashDictLR
+3 WCPtrHashDict<Key,Value>::bitHash()=WCPtrHashDictXKey_ValueY__bitHashLR
+3 WCPtrHashDict<Key,Value>::buckets()=WCPtrHashDictXKey_ValueY__bucketsLR
+3 WCPtrHashDict<Key,Value>::clear()=WCPtrHashDictXKey_ValueY__clearLR
+3 WCPtrHashDict<Key,Value>::clearAndDestroy()=WCPtrHashDictXKey_ValueY__clearAndDestroyLR
+3 WCPtrHashDict<Key,Value>::contains()=WCPtrHashDictXKey_ValueY__containsLR
+3 WCPtrHashDict<Key,Value>::entries()=WCPtrHashDictXKey_ValueY__entriesLR
+3 WCPtrHashDict<Key,Value>::find()=WCPtrHashDictXKey_ValueY__findLR
+3 WCPtrHashDict<Key,Value>::findKeyAndValue()=WCPtrHashDictXKey_ValueY__findKeyAndValueLR
+3 WCPtrHashDict<Key,Value>::forAll()=WCPtrHashDictXKey_ValueY__forAllLR
+3 WCPtrHashDict<Key,Value>::insert()=WCPtrHashDictXKey_ValueY__insertLR
+3 WCPtrHashDict<Key,Value>::isEmpty()=WCPtrHashDictXKey_ValueY__isEmptyLR
+3 WCPtrHashDict<Key,Value>::operator []()=WCPtrHashDictXKey_ValueY__operator_UVLR
+3 WCPtrHashDict<Key,Value>::operator \=()=WCPtrHashDictXKey_ValueY__operator_ELR
+3 WCPtrHashDict<Key,Value>::operator \=\=()=WCPtrHashDictXKey_ValueY__operator_EELR
+3 WCPtrHashDict<Key,Value>::remove()=WCPtrHashDictXKey_ValueY__removeLR
+3 WCPtrHashDict<Key,Value>::resize()=WCPtrHashDictXKey_ValueY__resizeLR
+3 WCPtrHashTable<Type>, WCPtrHashSet<Type> Class Description
+3 Introduction=WCPtrHashTableXTypeY__WCPtrHashSetXTypeY_Class_Description
+3 WCPtrHashSet<Type>::WCPtrHashSet()=WCPtrHashSetXTypeY__WCPtrHashSetLR
+3 WCPtrHashSet<Type>::~WCPtrHashSet()=WCPtrHashSetXTypeY____WCPtrHashSetLR
+3 WCPtrHashTable<Type>::WCPtrHashTable()=WCPtrHashTableXTypeY__WCPtrHashTableLR
+3 WCPtrHashTable<Type>::~WCPtrHashTable()=WCPtrHashTableXTypeY____WCPtrHashTableLR
+3 WCPtrHashTable<Type>::bitHash(), WCPtrHashSet<Type>::bitHash()=WCPtrHashTableXTypeY__bitHashLR__WCPtrHashSetXTypeY__bitHashLR
+3 WCPtrHashTable<Type>::buckets(), WCPtrHashSet<Type>::buckets()=WCPtrHashTableXTypeY__bucketsLR__WCPtrHashSetXTypeY__bucketsLR
+3 WCPtrHashTable<Type>::clear(), WCPtrHashSet<Type>::clear()=WCPtrHashTableXTypeY__clearLR__WCPtrHashSetXTypeY__clearLR
+3 WCPtrHashTable<Type>,WCPtrHashSet<Type>::clearAndDestroy()=WCPtrHashTableXTypeY_WCPtrHashSetXTypeY__clearAndDestroyLR
+3 WCPtrHashTable<Type>::contains(), WCPtrHashSet<Type>::contains()=WCPtrHashTableXTypeY__containsLR__WCPtrHashSetXTypeY__containsLR
+3 WCPtrHashTable<Type>::entries(), WCPtrHashSet<Type>::entries()=WCPtrHashTableXTypeY__entriesLR__WCPtrHashSetXTypeY__entriesLR
+3 WCPtrHashTable<Type>::find(), WCPtrHashSet<Type>::find()=WCPtrHashTableXTypeY__findLR__WCPtrHashSetXTypeY__findLR
+3 WCPtrHashTable<Type>::forAll(), WCPtrHashSet<Type>::forAll()=WCPtrHashTableXTypeY__forAllLR__WCPtrHashSetXTypeY__forAllLR
+3 WCPtrHashTable<Type>::insert(), WCPtrHashSet<Type>::insert()=WCPtrHashTableXTypeY__insertLR__WCPtrHashSetXTypeY__insertLR
+3 WCPtrHashTable<Type>::isEmpty(), WCPtrHashSet<Type>::isEmpty()=WCPtrHashTableXTypeY__isEmptyLR__WCPtrHashSetXTypeY__isEmptyLR
+3 WCPtrHashTable<Type>::occurencesOf()=WCPtrHashTableXTypeY__occurencesOfLR
+3 WCPtrHashTable<Type>::operator \=(), WCPtrHashSet<Type>::operator \=()=WCPtrHashTableXTypeY__operator_ELR__WCPtrHashSetXTypeY__operator_ELR
+3 WCPtrHashTable<Type>::operator \=\=(), WCPtrHashSet<Type>::operator \=\=()=WCPtrHashTableXTypeY__operator_EELR__WCPtrHashSetXTypeY__operator_EELR
+3 WCPtrHashTable<Type>::remove(), WCPtrHashSet<Type>::remove()=WCPtrHashTableXTypeY__removeLR__WCPtrHashSetXTypeY__removeLR
+3 WCPtrHashTable<Type>::removeAll()=WCPtrHashTableXTypeY__removeAllLR
+3 WCPtrHashTable<Type>::resize(), WCPtrHashSet<Type>::resize()=WCPtrHashTableXTypeY__resizeLR__WCPtrHashSetXTypeY__resizeLR
+3 WCValHashDict<Key,Value> Class Description
+3 Introduction=WCValHashDictXKey_ValueY_Class_Description
+3 WCValHashDict<Key,Value>::WCValHashDict()=WCValHashDictXKey_ValueY__WCValHashDictLR
+3 WCValHashDict<Key,Value>::~WCValHashDict()=WCValHashDictXKey_ValueY____WCValHashDictLR
+3 WCValHashDict<Key,Value>::bitHash()=WCValHashDictXKey_ValueY__bitHashLR
+3 WCValHashDict<Key,Value>::buckets()=WCValHashDictXKey_ValueY__bucketsLR
+3 WCValHashDict<Key,Value>::clear()=WCValHashDictXKey_ValueY__clearLR
+3 WCValHashDict<Key,Value>::contains()=WCValHashDictXKey_ValueY__containsLR
+3 WCValHashDict<Key,Value>::entries()=WCValHashDictXKey_ValueY__entriesLR
+3 WCValHashDict<Key,Value>::find()=WCValHashDictXKey_ValueY__findLR
+3 WCValHashDict<Key,Value>::findKeyAndValue()=WCValHashDictXKey_ValueY__findKeyAndValueLR
+3 WCValHashDict<Key,Value>::forAll()=WCValHashDictXKey_ValueY__forAllLR
+3 WCValHashDict<Key,Value>::insert()=WCValHashDictXKey_ValueY__insertLR
+3 WCValHashDict<Key,Value>::isEmpty()=WCValHashDictXKey_ValueY__isEmptyLR
+3 WCValHashDict<Key,Value>::operator []()=WCValHashDictXKey_ValueY__operator_UVLR
+3 WCValHashDict<Key,Value>::operator \=()=WCValHashDictXKey_ValueY__operator_ELR
+3 WCValHashDict<Key,Value>::operator \=\=()=WCValHashDictXKey_ValueY__operator_EELR
+3 WCValHashDict<Key,Value>::remove()=WCValHashDictXKey_ValueY__removeLR
+3 WCValHashDict<Key,Value>::resize()=WCValHashDictXKey_ValueY__resizeLR
+3 WCValHashTable<Type>, WCValHashSet<Type> Class Description
+3 Introduction=WCValHashTableXTypeY__WCValHashSetXTypeY_Class_Description
+3 WCValHashSet<Type>::WCValHashSet()=WCValHashSetXTypeY__WCValHashSetLR
+3 WCValHashSet<Type>::~WCValHashSet()=WCValHashSetXTypeY____WCValHashSetLR
+3 WCValHashTable<Type>::WCValHashTable()=WCValHashTableXTypeY__WCValHashTableLR
+3 WCValHashTable<Type>::~WCValHashTable()=WCValHashTableXTypeY____WCValHashTableLR
+3 WCValHashTable<Type>::bitHash(), WCValHashSet<Type>::bitHash()=WCValHashTableXTypeY__bitHashLR__WCValHashSetXTypeY__bitHashLR
+3 WCValHashTable<Type>::buckets(), WCValHashSet<Type>::buckets()=WCValHashTableXTypeY__bucketsLR__WCValHashSetXTypeY__bucketsLR
+3 WCValHashTable<Type>::clear(), WCValHashSet<Type>::clear()=WCValHashTableXTypeY__clearLR__WCValHashSetXTypeY__clearLR
+3 WCValHashTable<Type>::contains(), WCValHashSet<Type>::contains()=WCValHashTableXTypeY__containsLR__WCValHashSetXTypeY__containsLR
+3 WCValHashTable<Type>::entries(), WCValHashSet<Type>::entries()=WCValHashTableXTypeY__entriesLR__WCValHashSetXTypeY__entriesLR
+3 WCValHashTable<Type>::find(), WCValHashSet<Type>::find()=WCValHashTableXTypeY__findLR__WCValHashSetXTypeY__findLR
+3 WCValHashTable<Type>::forAll(), WCValHashSet<Type>::forAll()=WCValHashTableXTypeY__forAllLR__WCValHashSetXTypeY__forAllLR
+3 WCValHashTable<Type>::insert(), WCValHashSet<Type>::insert()=WCValHashTableXTypeY__insertLR__WCValHashSetXTypeY__insertLR
+3 WCValHashTable<Type>::isEmpty(), WCValHashSet<Type>::isEmpty()=WCValHashTableXTypeY__isEmptyLR__WCValHashSetXTypeY__isEmptyLR
+3 WCValHashTable<Type>::occurencesOf()=WCValHashTableXTypeY__occurencesOfLR
+3 WCValHashTable<Type>::operator \=(), WCValHashSet<Type>::operator \=()=WCValHashTableXTypeY__operator_ELR__WCValHashSetXTypeY__operator_ELR
+3 WCValHashTable<Type>::operator \=\=(), WCValHashSet<Type>::operator \=\=()=WCValHashTableXTypeY__operator_EELR__WCValHashSetXTypeY__operator_EELR
+3 WCValHashTable<Type>::remove(), WCValHashSet<Type>::remove()=WCValHashTableXTypeY__removeLR__WCValHashSetXTypeY__removeLR
+3 WCValHashTable<Type>::removeAll()=WCValHashTableXTypeY__removeAllLR
+3 WCValHashTable<Type>::resize(), WCValHashSet<Type>::resize()=WCValHashTableXTypeY__resizeLR__WCValHashSetXTypeY__resizeLR
+2 Hash Iterators
+2 Introduction=Hash_Iterators
+3 WCPtrHashDictIter<Key,Value> Class Description
+3 Introduction=WCPtrHashDictIterXKey_ValueY_Class_Description
+3 WCPtrHashDictIter<Key,Value>::WCPtrHashDictIter()=WCPtrHashDictIterXKey_ValueY__WCPtrHashDictIterLR
+3 WCPtrHashDictIter<Key,Value>::~WCPtrHashDictIter()=WCPtrHashDictIterXKey_ValueY____WCPtrHashDictIterLR
+3 WCPtrHashDictIter<Key,Value>::container()=WCPtrHashDictIterXKey_ValueY__containerLR
+3 WCPtrHashDictIter<Key,Value>::key()=WCPtrHashDictIterXKey_ValueY__keyLR
+3 WCPtrHashDictIter<Key,Value>::operator ()()=WCPtrHashDictIterXKey_ValueY__operator_LRLR
+3 WCPtrHashDictIter<Key,Value>::operator ++()=WCPtrHashDictIterXKey_ValueY__operator_PPLR
+3 WCPtrHashDictIter<Key,Value>::reset()=WCPtrHashDictIterXKey_ValueY__resetLR
+3 WCPtrHashDictIter<Key,Value>::value()=WCPtrHashDictIterXKey_ValueY__valueLR
+3 WCValHashDictIter<Key,Value> Class Description
+3 Introduction=WCValHashDictIterXKey_ValueY_Class_Description
+3 WCValHashDictIter<Key,Value>::WCValHashDictIter()=WCValHashDictIterXKey_ValueY__WCValHashDictIterLR
+3 WCValHashDictIter<Key,Value>::~WCValHashDictIter()=WCValHashDictIterXKey_ValueY____WCValHashDictIterLR
+3 WCValHashDictIter<Key,Value>::container()=WCValHashDictIterXKey_ValueY__containerLR
+3 WCValHashDictIter<Key,Value>::key()=WCValHashDictIterXKey_ValueY__keyLR
+3 WCValHashDictIter<Key,Value>::operator ()()=WCValHashDictIterXKey_ValueY__operator_LRLR
+3 WCValHashDictIter<Key,Value>::operator ++()=WCValHashDictIterXKey_ValueY__operator_PPLR
+3 WCValHashDictIter<Key,Value>::reset()=WCValHashDictIterXKey_ValueY__resetLR
+3 WCValHashDictIter<Key,Value>::value()=WCValHashDictIterXKey_ValueY__valueLR
+3 WCPtrHashSetIter<Type>, WCPtrHashTableIter<Type> Class Description
+3 Introduction=WCPtrHashSetIterXTypeY__WCPtrHashTableIterXTypeY_Class_Description
+3 WCPtrHashSetIter<Type>::WCPtrHashSetIter()=WCPtrHashSetIterXTypeY__WCPtrHashSetIterLR
+3 WCPtrHashSetIter<Type>::~WCPtrHashSetIter()=WCPtrHashSetIterXTypeY____WCPtrHashSetIterLR
+3 WCPtrHashTableIter<Type>::WCPtrHashTableIter()=WCPtrHashTableIterXTypeY__WCPtrHashTableIterLR
+3 WCPtrHashTableIter<Type>::~WCPtrHashTableIter()=WCPtrHashTableIterXTypeY____WCPtrHashTableIterLR
+3 WCPtrHashSetIter<Type>,WCPtrHashTableIter<Type>::container()=WCPtrHashSetIterXTypeY_WCPtrHashTableIterXTypeY__containerLR
+3 WCPtrHashSetIter<Type>::current(), WCPtrHashTableIter<Type>::current()=WCPtrHashSetIterXTypeY__currentLR__WCPtrHashTableIterXTypeY__currentLR
+3 WCPtrHashSetIter<Type>,WCPtrHashTableIter<Type>::operator ()()=WCPtrHashSetIterXTypeY_WCPtrHashTableIterXTypeY__operator_LRLR
+3 WCPtrHashSetIter<Type>,WCPtrHashTableIter<Type>::operator ++()=WCPtrHashSetIterXTypeY_WCPtrHashTableIterXTypeY__operator_PPLR
+3 WCPtrHashSetIter<Type>::reset(), WCPtrHashTableIter<Type>::reset()=WCPtrHashSetIterXTypeY__resetLR__WCPtrHashTableIterXTypeY__resetLR
+3 WCValHashSetIter<Type>, WCValHashTableIter<Type> Class Description
+3 Introduction=WCValHashSetIterXTypeY__WCValHashTableIterXTypeY_Class_Description
+3 WCValHashSetIter<Type>::WCValHashSetIter()=WCValHashSetIterXTypeY__WCValHashSetIterLR
+3 WCValHashSetIter<Type>::~WCValHashSetIter()=WCValHashSetIterXTypeY____WCValHashSetIterLR
+3 WCValHashTableIter<Type>::WCValHashTableIter()=WCValHashTableIterXTypeY__WCValHashTableIterLR
+3 WCValHashTableIter<Type>::~WCValHashTableIter()=WCValHashTableIterXTypeY____WCValHashTableIterLR
+3 WCValHashSetIter<Type>,WCValHashTableIter<Type>::container()=WCValHashSetIterXTypeY_WCValHashTableIterXTypeY__containerLR
+3 WCValHashSetIter<Type>::current(), WCValHashTableIter<Type>::current()=WCValHashSetIterXTypeY__currentLR__WCValHashTableIterXTypeY__currentLR
+3 WCValHashSetIter<Type>,WCValHashTableIter<Type>::operator ()()=WCValHashSetIterXTypeY_WCValHashTableIterXTypeY__operator_LRLR
+3 WCValHashSetIter<Type>,WCValHashTableIter<Type>::operator ++()=WCValHashSetIterXTypeY_WCValHashTableIterXTypeY__operator_PPLR
+3 WCValHashSetIter<Type>::reset(), WCValHashTableIter<Type>::reset()=WCValHashSetIterXTypeY__resetLR__WCValHashTableIterXTypeY__resetLR
+2 List Containers
+2 Introduction=List_Containers
+3 WCDLink Class Description
+3 Introduction=WCDLink_Class_Description
+3 WCDLink::WCDLink()=WCDLink__WCDLinkLR
+3 WCDLink::~WCDLink()=WCDLink____WCDLinkLR
+3 WCIsvSList<Type>, WCIsvDList<Type> Class Description
+3 Introduction=WCIsvSListXTypeY__WCIsvDListXTypeY_Class_Description
+3 WCIsvSList<Type>::WCIsvSList()=WCIsvSListXTypeY__WCIsvSListLR
+3 WCIsvSList<Type>::~WCIsvSList()=WCIsvSListXTypeY____WCIsvSListLR
+3 WCIsvDList<Type>::WCIsvDList()=WCIsvDListXTypeY__WCIsvDListLR
+3 WCIsvDList<Type>::~WCIsvDList()=WCIsvDListXTypeY____WCIsvDListLR
+3 WCIsvSList<Type>::append(), WCIsvDList<Type>::append()=WCIsvSListXTypeY__appendLR__WCIsvDListXTypeY__appendLR
+3 WCIsvSList<Type>::clear(), WCIsvDList<Type>::clear()=WCIsvSListXTypeY__clearLR__WCIsvDListXTypeY__clearLR
+3 WCIsvSList<Type>,WCIsvDList<Type>::clearAndDestroy()=WCIsvSListXTypeY_WCIsvDListXTypeY__clearAndDestroyLR
+3 WCIsvSList<Type>::contains(), WCIsvDList<Type>::contains()=WCIsvSListXTypeY__containsLR__WCIsvDListXTypeY__containsLR
+3 WCIsvSList<Type>::entries(), WCIsvDList<Type>::entries()=WCIsvSListXTypeY__entriesLR__WCIsvDListXTypeY__entriesLR
+3 WCIsvSList<Type>::find(), WCIsvDList<Type>::find()=WCIsvSListXTypeY__findLR__WCIsvDListXTypeY__findLR
+3 WCIsvSList<Type>::findLast(), WCIsvDList<Type>::findLast()=WCIsvSListXTypeY__findLastLR__WCIsvDListXTypeY__findLastLR
+3 WCIsvSList<Type>::forAll(), WCIsvDList<Type>::forAll()=WCIsvSListXTypeY__forAllLR__WCIsvDListXTypeY__forAllLR
+3 WCIsvSList<Type>::get(), WCIsvDList<Type>::get()=WCIsvSListXTypeY__getLR__WCIsvDListXTypeY__getLR
+3 WCIsvSList<Type>::index(), WCIsvDList<Type>::index()=WCIsvSListXTypeY__indexLR__WCIsvDListXTypeY__indexLR
+3 WCIsvSList<Type>::insert(), WCIsvDList<Type>::insert()=WCIsvSListXTypeY__insertLR__WCIsvDListXTypeY__insertLR
+3 WCIsvSList<Type>::isEmpty(), WCIsvDList<Type>::isEmpty()=WCIsvSListXTypeY__isEmptyLR__WCIsvDListXTypeY__isEmptyLR
+3 WCIsvSList<Type>::operator \=(), WCIsvDList<Type>::operator \=()=WCIsvSListXTypeY__operator_ELR__WCIsvDListXTypeY__operator_ELR
+3 WCIsvSList<Type>::operator \=\=(), WCIsvDList<Type>::operator \=\=()=WCIsvSListXTypeY__operator_EELR__WCIsvDListXTypeY__operator_EELR
+3 WCPtrSList<Type>, WCPtrDList<Type> Class Description
+3 Introduction=WCPtrSListXTypeY__WCPtrDListXTypeY_Class_Description
+3 WCPtrSList<Type>::WCPtrSList()=WCPtrSListXTypeY__WCPtrSListLR
+3 WCPtrSList<Type>::~WCPtrSList()=WCPtrSListXTypeY____WCPtrSListLR
+3 WCPtrDList<Type>::WCPtrDList()=WCPtrDListXTypeY__WCPtrDListLR
+3 WCPtrDList<Type>::~WCPtrDList()=WCPtrDListXTypeY____WCPtrDListLR
+3 WCPtrSList<Type>::append(), WCPtrDList<Type>::append()=WCPtrSListXTypeY__appendLR__WCPtrDListXTypeY__appendLR
+3 WCPtrSList<Type>::clear(), WCPtrDList<Type>::clear()=WCPtrSListXTypeY__clearLR__WCPtrDListXTypeY__clearLR
+3 WCPtrSList<Type>,WCPtrDList<Type>::clearAndDestroy()=WCPtrSListXTypeY_WCPtrDListXTypeY__clearAndDestroyLR
+3 WCPtrSList<Type>::contains(), WCPtrDList<Type>::contains()=WCPtrSListXTypeY__containsLR__WCPtrDListXTypeY__containsLR
+3 WCPtrSList<Type>::entries(), WCPtrDList<Type>::entries()=WCPtrSListXTypeY__entriesLR__WCPtrDListXTypeY__entriesLR
+3 WCPtrSList<Type>::find(), WCPtrDList<Type>::find()=WCPtrSListXTypeY__findLR__WCPtrDListXTypeY__findLR
+3 WCPtrSList<Type>::findLast(), WCPtrDList<Type>::findLast()=WCPtrSListXTypeY__findLastLR__WCPtrDListXTypeY__findLastLR
+3 WCPtrSList<Type>::forAll(), WCPtrDList<Type>::forAll()=WCPtrSListXTypeY__forAllLR__WCPtrDListXTypeY__forAllLR
+3 WCPtrSList<Type>::get(), WCPtrDList<Type>::get()=WCPtrSListXTypeY__getLR__WCPtrDListXTypeY__getLR
+3 WCPtrSList<Type>::index(), WCPtrDList<Type>::index()=WCPtrSListXTypeY__indexLR__WCPtrDListXTypeY__indexLR
+3 WCPtrSList<Type>::insert(), WCPtrDList<Type>::insert()=WCPtrSListXTypeY__insertLR__WCPtrDListXTypeY__insertLR
+3 WCPtrSList<Type>::isEmpty(), WCPtrDList<Type>::isEmpty()=WCPtrSListXTypeY__isEmptyLR__WCPtrDListXTypeY__isEmptyLR
+3 WCPtrSList<Type>::operator \=(), WCPtrDList<Type>::operator \=()=WCPtrSListXTypeY__operator_ELR__WCPtrDListXTypeY__operator_ELR
+3 WCPtrSList<Type>::operator \=\=(), WCPtrDList<Type>::operator \=\=()=WCPtrSListXTypeY__operator_EELR__WCPtrDListXTypeY__operator_EELR
+3 WCSLink Class Description
+3 Introduction=WCSLink_Class_Description
+3 WCSLink::WCSLink()=WCSLink__WCSLinkLR
+3 WCSLink::~WCSLink()=WCSLink____WCSLinkLR
+3 WCValSList<Type>, WCValDList<Type> Class Description
+3 Introduction=WCValSListXTypeY__WCValDListXTypeY_Class_Description
+3 WCValSList<Type>::WCValSList()=WCValSListXTypeY__WCValSListLR
+3 WCValSList<Type>::~WCValSList()=WCValSListXTypeY____WCValSListLR
+3 WCValDList<Type>::WCValDList()=WCValDListXTypeY__WCValDListLR
+3 WCValDList<Type>::~WCValDList()=WCValDListXTypeY____WCValDListLR
+3 WCValSList<Type>::append(), WCValDList<Type>::append()=WCValSListXTypeY__appendLR__WCValDListXTypeY__appendLR
+3 WCValSList<Type>::clear(), WCValDList<Type>::clear()=WCValSListXTypeY__clearLR__WCValDListXTypeY__clearLR
+3 WCValSList<Type>,WCValDList<Type>::clearAndDestroy()=WCValSListXTypeY_WCValDListXTypeY__clearAndDestroyLR
+3 WCValSList<Type>::contains(), WCValDList<Type>::contains()=WCValSListXTypeY__containsLR__WCValDListXTypeY__containsLR
+3 WCValSList<Type>::entries(), WCValDList<Type>::entries()=WCValSListXTypeY__entriesLR__WCValDListXTypeY__entriesLR
+3 WCValSList<Type>::find(), WCValDList<Type>::find()=WCValSListXTypeY__findLR__WCValDListXTypeY__findLR
+3 WCValSList<Type>::findLast(), WCValDList<Type>::findLast()=WCValSListXTypeY__findLastLR__WCValDListXTypeY__findLastLR
+3 WCValSList<Type>::forAll(), WCValDList<Type>::forAll()=WCValSListXTypeY__forAllLR__WCValDListXTypeY__forAllLR
+3 WCValSList<Type>::get(), WCValDList<Type>::get()=WCValSListXTypeY__getLR__WCValDListXTypeY__getLR
+3 WCValSList<Type>::index(), WCValDList<Type>::index()=WCValSListXTypeY__indexLR__WCValDListXTypeY__indexLR
+3 WCValSList<Type>::insert(), WCValDList<Type>::insert()=WCValSListXTypeY__insertLR__WCValDListXTypeY__insertLR
+3 WCValSList<Type>::isEmpty(), WCValDList<Type>::isEmpty()=WCValSListXTypeY__isEmptyLR__WCValDListXTypeY__isEmptyLR
+3 WCValSList<Type>::operator \=(), WCValDList<Type>::operator \=()=WCValSListXTypeY__operator_ELR__WCValDListXTypeY__operator_ELR
+3 WCValSList<Type>::operator \=\=(), WCValDList<Type>::operator \=\=()=WCValSListXTypeY__operator_EELR__WCValDListXTypeY__operator_EELR
+2 List Iterators
+2 Introduction=List_Iterators
+3 WCIsvConstSListIter<Type>, WCIsvConstDListIter<Type> Class Description
+3 Introduction=WCIsvConstSListIterXTypeY__WCIsvConstDListIterXTypeY_Class_Description
+3 WCIsvConstSListIter<Type>::WCIsvConstSListIter()=WCIsvConstSListIterXTypeY__WCIsvConstSListIterLR
+3 WCIsvConstSListIter<Type>::~WCIsvConstSListIter()=WCIsvConstSListIterXTypeY____WCIsvConstSListIterLR
+3 WCIsvConstDListIter<Type>::WCIsvConstDListIter()=WCIsvConstDListIterXTypeY__WCIsvConstDListIterLR
+3 WCIsvConstDListIter<Type>::~WCIsvConstDListIter()=WCIsvConstDListIterXTypeY____WCIsvConstDListIterLR
+3 WCIsvConstSListIter<Type>,WCIsvConstDListIter<Type>::container()=WCIsvConstSListIterXTypeY_WCIsvConstDListIterXTypeY__containerLR
+3 WCIsvConstSListIter<Type>::current(), WCIsvConstDListIter<Type>::current()=WCIsvConstSListIterXTypeY__currentLR__WCIsvConstDListIterXTypeY__currentLR
+3 WCIsvConstSListIter<Type>,WCIsvConstDListIter<Type>::operator ()()=WCIsvConstSListIterXTypeY_WCIsvConstDListIterXTypeY__operator_LRLR
+3 WCIsvConstSListIter<Type>,WCIsvConstDListIter<Type>::operator ++()=WCIsvConstSListIterXTypeY_WCIsvConstDListIterXTypeY__operator_PPLR
+3 WCIsvConstSListIter<Type>,WCIsvConstDListIter<Type>::operator +\=()=WCIsvConstSListIterXTypeY_WCIsvConstDListIterXTypeY__operator_PELR
+3 WCIsvConstDListIter<Type>::operator --()=WCIsvConstDListIterXTypeY__operator_MMLR
+3 WCIsvConstDListIter<Type>::operator -\=()=WCIsvConstDListIterXTypeY__operator_MELR
+3 WCIsvConstSListIter<Type>::reset(), WCIsvConstDListIter<Type>::reset()=WCIsvConstSListIterXTypeY__resetLR__WCIsvConstDListIterXTypeY__resetLR
+3 WCIsvSListIter<Type>, WCIsvDListIter<Type> Class Description
+3 Introduction=WCIsvSListIterXTypeY__WCIsvDListIterXTypeY_Class_Description
+3 WCIsvSListIter<Type>::WCIsvSListIter()=WCIsvSListIterXTypeY__WCIsvSListIterLR
+3 WCIsvSListIter<Type>::~WCIsvSListIter()=WCIsvSListIterXTypeY____WCIsvSListIterLR
+3 WCIsvDListIter<Type>::WCIsvDListIter()=WCIsvDListIterXTypeY__WCIsvDListIterLR
+3 WCIsvDListIter<Type>::~WCIsvDListIter()=WCIsvDListIterXTypeY____WCIsvDListIterLR
+3 WCIsvSListIter<Type>::append(), WCIsvDListIter<Type>::append()=WCIsvSListIterXTypeY__appendLR__WCIsvDListIterXTypeY__appendLR
+3 WCIsvSListIter<Type>,WCIsvDListIter<Type>::container()=WCIsvSListIterXTypeY_WCIsvDListIterXTypeY__containerLR
+3 WCIsvSListIter<Type>::current(), WCIsvDListIter<Type>::current()=WCIsvSListIterXTypeY__currentLR__WCIsvDListIterXTypeY__currentLR
+3 WCIsvDListIter<Type>::insert()=WCIsvDListIterXTypeY__insertLR
+3 WCIsvSListIter<Type>,WCIsvDListIter<Type>::operator ()()=WCIsvSListIterXTypeY_WCIsvDListIterXTypeY__operator_LRLR
+3 WCIsvSListIter<Type>,WCIsvDListIter<Type>::operator ++()=WCIsvSListIterXTypeY_WCIsvDListIterXTypeY__operator_PPLR
+3 WCIsvSListIter<Type>,WCIsvDListIter<Type>::operator +\=()=WCIsvSListIterXTypeY_WCIsvDListIterXTypeY__operator_PELR
+3 WCIsvDListIter<Type>::operator --()=WCIsvDListIterXTypeY__operator_MMLR
+3 WCIsvDListIter<Type>::operator -\=()=WCIsvDListIterXTypeY__operator_MELR
+3 WCIsvSListIter<Type>::reset(), WCIsvDListIter<Type>::reset()=WCIsvSListIterXTypeY__resetLR__WCIsvDListIterXTypeY__resetLR
+3 WCPtrConstSListIter<Type>, WCPtrConstDListIter<Type> Class Description
+3 Introduction=WCPtrConstSListIterXTypeY__WCPtrConstDListIterXTypeY_Class_Description
+3 WCPtrConstSListIter<Type>::WCPtrConstSListIter()=WCPtrConstSListIterXTypeY__WCPtrConstSListIterLR
+3 WCPtrConstSListIter<Type>::~WCPtrConstSListIter()=WCPtrConstSListIterXTypeY____WCPtrConstSListIterLR
+3 WCPtrConstDListIter<Type>::WCPtrConstDListIter()=WCPtrConstDListIterXTypeY__WCPtrConstDListIterLR
+3 WCPtrConstDListIter<Type>::~WCPtrConstDListIter()=WCPtrConstDListIterXTypeY____WCPtrConstDListIterLR
+3 WCPtrConstSListIter<Type>,WCPtrConstDListIter<Type>::container()=WCPtrConstSListIterXTypeY_WCPtrConstDListIterXTypeY__containerLR
+3 WCPtrConstSListIter<Type>::current(), WCPtrConstDListIter<Type>::current()=WCPtrConstSListIterXTypeY__currentLR__WCPtrConstDListIterXTypeY__currentLR
+3 WCPtrConstSListIter<Type>,WCPtrConstDListIter<Type>::operator ()()=WCPtrConstSListIterXTypeY_WCPtrConstDListIterXTypeY__operator_LRLR
+3 WCPtrConstSListIter<Type>,WCPtrConstDListIter<Type>::operator ++()=WCPtrConstSListIterXTypeY_WCPtrConstDListIterXTypeY__operator_PPLR
+3 WCPtrConstSListIter<Type>,WCPtrConstDListIter<Type>::operator +\=()=WCPtrConstSListIterXTypeY_WCPtrConstDListIterXTypeY__operator_PELR
+3 WCPtrConstDListIter<Type>::operator --()=WCPtrConstDListIterXTypeY__operator_MMLR
+3 WCPtrConstDListIter<Type>::operator -\=()=WCPtrConstDListIterXTypeY__operator_MELR
+3 WCPtrConstSListIter<Type>::reset(), WCPtrConstDListIter<Type>::reset()=WCPtrConstSListIterXTypeY__resetLR__WCPtrConstDListIterXTypeY__resetLR
+3 WCPtrSListIter<Type>, WCPtrDListIter<Type> Class Description
+3 Introduction=WCPtrSListIterXTypeY__WCPtrDListIterXTypeY_Class_Description
+3 WCPtrSListIter<Type>::WCPtrSListIter()=WCPtrSListIterXTypeY__WCPtrSListIterLR
+3 WCPtrSListIter<Type>::~WCPtrSListIter()=WCPtrSListIterXTypeY____WCPtrSListIterLR
+3 WCPtrDListIter<Type>::WCPtrDListIter()=WCPtrDListIterXTypeY__WCPtrDListIterLR
+3 WCPtrDListIter<Type>::~WCPtrDListIter()=WCPtrDListIterXTypeY____WCPtrDListIterLR
+3 WCPtrSListIter<Type>::append(), WCPtrDListIter<Type>::append()=WCPtrSListIterXTypeY__appendLR__WCPtrDListIterXTypeY__appendLR
+3 WCPtrSListIter<Type>,WCPtrDListIter<Type>::container()=WCPtrSListIterXTypeY_WCPtrDListIterXTypeY__containerLR
+3 WCPtrSListIter<Type>::current(), WCPtrDListIter<Type>::current()=WCPtrSListIterXTypeY__currentLR__WCPtrDListIterXTypeY__currentLR
+3 WCPtrDListIter<Type>::insert()=WCPtrDListIterXTypeY__insertLR
+3 WCPtrSListIter<Type>,WCPtrDListIter<Type>::operator ()()=WCPtrSListIterXTypeY_WCPtrDListIterXTypeY__operator_LRLR
+3 WCPtrSListIter<Type>,WCPtrDListIter<Type>::operator ++()=WCPtrSListIterXTypeY_WCPtrDListIterXTypeY__operator_PPLR
+3 WCPtrSListIter<Type>,WCPtrDListIter<Type>::operator +\=()=WCPtrSListIterXTypeY_WCPtrDListIterXTypeY__operator_PELR
+3 WCPtrDListIter<Type>::operator --()=WCPtrDListIterXTypeY__operator_MMLR
+3 WCPtrDListIter<Type>::operator -\=()=WCPtrDListIterXTypeY__operator_MELR
+3 WCPtrSListIter<Type>::reset(), WCPtrDListIter<Type>::reset()=WCPtrSListIterXTypeY__resetLR__WCPtrDListIterXTypeY__resetLR
+3 WCValConstSListIter<Type>, WCValConstDListIter<Type> Class Description
+3 Introduction=WCValConstSListIterXTypeY__WCValConstDListIterXTypeY_Class_Description
+3 WCValConstSListIter<Type>::WCValConstSListIter()=WCValConstSListIterXTypeY__WCValConstSListIterLR
+3 WCValConstSListIter<Type>::~WCValConstSListIter()=WCValConstSListIterXTypeY____WCValConstSListIterLR
+3 WCValConstDListIter<Type>::WCValConstDListIter()=WCValConstDListIterXTypeY__WCValConstDListIterLR
+3 WCValConstDListIter<Type>::~WCValConstDListIter()=WCValConstDListIterXTypeY____WCValConstDListIterLR
+3 WCValConstSListIter<Type>,WCValConstDListIter<Type>::container()=WCValConstSListIterXTypeY_WCValConstDListIterXTypeY__containerLR
+3 WCValConstSListIter<Type>::current(), WCValConstDListIter<Type>::current()=WCValConstSListIterXTypeY__currentLR__WCValConstDListIterXTypeY__currentLR
+3 WCValConstSListIter<Type>,WCValConstDListIter<Type>::operator ()()=WCValConstSListIterXTypeY_WCValConstDListIterXTypeY__operator_LRLR
+3 WCValConstSListIter<Type>,WCValConstDListIter<Type>::operator ++()=WCValConstSListIterXTypeY_WCValConstDListIterXTypeY__operator_PPLR
+3 WCValConstSListIter<Type>,WCValConstDListIter<Type>::operator +\=()=WCValConstSListIterXTypeY_WCValConstDListIterXTypeY__operator_PELR
+3 WCValConstDListIter<Type>::operator --()=WCValConstDListIterXTypeY__operator_MMLR
+3 WCValConstDListIter<Type>::operator -\=()=WCValConstDListIterXTypeY__operator_MELR
+3 WCValConstSListIter<Type>::reset(), WCValConstDListIter<Type>::reset()=WCValConstSListIterXTypeY__resetLR__WCValConstDListIterXTypeY__resetLR
+3 WCValSListIter<Type>, WCValDListIter<Type> Class Description
+3 Introduction=WCValSListIterXTypeY__WCValDListIterXTypeY_Class_Description
+3 WCValSListIter<Type>::WCValSListIter()=WCValSListIterXTypeY__WCValSListIterLR
+3 WCValSListIter<Type>::~WCValSListIter()=WCValSListIterXTypeY____WCValSListIterLR
+3 WCValDListIter<Type>::WCValDListIter()=WCValDListIterXTypeY__WCValDListIterLR
+3 WCValDListIter<Type>::~WCValDListIter()=WCValDListIterXTypeY____WCValDListIterLR
+3 WCValSListIter<Type>::append(), WCValDListIter<Type>::append()=WCValSListIterXTypeY__appendLR__WCValDListIterXTypeY__appendLR
+3 WCValSListIter<Type>,WCValDListIter<Type>::container()=WCValSListIterXTypeY_WCValDListIterXTypeY__containerLR
+3 WCValSListIter<Type>::current(), WCValDListIter<Type>::current()=WCValSListIterXTypeY__currentLR__WCValDListIterXTypeY__currentLR
+3 WCValDListIter<Type>::insert()=WCValDListIterXTypeY__insertLR
+3 WCValSListIter<Type>,WCValDListIter<Type>::operator ()()=WCValSListIterXTypeY_WCValDListIterXTypeY__operator_LRLR
+3 WCValSListIter<Type>,WCValDListIter<Type>::operator ++()=WCValSListIterXTypeY_WCValDListIterXTypeY__operator_PPLR
+3 WCValSListIter<Type>,WCValDListIter<Type>::operator +\=()=WCValSListIterXTypeY_WCValDListIterXTypeY__operator_PELR
+3 WCValDListIter<Type>::operator --()=WCValDListIterXTypeY__operator_MMLR
+3 WCValDListIter<Type>::operator -\=()=WCValDListIterXTypeY__operator_MELR
+3 WCValSListIter<Type>::reset(), WCValDListIter<Type>::reset()=WCValSListIterXTypeY__resetLR__WCValDListIterXTypeY__resetLR
+2 Queue Container
+2 Introduction=Queue_Container
+3 WCQueue<Type,FType> Class Description
+3 Introduction=WCQueueXType_FTypeY_Class_Description
+3 WCQueue<Type,FType>::WCQueue()=WCQueueXType_FTypeY__WCQueueLR
+3 WCQueue<Type,FType>::~WCQueue()=WCQueueXType_FTypeY____WCQueueLR
+3 WCQueue<Type,FType>::clear()=WCQueueXType_FTypeY__clearLR
+3 WCQueue<Type,FType>::entries()=WCQueueXType_FTypeY__entriesLR
+3 WCQueue<Type,FType>::first()=WCQueueXType_FTypeY__firstLR
+3 WCQueue<Type,FType>::get()=WCQueueXType_FTypeY__getLR
+3 WCQueue<Type,FType>::insert()=WCQueueXType_FTypeY__insertLR
+3 WCQueue<Type,FType>::isEmpty()=WCQueueXType_FTypeY__isEmptyLR
+3 WCQueue<Type,FType>::last()=WCQueueXType_FTypeY__lastLR
+2 Skip List Containers
+2 Introduction=Skip_List_Containers
+3 WCPtrSkipListDict<Key,Value> Class Description
+3 Introduction=WCPtrSkipListDictXKey_ValueY_Class_Description
+3 WCPtrSkipListDict<Key,Value>::WCPtrSkipListDict()=WCPtrSkipListDictXKey_ValueY__WCPtrSkipListDictLR
+3 WCPtrSkipListDict<Key,Value>::~WCPtrSkipListDict()=WCPtrSkipListDictXKey_ValueY____WCPtrSkipListDictLR
+3 WCPtrSkipListDict<Key,Value>::clear()=WCPtrSkipListDictXKey_ValueY__clearLR
+3 WCPtrSkipListDict<Key,Value>::clearAndDestroy()=WCPtrSkipListDictXKey_ValueY__clearAndDestroyLR
+3 WCPtrSkipListDict<Key,Value>::contains()=WCPtrSkipListDictXKey_ValueY__containsLR
+3 WCPtrSkipListDict<Key,Value>::entries()=WCPtrSkipListDictXKey_ValueY__entriesLR
+3 WCPtrSkipListDict<Key,Value>::find()=WCPtrSkipListDictXKey_ValueY__findLR
+3 WCPtrSkipListDict<Key,Value>::findKeyAndValue()=WCPtrSkipListDictXKey_ValueY__findKeyAndValueLR
+3 WCPtrSkipListDict<Key,Value>::forAll()=WCPtrSkipListDictXKey_ValueY__forAllLR
+3 WCPtrSkipListDict<Key,Value>::insert()=WCPtrSkipListDictXKey_ValueY__insertLR
+3 WCPtrSkipListDict<Key,Value>::isEmpty()=WCPtrSkipListDictXKey_ValueY__isEmptyLR
+3 WCPtrSkipListDict<Key,Value>::operator []()=WCPtrSkipListDictXKey_ValueY__operator_UVLR
+3 WCPtrSkipListDict<Key,Value>::operator \=()=WCPtrSkipListDictXKey_ValueY__operator_ELR
+3 WCPtrSkipListDict<Key,Value>::operator \=\=()=WCPtrSkipListDictXKey_ValueY__operator_EELR
+3 WCPtrSkipListDict<Key,Value>::remove()=WCPtrSkipListDictXKey_ValueY__removeLR
+3 WCPtrSkipList<Type>, WCPtrSkipListSet<Type> Class Description
+3 Introduction=WCPtrSkipListXTypeY__WCPtrSkipListSetXTypeY_Class_Description
+3 WCPtrSkipListSet<Type>::WCPtrSkipListSet()=WCPtrSkipListSetXTypeY__WCPtrSkipListSetLR
+3 WCPtrSkipListSet<Type>::~WCPtrSkipListSet()=WCPtrSkipListSetXTypeY____WCPtrSkipListSetLR
+3 WCPtrSkipList<Type>::WCPtrSkipList()=WCPtrSkipListXTypeY__WCPtrSkipListLR
+3 WCPtrSkipList<Type>::~WCPtrSkipList()=WCPtrSkipListXTypeY____WCPtrSkipListLR
+3 WCPtrSkipList<Type>::clear(), WCPtrSkipListSet<Type>::clear()=WCPtrSkipListXTypeY__clearLR__WCPtrSkipListSetXTypeY__clearLR
+3 WCPtrSkipList<Type>,WCPtrSkipListSet<Type>::clearAndDestroy()=WCPtrSkipListXTypeY_WCPtrSkipListSetXTypeY__clearAndDestroyLR
+3 WCPtrSkipList<Type>::contains(), WCPtrSkipListSet<Type>::contains()=WCPtrSkipListXTypeY__containsLR__WCPtrSkipListSetXTypeY__containsLR
+3 WCPtrSkipList<Type>::entries(), WCPtrSkipListSet<Type>::entries()=WCPtrSkipListXTypeY__entriesLR__WCPtrSkipListSetXTypeY__entriesLR
+3 WCPtrSkipList<Type>::find(), WCPtrSkipListSet<Type>::find()=WCPtrSkipListXTypeY__findLR__WCPtrSkipListSetXTypeY__findLR
+3 WCPtrSkipList<Type>::forAll(), WCPtrSkipListSet<Type>::forAll()=WCPtrSkipListXTypeY__forAllLR__WCPtrSkipListSetXTypeY__forAllLR
+3 WCPtrSkipList<Type>::insert(), WCPtrSkipListSet<Type>::insert()=WCPtrSkipListXTypeY__insertLR__WCPtrSkipListSetXTypeY__insertLR
+3 WCPtrSkipList<Type>::isEmpty(), WCPtrSkipListSet<Type>::isEmpty()=WCPtrSkipListXTypeY__isEmptyLR__WCPtrSkipListSetXTypeY__isEmptyLR
+3 WCPtrSkipList<Type>::occurrencesOf()=WCPtrSkipListXTypeY__occurrencesOfLR
+3 WCPtrSkipList<Type>::operator \=(), WCPtrSkipListSet<Type>::operator \=()=WCPtrSkipListXTypeY__operator_ELR__WCPtrSkipListSetXTypeY__operator_ELR
+3 WCPtrSkipList<Type>::operator \=\=(), WCPtrSkipListSet<Type>::operator \=\=()=WCPtrSkipListXTypeY__operator_EELR__WCPtrSkipListSetXTypeY__operator_EELR
+3 WCPtrSkipList<Type>::remove(), WCPtrSkipListSet<Type>::remove()=WCPtrSkipListXTypeY__removeLR__WCPtrSkipListSetXTypeY__removeLR
+3 WCPtrSkipList<Type>::removeAll()=WCPtrSkipListXTypeY__removeAllLR
+3 WCValSkipListDict<Key,Value> Class Description
+3 Introduction=WCValSkipListDictXKey_ValueY_Class_Description
+3 WCValSkipListDict<Key,Value>::WCValSkipListDict()=WCValSkipListDictXKey_ValueY__WCValSkipListDictLR
+3 WCValSkipListDict<Key,Value>::~WCValSkipListDict()=WCValSkipListDictXKey_ValueY____WCValSkipListDictLR
+3 WCValSkipListDict<Key,Value>::clear()=WCValSkipListDictXKey_ValueY__clearLR
+3 WCValSkipListDict<Key,Value>::contains()=WCValSkipListDictXKey_ValueY__containsLR
+3 WCValSkipListDict<Key,Value>::entries()=WCValSkipListDictXKey_ValueY__entriesLR
+3 WCValSkipListDict<Key,Value>::find()=WCValSkipListDictXKey_ValueY__findLR
+3 WCValSkipListDict<Key,Value>::findKeyAndValue()=WCValSkipListDictXKey_ValueY__findKeyAndValueLR
+3 WCValSkipListDict<Key,Value>::forAll()=WCValSkipListDictXKey_ValueY__forAllLR
+3 WCValSkipListDict<Key,Value>::insert()=WCValSkipListDictXKey_ValueY__insertLR
+3 WCValSkipListDict<Key,Value>::isEmpty()=WCValSkipListDictXKey_ValueY__isEmptyLR
+3 WCValSkipListDict<Key,Value>::operator []()=WCValSkipListDictXKey_ValueY__operator_UVLR
+3 WCValSkipListDict<Key,Value>::operator \=()=WCValSkipListDictXKey_ValueY__operator_ELR
+3 WCValSkipListDict<Key,Value>::operator \=\=()=WCValSkipListDictXKey_ValueY__operator_EELR
+3 WCValSkipListDict<Key,Value>::remove()=WCValSkipListDictXKey_ValueY__removeLR
+3 WCValSkipList<Type>, WCValSkipListSet<Type> Class Description
+3 Introduction=WCValSkipListXTypeY__WCValSkipListSetXTypeY_Class_Description
+3 WCValSkipListSet<Type>::WCValSkipListSet()=WCValSkipListSetXTypeY__WCValSkipListSetLR
+3 WCValSkipListSet<Type>::~WCValSkipListSet()=WCValSkipListSetXTypeY____WCValSkipListSetLR
+3 WCValSkipList<Type>::WCValSkipList()=WCValSkipListXTypeY__WCValSkipListLR
+3 WCValSkipList<Type>::~WCValSkipList()=WCValSkipListXTypeY____WCValSkipListLR
+3 WCValSkipList<Type>::clear(), WCValSkipListSet<Type>::clear()=WCValSkipListXTypeY__clearLR__WCValSkipListSetXTypeY__clearLR
+3 WCValSkipList<Type>::contains(), WCValSkipListSet<Type>::contains()=WCValSkipListXTypeY__containsLR__WCValSkipListSetXTypeY__containsLR
+3 WCValSkipList<Type>::entries(), WCValSkipListSet<Type>::entries()=WCValSkipListXTypeY__entriesLR__WCValSkipListSetXTypeY__entriesLR
+3 WCValSkipList<Type>::find(), WCValSkipListSet<Type>::find()=WCValSkipListXTypeY__findLR__WCValSkipListSetXTypeY__findLR
+3 WCValSkipList<Type>::forAll(), WCValSkipListSet<Type>::forAll()=WCValSkipListXTypeY__forAllLR__WCValSkipListSetXTypeY__forAllLR
+3 WCValSkipList<Type>::insert(), WCValSkipListSet<Type>::insert()=WCValSkipListXTypeY__insertLR__WCValSkipListSetXTypeY__insertLR
+3 WCValSkipList<Type>::isEmpty(), WCValSkipListSet<Type>::isEmpty()=WCValSkipListXTypeY__isEmptyLR__WCValSkipListSetXTypeY__isEmptyLR
+3 WCValSkipList<Type>::occurrencesOf()=WCValSkipListXTypeY__occurrencesOfLR
+3 WCValSkipList<Type>::operator \=(), WCValSkipListSet<Type>::operator \=()=WCValSkipListXTypeY__operator_ELR__WCValSkipListSetXTypeY__operator_ELR
+3 WCValSkipList<Type>::operator \=\=(), WCValSkipListSet<Type>::operator \=\=()=WCValSkipListXTypeY__operator_EELR__WCValSkipListSetXTypeY__operator_EELR
+3 WCValSkipList<Type>::remove(), WCValSkipListSet<Type>::remove()=WCValSkipListXTypeY__removeLR__WCValSkipListSetXTypeY__removeLR
+3 WCValSkipList<Type>::removeAll()=WCValSkipListXTypeY__removeAllLR
+2 Stack Container
+2 Introduction=Stack_Container
+3 WCStack<Type,FType> Class Description
+3 Introduction=WCStackXType_FTypeY_Class_Description
+3 WCStack<Type,FType>::WCStack()=WCStackXType_FTypeY__WCStackLR
+3 WCStack<Type,FType>::~WCStack()=WCStackXType_FTypeY____WCStackLR
+3 WCStack<Type,FType>::clear()=WCStackXType_FTypeY__clearLR
+3 WCStack<Type,FType>::entries()=WCStackXType_FTypeY__entriesLR
+3 WCStack<Type,FType>::isEmpty()=WCStackXType_FTypeY__isEmptyLR
+3 WCStack<Type,FType>::pop()=WCStackXType_FTypeY__popLR
+3 WCStack<Type,FType>::push()=WCStackXType_FTypeY__pushLR
+3 WCStack<Type,FType>::top()=WCStackXType_FTypeY__topLR
+2 Vector Containers
+2 Introduction=Vector_Containers
+3 WCPtrSortedVector<Type>, WCPtrOrderedVector<Type> Class Description
+3 Introduction=WCPtrSortedVectorXTypeY__WCPtrOrderedVectorXTypeY_Class_Description
+3 WCPtrOrderedVector<Type>::WCPtrOrderedVector()=WCPtrOrderedVectorXTypeY__WCPtrOrderedVectorLR
+3 WCPtrOrderedVector<Type>::~WCPtrOrderedVector()=WCPtrOrderedVectorXTypeY____WCPtrOrderedVectorLR
+3 WCPtrSortedVector<Type>::WCPtrSortedVector()=WCPtrSortedVectorXTypeY__WCPtrSortedVectorLR
+3 WCPtrSortedVector<Type>::~WCPtrSortedVector()=WCPtrSortedVectorXTypeY____WCPtrSortedVectorLR
+3 WCPtrOrderedVector<Type>::append()=WCPtrOrderedVectorXTypeY__appendLR
+3 WCPtrSortedVector<Type>::clear(), WCPtrOrderedVector<Type>::clear()=WCPtrSortedVectorXTypeY__clearLR__WCPtrOrderedVectorXTypeY__clearLR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::clearAndDestroy()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__clearAndDestroyLR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::contains()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__containsLR
+3 WCPtrSortedVector<Type>::entries(), WCPtrOrderedVector<Type>::entries()=WCPtrSortedVectorXTypeY__entriesLR__WCPtrOrderedVectorXTypeY__entriesLR
+3 WCPtrSortedVector<Type>::find(), WCPtrOrderedVector<Type>::find()=WCPtrSortedVectorXTypeY__findLR__WCPtrOrderedVectorXTypeY__findLR
+3 WCPtrSortedVector<Type>::first(), WCPtrOrderedVector<Type>::first()=WCPtrSortedVectorXTypeY__firstLR__WCPtrOrderedVectorXTypeY__firstLR
+3 WCPtrSortedVector<Type>::index(), WCPtrOrderedVector<Type>::index()=WCPtrSortedVectorXTypeY__indexLR__WCPtrOrderedVectorXTypeY__indexLR
+3 WCPtrSortedVector<Type>::insert(), WCPtrOrderedVector<Type>::insert()=WCPtrSortedVectorXTypeY__insertLR__WCPtrOrderedVectorXTypeY__insertLR
+3 WCPtrOrderedVector<Type>::insertAt()=WCPtrOrderedVectorXTypeY__insertAtLR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::isEmpty()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__isEmptyLR
+3 WCPtrSortedVector<Type>::last(), WCPtrOrderedVector<Type>::last()=WCPtrSortedVectorXTypeY__lastLR__WCPtrOrderedVectorXTypeY__lastLR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::occurrencesOf()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__occurrencesOfLR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::operator []()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__operator_UVLR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::operator \=()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__operator_ELR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::operator \=\=()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__operator_EELR
+3 WCPtrOrderedVector<Type>::prepend()=WCPtrOrderedVectorXTypeY__prependLR
+3 WCPtrSortedVector<Type>::remove(), WCPtrOrderedVector<Type>::remove()=WCPtrSortedVectorXTypeY__removeLR__WCPtrOrderedVectorXTypeY__removeLR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::removeAll()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__removeAllLR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::removeAt()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__removeAtLR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::removeFirst()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__removeFirstLR
+3 WCPtrSortedVector<Type>,WCPtrOrderedVector<Type>::removeLast()=WCPtrSortedVectorXTypeY_WCPtrOrderedVectorXTypeY__removeLastLR
+3 WCPtrSortedVector<Type>::resize(), WCPtrOrderedVector<Type>::resize()=WCPtrSortedVectorXTypeY__resizeLR__WCPtrOrderedVectorXTypeY__resizeLR
+3 WCPtrVector<Type> Class Description
+3 Introduction=WCPtrVectorXTypeY_Class_Description
+3 WCPtrVector<Type>::WCPtrVector()=WCPtrVectorXTypeY__WCPtrVectorLR
+3 WCPtrVector<Type>::~WCPtrVector()=WCPtrVectorXTypeY____WCPtrVectorLR
+3 WCPtrVector<Type>::clear()=WCPtrVectorXTypeY__clearLR
+3 WCPtrVector<Type>::clearAndDestroy()=WCPtrVectorXTypeY__clearAndDestroyLR
+3 WCPtrVector<Type>::length()=WCPtrVectorXTypeY__lengthLR
+3 WCPtrVector<Type>::operator []()=WCPtrVectorXTypeY__operator_UVLR
+3 WCPtrVector<Type>::operator \=()=WCPtrVectorXTypeY__operator_ELR
+3 WCPtrVector<Type>::operator \=\=()=WCPtrVectorXTypeY__operator_EELR
+3 WCPtrVector<Type>::resize()=WCPtrVectorXTypeY__resizeLR
+3 WCValSortedVector<Type>, WCValOrderedVector<Type> Class Description
+3 Introduction=WCValSortedVectorXTypeY__WCValOrderedVectorXTypeY_Class_Description
+3 WCValOrderedVector<Type>::WCValOrderedVector()=WCValOrderedVectorXTypeY__WCValOrderedVectorLR
+3 WCValOrderedVector<Type>::~WCValOrderedVector()=WCValOrderedVectorXTypeY____WCValOrderedVectorLR
+3 WCValSortedVector<Type>::WCValSortedVector()=WCValSortedVectorXTypeY__WCValSortedVectorLR
+3 WCValSortedVector<Type>::~WCValSortedVector()=WCValSortedVectorXTypeY____WCValSortedVectorLR
+3 WCValOrderedVector<Type>::append()=WCValOrderedVectorXTypeY__appendLR
+3 WCValSortedVector<Type>::clear(), WCValOrderedVector<Type>::clear()=WCValSortedVectorXTypeY__clearLR__WCValOrderedVectorXTypeY__clearLR
+3 WCValSortedVector<Type>,WCValOrderedVector<Type>::contains()=WCValSortedVectorXTypeY_WCValOrderedVectorXTypeY__containsLR
+3 WCValSortedVector<Type>::entries(), WCValOrderedVector<Type>::entries()=WCValSortedVectorXTypeY__entriesLR__WCValOrderedVectorXTypeY__entriesLR
+3 WCValSortedVector<Type>::find(), WCValOrderedVector<Type>::find()=WCValSortedVectorXTypeY__findLR__WCValOrderedVectorXTypeY__findLR
+3 WCValSortedVector<Type>::first(), WCValOrderedVector<Type>::first()=WCValSortedVectorXTypeY__firstLR__WCValOrderedVectorXTypeY__firstLR
+3 WCValSortedVector<Type>::index(), WCValOrderedVector<Type>::index()=WCValSortedVectorXTypeY__indexLR__WCValOrderedVectorXTypeY__indexLR
+3 WCValSortedVector<Type>::insert(), WCValOrderedVector<Type>::insert()=WCValSortedVectorXTypeY__insertLR__WCValOrderedVectorXTypeY__insertLR
+3 WCValOrderedVector<Type>::insertAt()=WCValOrderedVectorXTypeY__insertAtLR
+3 WCValSortedVector<Type>,WCValOrderedVector<Type>::isEmpty()=WCValSortedVectorXTypeY_WCValOrderedVectorXTypeY__isEmptyLR
+3 WCValSortedVector<Type>::last(), WCValOrderedVector<Type>::last()=WCValSortedVectorXTypeY__lastLR__WCValOrderedVectorXTypeY__lastLR
+3 WCValSortedVector<Type>,WCValOrderedVector<Type>::occurrencesOf()=WCValSortedVectorXTypeY_WCValOrderedVectorXTypeY__occurrencesOfLR
+3 WCValSortedVector<Type>,WCValOrderedVector<Type>::operator []()=WCValSortedVectorXTypeY_WCValOrderedVectorXTypeY__operator_UVLR
+3 WCValSortedVector<Type>,WCValOrderedVector<Type>::operator \=()=WCValSortedVectorXTypeY_WCValOrderedVectorXTypeY__operator_ELR
+3 WCValSortedVector<Type>,WCValOrderedVector<Type>::operator \=\=()=WCValSortedVectorXTypeY_WCValOrderedVectorXTypeY__operator_EELR
+3 WCValOrderedVector<Type>::prepend()=WCValOrderedVectorXTypeY__prependLR
+3 WCValSortedVector<Type>::remove(), WCValOrderedVector<Type>::remove()=WCValSortedVectorXTypeY__removeLR__WCValOrderedVectorXTypeY__removeLR
+3 WCValSortedVector<Type>,WCValOrderedVector<Type>::removeAll()=WCValSortedVectorXTypeY_WCValOrderedVectorXTypeY__removeAllLR
+3 WCValSortedVector<Type>,WCValOrderedVector<Type>::removeAt()=WCValSortedVectorXTypeY_WCValOrderedVectorXTypeY__removeAtLR
+3 WCValSortedVector<Type>,WCValOrderedVector<Type>::removeFirst()=WCValSortedVectorXTypeY_WCValOrderedVectorXTypeY__removeFirstLR
+3 WCValSortedVector<Type>,WCValOrderedVector<Type>::removeLast()=WCValSortedVectorXTypeY_WCValOrderedVectorXTypeY__removeLastLR
+3 WCValSortedVector<Type>::resize(), WCValOrderedVector<Type>::resize()=WCValSortedVectorXTypeY__resizeLR__WCValOrderedVectorXTypeY__resizeLR
+3 WCValVector<Type> Class Description
+3 Introduction=WCValVectorXTypeY_Class_Description
+3 WCValVector<Type>::WCValVector()=WCValVectorXTypeY__WCValVectorLR
+3 WCValVector<Type>::~WCValVector()=WCValVectorXTypeY____WCValVectorLR
+3 WCValVector<Type>::clear()=WCValVectorXTypeY__clearLR
+3 WCValVector<Type>::length()=WCValVectorXTypeY__lengthLR
+3 WCValVector<Type>::operator []()=WCValVectorXTypeY__operator_UVLR
+3 WCValVector<Type>::operator \=()=WCValVectorXTypeY__operator_ELR
+3 WCValVector<Type>::operator \=\=()=WCValVectorXTypeY__operator_EELR
+3 WCValVector<Type>::resize()=WCValVectorXTypeY__resizeLR
+2 Input/Output Classes
+2 Introduction=InputDOutput_Classes
+3 filebuf Class Description
+3 Introduction=filebuf_Class_Description
+3 filebuf::attach()=filebuf__attachLR
+3 filebuf::close()=filebuf__closeLR
+3 filebuf::fd()=filebuf__fdLR
+3 filebuf::filebuf()=filebuf__filebufLR
+3 filebuf::~filebuf()=filebuf____filebufLR
+3 filebuf::is_open()=filebuf__is_openLR
+3 filebuf::open()=filebuf__openLR
+3 filebuf::openprot=filebuf__openprot
+3 filebuf::overflow()=filebuf__overflowLR
+3 filebuf::pbackfail()=filebuf__pbackfailLR
+3 filebuf::seekoff()=filebuf__seekoffLR
+3 filebuf::setbuf()=filebuf__setbufLR
+3 filebuf::sync()=filebuf__syncLR
+3 filebuf::underflow()=filebuf__underflowLR
+3 fstream Class Description
+3 Introduction=fstream_Class_Description
+3 fstream::fstream()=fstream__fstreamLR
+3 fstream::~fstream()=fstream____fstreamLR
+3 fstream::open()=fstream__openLR
+3 fstreambase Class Description
+3 Introduction=fstreambase_Class_Description
+3 fstreambase::attach()=fstreambase__attachLR
+3 fstreambase::close()=fstreambase__closeLR
+3 fstreambase::fstreambase()=fstreambase__fstreambaseLR
+3 fstreambase::~fstreambase()=fstreambase____fstreambaseLR
+3 fstreambase::is_open()=fstreambase__is_openLR
+3 fstreambase::fd()=fstreambase__fdLR
+3 fstreambase::open()=fstreambase__openLR
+3 fstreambase::rdbuf()=fstreambase__rdbufLR
+3 fstreambase::setbuf()=fstreambase__setbufLR
+3 ifstream Class Description
+3 Introduction=ifstream_Class_Description
+3 ifstream::ifstream()=ifstream__ifstreamLR
+3 ifstream::~ifstream()=ifstream____ifstreamLR
+3 ifstream::open()=ifstream__openLR
+3 ios Class Description
+3 Introduction=ios_Class_Description
+3 ios::bad()=ios__badLR
+3 ios::bitalloc()=ios__bitallocLR
+3 ios::clear()=ios__clearLR
+3 ios::eof()=ios__eofLR
+3 ios::exceptions()=ios__exceptionsLR
+3 ios::fail()=ios__failLR
+3 ios::fill()=ios__fillLR
+3 ios::flags()=ios__flagsLR
+3 ios::fmtflags=ios__fmtflags
+3 ios::good()=ios__goodLR
+3 ios::init()=ios__initLR
+3 ios::ios()=ios__iosLR
+3 ios::~ios()=ios____iosLR
+3 ios::iostate=ios__iostate
+3 ios::iword()=ios__iwordLR
+3 ios::openmode=ios__openmode
+3 ios::operator !()=ios__operator__LR
+3 ios::operator void *()=ios__operator_void_TLR
+3 ios::precision()=ios__precisionLR
+3 ios::pword()=ios__pwordLR
+3 ios::rdbuf()=ios__rdbufLR
+3 ios::rdstate()=ios__rdstateLR
+3 ios::seekdir=ios__seekdir
+3 ios::setf()=ios__setfLR
+3 ios::setstate()=ios__setstateLR
+3 ios::sync_with_stdio()=ios__sync_with_stdioLR
+3 ios::tie()=ios__tieLR
+3 ios::unsetf()=ios__unsetfLR
+3 ios::width()=ios__widthLR
+3 ios::xalloc()=ios__xallocLR
+3 iostream Class Description
+3 Introduction=iostream_Class_Description
+3 iostream::iostream()=iostream__iostreamLR
+3 iostream::~iostream()=iostream____iostreamLR
+3 iostream::operator \=()=iostream__operator_ELR
+3 istream Class Description
+3 Introduction=istream_Class_Description
+3 istream::eatwhite()=istream__eatwhiteLR
+3 istream::gcount()=istream__gcountLR
+3 istream::get()=istream__getLR
+3 istream::getline()=istream__getlineLR
+3 istream::ignore()=istream__ignoreLR
+3 istream::ipfx()=istream__ipfxLR
+3 istream::isfx()=istream__isfxLR
+3 istream::istream()=istream__istreamLR
+3 istream::~istream()=istream____istreamLR
+3 istream::operator \=()=istream__operator_ELR
+3 istream::operator >>()=istream__operator_YYLR
+3 istream::peek()=istream__peekLR
+3 istream::putback()=istream__putbackLR
+3 istream::read()=istream__readLR
+3 istream::seekg()=istream__seekgLR
+3 istream::sync()=istream__syncLR
+3 istream::tellg()=istream__tellgLR
+3 istrstream Class Description
+3 Introduction=istrstream_Class_Description
+3 istrstream::istrstream()=istrstream__istrstreamLR
+3 istrstream::~istrstream()=istrstream____istrstreamLR
+3 Manipulators=Manipulators
+3 manipulator dec()=manipulator_decLR
+3 manipulator endl()=manipulator_endlLR
+3 manipulator ends()=manipulator_endsLR
+3 manipulator flush()=manipulator_flushLR
+3 manipulator hex()=manipulator_hexLR
+3 manipulator oct()=manipulator_octLR
+3 manipulator resetiosflags()=manipulator_resetiosflagsLR
+3 manipulator setbase()=manipulator_setbaseLR
+3 manipulator setfill()=manipulator_setfillLR
+3 manipulator setiosflags()=manipulator_setiosflagsLR
+3 manipulator setprecision()=manipulator_setprecisionLR
+3 manipulator setw()=manipulator_setwLR
+3 manipulator setwidth()=manipulator_setwidthLR
+3 manipulator ws()=manipulator_wsLR
+3 ofstream Class Description
+3 Introduction=ofstream_Class_Description
+3 ofstream::ofstream()=ofstream__ofstreamLR
+3 ofstream::~ofstream()=ofstream____ofstreamLR
+3 ofstream::open()=ofstream__openLR
+3 ostream Class Description
+3 Introduction=ostream_Class_Description
+3 ostream::flush()=ostream__flushLR
+3 ostream::operator <<()=ostream__operator_XXLR
+3 ostream::operator \=()=ostream__operator_ELR
+3 ostream::opfx()=ostream__opfxLR
+3 ostream::osfx()=ostream__osfxLR
+3 ostream::ostream()=ostream__ostreamLR
+3 ostream::~ostream()=ostream____ostreamLR
+3 ostream::put()=ostream__putLR
+3 ostream::seekp()=ostream__seekpLR
+3 ostream::tellp()=ostream__tellpLR
+3 ostream::write()=ostream__writeLR
+3 ostrstream Class Description
+3 Introduction=ostrstream_Class_Description
+3 ostrstream::ostrstream()=ostrstream__ostrstreamLR
+3 ostrstream::~ostrstream()=ostrstream____ostrstreamLR
+3 ostrstream::pcount()=ostrstream__pcountLR
+3 ostrstream::str()=ostrstream__strLR
+3 stdiobuf Class Description
+3 Introduction=stdiobuf_Class_Description
+3 stdiobuf::overflow()=stdiobuf__overflowLR
+3 stdiobuf::stdiobuf()=stdiobuf__stdiobufLR
+3 stdiobuf::~stdiobuf()=stdiobuf____stdiobufLR
+3 stdiobuf::sync()=stdiobuf__syncLR
+3 stdiobuf::underflow()=stdiobuf__underflowLR
+3 streambuf Class Description
+3 Introduction=streambuf_Class_Description
+3 streambuf::allocate()=streambuf__allocateLR
+3 streambuf::base()=streambuf__baseLR
+3 streambuf::blen()=streambuf__blenLR
+3 streambuf::dbp()=streambuf__dbpLR
+3 streambuf::do_sgetn()=streambuf__do_sgetnLR
+3 streambuf::do_sputn()=streambuf__do_sputnLR
+3 streambuf::doallocate()=streambuf__doallocateLR
+3 streambuf::eback()=streambuf__ebackLR
+3 streambuf::ebuf()=streambuf__ebufLR
+3 streambuf::egptr()=streambuf__egptrLR
+3 streambuf::epptr()=streambuf__epptrLR
+3 streambuf::gbump()=streambuf__gbumpLR
+3 streambuf::gptr()=streambuf__gptrLR
+3 streambuf::in_avail()=streambuf__in_availLR
+3 streambuf::out_waiting()=streambuf__out_waitingLR
+3 streambuf::overflow()=streambuf__overflowLR
+3 streambuf::pbackfail()=streambuf__pbackfailLR
+3 streambuf::pbase()=streambuf__pbaseLR
+3 streambuf::pbump()=streambuf__pbumpLR
+3 streambuf::pptr()=streambuf__pptrLR
+3 streambuf::sbumpc()=streambuf__sbumpcLR
+3 streambuf::seekoff()=streambuf__seekoffLR
+3 streambuf::seekpos()=streambuf__seekposLR
+3 streambuf::setb()=streambuf__setbLR
+3 streambuf::setbuf()=streambuf__setbufLR
+3 streambuf::setg()=streambuf__setgLR
+3 streambuf::setp()=streambuf__setpLR
+3 streambuf::sgetc()=streambuf__sgetcLR
+3 streambuf::sgetchar()=streambuf__sgetcharLR
+3 streambuf::sgetn()=streambuf__sgetnLR
+3 streambuf::snextc()=streambuf__snextcLR
+3 streambuf::speekc()=streambuf__speekcLR
+3 streambuf::sputbackc()=streambuf__sputbackcLR
+3 streambuf::sputc()=streambuf__sputcLR
+3 streambuf::sputn()=streambuf__sputnLR
+3 streambuf::stossc()=streambuf__stosscLR
+3 streambuf::streambuf()=streambuf__streambufLR
+3 streambuf::~streambuf()=streambuf____streambufLR
+3 streambuf::sync()=streambuf__syncLR
+3 streambuf::unbuffered()=streambuf__unbufferedLR
+3 streambuf::underflow()=streambuf__underflowLR
+3 strstream Class Description
+3 Introduction=strstream_Class_Description
+3 strstream::str()=strstream__strLR
+3 strstream::strstream()=strstream__strstreamLR
+3 strstream::~strstream()=strstream____strstreamLR
+3 strstreambase Class Description
+3 Introduction=strstreambase_Class_Description
+3 strstreambase::rdbuf()=strstreambase__rdbufLR
+3 strstreambase::strstreambase()=strstreambase__strstreambaseLR
+3 strstreambase::~strstreambase()=strstreambase____strstreambaseLR
+3 strstreambuf Class Description
+3 Introduction=strstreambuf_Class_Description
+3 strstreambuf::alloc_size_increment()=strstreambuf__alloc_size_incrementLR
+3 strstreambuf::doallocate()=strstreambuf__doallocateLR
+3 strstreambuf::freeze()=strstreambuf__freezeLR
+3 strstreambuf::overflow()=strstreambuf__overflowLR
+3 strstreambuf::seekoff()=strstreambuf__seekoffLR
+3 strstreambuf::setbuf()=strstreambuf__setbufLR
+3 strstreambuf::str()=strstreambuf__strLR
+3 strstreambuf::strstreambuf()=strstreambuf__strstreambufLR
+3 strstreambuf::~strstreambuf()=strstreambuf____strstreambufLR
+3 strstreambuf::sync()=strstreambuf__syncLR
+3 strstreambuf::underflow()=strstreambuf__underflowLR
+2 String Class
+2 Introduction=String_Class
+3 String Class Description
+3 Introduction=String_Class_Description
+3 String::alloc_mult_size()=String__alloc_mult_sizeLR
+3 String::get_at()=String__get_atLR
+3 String::index()=String__indexLR
+3 String::length()=String__lengthLR
+3 String::lower()=String__lowerLR
+3 String::match()=String__matchLR
+3 String::operator !()=String__operator__LR
+3 String operator !\=()=String_operator__ELR
+3 String::operator ()()=String__operator_LRLR
+3 String operator +()=String_operator_PLR
+3 String::operator +\=()=String__operator_PELR
+3 String operator <()=String_operator_XLR
+3 String operator <<()=String_operator_XXLR
+3 String operator <\=()=String_operator_XELR
+3 String::operator \=()=String__operator_ELR
+3 String operator \=\=()=String_operator_EELR
+3 String operator >()=String_operator_YLR
+3 String operator >\=()=String_operator_YELR
+3 String operator >>()=String_operator_YYLR
+3 String::operator []()=String__operator_UVLR
+3 String::operator char()=String__operator_charLR
+3 String::operator char const *()=String__operator_char_const_TLR
+3 String::put_at()=String__put_atLR
+3 String::String()=String__StringLR
+3 String::~String()=String____StringLR
+3 String::upper()=String__upperLR
+3 String valid()=String_validLR
+3 String::valid()=String__validLR

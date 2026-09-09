@@ -1,0 +1,267 @@
+:Base wd.hlp>main
+:Title Open Watcom 1.9 Debugger Guide
+:Index Open Watcom 1.9 Debugger Guide Help=wd.hlp
+
+1 Open Watcom 1.9 Debugger Guide
+2 Overview
+2 Introduction=Overview
+3 New Features
+3 Introduction=New_Features
+3 User Interface=User_Interface
+3 Reverse Execution=Reverse_Execution
+3 Replay=Replay
+3 Stack Unwinding=Stack_Unwinding
+3 Simplified Breakpoints=Simplified_Breakpoints
+3 Context Sensitive Menus=Context_Sensitive_Menus
+3 Buttons=Buttons
+2 Common Menu Items=Common_Menu_Items
+2 Preparing a Program to be Debugged
+2 Introduction=Preparing_a_Program_to_be_Debugged
+2 Compiler Debugging Options=Compiler_Debugging_Options
+2 Linker Debugging Options=Linker_Debugging_Options
+2 Debugger Settings=Debugger_Settings
+2 Starting Up the Debugger
+2 Introduction=Starting_Up_the_Debugger
+2 Open Watcom Debugger Command Line=Open_Watcom_Debugger_Command_Line
+2 Common Switches=Common_Switches
+2 DOS and Windows Options=DOS_and_Windows_Options
+2 DOS Specific Options=DOS_Specific_Options
+2 Windows Specific Options=Windows_Specific_Options
+2 Linux Options=Linux_Options
+2 QNX Options=QNX_Options
+3 Environment Variables
+3 Introduction=Environment_Variables
+3 WD Environment Variable=WD_Environment_Variable
+3 WD Environment Variable in Linux=WD_Environment_Variable_in_Linux
+3 WD Environment Variable in QNX=WD_Environment_Variable_in_QNX
+2 The Open Watcom Debugger Environment
+2 Introduction=The_Open_Watcom_Debugger_Environment
+3 Debugger Windows
+3 Introduction=Debugger_Windows
+3 Window Controls=Window_Controls
+3 The Current Window=The_Current_Window
+4 Controlling the Size and Location of Windows
+4 Introduction=Controlling_the_Size_and_Location_of_Windows
+4 Moving Windows=Moving_Windows
+4 Resizing Windows=Resizing_Windows
+4 Zooming Windows=Zooming_Windows
+4 Context Sensitive Pop-up Menus=Context_Sensitive_PopMup_Menus
+4 Text Selection=Text_Selection
+2 Menus=Menus
+2 The Toolbar=The_Toolbar
+2 Dialogs=Dialogs
+3 Accelerators
+3 Introduction=Accelerators
+3 Default Accelerators=Default_Accelerators
+3 Turbo Emulation Accelerators=Turbo_Emulation_Accelerators
+3 The File Menu
+3 Introduction=The_File_Menu
+3 The Options Dialog=The_Options_Dialog
+4 The Window Options Dialog
+4 Introduction=The_Window_Options_Dialog
+4 The Assembly Options=The_Assembly_Options
+4 The Variables Options=The_Variables_Options
+4 The File Options=The_File_Options
+4 The Functions and Globals Options=The_Functions_and_Globals_Options
+4 The Modules Options=The_Modules_Options
+2 The Code Menu=The_Code_Menu
+2 The Data Menu=The_Data_Menu
+2 The Window Menu=The_Window_Menu
+2 The Action Menu=The_Action_Menu
+2 The Help Menu=The_Help_Menu
+2 The Status Window=The_Status_Window
+2 The Log Window=The_Log_Window
+2 The Accelerator Window=The_Accelerator_Window
+2 Navigating Through a Program
+2 Introduction=Navigating_Through_a_Program
+3 The Search Menu
+3 Introduction=The_Search_Menu
+3 Entering Search Strings=Entering_Search_Strings
+2 The Source Window=The_Source_Window
+2 The File Window=The_File_Window
+2 The Modules Window=The_Modules_Window
+2 The Globals Window=The_Globals_Window
+2 The Functions Window=The_Functions_Window
+2 The Images Window=The_Images_Window
+2 Controlling Program Execution
+2 Introduction=Controlling_Program_Execution
+2 The Run Menu=The_Run_Menu
+2 The Undo Menu=The_Undo_Menu
+2 The Replay Window=The_Replay_Window
+2 The Calls Window=The_Calls_Window
+2 The Thread Window=The_Thread_Window
+2 Examining and Modifying the Program State
+2 Introduction=Examining_and_Modifying_the_Program_State
+2 Variable and Watch Windows=Variable_and_Watch_Windows
+3 The Memory and Stack Windows
+3 Introduction=The_Memory_and_Stack_Windows
+3 Following Linked Lists=Following_Linked_Lists
+3 Traversing Arrays=Traversing_Arrays
+2 Breakpoints
+2 Introduction=Breakpoints
+3 How to Use Breakpoints during a Debugging Session
+3 Introduction=How_to_Use_Breakpoints_during_a_Debugging_Session
+3 Setting Simple Breakpoints=Setting_Simple_Breakpoints
+3 Clearing, Disabling, and Enabling Breakpoints=Clearing__Disabling__and_Enabling_Breakpoints
+2 The Break Menu=The_Break_Menu
+2 The Break Window=The_Break_Window
+2 The Breakpoint Dialog=The_Breakpoint_Dialog
+2 Assembly Level Debugging
+2 Introduction=Assembly_Level_Debugging
+2 The CPU Register Window=The_CPU_Register_Window
+2 The Assembly Window=The_Assembly_Window
+2 The I/O Ports Window=The_IDO_Ports_Window
+2 The FPU Registers Window=The_FPU_Registers_Window
+2 The MMX Registers Window=The_MMX_Registers_Window
+2 The XMM Registers Window=The_XMM_Registers_Window
+2 Remote Debugging
+2 Introduction=Remote_Debugging
+3 Link Descriptions
+3 Introduction=Link_Descriptions
+3 NOV (Novell SPX)=NOV_LNovell_SPXR
+3 NET (NetBIOS)=NET_LNetBIOSR
+3 PAR (Parallel)=PAR_LParallelR
+3 SER (Serial)=SER_LSerialR
+3 WIN (Windows 3.x/9x Virtual DOS Machine)=WIN_LWindows_3_xD9x_Virtual_DOS_MachineR
+3 NMP (Named Pipes)=NMP_LNamed_PipesR
+3 VDM (Virtual DOS Machine)=VDM_LVirtual_DOS_MachineR
+3 TCP/IP (Internet Packets)=TCPDIP_LInternet_PacketsR
+2 Specifying Files on Remote and Local Machines=Specifying_Files_on_Remote_and_Local_Machines
+2 Interrupting a Running Program
+2 Introduction=Interrupting_a_Running_Program
+2 DOS=DOS
+2 Windows 3.x=Windows_3_x
+2 Windows NT, Windows 95=Windows_NT__Windows_95
+2 OS/2=OSD2
+2 NetWare=NetWare
+2 Linux=Linux
+2 QNX=QNX
+2 Operating System Specifics
+2 Introduction=Operating_System_Specifics
+3 Debugging 32-bit DOS Extender Applications
+3 Introduction=Debugging_32Mbit_DOS_Extender_Applications
+3 Debugging CauseWay 32-bit DOS Extender Applications=Debugging_CauseWay_32Mbit_DOS_Extender_Applications
+3 Debugging DOS/4G(W) 32-bit DOS Extender Applications=Debugging_DOSD4GLWR_32Mbit_DOS_Extender_Applications
+3 Debugging Phar Lap 32-bit DOS Extender Applications=Debugging_Phar_Lap_32Mbit_DOS_Extender_Applications
+2 Debugging a Novell NLM=Debugging_a_Novell_NLM
+2 Debugging Graphics Applications=Debugging_Graphics_Applications
+2 Debugging Windows 3.x Applications=Debugging_Windows_3_x_Applications
+2 Debugging Dynamic Link Libraries=Debugging_Dynamic_Link_Libraries
+2 Disabling Use of 386/486 Debug Registers=Disabling_Use_of_386D486_Debug_Registers
+3 Debugging Under Linux
+3 Introduction=Debugging_Under_Linux
+3 Search Order for Open Watcom Debugger Support Files under Linux=Search_Order_for_Open_Watcom_Debugger_Support_Files_under_Linux
+3 Debugging Under QNX
+3 Introduction=Debugging_Under_QNX
+3 Debugging Under QNX Using the Postmortem Dump Facility=Debugging_Under_QNX_Using_the_Postmortem_Dump_Facility
+3 Search Order for Open Watcom Debugger Support Files under QNX=Search_Order_for_Open_Watcom_Debugger_Support_Files_under_QNX
+2 Open Watcom Debugger Expression Handling
+2 Introduction=Open_Watcom_Debugger_Expression_Handling
+2 General Rules of Expression Handling=General_Rules_of_Expression_Handling
+3 Language Independent Variables and Constants
+3 Introduction=Language_Independent_Variables_and_Constants
+3 Symbol Names=Symbol_Names
+3 Line Numbers=Line_Numbers
+4 Constants
+4 Introduction=Constants
+4 Integer Constants=Integer_Constants
+4 Real Constants=Real_Constants
+4 Complex Constant (FORTRAN Only)=Complex_Constant_LFORTRAN_OnlyR
+4 Character Constant (C Only)=Character_Constant_LC_OnlyR
+4 Character String Constant (FORTRAN Only)=Character_String_Constant_LFORTRAN_OnlyR
+3 Memory References=Memory_References
+3 Predefined Debugger Variables=Predefined_Debugger_Variables
+3 Register Aggregates=Register_Aggregates
+3 Operators for the C Grammar
+3 Introduction=Operators_for_the_C_Grammar
+3 Assignment Operators for the C Grammar=Assignment_Operators_for_the_C_Grammar
+3 Logical Operators for the C Grammar=Logical_Operators_for_the_C_Grammar
+3 Bit Operators for the C Grammar=Bit_Operators_for_the_C_Grammar
+3 Relational Operators for the C Grammar=Relational_Operators_for_the_C_Grammar
+3 Arithmetic/Logical Shift Operators for the C Grammar=ArithmeticDLogical_Shift_Operators_for_the_C_Grammar
+3 Binary Arithmetic Operators for the C Grammar=Binary_Arithmetic_Operators_for_the_C_Grammar
+3 Unary Arithmetic Operators for the C Grammar=Unary_Arithmetic_Operators_for_the_C_Grammar
+3 Special Unary Operators for the C Grammar=Special_Unary_Operators_for_the_C_Grammar
+3 Binary Address Operator for the C Grammar=Binary_Address_Operator_for_the_C_Grammar
+3 Primary Expression Operators for the C Grammar=Primary_Expression_Operators_for_the_C_Grammar
+3 Operators for the C++ Grammar
+3 Introduction=Operators_for_the_CPP_Grammar
+3 Ambiguity Resolution in the C++ Grammar=Ambiguity_Resolution_in_the_CPP_Grammar
+3 The "this" Operator for the C++ Grammar=The__this__Operator_for_the_CPP_Grammar
+3 "operator" Functions in the C++ Grammar=_operator__Functions_in_the_CPP_Grammar
+3 Scope Operator "::" for the C++ Grammar=Scope_Operator______for_the_CPP_Grammar
+3 Constructor/Destructor Functions in the C++ Grammar=ConstructorDDestructor_Functions_in_the_CPP_Grammar
+3 Operators for the FORTRAN Grammar
+3 Introduction=Operators_for_the_FORTRAN_Grammar
+3 Assignment Operators for the FORTRAN Grammar=Assignment_Operators_for_the_FORTRAN_Grammar
+3 Logical Operators for the FORTRAN Grammar=Logical_Operators_for_the_FORTRAN_Grammar
+3 Bit Operators for the FORTRAN Grammar=Bit_Operators_for_the_FORTRAN_Grammar
+3 Relational Operators for the FORTRAN Grammar=Relational_Operators_for_the_FORTRAN_Grammar
+3 Arithmetic/Logical Shift Operators for the FORTRAN Grammar=ArithmeticDLogical_Shift_Operators_for_the_FORTRAN_Grammar
+3 Concatenation Operator for the FORTRAN Grammar=Concatenation_Operator_for_the_FORTRAN_Grammar
+3 Binary Arithmetic Operators for the FORTRAN Grammar=Binary_Arithmetic_Operators_for_the_FORTRAN_Grammar
+3 Unary Arithmetic Operators for the FORTRAN Grammar=Unary_Arithmetic_Operators_for_the_FORTRAN_Grammar
+3 Special Unary Operators for the FORTRAN Grammar=Special_Unary_Operators_for_the_FORTRAN_Grammar
+3 Binary Address Operator for the FORTRAN Grammar=Binary_Address_Operator_for_the_FORTRAN_Grammar
+3 Primary Expression Operators for the FORTRAN Grammar=Primary_Expression_Operators_for_the_FORTRAN_Grammar
+2 Debugger Commands
+2 Introduction=Debugger_Commands
+2 Syntax Definitions=Syntax_Definitions
+3 Command Summary
+3 Introduction=Command_Summary
+3 Accelerate=Accelerate
+3 Break=Break
+3 Call=Call
+3 CAPture=CAPture
+3 COnfigfile=COnfigfile
+3 Display=Display
+3 DO (or /)=DO_Lor_DR
+3 ERror=ERror
+3 Examine=Examine
+3 Flip=Flip
+3 FOnt=FOnt
+3 Go=Go
+3 Help=Help
+3 HOok=HOok
+3 IF=IF
+3 INvoke (or <)=INvoke_Lor_XR
+3 Log (or >)=Log_Lor_YR
+3 MOdify=MOdify
+3 NEW=NEW
+3 PAint=PAint
+3 Print (or ?)=Print_Lor__R
+3 Quit=Quit
+3 RECord=RECord
+3 Register=Register
+3 REMark (or *)=REMark_Lor_TR
+3 Set=Set
+3 SHow=SHow
+3 SKip=SKip
+3 STackpos <intexpr>=STackpos_XintexprY
+3 SYstem (or !)=SYstem_Lor__R
+3 THread (or ~)=THread_Lor___R
+3 Trace=Trace
+3 Undo=Undo
+3 View=View
+3 While=While
+3 WIndow=WIndow
+2 Predefined Symbols
+2 Introduction=Predefined_Symbols
+2 Wiring For Remote Debugging
+2 Introduction=Wiring_For_Remote_Debugging
+2 Serial Port Wiring Considerations=Serial_Port_Wiring_Considerations
+2 Parallel Port Wiring Considerations=Parallel_Port_Wiring_Considerations
+2 Remote File Operations (DOS, OS/2 Only)
+2 Introduction=Remote_File_Operations_LDOS__OSD2_OnlyR
+2 RFX Commands=RFX_Commands
+2 Set Current Drive - drive:=Set_Current_Drive_M_drive_
+2 Change Directory - CHDIR, CD=Change_Directory_M_CHDIR__CD
+2 Copy Files - COPY=Copy_Files_M_COPY
+2 List Directory - DIR=List_Directory_M_DIR
+2 Erase File - ERASE, DEL=Erase_File_M_ERASE__DEL
+2 Exit from RFX - EXIT=Exit_from_RFX_M_EXIT
+2 Make Directory - MKDIR, MD=Make_Directory_M_MKDIR__MD
+2 Rename - RENAME, REN=Rename_M_RENAME__REN
+2 Remove Directory - RMDIR, RD=Remove_Directory_M_RMDIR__RD
+2 Display File Contents - TYPE=Display_File_Contents_M_TYPE
+2 RFX Sample Session=RFX_Sample_Session

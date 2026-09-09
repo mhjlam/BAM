@@ -1,0 +1,73 @@
+:Base wbrw.hlp>main
+:Title Open Watcom 1.9 Source Browser
+:Index Open Watcom 1.9 Source Browser Help=wbrw.hlp
+
+1 Open Watcom 1.9 Source Browser
+1 The Open Watcom Browser
+1 Introduction=The_Open_Watcom_Browser
+2 Using the Browser
+2 Introduction=Using_the_Browser
+2 Starting the Browser=Starting_the_Browser
+2 Quitting the Browser=Quitting_the_Browser
+2 The Browser Menu Bar=The_Browser_Menu_Bar
+2 Browser Files
+2 Introduction=Browser_Files
+2 Creating a Browser Database File within the Browser=Creating_a_Browser_Database_File_within_the_Browser
+2 Creating a Browser Database File from the Command Line=Creating_a_Browser_Database_File_from_the_Command_Line
+2 Opening an Existing Browser Database File=Opening_an_Existing_Browser_Database_File
+3 Working with Browser Module Files
+3 Introduction=Working_with_Browser_Module_Files
+3 Adding a Module File=Adding_a_Module_File
+3 Removing a Module File=Removing_a_Module_File
+3 Disabling a Module File=Disabling_a_Module_File
+3 Enabling a Module File=Enabling_a_Module_File
+2 Global Views
+2 Introduction=Global_Views
+2 The List View=The_List_View
+2 The Class Inheritance View=The_Class_Inheritance_View
+2 The Function Call Tree View=The_Function_Call_Tree_View
+3 Manipulating the Tree Views
+3 Introduction=Manipulating_the_Tree_Views
+4 Selecting Root Nodes
+4 Introduction=Selecting_Root_Nodes
+4 Disabling Root Nodes=Disabling_Root_Nodes
+4 Enabling Root Nodes=Enabling_Root_Nodes
+3 Expanding Nodes=Expanding_Nodes
+4 Collapsing Nodes
+4 Introduction=Collapsing_Nodes
+4 Using the Keyboard=Using_the_Keyboard
+2 Viewing Detail Information
+2 Introduction=Viewing_Detail_Information
+2 Goto Definition=Goto_Definition
+2 Source References=Source_References
+2 Symbol References=Symbol_References
+2 Locating Symbols
+2 Introduction=Locating_Symbols
+3 Find
+3 Introduction=Find
+3 Find Pattern=Find_Pattern
+4 Find Filters
+4 Introduction=Find_Filters
+4 Find File Filters=Find_File_Filters
+3 Performing the Find=Performing_the_Find
+2 Find Selected=Find_Selected
+2 Configuring the Browser
+2 Introduction=Configuring_the_Browser
+2 Regular Expressions for Find and Query=Regular_Expressions_for_Find_and_Query
+3 Global Symbol Queries
+3 Introduction=Global_Symbol_Queries
+3 Query Pattern=Query_Pattern
+4 Query Filters
+4 Introduction=Query_Filters
+4 Query File Filters=Query_File_Filters
+2 Enumerator Styles=Enumerator_Styles
+2 Member Filters for Classes=Member_Filters_for_Classes
+2 Auto-arranging of Graph Views=AutoMarranging_of_Graph_Views
+2 Line Drawing Method for Graph Views=Line_Drawing_Method_for_Graph_Views
+2 Changing the Graph Orientation=Changing_the_Graph_Orientation
+2 Defining Graph View Legends=Defining_Graph_View_Legends
+2 Selecting a Text Editor=Selecting_a_Text_Editor
+2 Automatically Saving Options on Exit=Automatically_Saving_Options_on_Exit
+1 Loading Options=Loading_Options
+1 Saving Options=Saving_Options
+1 Setting Source Search Paths=Setting_Source_Search_Paths

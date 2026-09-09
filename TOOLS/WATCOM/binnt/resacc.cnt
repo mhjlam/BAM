@@ -1,0 +1,40 @@
+:Base resacc.hlp>main
+:Title Open Watcom 1.9 Accelerator Editor
+:Index Open Watcom 1.9 Accelerator Editor Help=resacc.hlp
+
+1 Open Watcom 1.9 Accelerator Editor
+1 The Open Watcom Accelerator Editor
+1 Introduction=The_Open_Watcom_Accelerator_Editor
+2 Using the Accelerator Editor
+2 Introduction=Using_the_Accelerator_Editor
+3 Starting the Accelerator Editor
+3 Introduction=Starting_the_Accelerator_Editor
+3 Creating a New Accelerator Table=Creating_a_New_Accelerator_Table
+3 Opening an Existing Accelerator Table=Opening_an_Existing_Accelerator_Table
+2 Quitting the Accelerator Editor=Quitting_the_Accelerator_Editor
+2 The Accelerator Editor Menu Bar=The_Accelerator_Editor_Menu_Bar
+2 The Accelerator Editor Toolbar=The_Accelerator_Editor_Toolbar
+2 Using the Accelerator Editor Window
+2 Introduction=Using_the_Accelerator_Editor_Window
+2 Accelerator Editor: Resource Name Field=Accelerator_Editor__Resource_Name_Field
+2 Accelerator Editor: Attributes Area=Accelerator_Editor__Attributes_Area
+2 Accelerator Editor: Accelerator Item List=Accelerator_Editor__Accelerator_Item_List
+2 Accelerator Editor: Action Buttons=Accelerator_Editor__Action_Buttons
+2 Accelerator Functions
+2 Introduction=Accelerator_Functions
+2 Adding a New Accelerator Item=Adding_a_New_Accelerator_Item
+3 Changing an Existing Accelerator Item
+3 Introduction=Changing_an_Existing_Accelerator_Item
+3 Editing the Key Value=Editing_the_Key_Value
+3 Deleting Accelerator Items
+3 Introduction=Deleting_Accelerator_Items
+3 Deleting an Accelerator Item=Deleting_an_Accelerator_Item
+3 Deleting All Accelerator Items=Deleting_All_Accelerator_Items
+2 Renaming an Accelerator Table=Renaming_an_Accelerator_Table
+3 Saving Accelerator Items
+3 Introduction=Saving_Accelerator_Items
+3 Accelerator Editor: Update=Accelerator_Editor__Update
+3 Accelerator Editor: Save As=Accelerator_Editor__Save_As
+3 Accelerator Editor: Copy To=Accelerator_Editor__Copy_To
+2 Using Shortcuts to Create Accelerator Tables=Using_Shortcuts_to_Create_Accelerator_Tables
+2 Accelerator Editor: Changing Memory Options=Accelerator_Editor__Changing_Memory_Options

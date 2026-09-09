@@ -1,0 +1,47 @@
+:Base ddespy.hlp>main
+:Title Open Watcom 1.9 DDE Spy
+:Index Open Watcom 1.9 DDE Spy Help=ddespy.hlp
+
+1 Open Watcom 1.9 DDE Spy
+1 DDE Spy
+1 Introduction=DDE_Spy
+2 Using DDE Spy
+2 Introduction=Using_DDE_Spy
+2 Starting DDE Spy=Starting_DDE_Spy
+2 Quitting DDE Spy=Quitting_DDE_Spy
+2 The DDE Spy Menu Bar=The_DDE_Spy_Menu_Bar
+2 The DDE Spy Toolbar=The_DDE_Spy_Toolbar
+2 The DDE Spy Event List
+2 Introduction=The_DDE_Spy_Event_List
+2 DDE Spy: Setting the Font=DDE_Spy__Setting_the_Font
+2 DDE Spy: Saving the Event List to a File=DDE_Spy__Saving_the_Event_List_to_a_File
+2 DDE Spy: Clearing the Event List=DDE_Spy__Clearing_the_Event_List
+2 DDE Spy: Marking the Event List=DDE_Spy__Marking_the_Event_List
+2 DDE Spy: Pausing the Event List Output=DDE_Spy__Pausing_the_Event_List_Output
+2 DDE Spy: Automatic Scrolling=DDE_Spy__Automatic_Scrolling
+2 Selecting Information to Monitor
+2 Introduction=Selecting_Information_to_Monitor
+2 Setting the Message Filter=Setting_the_Message_Filter
+2 Setting the Callback Filter=Setting_the_Callback_Filter
+2 DDE Spy: Working with Log Files
+2 Introduction=DDE_Spy__Working_with_Log_Files
+3 DDE Spy: Configuring the Log File
+3 Introduction=DDE_Spy__Configuring_the_Log_File
+3 DDE Spy: Default Log Name=DDE_Spy__Default_Log_Name
+3 DDE Spy: Log Name=DDE_Spy__Log_Name
+3 DDE Spy: Action When Log File Exists=DDE_Spy__Action_When_Log_File_Exists
+2 DDE Spy: Start Logging=DDE_Spy__Start_Logging
+2 DDE Spy: Logging Type=DDE_Spy__Logging_Type
+2 DDE Spy: Stop Logging=DDE_Spy__Stop_Logging
+2 DDE Spy: Pause Logging=DDE_Spy__Pause_Logging
+2 Tracking with DDE Spy
+2 Introduction=Tracking_with_DDE_Spy
+2 Tracking Strings=Tracking_Strings
+2 Tracking Conversations=Tracking_Conversations
+2 Tracking Links=Tracking_Links
+2 Tracking Servers=Tracking_Servers
+2 Working with Aliases
+2 Introduction=Working_with_Aliases
+2 Defining Aliases=Defining_Aliases
+2 Disabling Aliases=Disabling_Aliases
+2 Purging Aliases=Purging_Aliases

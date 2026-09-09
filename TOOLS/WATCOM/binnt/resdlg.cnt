@@ -1,0 +1,41 @@
+:Base resdlg.hlp>main
+:Title Open Watcom 1.9 Dialog Editor
+:Index Open Watcom 1.9 Dialog Editor Help=resdlg.hlp
+
+1 Open Watcom 1.9 Dialog Editor
+1 The Open Watcom Dialog Editor
+1 Introduction=The_Open_Watcom_Dialog_Editor
+2 Using the Dialog Editor
+2 Introduction=Using_the_Dialog_Editor
+3 Starting the Dialog Editor
+3 Introduction=Starting_the_Dialog_Editor
+3 Opening a New Resource File with the Dialog Editor=Opening_a_New_Resource_File_with_the_Dialog_Editor
+3 Opening an Existing Resource File with the Dialog Editor=Opening_an_Existing_Resource_File_with_the_Dialog_Editor
+2 Quitting the Dialog Editor=Quitting_the_Dialog_Editor
+3 Saving a Resource File with the Dialog Editor
+3 Introduction=Saving_a_Resource_File_with_the_Dialog_Editor
+3 Dialog Editor: Save=Dialog_Editor__Save
+3 Dialog Editor: Save As=Dialog_Editor__Save_As
+2 The Dialog Editor Menu Bar=The_Dialog_Editor_Menu_Bar
+2 The Dialog Editor Toolbar=The_Dialog_Editor_Toolbar
+2 The Dialog Editor Toolbox=The_Dialog_Editor_Toolbox
+2 Using the Dialog Editor Window
+2 Introduction=Using_the_Dialog_Editor_Window
+3 The Dialog Editor Information Bar
+3 Introduction=The_Dialog_Editor_Information_Bar
+3 Dialogs=Dialogs
+3 Controls=Controls
+2 The Edit Window=The_Edit_Window
+2 The Workspace=The_Workspace
+2 Dialog Functions
+2 Introduction=Dialog_Functions
+2 Creating New Dialogs=Creating_New_Dialogs
+2 Opening Existing Dialogs=Opening_Existing_Dialogs
+2 Changing the Dialog Size=Changing_the_Dialog_Size
+2 Changing the Location of a Dialog=Changing_the_Location_of_a_Dialog
+2 Saving Dialogs=Saving_Dialogs
+2 Changing the Name of a Dialog=Changing_the_Name_of_a_Dialog
+2 Changing the Caption in a Dialog=Changing_the_Caption_in_a_Dialog
+2 Adding Controls to a Dialog=Adding_Controls_to_a_Dialog
+2 Modifying Controls in a Dialog=Modifying_Controls_in_a_Dialog
+2 Ordering Controls in a Dialog=Ordering_Controls_in_a_Dialog

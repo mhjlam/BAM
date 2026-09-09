@@ -1,0 +1,24 @@
+:Base resimg.hlp>main
+:Title Open Watcom 1.9 Image Editor
+:Index Open Watcom 1.9 Image Editor Help=resimg.hlp
+
+1 Open Watcom 1.9 Image Editor
+1 The Open Watcom Image Editor
+1 Introduction=The_Open_Watcom_Image_Editor
+1 Opening the Image Editor=Opening_the_Image_Editor
+1 Closing the Image Editor=Closing_the_Image_Editor
+2 The Main Screen
+2 Introduction=The_Main_Screen
+2 Creating a Design Grid=Creating_a_Design_Grid
+1 The Image Editor Menu Bar=The_Image_Editor_Menu_Bar
+1 The Image Editor Toolbar=The_Image_Editor_Toolbar
+1 The Image Editor Toolbox=The_Image_Editor_Toolbox
+2 The Image Editor Color Palette
+2 Introduction=The_Image_Editor_Color_Palette
+2 Selecting Screen and Inverse Colors=Selecting_Screen_and_Inverse_Colors
+2 Assigning Colors to Mouse Buttons=Assigning_Colors_to_Mouse_Buttons
+2 Hiding and Showing the Color Palette=Hiding_and_Showing_the_Color_Palette
+1 The Image Editor Status Line=The_Image_Editor_Status_Line
+1 Creating and Editing Bitmaps=Creating_and_Editing_Bitmaps
+1 Creating and Editing Cursors=Creating_and_Editing_Cursors
+1 Creating and Editing Icons=Creating_and_Editing_Icons

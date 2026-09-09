@@ -1,0 +1,521 @@
+:Base cguide.hlp>main
+:Title Open Watcom 1.9 C/C++ User's Guide
+:Index Open Watcom 1.9 C/C++ User's Guide Help=cguide.hlp
+
+1 Open Watcom 1.9 C/C++ User's Guide
+2 About This Manual
+2 Introduction=About_This_Manual
+2 Open Watcom C/C++ Compiler Options
+2 Introduction=Open_Watcom_CDCPP_Compiler_Options
+2 Compiler Options - Indexed=Compiler_Options_M_Indexed
+2 Compiler Options - Summarized Alphabetically=Compiler_Options_M_Summarized_Alphabetically
+3 Compiler Options - Summarized By Category
+3 Introduction=Compiler_Options_M_Summarized_By_Category
+3 Target Specific=Summary__Target_Specific
+3 Debugging/Profiling=Summary__DebuggingDProfiling
+3 Preprocessor=Summary__Preprocessor
+3 Diagnostics=Summary__Diagnostics
+3 Source/Output Control=Summary__SourceDOutput_Control
+3 Code Generation=Summary__Code_Generation
+3 80x86 Floating Point=Summary__80x86_Floating_Point
+3 Segments/Modules=Summary__SegmentsDModules
+3 80x86 Run-time Conventions=Summary__80x86_RunMtime_Conventions
+3 Optimizations=Summary__Optimizations
+3 C++ Exception Handling=Summary__CPP_Exception_Handling
+3 Double-Byte/Unicode Characters=Summary__DoubleMByteDUnicode_Characters
+3 Compatibility with Microsoft Visual C++=Summary__Compatibility_with_Microsoft_Visual_CPP
+3 Compatibility with Older Versions of the 80x86 Compilers=Summary__Compatibility_with_Older_Versions_of_the_80x86_Compilers
+3 Compiler Options - Full Description
+3 Introduction=Compiler_Options_M_Full_Description
+4 Target Specific
+4 Introduction=Target_Specific
+4 bc=bc
+4 bd=bd
+4 bg=bg
+4 bm=bm
+4 br=br
+4 bt[\=<os>]=btUEXosYV
+4 bw=bw
+4 of=of
+4 of+=ofP
+4 sg=sg
+4 st=st
+4 zw=zw
+4 zW (optimized)=zW_LoptimizedR
+4 zWs=zWs
+4 Debugging/Profiling
+4 Introduction=DebuggingDProfiling
+4 d0=d0
+4 d1=d1
+4 d1+=d1P
+4 d2=d2
+4 d2i=d2i
+4 d2s=d2s
+4 d2t=d2t
+4 d3=d3
+4 d3i=d3i
+4 d3s=d3s
+4 ee=ee
+4 en=en
+4 ep[<number>]=epUXnumberYV
+4 et=et
+4 h{w,d,c}=h_w_d_c_
+4 s=s
+4 Preprocessor
+4 Introduction=Preprocessor
+4 d<name>[\=text]=dXnameYUEtextV
+4 d+=dP
+4 fo[\=<file_name>] (preprocessor)=foUEXfile_nameYV_LpreprocessorR
+4 pil=pil
+4 p{e,l,c,w\=<num>}=p_e_l_c_wEXnumY_
+4 u<name>=uXnameY
+4 Diagnostics
+4 Introduction=Diagnostics
+4 e<number>=eXnumberY
+4 ef=ef
+4 eq=eq
+4 er=er
+4 ew=ew
+4 q=q
+4 t\=<num>=tEXnumY
+4 w<number>=wXnumberY
+4 wcd\=<number>=wcdEXnumberY
+4 wce\=<number>=wceEXnumberY
+4 we=we
+4 wo=wo
+4 wx=wx
+4 za=za
+4 ze=ze
+4 zq=zq
+4 zs=zs
+4 Source/Output Control
+4 Introduction=SourceDOutput_Control
+4 ad[\=<file_name>]=adUEXfile_nameYV
+4 adbs=adbs
+4 add[\=<file_name>]=addUEXfile_nameYV
+4 adhp[\=<path_name>]=adhpUEXpath_nameYV
+4 adfs=adfs
+4 adt[\=<target_name>]=adtUEXtarget_nameYV
+4 db=db
+4 ez=ez
+4 fc\=<file_name>=fcEXfile_nameY
+4 fh[q][\=<file_name>]=fhUqVUEXfile_nameYV
+4 fhd=fhd
+4 fhr=fhr
+4 fhw=fhw
+4 fhwe=fhwe
+4 fi\=<file_name>=fiEXfile_nameY
+4 fo[\=<file_name>]=foUEXfile_nameYV
+4 fr[\=<file_name>]=frUEXfile_nameYV
+4 ft=ft
+4 fti=fti
+4 fx=fx
+4 fzh=fzh
+4 fzs=fzs
+4 i\=<directory>=iEXdirectoryY
+4 k=k
+4 v=v
+4 zat=zat
+4 zf=zf
+4 zg=zg
+4 zl=zl
+4 zld=zld
+4 zlf=zlf
+4 zls=zls
+4 Code Generation
+4 Introduction=Code_Generation
+4 ecc=ecc
+4 ecd=ecd
+4 ecf=ecf
+4 ecp=ecp
+4 ecr=ecr
+4 ecs=ecs
+4 ecw=ecw
+4 ei=ei
+4 em=em
+4 j=j
+4 ri=ri
+4 xr=xr
+4 zc=zc
+4 zp[{1,2,4,8,16}]=zpU_1_2_4_8_16_V
+4 zpw=zpw
+4 zt<number>=ztXnumberY
+4 zv=zv
+4 80x86 Floating Point
+4 Introduction=80x86_Floating_Point
+4 fpc=fpc
+4 fpi=fpi
+4 fpi87=fpi87
+4 fp2=fp2
+4 fp3=fp3
+4 fp5=fp5
+4 fp6=fp6
+4 fpd=fpd
+4 Segments/Modules
+4 Introduction=SegmentsDModules
+4 g\=<codegroup>=gEXcodegroupY
+4 nc\=<name>=ncEXnameY
+4 nd\=<name>=ndEXnameY
+4 nm\=<name>=nmEXnameY
+4 nt\=<name>=ntEXnameY
+4 zm=zm
+4 zmf=zmf
+4 80x86 Run-time Conventions
+4 Introduction=80x86_RunMtime_Conventions
+4 0=0
+4 1=1
+4 2=2
+4 3=3
+4 4=4
+4 5=5
+4 6=6
+4 3{r|s}=3_r_s_
+4 4{r|s}=4_r_s_
+4 5{r|s}=5_r_s_
+4 6{r|s}=6_r_s_
+4 mf=mf
+4 ms=ms
+4 mm=mm
+4 mc=mc
+4 ml=ml
+4 mh=mh
+4 zd{f,p}=zd_f_p_
+4 zdl=zdl
+4 zev=zev
+4 zf{f,p}=zf_f_p_
+4 zfw=zfw
+4 zg{f,p}=zg_f_p_
+4 zri=zri
+4 zro=zro
+4 zu=zu
+4 Optimizations
+4 Introduction=Optimizations
+4 oa=oa
+4 ob=ob
+4 oc=oc
+4 od=od
+4 oe\=<num>=oeEXnumY
+4 oh=oh
+4 oi=oi
+4 oi+=oiP
+4 ok=ok
+4 ol=ol
+4 ol+=olP
+4 om=om
+4 on=on
+4 oo=oo
+4 op=op
+4 or=or
+4 os=os
+4 ot=ot
+4 ou=ou
+4 ox=ox
+4 oz=oz
+4 C++ Exception Handling
+4 Introduction=CPP_Exception_Handling
+4 xd=xd
+4 xdt=xdt
+4 xds=xds
+4 xs=xs
+4 xst=xst
+4 xss=xss
+4 Double-Byte/Unicode Characters
+4 Introduction=DoubleMByteDUnicode_Characters
+4 zk{0,1,2,l}=zk_0_1_2_l_
+4 zk0u=zk0u
+4 zku\=<codepage>=zkuEXcodepageY
+4 Compatibility with Microsoft Visual C++
+4 Introduction=Compatibility_with_Microsoft_Visual_CPP
+4 vc...=vc___
+4 vcap=vcap
+4 Compatibility with Older Versions of the 80x86 Compilers
+4 Introduction=Compatibility_with_Older_Versions_of_the_80x86_Compilers
+4 r=r
+4 fpr=fpr
+4 zz=zz
+2 The Open Watcom C/C++ Compilers
+2 Introduction=The_Open_Watcom_CDCPP_Compilers
+2 Open Watcom C/C++ Command Line Format=Open_Watcom_CDCPP_Command_Line_Format
+2 Open Watcom C/C++ DLL-based Compilers=Open_Watcom_CDCPP_DLLMbased_Compilers
+2 Environment Variables=Environment_Variables
+2 Open Watcom C/C++ Command Line Examples=Open_Watcom_CDCPP_Command_Line_Examples
+2 Benchmarking Hints=Benchmarking_Hints
+2 Compiler Diagnostics=Compiler_Diagnostics
+2 Open Watcom C/C++ #include File Processing=Open_Watcom_CDCPP__include_File_Processing
+2 Open Watcom C/C++ Preprocessor=Open_Watcom_CDCPP_Preprocessor
+2 Open Watcom C/C++ Predefined Macros=Open_Watcom_CDCPP_Predefined_Macros
+2 Open Watcom C/C++ Extended Keywords=Open_Watcom_CDCPP_Extended_Keywords
+3 Based Pointers
+3 Introduction=Based_Pointers
+3 Segment Constant Based Pointers and Objects=Segment_Constant_Based_Pointers_and_Objects
+3 Segment Object Based Pointers=Segment_Object_Based_Pointers
+3 Void Based Pointers=Void_Based_Pointers
+3 Self Based Pointers=Self_Based_Pointers
+2 The __declspec Keyword=The___declspec_Keyword
+2 The Open Watcom Code Generator=The_Open_Watcom_Code_Generator
+2 Precompiled Headers
+2 Introduction=Precompiled_Headers
+2 When to Precompile Header Files=When_to_Precompile_Header_Files
+2 Creating and Using Precompiled Headers=Creating_and_Using_Precompiled_Headers
+2 The "/fh[q]" (Precompiled Header) Option=The__DfhUqV__LPrecompiled_HeaderR_Option
+2 Consistency Rules for Precompiled Headers=Consistency_Rules_for_Precompiled_Headers
+2 The Open Watcom C/C++ Libraries
+2 Introduction=The_Open_Watcom_CDCPP_Libraries
+2 Open Watcom C/C++ Library Directory Structure=Open_Watcom_CDCPP_Library_Directory_Structure
+2 Open Watcom C/C++ C Libraries=Open_Watcom_CDCPP_C_Libraries
+2 Open Watcom C/C++ Class Libraries=Open_Watcom_CDCPP_Class_Libraries
+2 Open Watcom C/C++ Math Libraries=Open_Watcom_CDCPP_Math_Libraries
+2 Open Watcom C/C++ 80x87 Math Libraries=Open_Watcom_CDCPP_80x87_Math_Libraries
+2 Open Watcom C/C++ Alternate Math Libraries=Open_Watcom_CDCPP_Alternate_Math_Libraries
+2 The NO87 Environment Variable=The_NO87_Environment_Variable
+2 The LFN Environment Variable=The_LFN_Environment_Variable
+2 The Open Watcom C/C++ Run-time Initialization Routines=The_Open_Watcom_CDCPP_RunMtime_Initialization_Routines
+2 16-bit Memory Models
+2 Introduction=16Mbit_Memory_Models
+2 16-bit Code Models=16Mbit_Code_Models
+2 16-bit Data Models=16Mbit_Data_Models
+2 Summary of 16-bit Memory Models=Summary_of_16Mbit_Memory_Models
+2 Tiny Memory Model=Tiny_Memory_Model
+2 Mixed 16-bit Memory Model=Mixed_16Mbit_Memory_Model
+2 Linking Applications for the Various 16-bit Memory Models=Linking_Applications_for_the_Various_16Mbit_Memory_Models
+2 Creating a Tiny Memory Model Application=Creating_a_Tiny_Memory_Model_Application
+2 Memory Layout=16Mbit_Memory_Layout
+2 16-bit Assembly Language Considerations
+2 Introduction=16Mbit_Assembly_Language_Considerations
+3 Data Representation
+3 Introduction=16Mbit__Data_Representation
+3 Type "char"=16Mbit__Type__char_
+3 Type "short int"=16Mbit__Type__short_int_
+3 Type "long int"=16Mbit__Type__long_int_
+3 Type "int"=16Mbit__Type__int_
+3 Type "float"=16Mbit__Type__float_
+3 Type "double"=16Mbit__Type__double_
+2 Memory Layout=16Mbit__Memory_Layout
+3 Calling Conventions for Non-80x87 Applications
+3 Introduction=16Mbit__Calling_Conventions_for_NonM80x87_Applications
+3 Passing Arguments Using Register-Based Calling Conventions=16Mbit__Passing_Arguments_Using_RegisterMBased_Calling_Conventions
+3 Sizes of Predefined Types=16Mbit__Sizes_of_Predefined_Types
+3 Size of Enumerated Types=16Mbit__Size_of_Enumerated_Types
+3 Effect of Function Prototypes on Arguments=16Mbit__Effect_of_Function_Prototypes_on_Arguments
+3 Interfacing to Assembly Language Functions=16Mbit__Interfacing_to_Assembly_Language_Functions
+3 Functions with Variable Number of Arguments=16Mbit__Functions_with_Variable_Number_of_Arguments
+3 Returning Values from Functions=16Mbit__Returning_Values_from_Functions
+3 Calling Conventions for 80x87-based Applications
+3 Introduction=16Mbit__Calling_Conventions_for_80x87Mbased_Applications
+3 Passing Values in 80x87-based Applications=16Mbit__Passing_Values_in_80x87Mbased_Applications
+3 Returning Values in 80x87-based Applications=16Mbit__Returning_Values_in_80x87Mbased_Applications
+2 16-bit Pragmas
+2 Introduction=16Mbit_Pragmas
+2 Using Pragmas to Specify Options=16Mbit__Using_Pragmas_to_Specify_Options
+2 Using Pragmas to Specify Default Libraries=16Mbit__Using_Pragmas_to_Specify_Default_Libraries
+2 The ALIAS Pragma (C Only)=16Mbit__The_ALIAS_Pragma_LC_OnlyR
+2 The ALLOC_TEXT Pragma (C Only)=16Mbit__The_ALLOC_TEXT_Pragma_LC_OnlyR
+2 The CODE_SEG Pragma=16Mbit__The_CODE_SEG_Pragma
+2 The COMMENT Pragma=16Mbit__The_COMMENT_Pragma
+2 The DATA_SEG Pragma=16Mbit__The_DATA_SEG_Pragma
+2 The DISABLE_MESSAGE Pragma=16Mbit__The_DISABLE_MESSAGE_Pragma
+2 The DUMP_OBJECT_MODEL Pragma (C++ Only)=16Mbit__The_DUMP_OBJECT_MODEL_Pragma_LCPP_OnlyR
+2 The ENABLE_MESSAGE Pragma=16Mbit__The_ENABLE_MESSAGE_Pragma
+2 The ENUM Pragma=16Mbit__The_ENUM_Pragma
+2 The ERROR Pragma=16Mbit__The_ERROR_Pragma
+2 The EXTREF Pragma=16Mbit__The_EXTREF_Pragma
+2 The FUNCTION Pragma=16Mbit__The_FUNCTION_Pragma
+2 The INCLUDE_ALIAS Pragma=16Mbit__The_INCLUDE_ALIAS_Pragma
+2 Setting Priority of Static Data Initialization (C++ Only)=16Mbit__Setting_Priority_of_Static_Data_Initialization_LCPP_OnlyR
+2 The INLINE_DEPTH Pragma (C++ Only)=16Mbit__The_INLINE_DEPTH_Pragma_LCPP_OnlyR
+2 The INLINE_RECURSION Pragma (C++ Only)=16Mbit__The_INLINE_RECURSION_Pragma_LCPP_OnlyR
+2 The INTRINSIC Pragma=16Mbit__The_INTRINSIC_Pragma
+2 The MESSAGE Pragma=16Mbit__The_MESSAGE_Pragma
+2 The ONCE Pragma=16Mbit__The_ONCE_Pragma
+2 The PACK Pragma=16Mbit__The_PACK_Pragma
+2 The READ_ONLY_FILE Pragma=16Mbit__The_READ_ONLY_FILE_Pragma
+2 The TEMPLATE_DEPTH Pragma (C++ Only)=16Mbit__The_TEMPLATE_DEPTH_Pragma_LCPP_OnlyR
+2 The WARNING Pragma (C++ Only)=16Mbit__The_WARNING_Pragma_LCPP_OnlyR
+3 Auxiliary Pragmas
+3 Introduction=16Mbit__Auxiliary_Pragmas
+3 Specifying Symbol Attributes=16Mbit__Specifying_Symbol_Attributes
+3 Alias Names=16Mbit__Alias_Names
+4 Predefined Aliases
+4 Introduction=16Mbit__Predefined_Aliases
+4 Predefined "__cdecl" Alias=16Mbit__Predefined____cdecl__Alias
+4 Predefined "__pascal" Alias=16Mbit__Predefined____pascal__Alias
+4 Predefined "__watcall" Alias=16Mbit__Predefined____watcall__Alias
+3 Alternate Names for Symbols=16Mbit__Alternate_Names_for_Symbols
+4 Describing Calling Information
+4 Introduction=16Mbit__Describing_Calling_Information
+4 Loading Data Segment Register=16Mbit__Loading_Data_Segment_Register
+4 Defining Exported Symbols in Dynamic Link Libraries=16Mbit__Defining_Exported_Symbols_in_Dynamic_Link_Libraries
+4 Defining Windows Callback Functions=16Mbit__Defining_Windows_Callback_Functions
+4 Forcing a Stack Frame=16Mbit__Forcing_a_Stack_Frame
+4 Describing Argument Information
+4 Introduction=16Mbit__Describing_Argument_Information
+4 Passing Arguments in Registers=16Mbit__Passing_Arguments_in_Registers
+4 Forcing Arguments into Specific Registers=16Mbit__Forcing_Arguments_into_Specific_Registers
+4 Passing Arguments to In-Line Functions=16Mbit__Passing_Arguments_to_InMLine_Functions
+4 Removing Arguments from the Stack=16Mbit__Removing_Arguments_from_the_Stack
+4 Passing Arguments in Reverse Order=16Mbit__Passing_Arguments_in_Reverse_Order
+4 Describing Function Return Information
+4 Introduction=16Mbit__Describing_Function_Return_Information
+4 Returning Function Values in Registers=16Mbit__Returning_Function_Values_in_Registers
+4 Returning Structures=16Mbit__Returning_Structures
+4 Returning Floating-Point Data=16Mbit__Returning_FloatingMPoint_Data
+3 A Function that Never Returns=16Mbit__A_Function_that_Never_Returns
+3 Describing How Functions Use Memory=16Mbit__Describing_How_Functions_Use_Memory
+3 Describing the Registers Modified by a Function=16Mbit__Describing_the_Registers_Modified_by_a_Function
+3 An Example=16Mbit__An_Example
+4 Auxiliary Pragmas and the 80x87
+4 Introduction=16Mbit__Auxiliary_Pragmas_and_the_80x87
+4 Using the 80x87 to Pass Arguments=16Mbit__Using_the_80x87_to_Pass_Arguments
+4 Using the 80x87 to Return Function Values=16Mbit__Using_the_80x87_to_Return_Function_Values
+4 Preserving 80x87 Floating-Point Registers Across Calls=16Mbit__Preserving_80x87_FloatingMPoint_Registers_Across_Calls
+2 32-bit Memory Models
+2 Introduction=32Mbit_Memory_Models
+2 32-bit Code Models=32Mbit_Code_Models
+2 32-bit Data Models=32Mbit_Data_Models
+2 Summary of 32-bit Memory Models=Summary_of_32Mbit_Memory_Models
+2 Flat Memory Model=Flat_Memory_Model
+2 Mixed 32-bit Memory Model=Mixed_32Mbit_Memory_Model
+2 Linking Applications for the Various 32-bit Memory Models=Linking_Applications_for_the_Various_32Mbit_Memory_Models
+2 Memory Layout=32Mbit_Memory_Layout
+2 32-bit Assembly Language Considerations
+2 Introduction=32Mbit_Assembly_Language_Considerations
+3 Data Representation
+3 Introduction=32Mbit__Data_Representation
+3 Type "char"=32Mbit__Type__char_
+3 Type "short int"=32Mbit__Type__short_int_
+3 Type "long int"=32Mbit__Type__long_int_
+3 Type "int"=32Mbit__Type__int_
+3 Type "float"=32Mbit__Type__float_
+3 Type "double"=32Mbit__Type__double_
+2 Memory Layout=32Mbit__Memory_Layout
+3 Calling Conventions for Non-80x87 Applications
+3 Introduction=32Mbit__Calling_Conventions_for_NonM80x87_Applications
+3 Passing Arguments Using Register-Based Calling Conventions=32Mbit__Passing_Arguments_Using_RegisterMBased_Calling_Conventions
+3 Sizes of Predefined Types=32Mbit__Sizes_of_Predefined_Types
+3 Size of Enumerated Types=32Mbit__Size_of_Enumerated_Types
+3 Effect of Function Prototypes on Arguments=32Mbit__Effect_of_Function_Prototypes_on_Arguments
+3 Interfacing to Assembly Language Functions=32Mbit__Interfacing_to_Assembly_Language_Functions
+3 Using Stack-Based Calling Conventions=32Mbit__Using_StackMBased_Calling_Conventions
+3 Functions with Variable Number of Arguments=32Mbit__Functions_with_Variable_Number_of_Arguments
+3 Returning Values from Functions=32Mbit__Returning_Values_from_Functions
+3 Calling Conventions for 80x87-based Applications
+3 Introduction=32Mbit__Calling_Conventions_for_80x87Mbased_Applications
+3 Passing Values in 80x87-based Applications=32Mbit__Passing_Values_in_80x87Mbased_Applications
+3 Returning Values in 80x87-based Applications=32Mbit__Returning_Values_in_80x87Mbased_Applications
+2 32-bit Pragmas
+2 Introduction=32Mbit_Pragmas
+2 Using Pragmas to Specify Options=32Mbit__Using_Pragmas_to_Specify_Options
+2 Using Pragmas to Specify Default Libraries=32Mbit__Using_Pragmas_to_Specify_Default_Libraries
+2 The ALIAS Pragma (C Only)=32Mbit__The_ALIAS_Pragma_LC_OnlyR
+2 The ALLOC_TEXT Pragma (C Only)=32Mbit__The_ALLOC_TEXT_Pragma_LC_OnlyR
+2 The CODE_SEG Pragma=32Mbit__The_CODE_SEG_Pragma
+2 The COMMENT Pragma=32Mbit__The_COMMENT_Pragma
+2 The DATA_SEG Pragma=32Mbit__The_DATA_SEG_Pragma
+2 The DISABLE_MESSAGE Pragma=32Mbit__The_DISABLE_MESSAGE_Pragma
+2 The DUMP_OBJECT_MODEL Pragma (C++ Only)=32Mbit__The_DUMP_OBJECT_MODEL_Pragma_LCPP_OnlyR
+2 The ENABLE_MESSAGE Pragma=32Mbit__The_ENABLE_MESSAGE_Pragma
+2 The ENUM Pragma=32Mbit__The_ENUM_Pragma
+2 The ERROR Pragma=32Mbit__The_ERROR_Pragma
+2 The EXTREF Pragma=32Mbit__The_EXTREF_Pragma
+2 The FUNCTION Pragma=32Mbit__The_FUNCTION_Pragma
+2 The INCLUDE_ALIAS Pragma=32Mbit__The_INCLUDE_ALIAS_Pragma
+2 Setting Priority of Static Data Initialization (C++ Only)=32Mbit__Setting_Priority_of_Static_Data_Initialization_LCPP_OnlyR
+2 The INLINE_DEPTH Pragma (C++ Only)=32Mbit__The_INLINE_DEPTH_Pragma_LCPP_OnlyR
+2 The INLINE_RECURSION Pragma (C++ Only)=32Mbit__The_INLINE_RECURSION_Pragma_LCPP_OnlyR
+2 The INTRINSIC Pragma=32Mbit__The_INTRINSIC_Pragma
+2 The MESSAGE Pragma=32Mbit__The_MESSAGE_Pragma
+2 The ONCE Pragma=32Mbit__The_ONCE_Pragma
+2 The PACK Pragma=32Mbit__The_PACK_Pragma
+2 The READ_ONLY_FILE Pragma=32Mbit__The_READ_ONLY_FILE_Pragma
+2 The TEMPLATE_DEPTH Pragma (C++ Only)=32Mbit__The_TEMPLATE_DEPTH_Pragma_LCPP_OnlyR
+2 The WARNING Pragma (C++ Only)=32Mbit__The_WARNING_Pragma_LCPP_OnlyR
+3 Auxiliary Pragmas
+3 Introduction=32Mbit__Auxiliary_Pragmas
+3 Specifying Symbol Attributes=32Mbit__Specifying_Symbol_Attributes
+3 Alias Names=32Mbit__Alias_Names
+4 Predefined Aliases
+4 Introduction=32Mbit__Predefined_Aliases
+4 Predefined "__cdecl" Alias=32Mbit__Predefined____cdecl__Alias
+4 Predefined "__pascal" Alias=32Mbit__Predefined____pascal__Alias
+4 Predefined "__stdcall" Alias=32Mbit__Predefined____stdcall__Alias
+4 Predefined "__syscall" Alias=32Mbit__Predefined____syscall__Alias
+4 Predefined "__watcall" Alias (register calling convention)=32Mbit__Predefined____watcall__Alias_Lregister_calling_conventionR
+4 Predefined "__watcall" Alias (stack calling convention)=32Mbit__Predefined____watcall__Alias_Lstack_calling_conventionR
+3 Alternate Names for Symbols=32Mbit__Alternate_Names_for_Symbols
+4 Describing Calling Information
+4 Introduction=32Mbit__Describing_Calling_Information
+4 Loading Data Segment Register=32Mbit__Loading_Data_Segment_Register
+4 Defining Exported Symbols in Dynamic Link Libraries=32Mbit__Defining_Exported_Symbols_in_Dynamic_Link_Libraries
+4 Forcing a Stack Frame=32Mbit__Forcing_a_Stack_Frame
+4 Describing Argument Information
+4 Introduction=32Mbit__Describing_Argument_Information
+4 Passing Arguments in Registers=32Mbit__Passing_Arguments_in_Registers
+4 Forcing Arguments into Specific Registers=32Mbit__Forcing_Arguments_into_Specific_Registers
+4 Passing Arguments to In-Line Functions=32Mbit__Passing_Arguments_to_InMLine_Functions
+4 Removing Arguments from the Stack=32Mbit__Removing_Arguments_from_the_Stack
+4 Passing Arguments in Reverse Order=32Mbit__Passing_Arguments_in_Reverse_Order
+4 Describing Function Return Information
+4 Introduction=32Mbit__Describing_Function_Return_Information
+4 Returning Function Values in Registers=32Mbit__Returning_Function_Values_in_Registers
+4 Returning Structures=32Mbit__Returning_Structures
+4 Returning Floating-Point Data=32Mbit__Returning_FloatingMPoint_Data
+3 A Function that Never Returns=32Mbit__A_Function_that_Never_Returns
+3 Describing How Functions Use Memory=32Mbit__Describing_How_Functions_Use_Memory
+3 Describing the Registers Modified by a Function=32Mbit__Describing_the_Registers_Modified_by_a_Function
+3 An Example=32Mbit__An_Example
+4 Auxiliary Pragmas and the 80x87
+4 Introduction=32Mbit__Auxiliary_Pragmas_and_the_80x87
+4 Using the 80x87 to Pass Arguments=32Mbit__Using_the_80x87_to_Pass_Arguments
+4 Using the 80x87 to Return Function Values=32Mbit__Using_the_80x87_to_Return_Function_Values
+4 Preserving 80x87 Floating-Point Registers Across Calls=32Mbit__Preserving_80x87_FloatingMPoint_Registers_Across_Calls
+2 In-line Assembly Language
+2 Introduction=InMline_Assembly_Language
+2 In-line Assembly Language Default Environment=InMline_Assembly_Language_Default_Environment
+2 In-line Assembly Language Tutorial=InMline_Assembly_Language_Tutorial
+2 Labels in In-line Assembly Code=Labels_in_InMline_Assembly_Code
+2 Variables in In-line Assembly Code=Variables_in_InMline_Assembly_Code
+2 In-line Assembly Language using _asm=InMline_Assembly_Language_using__asm
+2 In-line Assembly Directives and Opcodes=InMline_Assembly_Directives_and_Opcodes
+2 Structured Exception Handling
+2 Introduction=Structured_Exception_Handling
+2 Termination Handlers=Termination_Handlers
+2 Exception Filters and Exception Handlers=Exception_Filters_and_Exception_Handlers
+2 Resuming Execution After an Exception=Resuming_Execution_After_an_Exception
+2 Mixing and Matching _try/_finally and _try/_except=Mixing_and_Matching__tryD_finally_and__tryD_except
+2 Refining Exception Handling=Refining_Exception_Handling
+2 Throwing Your Own Exceptions=Throwing_Your_Own_Exceptions
+2 Creating ROM-based Applications
+2 Introduction=Creating_ROMMbased_Applications
+2 ROMable Functions=ROMable_Functions
+2 System-Dependent Functions=SystemMDependent_Functions
+2 Modifying the Startup Code=Modifying_the_Startup_Code
+2 Choosing the Correct Floating-Point Option=Choosing_the_Correct_FloatingMPoint_Option
+2 Use of Environment Variables
+2 Introduction=Use_of_Environment_Variables
+2 FORCE=FORCE
+2 INCLUDE=INCLUDE
+2 LFN=LFN
+2 LIB=LIB
+2 LIBDOS=LIBDOS
+2 LIBWIN=LIBWIN
+2 LIBOS2=LIBOS2
+2 LIBPHAR=LIBPHAR
+2 NO87=NO87
+2 PATH=PATH
+2 TMP=TMP
+2 WATCOM=WATCOM
+2 WCC=WCC
+2 WCC386=WCC386
+2 WCL=WCL
+2 WCL386=WCL386
+2 WCGMEMORY=WCGMEMORY
+2 WD=WD
+2 WDW=WDW
+2 WLANG=WLANG
+2 WPP=WPP
+2 WPP386=WPP386
+2 Open Watcom C/C++ Run-Time Messages
+2 Introduction=Open_Watcom_CDCPP_RunMTime_Messages
+2 Run-Time Error Messages=RunMTime_Error_Messages
+2 errno Values and Their Meanings=errno_Values_and_Their_Meanings
+2 Math Run-Time Error Messages=Math_RunMTime_Error_Messages
