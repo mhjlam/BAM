@@ -14,6 +14,12 @@ The DOS branch follows the original source and runtime layout while omitting ins
 
 See [the build instructions](DOCS/BUILDING.MD). The untouched import remains available on the `archive` branch, and the reorganized modern-port starting point remains on `port`.
 
+## DOS restoration status
+
+The `dosbox` branch is a self-contained, reproducible DOS build that runs on modern Windows: `BUILD/BUILD.PS1` compiles Tigre and BAM with the bundled Open Watcom 1.9 toolchain, publishes the selected executable under `GAME`, and launches it with the bundled DOSBox 0.74-3 runtime. `BUILD/BUILD-RESOURCES.PS1` can also regenerate the complete packed resource archive from all 828 loose assets.
+
+The restored single-player game reaches its menus and scenarios with graphics, keyboard, mouse, engine, and game logic active. Networking is intentionally out of scope, and cinematics are intentionally skipped pending a future native replacement for the incompatible Smacker decoder. Restoring DOS sound and music is the remaining runtime task for this branch; the original assets, HMI drivers, SOS libraries, configuration, and wrapper source have been retained for that work.
+
 BLOOD & MAGIC:  (c) 1996 Tachyon Studios.  All rights reserved.  Blood & Magic is a trademark of TSR.  Interplay is the trademark of Interplay Productions.  Licensed and distributed by Interplay Productions.  All other trademarks are the property of their respective owners.
 
 Developed for Interplay Productions by:
