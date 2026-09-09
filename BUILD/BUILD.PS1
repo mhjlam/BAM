@@ -113,6 +113,22 @@ function Remove-BuildOutput {
     }
 }
 
+function Get-PublishedExecutablePath {
+    $ExecutableName = if ($Configuration -eq 'Debug') { 'BAMDBG.EXE' } else { 'BAM.EXE' }
+    return Join-Path $GameDirectory $ExecutableName
+}
+
+function Remove-PublishedExecutable {
+    $ExecutablePath = [System.IO.Path]::GetFullPath((Get-PublishedExecutablePath))
+    $ExpectedRoot = [System.IO.Path]::GetFullPath($GameDirectory) + [System.IO.Path]::DirectorySeparatorChar
+    if (-not $ExecutablePath.StartsWith($ExpectedRoot, [System.StringComparison]::OrdinalIgnoreCase)) {
+        throw "Refusing to clean a path outside GAME: $ExecutablePath"
+    }
+    if (Test-Path -LiteralPath $ExecutablePath) {
+        Remove-Item -LiteralPath $ExecutablePath -Force
+    }
+}
+
 function Build-Sources {
     param(
         [Parameter(Mandatory = $true)][string] $SourceDirectory,
@@ -240,13 +256,9 @@ function Build-Bam {
         Invoke-WatcomTool -Executable 'wlink.exe' -Arguments @('@BAM.LNK') -WorkingDirectory $OutputDirectory
     }
 
-    # Stage the compact shipped runtime set so Bam.exe can be launched directly
-    # from its output directory. Main.stf contains the packed game resources;
-    # the much larger raw asset tree is intentionally not duplicated.
-    foreach ($RuntimeFile in $RuntimeFiles) {
-        Copy-Item -LiteralPath (Join-Path $GameDirectory $RuntimeFile) `
-            -Destination (Join-Path $OutputDirectory $RuntimeFile) -Force
-    }
+    $PublishedExecutablePath = Get-PublishedExecutablePath
+    Copy-Item -LiteralPath $ExecutablePath -Destination $PublishedExecutablePath -Force
+    Write-Host "Published $PublishedExecutablePath"
 }
 
 function Start-BamInDosBox {
@@ -264,15 +276,15 @@ function Start-BamInDosBox {
         $DosBoxPath = $DosBox.Source
     }
 
-    $OutputDirectory = Join-Path $OutputRoot "BAM\$Configuration"
-    $ExecutablePath = Join-Path $OutputDirectory 'BAM.EXE'
+    $ExecutablePath = Get-PublishedExecutablePath
     if (-not (Test-Path -LiteralPath $ExecutablePath)) {
         throw "The game executable was not found after building: $ExecutablePath"
     }
 
-    $MountCommand = 'mount c "' + $OutputDirectory + '"'
+    $ExecutableName = Split-Path -Leaf $ExecutablePath
+    $MountCommand = 'mount c "' + $GameDirectory + '"'
     Write-Host "Starting $ExecutablePath in DOSBox"
-    & $DosBoxPath -c $MountCommand -c 'c:' -c 'BAM.EXE' -c 'exit'
+    & $DosBoxPath -c $MountCommand -c 'c:' -c $ExecutableName -c 'exit'
     $ExitCodeVariable = Get-Variable -Name LASTEXITCODE -ErrorAction SilentlyContinue
     if ($ExitCodeVariable -and $ExitCodeVariable.Value -ne 0) {
         throw "DOSBox exited with code $($ExitCodeVariable.Value)."
@@ -282,6 +294,7 @@ function Start-BamInDosBox {
 if ($Clean -or $Rebuild) {
     Remove-BuildOutput -Component 'BAM'
     Remove-BuildOutput -Component 'TIGRE'
+    Remove-PublishedExecutable
     if ($Clean -and -not $Rebuild) {
         return
     }

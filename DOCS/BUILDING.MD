@@ -16,7 +16,7 @@ The default configuration is `Debug`. A clean Release build is:
 .\BUILD\BUILD.PS1 -Configuration Release -Rebuild
 ```
 
-Every invocation builds the Tigre library first and then links BAM. Generated objects, maps, libraries, executables, and staged runtime files are written below `BUILD/OUT` and ignored by Git.
+Every invocation builds the Tigre library first and then links BAM. Objects, maps, libraries, and the intermediate executable are written below `BUILD/OUT` and ignored by Git. The finished executable is copied into the runnable `GAME` directory as `BAM.EXE` for Release or `BAMDBG.EXE` for Debug; both generated files are also ignored by Git.
 
 The compatibility target remains Watcom-family C++ for 32-bit DOS/4GW. Important compatibility options include signed `char`, the flat 386 memory model, and byte-packed structures (`/zp1`) required by `MAP.IDX`.
 
@@ -28,13 +28,13 @@ To build and immediately run the game:
 .\BUILD\BUILD.PS1 -Configuration Release -Test
 ```
 
-The script uses `TOOLS/DOSBOX/DOSBox.exe`, mounts the staged output directory as drive `C:`, and launches `BAM.EXE`. It falls back to a DOSBox executable on `PATH` only if the bundled copy is absent.
+The script uses `TOOLS/DOSBOX/DOSBox.exe`, mounts `GAME` as drive `C:`, and launches the executable for the selected configuration. It falls back to a DOSBox executable on `PATH` only if the bundled copy is absent.
 
 The verified Release build reaches the main scenario-selection menu without user intervention. Cinematics currently advance immediately because the legacy Smacker decoder is disabled. Sound and multiplayer are also disabled in code while their recoverable audio assets, SDK libraries, headers, DOS drivers, and configuration files remain in the tree.
 
 ## RUNTIME FILES
 
-The runnable distribution is kept under `GAME`. The build stages these required files beside the generated `BAM.EXE`:
+The runnable distribution is kept under `GAME`. The build verifies these required files before publishing the selected executable into the same directory:
 
 - `DOS4GW.EXE`
 - `MAIN.STF`
@@ -43,9 +43,9 @@ The runnable distribution is kept under `GAME`. The build stages these required 
 - `RES_CFG.HPP`
 - `SOUND.CFG`
 
-`GAME/MAIN.STF` contains the packed resources used during normal play. The files under `DATA` are the corresponding loose development assets. Numeric names such as `9050.FON` are resource identifiers and intentionally retain their original spelling.
+`GAME/MAIN.STF` contains the packed resources used during normal play. The files under `GAME/DATA` are the corresponding loose development assets. Keeping both beneath `GAME` preserves the original relationship between the distributable and its content-pipeline inputs without cluttering the repository root. Numeric names such as `9050.FON` are resource identifiers and intentionally retain their original spelling.
 
-If startup reports that `9050.FON` is missing, BAM did not successfully open the packed resource set. Run the staged executable through `-Test`; do not copy `BAM.EXE` elsewhere without its runtime files.
+If startup reports that `9050.FON` is missing, BAM did not successfully open the packed resource set. Run the published executable through `-Test`; do not copy `BAM.EXE` or `BAMDBG.EXE` elsewhere without its runtime files.
 
 ## SOURCE LAYOUT
 

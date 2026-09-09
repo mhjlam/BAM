@@ -68,7 +68,7 @@ The 4DOS `.BTM` scripts describe how the demo's monolithic resource archive was 
 - `STUFF.DAT` described an archive named `main`; its resulting files were `MAIN.STF`, `MAIN.MAP`, and `MAP.IDX`.
 - `MOVEFILE.BAT` distributed those outputs, copied source between development machines, and reset archive attributes. Its absolute drive mappings have no meaning in the current repository.
 
-`INTDEMO.TXT`, `FILES.TXT`, `FILES.BKP`, and `STUFF.DAT` are generated manifests. The active loose resource files remain under `DATA`; the generated manifests and old executables are omitted from this branch.
+`INTDEMO.TXT`, `FILES.TXT`, `FILES.BKP`, and `STUFF.DAT` are generated manifests. The active loose resource files remain under `GAME/DATA`; the generated manifests and old executables are omitted from this branch.
 
 ## Installer and DOS sound support
 

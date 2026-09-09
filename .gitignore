@@ -6,6 +6,8 @@
 
 # Out-of-tree Open Watcom build products
 BUILD/OUT/
+GAME/BAM.EXE
+GAME/BAMDBG.EXE
 
 # DOSBox console logs generated beside the bundled executable
 TOOLS/DOSBOX/stdout.txt
