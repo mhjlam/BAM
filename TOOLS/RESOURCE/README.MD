@@ -4,4 +4,4 @@
 
 The packer's source code is not present in the recovered repository. Its binary is therefore retained as an essential content-pipeline dependency. Run it through `BUILD/BUILD-RESOURCES.PS1`; the script supplies DOS/4GW and executes it with the bundled DOSBox.
 
-`LEGACY` preserves the original 4DOS gathering scripts, absolute source-file manifests, and distribution helper. They document how `STUFF.DAT` was assembled on Tachyon's development drives, but their hard-coded `I:`, `D:`, and `Y:` paths are not used by the repository-local build.
+The original 4DOS gathering scripts, absolute source-file manifests, and distribution helper remain available on the `archive` branch. Their useful behavior and historical path assumptions are summarized in `DOCS/LEGACY_NOTES.MD`; they are not needed by the repository-local build.
