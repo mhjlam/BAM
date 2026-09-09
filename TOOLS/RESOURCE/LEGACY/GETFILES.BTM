@@ -1,0 +1,42 @@
+@echo off
+if "%1"=="" goto COMMANDS
+if "%@UPPER[%1]"=="QA" goto GO
+if "%@UPPER[%1]"=="MILESTONE" goto GO
+
+:COMMANDS
+echo Usage: "GETFILES <QA / MILESTONE>"
+goto EXIT
+
+:GO
+smartdrv c+ > NUL
+echo Reading FILES.TXT
+set FILEHANDLE=%@FILEOPEN[FILES.TXT,READ]
+:READLINE
+set FILENAME=%@FILEREAD[%FILEHANDLE]
+if "%filename" == "**EOF**" goto CLOSEFILE
+xcopy %filename .
+goto READLINE
+
+:CLOSEFILE
+set FILEHANDLE="%@FILECLOSE[%filehandle%]"
+
+rem Gather SMKs because they can't be included in STFs.
+rem xcopy \bam\smk\*.smk .
+
+rem Gather SCRs because they can't be included in STFs.
+rem xcopy \bam\scr\*.scr .
+
+if "%@UPPER[%1]"=="QA" goto MAKESTUF
+
+rem Gather FLCs for the Mac people, even though we use SMKs now.
+rem z:
+rem cd \flc
+rem no 15big.* no 15small.* no 10.* xcopy z:\flc\*.flc y:
+rem y:
+
+:MAKESTUF
+makestuf
+
+:EXIT
+smartdrv c > NUL
+

@@ -9,6 +9,7 @@ The DOS branch follows the original source and runtime layout while omitting ins
 - `GAME` contains the runnable DOS distribution, with loose source assets under `GAME/DATA`.
 - `BUILD/BUILD.PS1` builds Tigre and BAM together. Intermediate output goes under `BUILD/OUT`; the selected executable is published into `GAME`.
 - `TOOLS/WATCOM` and `TOOLS/DOSBOX` provide the compiler and emulator without external installation.
+- `TOOLS/RESOURCE` preserves the original resource-archive packer and its legacy pipeline metadata.
 - `DOCS` contains build and restoration notes.
 
 See [the build instructions](DOCS/BUILDING.MD). The untouched import remains available on the `archive` branch, and the reorganized modern-port starting point remains on `port`.

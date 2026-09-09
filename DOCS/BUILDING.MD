@@ -32,6 +32,16 @@ The script uses `TOOLS/DOSBOX/DOSBox.exe`, mounts `GAME` as drive `C:`, and laun
 
 The verified Release build reaches the main scenario-selection menu without user intervention. Cinematics currently advance immediately because the legacy Smacker decoder is disabled. Sound and multiplayer are also disabled in code while their recoverable audio assets, SDK libraries, headers, DOS drivers, and configuration files remain in the tree.
 
+## BUILD RESOURCES
+
+To regenerate the packed resource set without replacing the runnable copies:
+
+```powershell
+.\BUILD\BUILD-RESOURCES.PS1
+```
+
+The results and packer log are written under `BUILD/OUT/RESOURCES`. Add `-Publish` to copy the verified `MAIN.STF`, `MAIN.MAP`, and `MAP.IDX` into `GAME`. The script checks that every file named by `TOOLS/RESOURCE/STUFF.DAT` exists before invoking the original `MAKESTUF.EXE` through the bundled DOSBox.
+
 ## RUNTIME FILES
 
 The runnable distribution is kept under `GAME`. The build verifies these required files before publishing the selected executable into the same directory:
@@ -54,6 +64,7 @@ If startup reports that `9050.FON` is missing, BAM did not successfully open the
 - `CODE/TIGRE/TIGRE.MAK`, `CODE/SRC/BAM.MAK`, and `CODE/SRC/BAMF.MAK`: preserved historical makefiles.
 - `CODE/SRC/MAPEDIT*`: original map editor source.
 - `MAKERES`, `RESINFO`, `MAKEMIF`, `TIL2TLB`, and `TXT2SQB` sources: original content/resource pipeline.
+- `TOOLS/RESOURCE/MAKESTUF.EXE` and `STUFF.DAT`: original final archive packer and complete 828-file manifest.
 
 The historical makefiles are useful specifications but are not yet the supported build entry point. Modernizing the content pipeline—without networking and communications dependencies—is future work.
 
