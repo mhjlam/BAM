@@ -6,3 +6,7 @@
 
 # Out-of-tree Open Watcom build products
 BUILD/OUT/
+
+# DOSBox console logs generated beside the bundled executable
+TOOLS/DOSBOX/stdout.txt
+TOOLS/DOSBOX/stderr.txt

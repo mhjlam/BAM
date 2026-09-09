@@ -76,13 +76,13 @@ The DOS and Windows 95 installer configurations required a 486 and about 27 MB o
 
 The retained sound setup supported Sound Blaster variants, Gravis UltraSound, Ensoniq SoundScape, Microsoft Sound System, Pro Audio Spectrum 16, ESS AudioDrive, Roland devices, MPU-401, and several other period-specific cards. `SNDSETUP.BAT` detected Gravis hardware, loaded patches when found, and then launched `SNDSET2.EXE`. `PATCHES.INI` contained the UltraSound General MIDI patch-loading and fallback map.
 
-The active `SOUND.CFG` selects no digital or MIDI device. The `.386` drivers, sound detection/setup programs and data, SOS libraries, banks, music, and test audio remain available for the planned audio restoration. Registration programs, installers, PIF helpers, and installer messages are omitted. `DOS4GW.EXE` remains active because the executable requires the extender.
+The active `GAME/SOUND.CFG` selects no digital or MIDI device. The `.386` drivers, sound detection/setup programs and data, SOS libraries, banks, music, and test audio remain available under `GAME` or `CODE/TIGRE` for the planned audio restoration. Registration programs, installers, PIF helpers, and installer messages are omitted. `GAME/DOS4GW.EXE` remains active because the executable requires the extender.
 
-The demo also checked `HMICARDS.386` as an integrity marker and armed a delayed memory-corruption crash when the file was missing or changed. That check has been removed from the active game because the HMI audio layer is disabled; the driver itself remains at the root for future audio work.
+The demo also checked `HMICARDS.386` as an integrity marker and armed a delayed memory-corruption crash when the file was missing or changed. That check has been removed from the active game because the HMI audio layer is disabled; the driver itself remains under `GAME` for future audio work.
 
 ## Cinematics
 
-The loose demo cinematics and scripts are preserved at their original root paths, and the RAD headers/library remain under `CODE/TIGRE`. The library is a valid Watcom 32-bit DOS library for Smacker 2.0y. The original `FLICSMK.CPP` wrapper compiles with Open Watcom 1.9 and links into the current game without the old SOS audio libraries.
+The loose demo cinematics and scripts are preserved under `GAME`, and the RAD headers/library remain under `CODE/TIGRE`. The library is a valid Watcom 32-bit DOS library for Smacker 2.0y. The original `FLICSMK.CPP` wrapper compiles with Open Watcom 1.9 and links into the current game without the old SOS audio libraries.
 
 An isolated DOSBox test confirmed that this combination opens, decodes, and displays the silent `15.SMK` Interplay logo. It then fails reproducibly on the audio-bearing `20.SMK` with a divide-by-zero inside the library's proprietary `unsmack.ASM` code. Suppressing the wrapper's audio requests does not prevent the fault. FFmpeg successfully decodes all three retained movies, so the evidence points to the old binary decoder rather than damaged media.
 

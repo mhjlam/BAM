@@ -6,7 +6,8 @@ The DOS branch follows the original source and runtime layout while omitting ins
 
 - `CODE/TIGRE` contains the Tigre engine, preserved audio/video SDK files, resource utilities, and original makefiles.
 - `CODE/SRC` contains the Blood & Magic game, map/content tools, and original makefiles.
-- `DATA` contains the loose source assets. Packed runtime resources remain at the repository root.
+- `DATA` contains the loose source assets.
+- `GAME` contains the runnable DOS distribution: packed resources, DOS/4GW, cinematics, sound data, drivers, and configuration.
 - `BUILD/BUILD.PS1` builds Tigre and BAM together; generated output goes under `BUILD/OUT`.
 - `TOOLS/WATCOM` and `TOOLS/DOSBOX` provide the compiler and emulator without external installation.
 - `DOCS` contains build and restoration notes.

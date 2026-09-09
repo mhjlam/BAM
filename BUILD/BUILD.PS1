@@ -13,6 +13,7 @@ Set-StrictMode -Version Latest
 $RepositoryRoot = Split-Path -Parent $PSScriptRoot
 $TigreSourceDir = Join-Path $RepositoryRoot 'CODE\TIGRE'
 $BamSourceDir = Join-Path $RepositoryRoot 'CODE\SRC'
+$GameDirectory = Join-Path $RepositoryRoot 'GAME'
 $OutputRoot = Join-Path $PSScriptRoot 'OUT'
 $LocalWatcomRoot = Join-Path $RepositoryRoot 'TOOLS\WATCOM'
 $BundledDosBox = Join-Path $RepositoryRoot 'TOOLS\DOSBOX\DOSBox.exe'
@@ -204,7 +205,7 @@ function Build-Bam {
     $OutputDirectory = Join-Path $OutputRoot "BAM\$Configuration"
     $RuntimeFiles = @('DOS4GW.EXE', 'MAIN.STF', 'MAIN.MAP', 'MAP.IDX', 'RES_CFG.HPP', 'SOUND.CFG')
     foreach ($RuntimeFile in $RuntimeFiles) {
-        $RuntimePath = Join-Path $RepositoryRoot $RuntimeFile
+        $RuntimePath = Join-Path $GameDirectory $RuntimeFile
         if (-not (Test-Path -LiteralPath $RuntimePath)) {
             throw "A required runtime file was not found: $RuntimePath"
         }
@@ -243,7 +244,7 @@ function Build-Bam {
     # from its output directory. Main.stf contains the packed game resources;
     # the much larger raw asset tree is intentionally not duplicated.
     foreach ($RuntimeFile in $RuntimeFiles) {
-        Copy-Item -LiteralPath (Join-Path $RepositoryRoot $RuntimeFile) `
+        Copy-Item -LiteralPath (Join-Path $GameDirectory $RuntimeFile) `
             -Destination (Join-Path $OutputDirectory $RuntimeFile) -Force
     }
 }

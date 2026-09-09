@@ -34,7 +34,7 @@ The verified Release build reaches the main scenario-selection menu without user
 
 ## RUNTIME FILES
 
-The build stages these files beside `BAM.EXE`:
+The runnable distribution is kept under `GAME`. The build stages these required files beside the generated `BAM.EXE`:
 
 - `DOS4GW.EXE`
 - `MAIN.STF`
@@ -43,7 +43,7 @@ The build stages these files beside `BAM.EXE`:
 - `RES_CFG.HPP`
 - `SOUND.CFG`
 
-`MAIN.STF` contains the packed resources used during normal play. The files under `DATA` are the corresponding loose development assets. Numeric names such as `9050.FON` are resource identifiers and intentionally retain their original spelling.
+`GAME/MAIN.STF` contains the packed resources used during normal play. The files under `DATA` are the corresponding loose development assets. Numeric names such as `9050.FON` are resource identifiers and intentionally retain their original spelling.
 
 If startup reports that `9050.FON` is missing, BAM did not successfully open the packed resource set. Run the staged executable through `-Test`; do not copy `BAM.EXE` elsewhere without its runtime files.
 
