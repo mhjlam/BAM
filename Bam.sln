@@ -1,0 +1,58 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "Bam", "Source\Bam\Bam.vcxproj", "{537DE925-D307-40EF-A6C4-F74515D5FBC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Legacy Tools", "Legacy Tools", "{E2CC64A3-FFCC-4630-A16B-143CF07DCA31}"
+EndProject
+Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "Legacy Installer Sources", "Source\Tools\Installer\Installer.vcxproj", "{B2D802BB-4EA7-4E14-B0DC-07DB71BB4759}"
+EndProject
+Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "Legacy Resource Tools", "Source\Tools\ResourceTools\ResourceTools.vcxproj", "{EE2D418B-0B82-429C-B91D-D304E667E65F}"
+EndProject
+Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "Legacy Map Editor", "Source\Tools\MapEditor\MapEditor.vcxproj", "{86DC2D13-EBE7-4667-A3DC-D46715DC20C5}"
+EndProject
+Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "Legacy Media Tools", "Source\Tools\MediaTools\MediaTools.vcxproj", "{E8924B10-9C59-449C-8587-4C156BA4A0D4}"
+EndProject
+Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "Legacy Miscellaneous Tools", "Source\Tools\MiscTools\MiscTools.vcxproj", "{207E7B46-CFA0-4735-99FC-7E1B501B3CBA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{8E201FA2-28EC-463B-B58C-6C50BD589BC6}"
+	ProjectSection(SolutionItems) = preProject
+		Archive\README.md = Archive\README.md
+		Docs\Building.md = Docs\Building.md
+		Docs\LegacyNotes.md = Docs\LegacyNotes.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{537DE925-D307-40EF-A6C4-F74515D5FBC4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{537DE925-D307-40EF-A6C4-F74515D5FBC4}.Debug|Win32.Build.0 = Debug|Win32
+		{537DE925-D307-40EF-A6C4-F74515D5FBC4}.Release|Win32.ActiveCfg = Release|Win32
+		{537DE925-D307-40EF-A6C4-F74515D5FBC4}.Release|Win32.Build.0 = Release|Win32
+		{B2D802BB-4EA7-4E14-B0DC-07DB71BB4759}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B2D802BB-4EA7-4E14-B0DC-07DB71BB4759}.Release|Win32.ActiveCfg = Release|Win32
+		{EE2D418B-0B82-429C-B91D-D304E667E65F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EE2D418B-0B82-429C-B91D-D304E667E65F}.Release|Win32.ActiveCfg = Release|Win32
+		{86DC2D13-EBE7-4667-A3DC-D46715DC20C5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{86DC2D13-EBE7-4667-A3DC-D46715DC20C5}.Release|Win32.ActiveCfg = Release|Win32
+		{E8924B10-9C59-449C-8587-4C156BA4A0D4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8924B10-9C59-449C-8587-4C156BA4A0D4}.Release|Win32.ActiveCfg = Release|Win32
+		{207E7B46-CFA0-4735-99FC-7E1B501B3CBA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{207E7B46-CFA0-4735-99FC-7E1B501B3CBA}.Release|Win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B2D802BB-4EA7-4E14-B0DC-07DB71BB4759} = {E2CC64A3-FFCC-4630-A16B-143CF07DCA31}
+		{EE2D418B-0B82-429C-B91D-D304E667E65F} = {E2CC64A3-FFCC-4630-A16B-143CF07DCA31}
+		{86DC2D13-EBE7-4667-A3DC-D46715DC20C5} = {E2CC64A3-FFCC-4630-A16B-143CF07DCA31}
+		{E8924B10-9C59-449C-8587-4C156BA4A0D4} = {E2CC64A3-FFCC-4630-A16B-143CF07DCA31}
+		{207E7B46-CFA0-4735-99FC-7E1B501B3CBA} = {E2CC64A3-FFCC-4630-A16B-143CF07DCA31}
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

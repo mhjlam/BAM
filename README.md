@@ -1,5 +1,22 @@
 # BLOOD & MAGIC™ INTERACTIVE DEMO
 
+## Repository layout
+
+The source tree and the original playable distribution are kept separate:
+
+- `Source/Tigre` contains the Tigre engine source.
+- `Source/Bam` contains the Blood & Magic game source.
+- `Source/Tools` contains categorized installer, resource, map-editor, media, and miscellaneous utility sources.
+- `Source/Shared` contains the small amount of source shared by the game and utilities.
+- `Game` contains the runnable resource set and the raw assets under `Game/Data`.
+- `Build` contains the unified Watcom build driver; generated output goes under `Build/Out`.
+- `Docs` contains restoration and historical notes.
+- `Archive` preserves the original DOS executable, installers, hardware support, generated manifests, obsolete source, and disabled middleware. It can be used to reconstruct the historical demo layout.
+- `Tools` contains the repository-local compiler installation when present; it is ignored by Git.
+- `Bam.sln` and the projects below `Source` provide a Visual Studio front end for the Watcom-compatible build. See [building instructions](Docs/Building.md).
+
+Repository-owned folders and authored filenames use PascalCase. Conventional metadata names (`README.md`, `.gitignore`, and `.vscode` files), numeric DOS resource IDs, preserved historical material under `Archive`, and third-party package names under `Tools` are intentionally exempt.
+
 BLOOD & MAGIC:  (c) 1996 Tachyon Studios.  All rights reserved.  Blood & Magic is a trademark of TSR.  Interplay is the trademark of Interplay Productions.  Licensed and distributed by Interplay Productions.  All other trademarks are the property of their respective owners.
 
 Developed for Interplay Productions by:

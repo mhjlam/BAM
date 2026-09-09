@@ -1,0 +1,11 @@
+# Visual Studio per-user state
+.vs/
+*.suo
+*.user
+
+# Out-of-tree Open Watcom build products
+Build/Out/
+
+# Repository-local compiler installation and downloaded installer
+Tools/downloads/
+Tools/open-watcom-1.9/
