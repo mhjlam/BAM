@@ -1,7 +1,11 @@
 [CmdletBinding()]
 param(
+    [ValidateSet('Demo', 'Full')]
+    [string] $Edition = 'Full',
     [ValidateSet('Debug', 'Release')]
     [string] $Configuration = 'Debug',
+    [ValidateSet('waveout', 'dsound', 'auto')]
+    [string] $DosBoxAudioDriver = 'waveout',
     [switch] $Clean,
     [switch] $Rebuild,
     [switch] $Test
@@ -14,7 +18,11 @@ $RepositoryRoot = Split-Path -Parent $PSScriptRoot
 $TigreSourceDir = Join-Path $RepositoryRoot 'CODE\TIGRE'
 $BamSourceDir = Join-Path $RepositoryRoot 'CODE\SRC'
 $GameDirectory = Join-Path $RepositoryRoot 'GAME'
+if ($Edition -eq 'Demo') {
+    $GameDirectory = Join-Path $GameDirectory 'DEMO'
+}
 $OutputRoot = Join-Path $PSScriptRoot 'OUT'
+$OutputRoot = Join-Path $OutputRoot $Edition
 $LocalWatcomRoot = Join-Path $RepositoryRoot 'TOOLS\WATCOM'
 $BundledDosBox = Join-Path $RepositoryRoot 'TOOLS\DOSBOX\DOSBox.exe'
 
@@ -27,7 +35,7 @@ $TigreSources = @(
     'MemMgr.cpp', 'Mono.cpp', 'Mouse.cpp', 'MouseInt.cpp', 'MouseScr.cpp',
     'Object.cpp', 'ObjMgr.cpp', 'Os.cpp', 'OsGrph.asm', 'Palette.cpp',
     'Periodic.cpp', 'Rect.cpp', 'ResMgr.cpp', 'Resource.cpp', 'SaveBase.cpp',
-    'SaveMgr.cpp', 'SConfig.cpp', 'ScrImage.cpp', 'Serial.cpp', 'SoundMgr.cpp',
+    'SaveMgr.cpp', 'SConfig.cpp', 'ScrImage.cpp', 'Serial.cpp', 'SoundMgr_SOS.cpp',
     'Stream.cpp', 'Srle.cpp', 'T12.cpp', 'Text.cpp', 'Trle.cpp',
     'VgaBuf.cpp', 'XMODDISP.CPP', 'ModeX.asm'
 )
@@ -43,7 +51,7 @@ $BamSources = @(
     'Ai.cpp', 'Assess.cpp', 'Bam.cpp', 'BAM_DG.CPP', 'BamFuncs.cpp',
     'BamFunc2.cpp', 'BamGuy.cpp', 'BamPopup.cpp', 'BamRoom.cpp', 'Cine.cpp',
     'Choose.cpp', 'Credits.cpp', 'Death.cpp', 'Encyclo.cpp', 'EncyMenu.cpp',
-    'Fade.cpp', 'FlicSmk.cpp', 'FMT_LBM.CPP', 'Hall.cpp', 'INTROHAL.CPP',
+    'Fade.cpp', 'FlicSmk_SMACKER.cpp', 'FMT_LBM.CPP', 'Hall.cpp', 'INTROHAL.CPP',
     'Items.cpp', 'LegendOp.cpp', 'MainMenu.cpp', 'MakeChar.cpp', 'Maps.cpp',
     'MapsBase.cpp', 'NetChar.cpp', 'NetHall.cpp', 'NetStory.cpp', 'Option.cpp',
     'Option2.cpp', 'Option3.cpp', 'Pather.cpp', 'SaveMenu.cpp', 'Snap.cpp',
@@ -172,6 +180,9 @@ function Build-Sources {
                 # Without /zp1, MapIdxRec is larger than the 18-byte MAP.IDX
                 # record and the resource manager silently loads zero maps.
                 $CompatibilityOptions = @('/dTRUE=1', '/dFALSE=0', '/zp1')
+                if ($Edition -eq 'Full') {
+                    $CompatibilityOptions += '/dBAM_FULL_GAME=1'
+                }
                 $Arguments = @('/bt=dos') + $Flags + $CompatibilityOptions + @($IncludeOption, "/fo=$ObjectPath", $SourcePath)
                 Invoke-WatcomTool -Executable 'wcl386.exe' -Arguments $Arguments -WorkingDirectory $OutputDirectory
             }
@@ -220,6 +231,9 @@ function Build-Bam {
 
     $OutputDirectory = Join-Path $OutputRoot "BAM\$Configuration"
     $RuntimeFiles = @('DOS4GW.EXE', 'MAIN.STF', 'MAIN.MAP', 'MAP.IDX', 'RES_CFG.HPP', 'SOUND.CFG')
+    if ($Edition -eq 'Full') {
+        $RuntimeFiles += @('CINES.MAP', 'STFS\CINES.STF')
+    }
     foreach ($RuntimeFile in $RuntimeFiles) {
         $RuntimePath = Join-Path $GameDirectory $RuntimeFile
         if (-not (Test-Path -LiteralPath $RuntimePath)) {
@@ -237,7 +251,7 @@ function Build-Bam {
     $Objects = Build-Sources -SourceDirectory $BamSourceDir -OutputDirectory $OutputDirectory `
         -Sources $BamSources -NewestHeaderTime $NewestHeaderTime -GetCppFlags $FlagSelector
 
-    $Libraries = @()
+    $Libraries = @('SOSDW1CR.LIB', 'SOSMW1CR.LIB', 'SMACK.LIB')
     Copy-Item -LiteralPath $TigreLibrary -Destination (Join-Path $OutputDirectory 'TIGRE.LIB') -Force
     foreach ($Library in $Libraries) {
         Copy-Item -LiteralPath (Join-Path $TigreSourceDir $Library) -Destination (Join-Path $OutputDirectory $Library) -Force
@@ -251,6 +265,7 @@ function Build-Bam {
         $LinkCommands = @('system dos4g', 'debug all', 'option map=BAM.MAP', 'option stack=8k', 'name BAM.EXE')
         $LinkCommands += $Objects | ForEach-Object { 'file ' + [System.IO.Path]::GetFileName($_) }
         $LinkCommands += 'library TIGRE.LIB'
+        $LinkCommands += $Libraries | ForEach-Object { 'library ' + $_ }
         $LinkCommands | Set-Content -LiteralPath $ResponsePath -Encoding Ascii
         Write-Host 'Linking BAM.EXE'
         Invoke-WatcomTool -Executable 'wlink.exe' -Arguments @('@BAM.LNK') -WorkingDirectory $OutputDirectory
@@ -284,7 +299,21 @@ function Start-BamInDosBox {
     $ExecutableName = Split-Path -Leaf $ExecutablePath
     $MountCommand = 'mount c "' + $GameDirectory + '"'
     Write-Host "Starting $ExecutablePath in DOSBox"
-    & $DosBoxPath -c $MountCommand -c 'c:' -c $ExecutableName -c 'exit'
+    # SDL 1.2 calls its DirectSound backend "dsound", not "directsound".
+    # Use waveOut by default and isolate the override to this child process.
+    $PreviousAudioDriver = [Environment]::GetEnvironmentVariable('SDL_AUDIODRIVER', 'Process')
+    try {
+        if ($DosBoxAudioDriver -eq 'auto') {
+            [Environment]::SetEnvironmentVariable('SDL_AUDIODRIVER', $null, 'Process')
+        }
+        else {
+            [Environment]::SetEnvironmentVariable('SDL_AUDIODRIVER', $DosBoxAudioDriver, 'Process')
+        }
+        & $DosBoxPath -conf (Join-Path $PSScriptRoot 'DOSBOX.CONF') -c $MountCommand -c 'c:' -c $ExecutableName -c 'exit'
+    }
+    finally {
+        [Environment]::SetEnvironmentVariable('SDL_AUDIODRIVER', $PreviousAudioDriver, 'Process')
+    }
     $ExitCodeVariable = Get-Variable -Name LASTEXITCODE -ErrorAction SilentlyContinue
     if ($ExitCodeVariable -and $ExitCodeVariable.Value -ne 0) {
         throw "DOSBox exited with code $($ExitCodeVariable.Value)."

@@ -490,6 +490,7 @@ TFlicSmacker::Play(int cineNum_P, int extraBuf, int simSpeed,
 
 	if(pSoundMgr->hDigiDriverHandle != -1)
 	{
+		SmackSoundUseSOS3(pSoundMgr->hDigiDriverHandle, _TIMER_RATE);
 		//Set audio track flags
 		startFlags |= SMACKTRACKS;
 	}

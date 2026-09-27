@@ -257,7 +257,6 @@ Cine::Cycle(void)
 	{
 		if(!AExists(RES_SMACKER,bGlobal.cinematic))
 		{
-			// Smacker playback is intentionally disabled in the restoration.
 			// Missing cinematics are optional transitions, so advance through
 			// chained intro entries or continue to the destination room.
 			pMono->Out("Skipping unavailable cinematic %d\n",bGlobal.cinematic);

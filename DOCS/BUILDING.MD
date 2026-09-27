@@ -16,6 +16,14 @@ The default configuration is `Debug`. A clean Release build is:
 .\BUILD\BUILD.PS1 -Configuration Release -Rebuild
 ```
 
+The default edition is `Full`. To build and launch the full game with the imported retail assets:
+
+```powershell
+.\BUILD\BUILD.PS1 -Edition Full -Configuration Release -Test
+```
+
+Full executables are published under `GAME`; Demo executables under `GAME/DEMO`. Use `-Edition Demo` to build and test the demo. Intermediate files are isolated under `BUILD/OUT/<Edition>`. Edition and optimization configuration are independent: `Full` selects the full-game code paths and assets, while `Release` selects compiler flags. The legacy demo macro changes class layouts, so each edition is compiled separately rather than switched inside one running executable. See `GAME/README.MD` for required retail resources and current limitations.
+
 Every invocation builds the Tigre library first and then links BAM. Objects, maps, libraries, and the intermediate executable are written below `BUILD/OUT` and ignored by Git. The finished executable is copied into the runnable `GAME` directory as `BAM.EXE` for Release or `BAMDBG.EXE` for Debug; both generated files are also ignored by Git.
 
 The compatibility target remains Watcom-family C++ for 32-bit DOS/4GW. Important compatibility options include signed `char`, the flat 386 memory model, and byte-packed structures (`/zp1`) required by `MAP.IDX`.
@@ -40,7 +48,7 @@ To regenerate the packed resource set without replacing the runnable copies:
 .\BUILD\BUILD-RESOURCES.PS1
 ```
 
-The results and packer log are written under `BUILD/OUT/RESOURCES`. Add `-Publish` to copy the verified `MAIN.STF`, `MAIN.MAP`, and `MAP.IDX` into `GAME`. The script checks that every file named by `TOOLS/RESOURCE/STUFF.DAT` exists before invoking the original `MAKESTUF.EXE` through the bundled DOSBox.
+The resource builder currently rebuilds the demo archive from `GAME/DEMO/DATA`; loose retail resource inputs are not available. The results and packer log are written under `BUILD/OUT/RESOURCES`. Add `-Publish` to copy the verified `MAIN.STF`, `MAIN.MAP`, and `MAP.IDX` into `GAME/DEMO`. The script checks that every file named by `TOOLS/RESOURCE/STUFF.DAT` exists before invoking the original `MAKESTUF.EXE` through the bundled DOSBox. It does not overwrite the retail archives in `GAME`.
 
 ## RUNTIME FILES
 
@@ -53,7 +61,7 @@ The runnable distribution is kept under `GAME`. The build verifies these require
 - `RES_CFG.HPP`
 - `SOUND.CFG`
 
-`GAME/MAIN.STF` contains the packed resources used during normal play. The files under `GAME/DATA` are the corresponding loose development assets. Keeping both beneath `GAME` preserves the original relationship between the distributable and its content-pipeline inputs without cluttering the repository root. Numeric names such as `9050.FON` are resource identifiers and intentionally retain their original spelling.
+`GAME/MAIN.STF` contains the full-game packed resources. `GAME/DEMO/MAIN.STF` and the loose development assets under `GAME/DEMO/DATA` belong to the demo. Numeric names such as `9050.FON` are resource identifiers and intentionally retain their original spelling.
 
 If startup reports that `9050.FON` is missing, BAM did not successfully open the packed resource set. Run the published executable through `-Test`; do not copy `BAM.EXE` or `BAMDBG.EXE` elsewhere without its runtime files.
 
@@ -72,7 +80,46 @@ The historical makefiles are useful specifications but are not yet the supported
 
 - Single-player game logic, Mode X graphics, keyboard, mouse, resource loading, and DOS/4GW execution are active.
 - Network transport and multiplayer are intentionally out of scope.
-- Audio restoration is the next planned subsystem. SOS libraries, HMI drivers, banks, MIDI/HMP files, WAV files, setup data, configuration, `8TRACK.*`, and the original `SOUNDMGR_SOS.*` implementation have therefore been retained. The active build continues to compile the disabled `SOUNDMGR.*` facade.
-- Smacker media, its binary SDK files, and the original `FLICSMK_SMACKER.*` wrapper are retained. The active build compiles the disabled `FLICSMK.*` facade because the old decoder crashes on part of the intro sequence.
+- The original `SOUNDMGR_SOS.*` implementation and SOS libraries are active. The demo configuration selects Sound Blaster 16 digital audio and OPL3 music. Driver initialization and WAV/HMP playback are logged to `AUDIO.LOG` while restoration is being tested. Retail audio configuration still needs verification.
+- The original `FLICSMK_SMACKER.*` wrapper and `SMACK.LIB` are active again, using the SOS digital driver. Complete movie playback and sound still need verification.
+
+### DOSBox audio troubleshooting
+
+`-Test` defaults to SDL's Windows `waveout` audio backend. Use
+`-DosBoxAudioDriver dsound` or `-DosBoxAudioDriver auto` to test alternatives.
+The override is local to the launched process; it does not change Windows environment settings.
+
+`BUILD/DOSBOX.CONF` uses fixed 30,000 CPU cycles. The initial 100 ms prebuffer
+with 2,048-sample blocks improved the initial full-version startup test,
+but crackling was subsequently reported when another application also played
+audio. Backend/buffering investigation is ongoing; this is not yet a confirmed
+fix. A 200 ms prebuffer with 4,096-sample blocks is now being tested. The larger
+buffer adds audio latency.
+
+Full-version movies and scripts search `GAME` before `GAME/STFS`. Both contain
+`30.SMK`, but the root copy is the longer opening cinematic; the `STFS` copy is
+much shorter. Campaign movies still fall back to `STFS`.
+By choice, `GAME/DEMO/30.SMK` uses the short variant (206,160 bytes), while
+`GAME/30.SMK` retains the long intro (4,318,552 bytes). This is an edition
+presentation choice, not a claim about the original release arrangement.
+
+If DOSBox prints `Can't open audio: No available audio device`, it has disabled
+host audio output even if BAM successfully initializes its emulated sound card.
+In particular, an inherited `SDL_AUDIODRIVER=directsound` is invalid for bundled
+SDL 1.2: its DirectSound backend is named `dsound`. For a manual launch, run
+`$env:SDL_AUDIODRIVER = 'waveout'` in that PowerShell session first.
+
+### Save/load restoration
+
+The original save manager is re-enabled: its historical release-build bypass
+previously reported success without writing anything. Single-player slots use
+`1.SAV` through `10.SAV` in the selected edition's runtime directory. These
+files and generated campaign progress are ignored by Git.
+
+Saves contain raw engine object layouts, so use the same edition, executable
+build, and configuration to save and load. Header version/build mismatches are
+rejected before restoring allocations. Compatibility with original commercial
+save files is not guaranteed. In-game save/load round-trip verification is
+still pending.
 
 See `DOCS/LEGACY_NOTES.MD` for the investigation record.

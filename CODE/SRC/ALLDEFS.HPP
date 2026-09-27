@@ -11,7 +11,9 @@
 #define NDEBUG
 //#define DEBUG_BIG_NET
 
+#ifndef BAM_FULL_GAME
 #define INTERACTIVE_DEMO
+#endif
 
 // resource #s for sound FX - to be entered as they are implemented
 #define SND_HEAL_REPAIR	7200

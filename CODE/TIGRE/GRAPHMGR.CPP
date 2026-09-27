@@ -831,6 +831,12 @@ GraphicsMgr::Save(uint16 state, FILE *fp)
 				// read the scrim list data 
 				gOldListData = scrimList.gData;
 				AFree(gOldListData);
+				// Release() cleared the live list's count and links. GList::Save
+				// only restores its own sort flag, not the List base metadata.
+				// Recover that metadata from the manager snapshot, preserving
+				// the live object/vtable and replacing the saved data grip below.
+				memcpy(&scrimList.listDataStart, &pTempMgr->scrimList.listDataStart,
+					(char *)&scrimList.listDataEnd - (char *)&scrimList.listDataStart);
 				ARestoreGripNum(&gListData, fp);
 				scrimList.gData = gListData;
 

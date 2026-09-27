@@ -1137,7 +1137,6 @@ main(int argc, char** argv)
 
       if (saveNum)
       {
-         pMemMgr->Dump((uint16) (100 + saveNum), "Save Dump", TRUE);
          saverResult = saveMgr.Save((uint16) saveNum, bGlobal.versionNum,
 				bGlobal.versionSubNum, bGlobal.buildID, saveMessage);
          if (saverResult)
@@ -1158,7 +1157,6 @@ main(int argc, char** argv)
 				BamDebug.Out("Restore failed!  Error %d\n", saverResult);
 //         	APanic(mess);
          }
-         pMemMgr->Dump((uint16) (200 + restoreNum), "Restore Dump", TRUE);
 			netRestoreNum = 0;	//reset this after restore
          restoreNum = 0; 
 			bGlobal.roomMgr.Cycle();

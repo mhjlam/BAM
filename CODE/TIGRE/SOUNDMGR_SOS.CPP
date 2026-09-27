@@ -708,7 +708,13 @@ SoundMgr::Init(char *configFileName)
 		// set the bit for shutdown
 		sosActiveSystems |= SOS_DIGI_TIMER_EVENT;
 
-		SetMasterDigiVolume(digiVolume);
+	SetMasterDigiVolume(digiVolume);
+	}
+	FILE *audioLog = fopen("AUDIO.LOG", "w");
+	if (audioLog)
+	{
+		fprintf(audioLog, "Digital device=%04x handle=%u port=%04x irq=%u dma=%u\nMIDI device=%04x handle=%u port=%04x\nActive systems=%04x\n", digiDevice, hDigiDriverHandle, digiPort, digiIRQ, digiDMA, midiDevice, hMidiDriverHandle, midiPort, sosActiveSystems);
+		fclose(audioLog);
 	}
 
 #ifdef SNDMGR_DEBUG
@@ -741,7 +747,7 @@ SoundMgr::InitError(WORD wError, char *message)
 		pMess = message;
 	}
 
-	printf(message);
+	printf("%s\n", pMess);
 
 	ShutDownSoundMgr();
 	APrintUnfreedPtrs(FALSE);
@@ -1288,6 +1294,11 @@ SoundMgr::AddDigi(TSound *pSound, int sndNum, grip callBack)
 		{
 			// if not paused, start the sound
 	   	pSound->hSOSSampleHandle = sosDIGIStartSample( hDigiDriverHandle, &pSound->sSOSSampleData );
+			FILE *log = fopen("AUDIO.LOG", "a");
+			if (log) {
+				fprintf(log, "WAV %d: handle=%u bytes=%lu rate=%lu volume=%u master=%u\n", sndNum, pSound->hSOSSampleHandle, pSound->sSOSSampleData.dwSampleSize, sampleRate, pSound->volume, digiVolume);
+				fclose(log);
+			}
 		}
 	}
 
@@ -1402,6 +1413,11 @@ SoundMgr::AddMidi(TMusic *pMusic, uint16 sndNum, grip callBack)
 	{
 		// if not paused, start the song
    	wError = sosMIDIStartSong( pMusic->wSongHandle );
+		FILE *log = fopen("AUDIO.LOG", "a");
+		if (log) {
+			fprintf(log, "HMP %u: handle=%u startError=%u volume=%u master=%u\n", sndNum, pMusic->wSongHandle, wError, pMusic->volume, midiVolume);
+			fclose(log);
+		}
    	if(wError)
    	{
 			#ifndef NDEBUG

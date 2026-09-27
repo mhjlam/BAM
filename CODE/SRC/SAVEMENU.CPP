@@ -231,9 +231,9 @@ SaveMenu::Setup(grip gprevContext_P,option_t menuType_P)
 				//get save game num from filename
 				x = GetSaveNum();
 
-				if(x == 10)
+				if(x < 0 || x >= buttonNum)
 				{
-					//10 is really save game 11 -our net save game, so ignore
+					// Ignore the multiplayer slot and unrelated .SAV files.
 					continue;
 				}
 
@@ -349,9 +349,11 @@ SaveMenu::GetSaveNum()
 	pfn = fn;
 	do
 	{
+		if (*pStr < '0' || *pStr > '9')
+			return -1;
 		*pfn++ = *pStr++;
 		cnt++;
-	}while (*pStr != '.' && cnt < 14);
+	}while (*pStr && *pStr != '.' && cnt < 13);
 	*pfn = NULL;
 	// array is 0-9 but save games are 1-10 so subtract 1
 	x = atoi(fn);

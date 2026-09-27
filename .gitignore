@@ -6,8 +6,20 @@
 
 # Out-of-tree Open Watcom build products
 BUILD/OUT/
+# Retail runtime/media are local-only; distribute the demo assets instead.
+GAME/*
+!GAME/DEMO/
+!GAME/README.MD
+!GAME/RES_CFG.HPP
+!GAME/SOUND.CFG
 GAME/BAM.EXE
 GAME/BAMDBG.EXE
+GAME/DEMO/BAM.EXE
+GAME/DEMO/BAMDBG.EXE
+GAME/**/AUDIO.LOG
+GAME/**/*.SAV
+GAME/**/CAMPAIGN.DAT
+GAME/**/MEM*.DMP
 
 # DOSBox console logs generated beside the bundled executable
 TOOLS/DOSBOX/stdout.txt

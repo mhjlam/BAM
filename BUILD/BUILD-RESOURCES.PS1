@@ -8,7 +8,7 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 $RepositoryRoot = Split-Path -Parent $PSScriptRoot
-$GameDirectory = Join-Path $RepositoryRoot 'GAME'
+$GameDirectory = Join-Path $RepositoryRoot 'GAME\DEMO'
 $DataDirectory = Join-Path $GameDirectory 'DATA'
 $ResourceToolsDirectory = Join-Path $RepositoryRoot 'TOOLS\RESOURCE'
 $DosBoxPath = Join-Path $RepositoryRoot 'TOOLS\DOSBOX\DOSBox.exe'
@@ -106,5 +106,5 @@ if ($Publish) {
 }
 else {
     Write-Host "Generated resource archive under $OutputDirectory"
-    Write-Host 'Use -Publish to replace the runnable copies under GAME.'
+    Write-Host 'Use -Publish to replace the demo runtime copies under GAME\DEMO.'
 }

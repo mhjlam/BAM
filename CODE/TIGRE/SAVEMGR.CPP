@@ -82,12 +82,6 @@ SaveMgr::Save(uint16 saveNum, uint16 versionNum, uint16 versionSubNum,
 	char		fileName[FILENAME_MAX];
 	size_t	nameSize;
 
-	#ifdef NDEBUG
-	// BUGBUG! temporarily block access to savegame for release vers, since
-	//	it's all under reconstruction - Van
-	return(result);
-	#endif
-
 #ifdef OS_MAC
 	pSaveMgrFile = OS_PutSaveFILE(saveName);
 	if (pSaveMgrFile == HIT_CANCEL) return(0);	//all ok, we just hit cancel.
@@ -270,14 +264,13 @@ SaveMgr::Restore(uint16 saveNum, uint16 versionNum, uint16 versionSubNum,
 				break;
 			}
 
-			#ifndef NDEBUG
-			if(buildNum != buildID)
+			// Saves contain raw object layouts and must match this build.
+			if(verNum != versionNum || verSubNum != versionSubNum || buildNum != buildID)
 			{
 				// old save-game, potentially incompatible.  Play it safe.
 				result = SM_VERSION_ERROR;
 				break;
 			}
-			#endif
 
 //			// skip past the version num and subnum
 //			// read the version number
@@ -293,6 +286,12 @@ SaveMgr::Restore(uint16 saveNum, uint16 versionNum, uint16 versionSubNum,
 			if (fread(&nameSize, 1, sizeof(size_t), pSaveMgrFile) != sizeof(size_t))
  			{
 				// read problem				
+				result = SM_FILE_READ_ERROR;
+				break;
+			}
+
+			if (nameSize == 0 || nameSize > 256)
+			{
 				result = SM_FILE_READ_ERROR;
 				break;
 			}
@@ -575,6 +574,11 @@ SaveMgr::GetSaveInfo(char *fileName, char *saveName, uint16 maxNameSize,
 				break;
 			}
 
+			if (nameSize == 0 || nameSize > 256 || maxNameSize == 0)
+			{
+				result = SM_FILE_READ_ERROR;
+				break;
+			}
 			if (nameSize > maxNameSize)
 			{
 				// the save name is larger than the buffer they passed.
@@ -592,7 +596,7 @@ SaveMgr::GetSaveInfo(char *fileName, char *saveName, uint16 maxNameSize,
 				break;
 			}
 
-			if (result == SM_SAVE_NAME_TRUNC_ERROR) 
+			if (result == SM_SAVE_NAME_TRUNC_ERROR || saveName[nameSize - 1] != 0)
 			{
 				// this name is being truncated.  null terminate
 				saveName[nameSize - 1] = 0;

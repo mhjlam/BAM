@@ -6,7 +6,7 @@ The DOS branch follows the original source and runtime layout while omitting ins
 
 - `CODE/TIGRE` contains the Tigre engine, preserved audio/video SDK files, resource utilities, and original makefiles.
 - `CODE/SRC` contains the Blood & Magic game, map/content tools, and original makefiles.
-- `GAME` contains the runnable DOS distribution, with loose source assets under `GAME/DATA`.
+- `GAME` contains the full-game DOS distribution (the default edition). `GAME/DEMO` contains the demo distribution and its loose source assets under `GAME/DEMO/DATA`.
 - `BUILD/BUILD.PS1` builds Tigre and BAM together. Intermediate output goes under `BUILD/OUT`; the selected executable is published into `GAME`.
 - `TOOLS/WATCOM` and `TOOLS/DOSBOX` provide the compiler and emulator without external installation.
 - `TOOLS/RESOURCE` preserves the original resource-archive packer and its legacy pipeline metadata.
@@ -16,7 +16,7 @@ See [the build instructions](DOCS/BUILDING.MD). The untouched import remains ava
 
 ## DOS restoration status
 
-The `dosbox` branch is a self-contained, reproducible DOS build that runs on modern Windows: `BUILD/BUILD.PS1` compiles Tigre and BAM with the bundled Open Watcom 1.9 toolchain, publishes the selected executable under `GAME`, and launches it with the bundled DOSBox 0.74-3 runtime. `BUILD/BUILD-RESOURCES.PS1` can also regenerate the complete packed resource archive from all 828 loose assets.
+The `dosbox` branch builds on modern Windows: `BUILD/BUILD.PS1` compiles Tigre and BAM with the bundled Open Watcom 1.9 toolchain and launches it with the bundled DOSBox 0.74-3 runtime. Full is the default edition and publishes under `GAME`; `-Edition Demo` publishes under `GAME/DEMO`. `BUILD/BUILD-RESOURCES.PS1` can regenerate the demo's packed resource archive from all 828 loose demo assets.
 
 The restored single-player game reaches its menus and scenarios with graphics, keyboard, mouse, engine, and game logic active. Networking is intentionally out of scope, and cinematics are intentionally skipped pending a future native replacement for the incompatible Smacker decoder. Restoring DOS sound and music is the remaining runtime task for this branch; the original assets, HMI drivers, SOS libraries, configuration, and wrapper source have been retained for that work.
 
