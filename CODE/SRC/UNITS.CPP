@@ -5734,7 +5734,7 @@ Unit::CycleGuardMode(void)
 			{
 				// mana bonus from meditation
 				if((pBam->playerTypes[player] == PLAYER_COMPUTER && currMana < MANA_ACOLYTE_MAX / 2) ||
-					currMana < MANA_ACOLYTE_MAX)
+					currMana < MANA_ACOLYTE_MAX / 2)
 				{
 					currMana = AMin((currMana + MANA_MEDITATE), MANA_ACOLYTE_MAX);
 					if(fCursorTracking && player == pWorld->playerSide)
@@ -10297,6 +10297,9 @@ Unit::CycleMoveTo(void)
 
 			// walk only to edge of current tile bordering new tile, then verify that target
 			// space is still empty before actually entering
+			// Retail 1.01 fix: recompute both edge offsets for every step.  Version 1.00
+			// reused their saved/uninitialized values here, which caused the documented
+			// Red level 3 problem when the moving Brigand was hit after a save.
 			switch(currDir)
 			{
 				case DOWN:

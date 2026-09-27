@@ -181,6 +181,8 @@ class World : public BAM_Room
 		void				FakeMouseClick(grip gButton);
 		void				AllowMouseDragging(bool fNewState, bool fForce = FALSE);
 		void				SetTutorialGoal(tutorialGoals goal, bool fState);
+		bool				SuspendVictoryDefeat(void);
+		void				ResumeVictoryDefeat(void), ClearVictoryDefeat(grip gPopup);
 
 
 		virtual bool	Save(uint16 state, FILE	*pFile = NULL);
@@ -245,6 +247,7 @@ class World : public BAM_Room
 		WinningCondition winCons[MAX_WINCONS];
 		ticks_t			tWorldEnds;
 		int				worldEnder;
+		grip				gVictoryDefeat;
 
 		int				unitsCreated[TOTAL_SIDES];
 		int				unitsLost[TOTAL_SIDES];

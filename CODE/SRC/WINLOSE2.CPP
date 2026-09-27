@@ -24,6 +24,7 @@
 #include "BamFuncs.hpp"
 #include "BAM_DG.HPP"
 #include "SaveBase.hpp"
+#include "World.hpp"
 
 #include <string.h>
 
@@ -388,6 +389,9 @@ VictoryDefeat::HandleMsg(Message* pMsg)
 void
 VictoryDefeat::Cleanup()
 {
+	if(pWorld)
+		pWorld->ClearVictoryDefeat(gSelf);
+
 	fadeTo.FadeUp();
 
 	Activate(FALSE);

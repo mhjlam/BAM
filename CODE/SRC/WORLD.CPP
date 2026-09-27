@@ -121,6 +121,7 @@ World::World(void) : lBackgroundAnis(100, TRUE)
 	memset(gPathAni, NULL, sizeof(gPathAni));
 	bGlobal.gWorld = gSelf;
 	tShowOffTimer = NULL;
+	gVictoryDefeat = NULL;
 
 	currFrame = 0;
 	for(i = 0; i < 5; i++)
@@ -5125,6 +5126,14 @@ World::EndScenario(int winningSide)
 
 	AllowMouseDragging(FALSE);
 
+	// Preserve the logical result independently of the transient result UI.
+	// Normal play sets this during the win countdown; direct callers do not.
+	if(winningSide == SIDE1 || winningSide == SIDE2)
+	{
+		worldEnder = winningSide;
+		tWorldEnds = 0;
+	}
+
 	if(winningSide == SIDE3)
 	{
 		// special case - just exit back to main menu
@@ -5207,8 +5216,46 @@ World::EndScenario(int winningSide)
 	else
 	{
 		TRACK_MEM("WINLOSE2");	pPop = new VictoryDefeat;
+		gVictoryDefeat = pPop->gSelf;
 		pPop->Setup(gPal, (winningSide == playerSide)? TRUE: FALSE);
 	}
+}
+
+// The memory manager saves allocations verbatim.  VictoryDefeat is a transient
+// modal which owns palette, mouse, context, scrim, and dynamic-resource state;
+// restoring that raw UI state leaves stale runtime relationships.  Save the
+// completed World instead and reconstruct the modal from worldEnder on restore.
+bool
+World::SuspendVictoryDefeat(void)
+{
+	if(!gVictoryDefeat)
+		return FALSE;
+
+	grip gPopup = gVictoryDefeat;
+	gVictoryDefeat = NULL;
+	ADerefAs(VictoryDefeat, gPopup)->Cleanup();
+	return TRUE;
+}
+
+void
+World::ResumeVictoryDefeat(void)
+{
+	VictoryDefeat *pPop;
+
+	if(gVictoryDefeat || bGlobal.storyLine == TUTORIAL ||
+		(worldEnder != SIDE1 && worldEnder != SIDE2))
+		return;
+
+	TRACK_MEM("WINLOSE2");	pPop = new VictoryDefeat;
+	gVictoryDefeat = pPop->gSelf;
+	pPop->Setup(gPal, (worldEnder == playerSide)? TRUE: FALSE);
+}
+
+void
+World::ClearVictoryDefeat(grip gPopup)
+{
+	if(gVictoryDefeat == gPopup)
+		gVictoryDefeat = NULL;
 }
 
 void

@@ -493,7 +493,8 @@ MainMenu::SetupMainMenu()
 	#ifdef INTERACTIVE_DEMO
 	strcpy(verStr,"DEMO ver.");
 	#else
-	sprintf(verStr,"ver %d.%d",bGlobal.versionNum,bGlobal.versionSubNum);
+	// Release numbers use a two-digit patch component (for example, 1.01).
+	sprintf(verStr,"ver %d.%02d",bGlobal.versionNum,bGlobal.versionSubNum);
 	#endif
 
 	//strcpy(verStr,"WORK IN PROGRESS");

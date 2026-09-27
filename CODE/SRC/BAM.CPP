@@ -142,8 +142,10 @@ BamGlobal::BamGlobal()
 	// tutorial mode
 	memset(fTutorialGoals, NULL, sizeof(fTutorialGoals));
 
-	versionNum = 0;
-	versionSubNum = 93;
+	// The recovered source retained the demo-facing 0.93 version pair even
+	// though it contains later retail and 1.01 code.  Report release 1.01.
+	versionNum = 1;
+	versionSubNum = 1;
 
 	// hash compile-time string for a (virtually) unique version #
 	char	*pTime = __TIME__;
@@ -1137,8 +1139,11 @@ main(int argc, char** argv)
 
       if (saveNum)
       {
+			bool resumeVictoryDefeat = pWorld && pWorld->SuspendVictoryDefeat();
          saverResult = saveMgr.Save((uint16) saveNum, bGlobal.versionNum,
 				bGlobal.versionSubNum, bGlobal.buildID, saveMessage);
+			if(resumeVictoryDefeat && pWorld)
+				pWorld->ResumeVictoryDefeat();
          if (saverResult)
          {
             sprintf(mess, "save failed.  error #%d", saverResult);
@@ -1149,6 +1154,7 @@ main(int argc, char** argv)
       }
       if (restoreNum)
       {
+			bool resumeVictoryDefeat = pWorld && pWorld->SuspendVictoryDefeat();
          saverResult = saveMgr.Restore((uint16) restoreNum, bGlobal.versionNum,
 				bGlobal.versionSubNum, bGlobal.buildID);
          if (saverResult)
@@ -1156,36 +1162,42 @@ main(int argc, char** argv)
 //         	sprintf(mess, "restore failed.  error #%d", saverResult);
 				BamDebug.Out("Restore failed!  Error %d\n", saverResult);
 //         	APanic(mess);
+				if(resumeVictoryDefeat && pWorld)
+					pWorld->ResumeVictoryDefeat();
          }
-			netRestoreNum = 0;	//reset this after restore
-         restoreNum = 0; 
-			bGlobal.roomMgr.Cycle();
-
-			// frantic temporary debugging measure
-			pBam = ADerefAs(BAM_Application, bGlobal.gBam);
-			if (bGlobal.gWorld)
-			{
-				pWorld = ADerefAs(World, bGlobal.gWorld);
-				pWorld->Save(AFTER_RESTORE);
-			}
 			else
 			{
-				pWorld = NULL;
-			}
-			bGlobal.roomMgr.Cycle();
-			pMemMgr->Cycle();
-			pSoundMgr->Cycle();
+				bGlobal.roomMgr.Cycle();
 
-			if(pWorld)
-			{
-				pBam->fPauseWorld = TRUE;	//force ResumeTicks() to be called in PauseWorld
-				pWorld->Pause(FALSE, TRUE);
-				pBam->PauseWorld();
+				// frantic temporary debugging measure
+				pBam = ADerefAs(BAM_Application, bGlobal.gBam);
+				if (bGlobal.gWorld)
+				{
+					pWorld = ADerefAs(World, bGlobal.gWorld);
+					pWorld->Save(AFTER_RESTORE);
+				}
+				else
+				{
+					pWorld = NULL;
+				}
+				bGlobal.roomMgr.Cycle();
+				pMemMgr->Cycle();
+				pSoundMgr->Cycle();
+
+				if(pWorld)
+				{
+					pWorld->ResumeVictoryDefeat();
+					pBam->fPauseWorld = TRUE;	//force ResumeTicks() to be called in PauseWorld
+					pWorld->Pause(FALSE, TRUE);
+					pBam->PauseWorld();
+				}
+				else bGlobal.roomMgr.curRoom->Pause(FALSE, TRUE);
+				#ifndef OLD_MOUSE_INTERRUPT_HANDLER
+				MouseHandler( FALSE );
+				#endif
 			}
-			else bGlobal.roomMgr.curRoom->Pause(FALSE, TRUE);
-			#ifndef OLD_MOUSE_INTERRUPT_HANDLER
-   	   MouseHandler( FALSE );
-			#endif
+			netRestoreNum = 0;	//reset this after restore
+         restoreNum = 0;
       }
 
 		if(pWorld)
